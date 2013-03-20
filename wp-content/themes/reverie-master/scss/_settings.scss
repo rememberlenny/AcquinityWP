@@ -4,3 +4,688 @@
 // doc page. We tried to name them to where they'd make sense just by reading them.
 // Go to http://foundation.zurb.com/docs/ to find what you need.
 
+@import "topbar";
+@import "sidebar";
+@import "footer";
+@import "font";
+@import "ieset";
+
+//
+// Gen eral
+//
+
+ul, li, ol{
+  list-style:none;
+}
+
+body{
+  overflow-x: hidden;
+  background: white;
+  border-top:5px solid $secondary-color;
+
+}
+
+.container{
+  overflow-x: hidden;
+  background: #333;
+}
+
+html ::selection, body ::selection, button ::selection, input ::selection, select ::selection, textarea ::selection {
+  background: $success-color;
+  color: white;
+}
+
+//
+// Media Queries
+//
+
+
+
+  .social-block span {font-size: 2em; }
+
+//
+// Elements
+//
+  .fl{ float:left; }
+  .fr{ float:right; }
+  .ofhdn{ overflow:hidden; }
+  ul.no-style{ list-style: none;}
+  hr.silent{ border: 0px solid transparent !important; }
+  .top-nav-wrapper{ background: white; }
+  .clearboth{ clear: both; }
+  .secondary{
+    @include transition (all, .2s);
+    color: $secondary-color;
+    &:hover{
+      color: lighten($secondary-color, 20%);
+    }
+  }
+
+
+// Layout
+//
+ // .s9999{ width: 9999px; }     
+  .h300{ height: 300px; }
+  .h100{ height: 100px; }
+  .h120{ height: 120px; }
+  .b30{ padding-bottom: 30px; }    
+  .tp30{ padding-top: 30px; }
+  .mrn9{ margin-right: -0.9375em; }
+  .mln9{ margin-left: -0.9375em; }
+  .pr98 { padding-right: 1.875em; }
+  .pl98 { padding-left: 1.875em; }
+  .row-fluid{ max-width: none !important; }
+  .content{
+  }
+  .margeless{ margin: 0px; }
+  .pl02{
+    padding-left: 0.2em;
+  }
+
+//
+// Background
+//
+  #bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+  #bgContent{
+    width: 58.75em;
+    margin: 0 auto;
+    #bgLeft{
+      float: left;
+      width: 39.16666em;
+      #bgLeftExtension{
+        float: right;
+        width: 9999px;
+       // background: $page-text-background;
+        #bgLeftContent{ 
+        float: right;
+        width: 39.16665em;
+       // border-left: 1px solid #E4E2E1;
+       // height: 2000px;
+        }
+      }
+    }
+    #bgRight{
+      float: left;
+      width: 19.58333em;
+      #bgRightExtension{
+        float: left;
+        width: 9999px;
+       // background: $sidebar-main-color;
+        #bgRightContent{ 
+          float: left;
+          width: 19.58332em;
+        //  border-right: 1px solid #464341;
+         // height: 2000px;
+        }
+      }
+    }
+  }
+  .content.brand{
+
+  }
+
+  .brandwrap{
+    max-height: 70px;
+  }
+
+  .brandwrap{
+    max-height: 89px !important;
+  }
+  .brand-bar{
+
+    .brand-bar-extension{
+     // width: 9999px;
+     // float: right;
+      .brand-bar-content{
+        padding-left: 1em;
+        padding-right: 1em;
+        li{
+          padding-top: 5px;
+        }
+      //  float:right;
+      //  max-width: 39.166em;
+      }
+    }                 
+  }
+  .brand-row{
+    padding:0 .5em;
+    background: $brandbar-color;
+    img{
+      max-height: 50px;
+      opacity: .3;
+      @include transition( all, .7s );
+      @include delaytransition( .4s );
+    }
+    &.active{
+      img{
+        opacity: 1;
+        @include transition( all, 2s );
+      }
+    }
+  }
+
+//
+// Main
+//
+
+  // Hero
+  // 
+
+    
+
+    .masthead-photo { 
+      background: url('../images/hero/hero-map.jpg') center center;
+      overflow: hidden; 
+      float: right; 
+      width: 100%;
+      border-right: 1px solid #222;
+    }
+    .masthead-photo-extension{ 
+      width: 100%; 
+    }
+    .masthead-photo-content{
+      margin-top: 185px;
+    }
+    .masthead-photo-content{
+      float: left;
+      padding:0 1.875em 0;
+      h1{
+        font-weight: 100;
+        font-size: 1.7em;
+        display:inline;
+        clear: right;
+        background:#1A1A1A;;
+        background:rgb (26,26,26);
+        background:rgba(26,26,26,0.66);
+        color: white;
+        margin: 0em;
+        padding-left: .2em;
+        padding-right: .2em;
+      }
+      @include transition(all, .2s); 
+   
+    }
+    @media only screen and (max-width: 767px){
+          .content-block{
+      .rgtcont.text-c, ul.text-c{
+        text-align:center !important;
+      }
+    }
+    }
+    @media only screen and (min-width: 768px){
+     .masthead-photo-content h1 {
+      font-weight: 400;
+      font-size: 2.2em;
+    }
+    .content-block{
+      .rgtcont.text-c, ul.text-c{
+        text-align:left !important;
+      }
+    }
+    .masthead-photo-content{
+      margin-top: 155px;
+    }
+      .masthead-photo-extension{ 
+      width: 100%; 
+    }
+    .masthead-photo-content{
+    }
+
+    }
+
+    
+
+  //
+  // Case Study
+  //
+  //
+  .content-main > .columns{
+    padding:0px !important;
+  }
+  .content-main{
+    .main{
+      border-right: 1px solid darken(#333, 20%);
+    }
+  }
+  .hero-row {
+    .main{
+      z-index: 1;
+      width:100%;
+    }
+    .sidebar {
+      background: #1A1A1A;
+    }
+    .company-facts-extension{
+      width: 100%;
+    }
+    .chart {
+      svg{
+        position: absolute !important;
+      }
+      text-align: center;
+      h2 {
+        width: 180px;
+        height: 180px;
+        line-height: 145px;
+        font-size: 44px;
+      }
+    }
+    h4.subheader{
+      opacity: .7;
+      font-size: 1.4em !important;
+      display: inline;
+    }
+  }
+
+  @media only screen and (min-width:1000px){
+      .masthead-photo-content{
+      float: left;
+      padding:0 1.875em 0;
+      margin-top: 135px;
+      h1{
+        font-weight: 100;
+        font-size: 2.8em;
+        line-height: 1.3;
+      }
+    }
+      .masthead-photo{
+        width: 9999px;
+      }
+    .masthead-photo-extension{ 
+      width: 9999px; 
+      float: right;
+      .masthead-photo-content{
+        float:right;
+        width: 667px;
+        padding-left: 1.875em;
+      }
+    }
+    .company-facts-extension{
+      width: 9999px !important;
+      background: #1A1A1A;
+      float:left;
+      .company-facts-content{
+        float: left;
+      }
+    }
+    .case-studies-extension{
+      width: 9999px !important;
+      background: white;
+      float:right;
+      #case-sliders{
+        float: right;
+        width: 667px;
+      }
+    }
+    .page-main-extension{
+      background: #FAF8F6;
+      width: 9999px !important;
+      float: right;
+
+      .page-main-content{
+        float: right;
+        width: 667px;
+      }
+    }
+   .company-facts-extension{
+      #featrap{
+        float: right;
+        width: 667px;
+      }
+      .orbit-container{
+        background: transparent !important;
+        overflow: visible;
+      }
+    }
+  }
+
+  #featrap{
+    margin: 0 auto;
+    padding-top: 0em;
+      .pre-head{
+        padding-left: 0.9375em;
+        line-height: 3em;
+        margin-bottom: 0em;
+        padding-bottom: 0em;
+        opacity: 1;
+        font-size: 1.6em !important;
+      }
+      .orbit-container{
+        li{
+          opacity: 0;
+          @include transition( all, .5s)
+        }
+        li.active{
+          opacity: 1;
+          @include transition( all, .5s)
+        }
+      }
+
+      .sub-case{
+        padding-top: 2.7em !important;
+        display: inline;
+        float: left;
+        padding-top: 1em;
+        padding-left: 0.6em;
+        h4{ 
+        line-height: 1em;
+        }
+      }
+          .chart{ 
+
+
+    }
+    .case-row{
+      margin-top: 1em;
+    }
+      .chart-container{
+        margin: 0 auto;
+        padding-top: .5em;
+              background: url('../images/sub/firefox.png') center center;
+      background-repeat: no-repeat;
+      max-width: 250px;
+      height: 166px;
+        h4{
+        }
+      }
+      .sub-case{
+        padding-top: 1.5em;
+        p{
+          opacity: .6;
+        }
+      }
+      .orbit-container{
+        background: transparent;
+      }
+      .orbit-bullets{
+        display: none;
+      }
+  }
+
+  
+    #case-sliders{
+      &>h2{
+        font-size: 1.85em;
+      }
+      padding-top: .8em;
+      h2{
+        margin-bottom: 0em;
+      }
+      ul{
+        height: auto !important;
+      }
+      .orbit-prev{
+        visibility: hidden;
+      }
+      .orbit-next{
+        visibility: hidden;
+      }
+    }
+    .case-studies{
+      width:100%;
+      text-align: left;
+      h4.subheader{ 
+        font-size: 1.6em;
+      }
+    }
+    .case-study-item{ 
+      padding: 0em 0em; 
+      h2.subheader{
+        font-size: 1.5em;
+
+        margin-bottom: .2em;
+      }
+      p{
+        font-size: .8em;
+      }
+    }
+    .case-row{ 
+      padding-left: 0em; 
+      padding-right: 0em; 
+
+      a.button{
+        opacity: 0;
+        @include transition(all, 1s);
+      }
+      &.active{
+        a.button{
+          opacity: 1;
+          @include transition(all, 1s);
+        }
+      }
+    }
+    .case-studies-extension{
+        background: white;
+        li{
+          height: auto;
+          opacity: 0;
+            @include transition( all, .9s );
+        }
+        li.active{
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+        filter: alpha(opacity=60);
+        opacity: 1;
+        @include transition( all, .2s );
+        }
+      .orbit-container{ 
+          background: none !important; 
+          text-align: left;
+          overflow:visible;
+      }
+
+    }    
+    .case-studies-content{
+      .orbit-bullets{
+        display: inline-block;
+      }
+      .image-wrapper{
+        overflow: hidden;
+        max-width:100%;
+        border-radius: 3px;
+      }
+    }
+    
+    .case-studies{
+      ul#featured2.orbit-slides-container{
+          height: auto !important;
+      }
+    }
+    //Orbit
+    //
+
+
+    //Brand logos
+    .brandwrap{
+
+      .orbit-container{ 
+        background: none !important; 
+         > ul{
+          height: auto !important;
+        }
+      }
+      .orbit-slide-number{ visibility: hidden; }
+      .orbit-prev{ visibility: hidden; } 
+      .orbit-next{ visibility: hidden; } 
+      .orbit-timer{ visibility: hidden; }
+      ol.orbit-bullets {
+      }
+      .orbit-container {
+        overflow: visible !important;
+
+      }
+    }
+
+    #case-sliders{
+      padding-top: 1.5em;
+      padding-bottom: 1em;
+      text-align:center;
+      h4{text-align: left;}
+      .orbit-bullets li {
+        @include transition( all, .2s );
+        background: lighten(#949494, 20%);
+        -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+        filter: alpha(opacity=80);
+        opacity: .8;
+        border: none;
+      }
+      .orbit-bullets li:hover {
+        background: $success-color!important;
+        @include transition( all, .2s );
+        border: none;
+      }
+      .orbit-bullets li.active {
+        @include transition( all, .2s );
+        background: none;
+        border: solid 2px $secondary-color;  
+        &:hover{
+          border: 0px;
+        }
+      }
+      .orbit-timer{
+        visibility: hidden;
+      }
+      .orbit-slide-number{
+        display: none !important;
+      }
+    }
+
+    .lt-ie9 .orbit-container{ overflow: hidden !important;}
+    .lt-ie9 .orbit-container li{ display: none !important;}
+    .lt-ie9 .orbit-container li.active{ display: block !important;}
+
+
+
+  //
+  // Page Main
+  //
+  .page-main{
+  }
+  .page-main-extension{
+    background: #FAF8F6;
+    border-top: 1px solid #E4E2E1;
+    border-bottom: 1px solid #E4E2E1;
+  }
+  .page-main-content{
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    .info-gr{
+      padding: 3em 0 5em;
+    }
+    h4.subheader{
+      font-size: 1.6em;
+    }
+  }
+
+  @media only screen and (min-width:768px) {
+     .brand-bar-extension{
+      background: #262626 !important;
+      margin: 0 auto !important;
+      #brandslider{
+        max-width: 1000px !important;
+      }
+      .orbit-prev{ 
+        visibility: visible !important;
+        position: absolute;
+        top: 0%!important;
+        margin-top: 0px!important;
+        background-color: transparent!important;
+        width: 9999px!important;
+        height: 89px!important;
+        margin-left: -9999px!important;
+      }
+     }
+     .case-studies-extension{
+    }
+     .brand-bar-extension{ 
+     .orbit-next{ 
+        visibility: visible !important;
+        position: absolute;
+        top: 0%!important;
+        margin-top: 0px!important;
+        background-color: transparent!important;
+        width: 9999px!important;
+        height: 89px!important;
+        margin-right: -9999px!important;
+      }  
+    }
+    .company-facts-extension{
+      #featrap{
+      .orbit-container{
+        height: 350px;
+      }
+        .orbit-slide-number{
+          display: none !important;
+        }
+      .orbit-prev{ 
+        visibility: hidden !important;
+      }
+     .orbit-next{ 
+        visibility: visible !important;
+        position: absolute;
+        top: 0%!important;
+        margin-top: 0px!important;
+        background-color: transparent!important;
+        width: 9999px!important;
+        height: 350px!important;
+        margin-right: -9999px!important;
+      } 
+    }
+  }
+    #featrap{
+      max-width: $max-right;
+    }
+    .case-studies-extension{
+        background: white;
+        li{
+          height: auto;
+          opacity: 0;
+            @include transition( all, .9s );
+        }
+        li.active{
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+        filter: alpha(opacity=60);
+        opacity: 1;
+        @include transition( all, .2s );
+        }
+        .case-row{
+          padding-left: 0em;
+          padding-right: 0em;
+          &.active{
+            padding-left: 0em;
+            padding-right: 0em;
+          }
+        }
+
+      .orbit-container{ 
+          background: none !important; 
+          text-align: left;
+          overflow:visible;
+      }
+
+    }  
+    .case-studies-extension{
+        li{
+          opacity: 0;
+            @include transition( all, .9s );
+        }
+        li.active{
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+        filter: alpha(opacity=60);
+        opacity: 1;
+        @include transition( all, .2s );
+        }
+      .orbit-container{ 
+          background: none !important; 
+          text-align: left;
+          overflow:visible;
+      }
+
+    }    
+  }

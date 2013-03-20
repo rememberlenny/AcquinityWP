@@ -1,0 +1,234 @@
+@import "variables";
+
+//
+// Sidebar
+//
+
+  div.sidebar{
+    background: $sidebar-main-color;
+    color: $sidebar-text-color;
+    a{
+      color: $sidebar-link-color;
+      @include transition( color, .2s );
+      &:hover{
+        color: $success-color;
+        @include transition( color, .2s );
+      }
+      .icon{
+        font-size: 1.4em;
+      }
+    }
+    h4.subheader{
+      font-size: 1.9em;
+      color: $sidebar-header-color;
+    }
+    hr{
+      border: solid #444;
+      border-width: 1px 0px 0px;
+    }
+  }
+  @media only screen and (min-width: 767px) {
+    .content-main{
+      .sidebar{
+      }
+    }
+    ul{
+      text-indent: $left-spacing;
+    }
+
+    .email-alerts-content, 
+    .products-link-content,
+    .contact-block-content, 
+    .social-block-content{
+      padding-right: 0.9375em; padding-left: 0.9375em; 
+    }
+  }
+  .link-string{
+    li{
+      line-height: 1.2em;
+    }
+    a{
+      font-size: .9em;
+    }
+  }
+  div.sidebar{
+    h4.subheader{
+      font-size: 1.6em;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .sidebar{
+      .product-link-content{
+      }
+      text-align: center;
+      .fl{
+        float: none;
+      }
+      .partner-block-content{
+        ul{
+          li{
+            img{ margin: 0 auto; }
+          }
+        }
+      }
+    }
+  }
+  // Company Facts
+  //
+
+    .company-facts{ 
+      .chart{
+        display: inline-block;
+        h2{
+          font-size: 2em;
+          line-height: 1.6em;
+          font-weight: 400;
+          color: $sidebar-header-color;
+          span{
+            font-size:.6em;
+          }
+        }
+      }
+      h3.subheader{
+        color: $sidebar-header-color;
+        font-size: 1.3em;
+      }
+    }
+  // Partner
+  //
+
+    .partner-block{
+      ul{
+        li{
+        }
+      }
+    }
+    .partner-block-extension{
+      height: auto !important;
+    }
+
+  // Email Alerts
+  //
+    div.email-alerts-block{
+
+      h4.subheader{
+      }
+      a{
+        color: white;
+      }
+      .email-box{
+        padding-left: $left-spacing;
+      }
+      label{
+        color: #AFAEAF;
+        margin-bottom: 1em;
+        @include transition( color, .2s );
+      }
+      .button{
+        &:hover{
+          color: #AFAEAF;
+          background: darken($secondary-color, 10%);
+          @include transition( all, .2s );
+        }
+      }
+      a.prefix{
+        border-radius: 3px;
+        margin-left: 1.1em;
+      }
+    }
+    .email-box{
+      padding-right:1em; 
+      input{
+        border-radius: 3px;
+        margin-right:1em;
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      .email-alerts-extension{
+      }
+    }
+  // Social block
+  //
+      .social-block{
+        span{
+          opacity: .6;
+        }
+        a{
+          font-size: 2em;
+          @include transition( color, .2s );
+           &:hover {
+            @include transition( color, .2s );
+          }
+        }
+        .foundiconsoc-facebook{
+          &:hover{
+            color: $facebook-color;
+          }
+        }
+        .foundiconsoc-twitter{
+          &:hover{
+            color: $twitter-color;
+          }
+        }
+        .foundiconsoc-youtube{
+          &:hover{ 
+            color: $youtube-color; 
+          }
+        }
+        .social-icon{
+          display:inline-block;
+          .social-icon-case{
+            margin: 0 auto;
+            border-radius: 3px;
+            width:35px;
+            height:35px;
+            @include transition (all, 1s );
+            &:hover{
+              @include transition (all, .5s );
+              opacity:.6;
+            }
+          }
+          img{
+            width: 30px;
+          }
+          .facebook{
+            background: url('../images/social/fb-icon.png') center center;
+            -moz-background-size:100% 100%; /* Old Firefox */
+            background-size:100% 100%;
+          }
+          .linkedin{
+            background: url('../images/social/li-icon.png') center center;
+            -moz-background-size:100% 100%; /* Old Firefox */
+            background-size:100% 100%;
+          }
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .social-block{
+          span{
+            font-size: 1.5em;
+          }
+          .h300{
+            height: auto;
+          }
+        }
+
+      }
+
+.products-link-extension{
+}
+ @media only screen and (min-width:1000px){
+    .email-alerts-extension,
+    .social-block-extension,
+    .products-link-extension{
+      width: 9999px !important;
+      background: #333;
+      float:left;
+      .email-alerts-content,
+      .social-block-content,
+      .Products-link-content{
+        float: left;
+      }
+    }
+  }
+
