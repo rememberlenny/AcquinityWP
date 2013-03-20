@@ -131,13 +131,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
   }
 
-  .brandwrap{
-    max-height: 70px;
-  }
-
-  .brandwrap{
-    max-height: 89px !important;
-  }
   .brand-bar{
 
     .brand-bar-extension{
@@ -593,7 +586,11 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       font-size: 1.6em;
     }
   }
-
+  #brandslider{
+    .orbit-bullets{
+      display: none;
+    }
+  }
   @media only screen and (min-width:768px) {
      .brand-bar-extension{
       background: #262626 !important;
@@ -608,7 +605,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         margin-top: 0px!important;
         background-color: transparent!important;
         width: 9999px!important;
-        height: 89px!important;
         margin-left: -9999px!important;
       }
      }
@@ -622,7 +618,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         margin-top: 0px!important;
         background-color: transparent!important;
         width: 9999px!important;
-        height: 89px!important;
         margin-right: -9999px!important;
       }  
     }
@@ -644,7 +639,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         margin-top: 0px!important;
         background-color: transparent!important;
         width: 9999px!important;
-        height: 350px!important;
         margin-right: -9999px!important;
       } 
     }

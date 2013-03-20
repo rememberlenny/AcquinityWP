@@ -1652,14 +1652,6 @@ hr.silent {
   width: 19.58332em;
 }
 
-.brandwrap {
-  max-height: 70px;
-}
-
-.brandwrap {
-  max-height: 89px !important;
-}
-
 .brand-bar .brand-bar-extension .brand-bar-content {
   padding-left: 1em;
   padding-right: 1em;
@@ -2131,6 +2123,10 @@ hr.silent {
   font-size: 1.6em;
 }
 
+#brandslider .orbit-bullets {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .brand-bar-extension {
     background: #262626 !important;
@@ -2146,7 +2142,6 @@ hr.silent {
     margin-top: 0px !important;
     background-color: transparent !important;
     width: 9999px !important;
-    height: 89px !important;
     margin-left: -9999px !important;
   }
 
@@ -2157,7 +2152,6 @@ hr.silent {
     margin-top: 0px !important;
     background-color: transparent !important;
     width: 9999px !important;
-    height: 89px !important;
     margin-right: -9999px !important;
   }
 
@@ -2177,7 +2171,6 @@ hr.silent {
     margin-top: 0px !important;
     background-color: transparent !important;
     width: 9999px !important;
-    height: 350px !important;
     margin-right: -9999px !important;
   }
 
