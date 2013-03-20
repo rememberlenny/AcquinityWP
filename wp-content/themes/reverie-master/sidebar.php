@@ -1,3 +1,3 @@
-<aside id="sidebar" class="small-12 large-4 columns">
+<div id="sidebar" class="pr98 pl98 large-4 small-12 columns">
 	<?php dynamic_sidebar("Sidebar"); ?>
-</aside><!-- /#sidebar -->
+</div><!-- /#sidebar -->
