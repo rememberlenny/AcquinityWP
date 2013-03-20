@@ -505,8 +505,11 @@ div.sidebar {
   background: #333333;
   color: white;
 }
+div.sidebar hr:first-child {
+  border-width: 0px;
+}
 div.sidebar a {
-  color: #afaeaf;
+  color: #afaeaf !important;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
@@ -523,6 +526,9 @@ div.sidebar a:hover {
 }
 div.sidebar a .icon {
   font-size: 1.4em;
+}
+div.sidebar li {
+  color: #afaeaf !important;
 }
 div.sidebar h4.subheader {
   font-size: 1.9em;
@@ -1892,7 +1898,18 @@ hr.silent {
   line-height: 1em;
 }
 #featrap .case-row {
-  margin-top: 1em;
+  margin-top: 0em;
+}
+#featrap .case-row h5 {
+  color: #efefef;
+  font-size: 1em;
+}
+#featrap .case-row h5.subheader {
+  font-size: 3em !important;
+  margin-bottom: .2em;
+  line-height: 1em;
+  color: #efefef;
+  font-weight: 100;
 }
 #featrap .chart-container {
   margin: 0 auto;
@@ -3445,12 +3462,12 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #b61636;
+  color: #32345c;
   text-decoration: none;
   line-height: inherit;
 }
 a:hover, a:focus {
-  color: #9f132f;
+  color: #292b4b;
 }
 a img {
   border: none;
@@ -3789,12 +3806,12 @@ button, .button {
   padding-bottom: 0.8125em;
   padding-left: 1.5em;
   font-size: 1em;
-  background-color: #b61636;
-  border-color: #891028;
+  background-color: #32345c;
+  border-color: #20213b;
   color: white;
 }
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #891028;
+  background-color: #20213b;
 }
 button:hover, button:focus, .button:hover, .button:focus {
   color: white;
@@ -3869,8 +3886,8 @@ button.right-align, .button.right-align {
   padding-right: 0.75em;
 }
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: #b61636;
-  border-color: #891028;
+  background-color: #32345c;
+  border-color: #20213b;
   color: white;
   cursor: default;
   opacity: 0.6;
@@ -3878,13 +3895,13 @@ button.disabled, button[disabled], .button.disabled, .button[disabled] {
   box-shadow: none;
 }
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #891028;
+  background-color: #20213b;
 }
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
   color: white;
 }
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #b61636;
+  background-color: #32345c;
 }
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
   background-color: #32345c;
@@ -4721,7 +4738,7 @@ form.custom .custom.disabled {
   background-color: rgba(0, 0, 0, 0.1);
 }
 .split.button span {
-  border-left-color: #720e22;
+  border-left-color: #17182a;
 }
 .split.button span {
   width: 3em;
@@ -5214,11 +5231,11 @@ form.custom .custom.disabled {
   background: #f7f7f7;
 }
 .top-bar-section ul li > a.button {
-  background: #b61636;
+  background: #32345c;
   font-size: 0.8125em;
 }
 .top-bar-section ul li > a.button:hover {
-  background: #891028;
+  background: #20213b;
 }
 .top-bar-section ul li > a.button.secondary {
   background: #32345c;
@@ -6037,8 +6054,8 @@ form.custom .custom.disabled {
   position: relative;
   padding: 0.6875em 1.3125em 0.75em 0.6875em;
   font-size: 0.875em;
-  background-color: #b61636;
-  border-color: #891028;
+  background-color: #32345c;
+  border-color: #20213b;
   color: white;
 }
 .alert-box .close {
@@ -6105,7 +6122,7 @@ form.custom .custom.disabled {
   font-size: 0.6875em;
   padding-left: 0.75em;
   text-transform: uppercase;
-  color: #b61636;
+  color: #32345c;
 }
 .breadcrumbs li.current a {
   cursor: default;
@@ -6163,7 +6180,7 @@ kbd {
   position: relative;
   padding: 0.1875em 0.625em 0.25em;
   font-size: 0.875em;
-  background-color: #b61636;
+  background-color: #32345c;
   color: #fff;
 }
 .label.radius {
@@ -6235,13 +6252,13 @@ kbd {
   background: transparent;
 }
 .pagination li.current a {
-  background: #b61636;
+  background: #32345c;
   color: white;
   font-weight: bold;
   cursor: default;
 }
 .pagination li.current a:hover, .pagination li.current a:focus {
-  background: #b61636;
+  background: #32345c;
 }
 
 .pagination-centered {
@@ -6280,10 +6297,10 @@ kbd {
 .panel.callout {
   border-style: solid;
   border-width: 1px;
-  border-color: #891028;
+  border-color: #20213b;
   margin-bottom: 1.25em;
   padding: 1.25em;
-  background: #b61636;
+  background: #32345c;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
@@ -6368,7 +6385,7 @@ kbd {
   margin-bottom: 0.625em;
 }
 .progress .meter {
-  background: #b61636;
+  background: #32345c;
   height: 100%;
   display: block;
 }
@@ -6418,7 +6435,7 @@ kbd {
 }
 .side-nav li a {
   display: block;
-  color: #b61636;
+  color: #32345c;
 }
 .side-nav li.active a {
   color: #4d4d4d;
@@ -6461,7 +6478,7 @@ kbd {
   -webkit-border-radius: 1000px;
   border-radius: 1000px;
   font-weight: bold;
-  background: #b61636;
+  background: #32345c;
   padding: 0.1875em 0.5625em;
   cursor: default;
   color: white;
@@ -6724,8 +6741,8 @@ table tfoot tr td {
   transition: all 200ms ease-out;
 }
 .th:hover, .th:focus {
-  -webkit-box-shadow: 0 0 6px 1px rgba(182, 22, 54, 0.5);
-  box-shadow: 0 0 6px 1px rgba(182, 22, 54, 0.5);
+  -webkit-box-shadow: 0 0 6px 1px rgba(50, 52, 92, 0.5);
+  box-shadow: 0 0 6px 1px rgba(50, 52, 92, 0.5);
 }
 .th.radius {
   -webkit-border-radius: 3px;
@@ -6740,8 +6757,8 @@ table tfoot tr td {
   color: #333333;
 }
 .has-tip:hover, .has-tip:focus {
-  border-bottom: dotted 1px #5b0b1b;
-  color: #b61636;
+  border-bottom: dotted 1px #0e0f1a;
+  color: #32345c;
 }
 .has-tip.tip-left, .has-tip.tip-right {
   float: none !important;
@@ -6773,8 +6790,8 @@ table tfoot tr td {
   top: -10px;
 }
 .tooltip.opened {
-  color: #b61636 !important;
-  border-bottom: dotted 1px #5b0b1b !important;
+  color: #32345c !important;
+  border-bottom: dotted 1px #0e0f1a !important;
 }
 
 .tap-to-close {

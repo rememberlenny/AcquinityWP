@@ -30,14 +30,12 @@ get_header(); ?>
       <div class="s9999 company-facts-extension h300 fl">
         <div class="company-facts-content content-sec">
           <div id="featrap" class="  lftcont case-studies-content content-sec fr">
-          <h4 class="pre-head subheader">Acquinity's Site Network</h4>
-            <ul>
+          <h4 class="pre-head subheader">Acquinity Stats</h4>
+          <hr>
+            <ul class="pre-head">
               <li class="active case-row" data-orbit-slide>
-                <div class="clearboth chart-container">
-                  <div class="chart">
-                    
-                  </div>
-                </div>
+              	<h5 class="subheader"><?php the_field('page_statistic_number'); ?></h5>
+              	<h5><?php the_field('page_statistic_text'); ?></h5>
               </li>
             </ul>
           </div>

@@ -5,10 +5,13 @@
 //
 
   div.sidebar{
+    hr:first-child{
+      border-width: 0px;
+    }
     background: $sidebar-main-color;
     color: $sidebar-text-color;
     a{
-      color: $sidebar-link-color;
+      color: $sidebar-link-color !important;
       @include transition( color, .2s );
       &:hover{
         color: $success-color;
@@ -17,6 +20,9 @@
       .icon{
         font-size: 1.4em;
       }
+    }
+    li{
+      color: $sidebar-link-color !important;
     }
     h4.subheader{
       font-size: 1.9em;

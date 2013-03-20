@@ -39,8 +39,8 @@
   $text-direction: ltr;
 
   // We use these as default colors throughout
-  $primary-color: #B61636;
   $secondary-color: #32345c;
+  $primary-color: $secondary-color;
 
   $alert-color: #B65116;
   $success-color: #586ca8;

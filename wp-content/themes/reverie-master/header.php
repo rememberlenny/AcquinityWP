@@ -33,6 +33,9 @@
   <!-- Startup Image iPhone (320x460) -->
   <link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 
+  <script type="text/javascript" src="//use.typekit.net/hxm2vop.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 <?php wp_head(); ?>
 
 </head>
@@ -78,7 +81,7 @@
                 'theme_location' => 'primary',
                 'container' => false,
                 'depth' => 0,
-                'items_wrap' => '<ul class="left">%3$s</ul>',
+                'items_wrap' => '<ul class="left">%3$s<li class="divider"></li></ul>',
                 'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
                 'walker' => new reverie_walker( array(
                     'in_top_bar' => true,

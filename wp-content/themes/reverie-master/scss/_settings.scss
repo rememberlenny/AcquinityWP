@@ -383,7 +383,18 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
     }
     .case-row{
-      margin-top: 1em;
+      margin-top: 0em;
+      h5{
+        color: #efefef;
+        &.subheader{
+          font-size: 3em !important;
+          margin-bottom: .2em;
+          line-height: 1em;
+          color: #efefef;
+          font-weight: 100;
+        }
+        font-size: 1em;
+      }
     }
       .chart-container{
         margin: 0 auto;

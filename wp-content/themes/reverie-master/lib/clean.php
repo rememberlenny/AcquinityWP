@@ -124,9 +124,9 @@ function reverie_scripts_and_styles() {
     // adding Foundation scripts file in the footer
     wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
     
-    if ($is_IE) {
+
        wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
-    }
+
 
     // enqueue styles and scripts
     wp_enqueue_script( 'reverie-modernizr' );
