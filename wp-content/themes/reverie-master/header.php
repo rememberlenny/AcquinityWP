@@ -35,7 +35,18 @@
 
   <script type="text/javascript" src="//use.typekit.net/hxm2vop.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+  <style type="text/css">
+    .facebook{
+      background: url('<?php the_field('linkedin_icon', 'option'); ?>') center center;
+      -moz-background-size:100% 100%; /* Old Firefox */
+      background-size:100% 100%;
+    }
+    .linkedin{
+      background: url('<?php the_field('facebook_icon', 'option'); ?>') center center;
+      -moz-background-size:100% 100%; /* Old Firefox */
+      background-size:100% 100%;
+    }
+  </style>
 <?php wp_head(); ?>
 
 </head>
@@ -68,7 +79,7 @@
         <ul class="title-area">
             <li class="name">
               <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                <img class="logo" src="images/logo.png" alt="">
+                <img class="logo" src="<?php the_field('site_logo', 'option'); ?>" alt="">
                 <?php //bloginfo( 'name' ); ?>
               </a></h1>
             </li>
@@ -90,7 +101,6 @@
             ) );
         ?>
         <ul class="right">
-          <li class="divider hide-for-medium-down"></li>
           <li class="has-form hide-for-medium-down fr">
                   <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <div class="row collapse search-box">
@@ -98,9 +108,9 @@
                         <input type="text" value="" name="s" id="s" placeholder="Search">
                       </div>
                       <div class="large-4 columns">
-                        <button type="submit" id="searchsubmit" class="button tiny">
-                          <i class="general foundiconenc-search"></i>
-                        </button>
+                        <input type="submit" id="searchsubmit" class="button tiny">
+
+                        </input>
                       </div>
                     </div>
                   </form>

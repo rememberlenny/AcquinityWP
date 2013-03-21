@@ -26,16 +26,16 @@ get_header(); ?>
     </div>
   </div>
   <div class="sidebar large-4 small-12 fl">
-    <div class="company-facts hide-for-small" id="featrap"> 
+    <div class="company-facts hide-for-small"> 
       <div class="s9999 company-facts-extension h300 fl">
         <div class="company-facts-content content-sec">
-          <div id="featrap" class="  lftcont case-studies-content content-sec fr">
+          <div id="featrap" class="  lftcont case-studies-content content-sec fl">
           <h4 class="pre-head subheader">Acquinity Stats</h4>
-          <hr>
             <ul class="pre-head">
               <li class="active case-row" data-orbit-slide>
+              	<p><?php the_field('page_statistic_pretext'); ?></p>
               	<h5 class="subheader"><?php the_field('page_statistic_number'); ?></h5>
-              	<h5><?php the_field('page_statistic_text'); ?></h5>
+              	<p><?php the_field('page_statistic_text'); ?></p>
               </li>
             </ul>
           </div>
@@ -98,36 +98,69 @@ get_header(); ?>
 	<div class="main large-8 columns "> 	
 		<div class="case-studies fr">
 		  <div class="s9999 case-studies-extension fr">
-		    <div id="case-sliders" class="pr98 pl98 lftcont case-studies-content content-sec fr">
-		      <h4 class="subheader">Success Stories</h4>
-		      <ul data-orbit>
-		        <li class="active case-row" data-orbit-slide>
-		          <div class="case-study-item text-center large-12 fl">
-		            <h2 class="subheader text-left">Energy</h2>
-		            <p class="text-left"><a href="" class="secondary">Acquinity's lead conversion team powered Direct Energy's customer acquisition efforts. &rarr;</a></p>
-		            
-		            <div class="image-wrapper radius">
-		            <img class="centered " src="images/case/telecom.jpg" alt=""></div>
-		          </div>
-		        </li>
-		        <li class=" case-row" data-orbit-slide>
-		          <div class="case-study-item text-center large-12 fl">
-		            <h2 class="subheader text-left">Telecom</h2>
-		            <p class="text-left"><a href="" class="secondary">Mobile provider Terracom/YourTel made the right call with Acquinity's targeting technology. &rarr;</a></p>
-		            <div class="image-wrapper radius">
-		            <img class="centered " src="images/case/phone.jpg" alt=""></div>
-		          </div>
-		        </li>
-		        <li class="case-row" data-orbit-slide>
-		          <div class="case-study-item text-center large-12 fl">
-		            <h2 class="subheader text-left">Retail</h2>
-		            <p class="text-left"><a href="" class="secondary">Natural food distributor NatureBox tasked Acquinity with boosting online orders. &rarr;</a></p>
-		            <div class="image-wrapper radius">
-		            <img class="centered " src="images/case/nuts.jpg" alt=""></div>
-
-		          </div>
-		        </li>
-		      </ul>
+		    <div id="case-sliders" class="column lftcont case-studies-content content-sec fr">
+		    	<div class="large-6 column">
+		    		<a href="/success-stories/">
+		    			<h4 class="subheader">Success Stories</h4>
+			      </a>
+	          <div class="case-study-item text-center large-12 fl">
+	          	<a href="/success-story-energy/" class="secondary">
+	          	<div class="image-wrapper radius">
+		            <img class="centered " src="images/case/telecom.jpg" alt="">
+	            </div>
+	            <h2 class="subheader text-left">Success Story: Energy</h2>
+	            <p class="text-left">Acquinity's lead conversion team powered Direct Energy's customer acquisition efforts. &rarr;</p></a>
+	          </div>
+						<hr>
+	          <div class=" clear text-left">
+							<h4 class="subheader">Recent Stories</h4>
+		          <ul class="circle column">
+		          	
+				        <li class="active case-row">
+				          	<a href="/success-story-telecom/" class="secondary">
+				            <p class="subheader text-left">Success Story: Telecom</p>
+				            </a>
+				        </li>
+				        <li class="active case-row">
+				          	<a href="/success-story-telecom/" class="secondary">
+				            <p class="subheader text-left">Success Story: Retail</p>
+				            </a>
+				        </li>
+				      </ul>
+	          </div>
+	        	<hr>
+		        	<a href="/success-stories/">
+		        		<p>View Archive</p>
+	        		</a> 
+	        	<hr>
+		        
+		    	</div>
+		    	<div class="large-6 column">
+		    		<a href="/news/">
+		    			<h4 class="subheader">News</h4>
+			      </a>
+	          <div class="case-study-item text-center large-12 fl">
+	          	<a href="/news/" class="secondary">
+	          	<div class="image-wrapper radius">
+		            <img class="centered " src="images/case/news.jpg" alt="">
+	            </div>
+	            <div class="text-left">
+	            	<a href="http://localhost:4421/live-from-leadscon-las-vegas-2013/">
+			            <h2 class="subheader text-left">Live from LEADSCON</h2>
+			            <label for="">20 MAR '13</label>
+			            <p class="text-left">
+			            	An overview from Acquinity's EVP of Media, Don Silvestri &rarr; 
+		            	</p>
+	            	</a>
+	            </div>
+	            <hr>
+								<a href="/news/">
+									<p>View Archive</p>
+								</a> 
+							<hr>
+	            </a>
+	          </div>
+		    	</div>
 		    </div>
 		  </div>
 		</div>
@@ -141,7 +174,7 @@ get_header(); ?>
 						<?php while (have_posts()) : the_post(); ?>
 						<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 							<header>
-								<h4 class="subheader"><?php the_title(); ?></h4>
+								<h4 class="subheader"><?php the_field('home_section_title'); ?></h4>
 								<?php // reverie_entry_meta(); ?>
 							</header>
 							<div class="entry-content">

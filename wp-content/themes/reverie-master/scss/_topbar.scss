@@ -51,6 +51,11 @@
       }
     }
     .top-bar{
+
+      #searchsubmit{
+        top: 24px;
+        padding-top: 0em;
+      }
       margin-bottom: 0em !important;
       li.name h1 {
         line-height: 68px;
@@ -102,6 +107,7 @@
 
 
     .top-nav-wrapper{
+      border-bottom: solid 1px #e6e6e6;
     }
 
  

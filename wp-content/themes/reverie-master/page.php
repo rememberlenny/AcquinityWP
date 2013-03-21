@@ -1,27 +1,71 @@
-<?php get_header(); ?>
+<?php 
+/*
+Template Name: Home Page
+*/
+get_header(); ?>
+
+<style type="text/css">
+	.masthead-photo {
+		background: url("<?php the_field('hero_image'); ?>") center center;
+	}
+</style>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
 	
-	<?php /* Start loop */ ?>
-	<?php while (have_posts()) : the_post(); ?>
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<header>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<?php reverie_entry_meta(); ?>
-			</header>
-			<div class="entry-content">
-				<?php the_content(); ?>
+<div class="content hero-row row twelve">
+  <div class="main large-8 fl">
+    <div class="masthead-photo h300">
+      <div class="s9999 masthead-photo-extension image-wrapper">
+        <div class="masthead-photo-content">
+          
+					<div> <h1 class="text-left hero-text"><?php the_field('hero_title_line_1'); ?></h1></div>
+          <div> <h1 class="text-left hero-text"><?php the_field('hero_title_line_2'); ?></h1></div>
+          
+        </div>
+       </div>
+    </div>
+  </div>
+  <div class="sidebar large-4 small-12 fl">
+    <div class="company-facts hide-for-small"> 
+      <div class="s9999 company-facts-extension h300 fl">
+        <div class="company-facts-content content-sec">
+          <div id="featrap" class="  lftcont case-studies-content content-sec fr">
+          <h4 class="pre-head subheader">Acquinity Stats</h4>
+            <ul class="pre-head">
+              <li class="active case-row" data-orbit-slide>
+              	<h5 class="subheader"><?php the_field('page_statistic_number'); ?></h5>
+              	<h5><?php the_field('page_statistic_text'); ?></h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>	
+	 
+	
+<div class="content content-main row twelve">
+	<div class="main large-8 columns "> 	
+		<?php /* Start loop */ ?>
+		<div class="case-studies fr">
+		  <div class="s9999 case-studies-extension fr">
+		    <div id="case-sliders" class="pr98 pl98 lftcont case-studies-content content-sec fr">
+	      <?php while (have_posts()) : the_post(); ?>
+					<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+						<header>
+							<h4 class="subheader"><?php the_title(); ?></h4>
+							<?php // reverie_entry_meta(); ?>
+						</header>
+						<div class="entry-content">
+							<?php the_content(); ?>
+						</div>
+					</article>
+				<?php endwhile; // End the loop ?>
+			  </div>
 			</div>
-			<footer>
-				<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'reverie'), 'after' => '</p></nav>' )); ?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			<?php comments_template(); ?>
-		</article>
-	<?php endwhile; // End the loop ?>
-
+		</div>
 	</div>
 	<?php get_sidebar(); ?>
-		
+</div>
 <?php get_footer(); ?>

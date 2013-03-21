@@ -3,7 +3,16 @@
 //
 // Sidebar
 //
-
+  #featrap{
+    h4.subheader{
+      margin-left: .2em;
+    }
+  }
+  @media only screen and (min-width: 768px){
+    #sidebar.sidebar{
+      margin-top: 1.4em;
+    }
+  }
   div.sidebar{
     hr:first-child{
       border-width: 0px;
@@ -11,7 +20,7 @@
     background: $sidebar-main-color;
     color: $sidebar-text-color;
     a{
-      color: $sidebar-link-color !important;
+      color: $sidebar-link-color ;
       @include transition( color, .2s );
       &:hover{
         color: $success-color;
@@ -60,6 +69,13 @@
   div.sidebar{
     h4.subheader{
       font-size: 1.6em;
+    }
+  }
+  .email-box{
+    label{
+        color: #AFAEAF;
+        margin-bottom: 1em;
+        @include transition( color, .2s );
     }
   }
   @media only screen and (max-width: 767px) {
@@ -115,7 +131,7 @@
 
   // Email Alerts
   //
-    div.email-alerts-block{
+  .email-box{
 
       h4.subheader{
       }
@@ -125,11 +141,7 @@
       .email-box{
         padding-left: $left-spacing;
       }
-      label{
-        color: #AFAEAF;
-        margin-bottom: 1em;
-        @include transition( color, .2s );
-      }
+ 
       .button{
         &:hover{
           color: #AFAEAF;
@@ -181,31 +193,18 @@
             color: $youtube-color; 
           }
         }
-        .social-icon{
-          display:inline-block;
-          .social-icon-case{
-            margin: 0 auto;
-            border-radius: 3px;
-            width:35px;
-            height:35px;
-            @include transition (all, 1s );
-            &:hover{
-              @include transition (all, .5s );
-              opacity:.6;
-            }
-          }
-          img{
-            width: 30px;
-          }
-          .facebook{
-            background: url('../images/social/fb-icon.png') center center;
-            -moz-background-size:100% 100%; /* Old Firefox */
-            background-size:100% 100%;
-          }
-          .linkedin{
-            background: url('../images/social/li-icon.png') center center;
-            -moz-background-size:100% 100%; /* Old Firefox */
-            background-size:100% 100%;
+      }
+      .social-icon{
+        display:inline-block !important;
+        .social-icon-case{
+          margin: 0 auto;
+          border-radius: 3px;
+          width:35px;
+          height:35px;
+          @include transition (all, 1s );
+          &:hover{
+            @include transition (all, .5s );
+            opacity:.6;
           }
         }
       }

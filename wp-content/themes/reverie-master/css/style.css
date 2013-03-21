@@ -406,6 +406,10 @@ nav.top-bar input {
 .top-bar {
   margin-bottom: 0em !important;
 }
+.top-bar #searchsubmit {
+  top: 24px;
+  padding-top: 0em;
+}
 .top-bar li.name h1 {
   line-height: 68px;
   font-size: 1.7625em;
@@ -455,6 +459,10 @@ nav.top-bar input {
   background: none;
 }
 
+.top-nav-wrapper {
+  border-bottom: solid 1px #e6e6e6;
+}
+
 .logo {
   padding-top: .7em;
   width: 130px;
@@ -501,6 +509,15 @@ h4.subheader {
   text-transform: uppercase;
 }
 
+#featrap h4.subheader {
+  margin-left: .2em;
+}
+
+@media only screen and (min-width: 768px) {
+  #sidebar.sidebar {
+    margin-top: 1.4em;
+  }
+}
 div.sidebar {
   background: #333333;
   color: white;
@@ -509,7 +526,7 @@ div.sidebar hr:first-child {
   border-width: 0px;
 }
 div.sidebar a {
-  color: #afaeaf !important;
+  color: #afaeaf;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
@@ -563,6 +580,16 @@ div.sidebar h4.subheader {
   font-size: 1.6em;
 }
 
+.email-box label {
+  color: #AFAEAF;
+  margin-bottom: 1em;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
 @media only screen and (max-width: 767px) {
   .sidebar {
     text-align: center;
@@ -595,22 +622,13 @@ div.sidebar h4.subheader {
   height: auto !important;
 }
 
-div.email-alerts-block a {
+.email-box a {
   color: white;
 }
-div.email-alerts-block .email-box {
+.email-box .email-box {
   padding-left: 0.08em;
 }
-div.email-alerts-block label {
-  color: #AFAEAF;
-  margin-bottom: 1em;
-  -webkit-transition: color 0.2s;
-  -moz-transition: color 0.2s;
-  -o-transition: color 0.2s;
-  -ms-transition: color 0.2s;
-  transition: color 0.2s;
-}
-div.email-alerts-block .button:hover {
+.email-box .button:hover {
   color: #AFAEAF;
   background: #20213b;
   -webkit-transition: all 0.2s;
@@ -619,7 +637,7 @@ div.email-alerts-block .button:hover {
   -ms-transition: all 0.2s;
   transition: all 0.2s;
 }
-div.email-alerts-block a.prefix {
+.email-box a.prefix {
   border-radius: 3px;
   margin-left: 1.1em;
 }
@@ -659,10 +677,11 @@ div.email-alerts-block a.prefix {
 .social-block .foundiconsoc-youtube:hover {
   color: #d02525;
 }
-.social-block .social-icon {
-  display: inline-block;
+
+.social-icon {
+  display: inline-block !important;
 }
-.social-block .social-icon .social-icon-case {
+.social-icon .social-icon-case {
   margin: 0 auto;
   border-radius: 3px;
   width: 35px;
@@ -673,28 +692,13 @@ div.email-alerts-block a.prefix {
   -ms-transition: all 1s;
   transition: all 1s;
 }
-.social-block .social-icon .social-icon-case:hover {
+.social-icon .social-icon-case:hover {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
   opacity: .6;
-}
-.social-block .social-icon img {
-  width: 30px;
-}
-.social-block .social-icon .facebook {
-  background: url("../images/social/fb-icon.png") center center;
-  -moz-background-size: 100% 100%;
-  /* Old Firefox */
-  background-size: 100% 100%;
-}
-.social-block .social-icon .linkedin {
-  background: url("../images/social/li-icon.png") center center;
-  -moz-background-size: 100% 100%;
-  /* Old Firefox */
-  background-size: 100% 100%;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1506,6 +1510,27 @@ ul, li, ol {
   list-style: none;
 }
 
+ul.disc li {
+  list-style: disc;
+}
+
+ul.circle li {
+  list-style: circle;
+}
+
+.clear {
+  clear: both;
+}
+
+label {
+  font-size: 0.875em;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 1.1875em;
+}
+
 body {
   overflow-x: hidden;
   background: white;
@@ -1520,6 +1545,19 @@ body {
 html ::selection, body ::selection, button ::selection, input ::selection, select ::selection, textarea ::selection {
   background: #586ca8;
   color: white;
+}
+
+@media only screen and (min-width: 58.75em) {
+  .top-bar-section li a:not(.button) {
+    padding: 0 20px;
+  }
+}
+.home .case-studies-extension {
+  border-bottom: none;
+}
+
+.case-studies-extension {
+  border-bottom: solid 1px #e6e6e6;
 }
 
 .social-block span {
@@ -1567,7 +1605,7 @@ hr.silent {
 }
 
 .h300 {
-  height: 300px;
+  height: 250px;
 }
 
 .h100 {
@@ -1662,7 +1700,9 @@ hr.silent {
 
 .brand-row {
   padding: 0 .5em;
-  background: #262626;
+  background: #FAF8F6;
+  border-bottom: 1px solid #E4E2E1;
+  border-top: 1px solid #E4E2E1;
 }
 .brand-row img {
   max-height: 50px;
@@ -1702,7 +1742,7 @@ hr.silent {
 }
 
 .masthead-photo-content {
-  margin-top: 185px;
+  margin-top: 145px;
 }
 
 .masthead-photo-content {
@@ -1737,6 +1777,7 @@ hr.silent {
   .masthead-photo-content h1 {
     font-weight: 400;
     font-size: 2.2em;
+    line-height: 1.3;
   }
 
   .content-block .rgtcont.text-c, .content-block ul.text-c {
@@ -1744,7 +1785,7 @@ hr.silent {
   }
 
   .masthead-photo-content {
-    margin-top: 155px;
+    margin-top: 130px;
   }
 
   .masthead-photo-extension {
@@ -1791,10 +1832,11 @@ hr.silent {
   .masthead-photo-content {
     float: left;
     padding: 0 1.875em 0;
-    margin-top: 135px;
+    margin-top: 70px;
+    padding-bottom: 12px;
   }
   .masthead-photo-content h1 {
-    font-weight: 100;
+    font-weight: 400;
     font-size: 2.8em;
     line-height: 1.3;
   }
@@ -1853,15 +1895,12 @@ hr.silent {
 }
 #featrap {
   margin: 0 auto;
-  padding-top: 0em;
+  padding-top: 2.1em;
 }
 #featrap .pre-head {
   padding-left: 0.9375em;
-  line-height: 3em;
-  margin-bottom: 0em;
-  padding-bottom: 0em;
+  line-height: 1.5em;
   opacity: 1;
-  font-size: 1.6em !important;
 }
 #featrap .orbit-container li {
   opacity: 0;
@@ -1889,19 +1928,21 @@ hr.silent {
 #featrap .sub-case h4 {
   line-height: 1em;
 }
-#featrap .case-row {
-  margin-top: 0em;
+#featrap ul.pre-head {
+  margin-top: 0.6em !important;
 }
 #featrap .case-row h5 {
-  color: #efefef;
-  font-size: 1em;
+  color: #e2e1e2 !important;
+  font-weight: 300;
+  font-size: 4em;
 }
 #featrap .case-row h5.subheader {
-  font-size: 3em !important;
-  margin-bottom: .2em;
-  line-height: 1em;
+  font-size: 3 !important;
+  margin-bottom: 0em;
+  margin-top: 0em;
+  line-height: .8em;
   color: #efefef;
-  font-weight: 100;
+  font-weight: 300;
 }
 #featrap .chart-container {
   margin: 0 auto;
@@ -1959,12 +2000,15 @@ hr.silent {
   margin-bottom: .2em;
 }
 .case-study-item p {
-  font-size: .8em;
+  font-size: 1em;
 }
 
 .case-row {
-  padding-left: 0em;
+  padding-left: 0.4675em;
   padding-right: 0em;
+}
+.case-row p {
+  margin-bottom: 0em;
 }
 .case-row a.button {
   opacity: 0;
@@ -2046,10 +2090,13 @@ hr.silent {
   overflow: visible !important;
 }
 
+.home #case-sliders {
+  text-align: center;
+}
+
 #case-sliders {
   padding-top: 1.5em;
   padding-bottom: 1em;
-  text-align: center;
 }
 #case-sliders h4 {
   text-align: left;

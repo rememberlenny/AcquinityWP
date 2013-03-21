@@ -95,4 +95,22 @@ function reverie_entry_meta() {
 	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('Posted on %s at %s.', 'reverie'), get_the_time('l, F jS, Y'), get_the_time()) .'</time>';
 	echo '<p class="byline author">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
 }
+
+register_post_type('case study slider', array(	'label' => 'Case Studies','description' => '','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'exclude_from_search' => false,'supports' => array('title','editor','excerpt','trackbacks','custom-fields','comments','revisions','thumbnail','author','page-attributes',),'labels' => array (
+  'name' => 'Case Studies',
+  'singular_name' => 'Case Study',
+  'menu_name' => 'Case Studies',
+  'add_new' => 'Add Case Study',
+  'add_new_item' => 'Add New Case Study',
+  'edit' => 'Edit',
+  'edit_item' => 'Edit Case Study',
+  'new_item' => 'New Case Study',
+  'view' => 'View Case Study',
+  'view_item' => 'View Case Study',
+  'search_items' => 'Search Case Studies',
+  'not_found' => 'No Case Studies Found',
+  'not_found_in_trash' => 'No Case Studies Found in Trash',
+  'parent' => 'Parent Case Study',
+),) );
+
 ?>
