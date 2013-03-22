@@ -4,11 +4,16 @@ Template Name: Home Page
 */
 get_header(); ?>
 
+<?php if (has_post_thumbnail( $post->ID ) ): ?>
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
 <style type="text/css">
 	.masthead-photo {
-		background: url("<?php the_field('hero_image'); ?>") center center;
+		background: url("<?php echo $image[0]; ?>") center right no-repeat #FAF8F6;
 	}
 </style>
+
+<?php endif; ?>
 
 <!-- Row for main content area -->
 	
@@ -17,10 +22,16 @@ get_header(); ?>
     <div class="masthead-photo h300">
       <div class="s9999 masthead-photo-extension image-wrapper">
         <div class="masthead-photo-content">
-          
-					<div> <h1 class="text-left hero-text"><?php the_field('hero_title_line_1'); ?></h1></div>
-          <div> <h1 class="text-left hero-text"><?php the_field('hero_title_line_2'); ?></h1></div>
-          
+          <?php
+          if(get_field('hero_title_line_1'))
+          {
+            echo '<div> <h1 class="text-left hero-text">' . the_field('hero_title_line_1') . '</h1></div>';
+          }
+          if(get_field('hero_title_line_2'))
+          {
+            echo '<div> <h1 class="text-left hero-text">' . the_field('hero_title_line_2') . '</h1></div>';
+          }
+          ?>
         </div>
        </div>
     </div>

@@ -1506,6 +1506,16 @@ h4.subheader {
   clear: both;
 }
 
+.gform_body label {
+  font-weight: 300;
+}
+.gform_body label .gfield_label {
+  font-weight: 400;
+}
+.gform_body input {
+  border-radius: 3px;
+}
+
 ul, li, ol {
   list-style: none;
 }
@@ -1729,6 +1739,10 @@ hr.silent {
   transition: all 2s;
 }
 
+.top-bar-section ul.right {
+  max-width: 270px;
+}
+
 .masthead-photo {
   background: url("../images/hero/hero-map.jpg") center center;
   overflow: hidden;
@@ -1785,7 +1799,7 @@ hr.silent {
   }
 
   .masthead-photo-content {
-    margin-top: 130px;
+    margin-top: 90px;
   }
 
   .masthead-photo-extension {
@@ -1832,12 +1846,12 @@ hr.silent {
   .masthead-photo-content {
     float: left;
     padding: 0 1.875em 0;
-    margin-top: 70px;
+    margin-top: 90px;
     padding-bottom: 12px;
   }
   .masthead-photo-content h1 {
     font-weight: 400;
-    font-size: 2.8em;
+    font-size: 2.2em;
     line-height: 1.3;
   }
 
@@ -1901,14 +1915,6 @@ hr.silent {
   padding-left: 0.9375em;
   line-height: 1.5em;
   opacity: 1;
-}
-#featrap .orbit-container li {
-  opacity: 0;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
 }
 #featrap .orbit-container li.active {
   opacity: 1;
@@ -1995,6 +2001,11 @@ hr.silent {
 .case-study-item {
   padding: 0em 0em;
 }
+.case-study-item label {
+  line-height: 1.5em;
+  display: inline-block;
+  color: #a2a2a2;
+}
 .case-study-item h2.subheader {
   font-size: 1.5em;
   margin-bottom: .2em;
@@ -2032,7 +2043,6 @@ hr.silent {
 }
 .case-studies-extension li {
   height: auto;
-  opacity: 0;
   -webkit-transition: all 0.9s;
   -moz-transition: all 0.9s;
   -o-transition: all 0.9s;
@@ -2230,7 +2240,6 @@ hr.silent {
   }
   .case-studies-extension li {
     height: auto;
-    opacity: 0;
     -webkit-transition: all 0.9s;
     -moz-transition: all 0.9s;
     -o-transition: all 0.9s;
@@ -2262,7 +2271,6 @@ hr.silent {
   }
 
   .case-studies-extension li {
-    opacity: 0;
     -webkit-transition: all 0.9s;
     -moz-transition: all 0.9s;
     -o-transition: all 0.9s;

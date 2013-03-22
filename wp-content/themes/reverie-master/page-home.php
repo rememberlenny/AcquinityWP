@@ -4,11 +4,16 @@ Template Name: Home Page
 */
 get_header(); ?>
 
+<?php if (has_post_thumbnail( $post->ID ) ): ?>
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
 <style type="text/css">
 	.masthead-photo {
-		background: url("<?php the_field('hero_image'); ?>") center center;
+		background: url("<?php echo $image[0]; ?>") center right no-repeat #FAF8F6;
 	}
 </style>
+
+<?php endif; ?>
 
 <!-- Row for main content area -->
 	
@@ -17,10 +22,16 @@ get_header(); ?>
     <div class="masthead-photo h300">
       <div class="s9999 masthead-photo-extension image-wrapper">
         <div class="masthead-photo-content">
-          
-					<div> <h1 class="text-left hero-text"><?php the_field('hero_title_line_1'); ?></h1></div>
-          <div> <h1 class="text-left hero-text"><?php the_field('hero_title_line_2'); ?></h1></div>
-          
+          <?php
+          if(get_field('hero_title_line_1'))
+          {
+            echo '<div> <h1 class="text-left hero-text">' . the_field('hero_title_line_1') . '</h1></div>';
+          }
+          if(get_field('hero_title_line_2'))
+          {
+            echo '<div> <h1 class="text-left hero-text">' . the_field('hero_title_line_2') . '</h1></div>';
+          }
+          ?>
         </div>
        </div>
     </div>
@@ -101,19 +112,21 @@ get_header(); ?>
 		    <div id="case-sliders" class="column lftcont case-studies-content content-sec fr">
 		    	<div class="large-6 column">
 		    		<a href="/success-stories/">
-		    			<h4 class="subheader">Success Stories</h4>
+		    			<h4 class="subheader">Featured Success</h4>
 			      </a>
-	          <div class="case-study-item text-center large-12 fl">
+	          <div class="case-study-item text-left large-12 fl">
 	          	<a href="/success-story-energy/" class="secondary">
 	          	<div class="image-wrapper radius">
 		            <img class="centered " src="images/case/telecom.jpg" alt="">
 	            </div>
-	            <h2 class="subheader text-left">Success Story: Energy</h2>
-	            <p class="text-left">Acquinity's lead conversion team powered Direct Energy's customer acquisition efforts. &rarr;</p></a>
+	            <h2 class="subheader">Direct Energy</h2>
+	            <label for="">Customer Acquisition,</label>
+	            <label for="">Energy</label>
+	            <p class="">Acquinity's lead conversion team powered Direct Energy's customer acquisition efforts. &rarr;</p></a>
 	          </div>
 						<hr>
-	          <div class=" clear text-left">
-							<h4 class="subheader">Recent Stories</h4>
+	          <div class=" clear text">
+							<h4 class="subheader">Success Stories</h4>
 		          <ul class="circle column">
 		          	
 				        <li class="active case-row">
@@ -127,13 +140,12 @@ get_header(); ?>
 				            </a>
 				        </li>
 				      </ul>
+				      <hr>
+				      	<a href="/success-stories/">
+			        		<p class="subheader text-center">View Success Archive</p>
+		        		</a>
+	        		<hr>
 	          </div>
-	        	<hr>
-		        	<a href="/success-stories/">
-		        		<p>View Archive</p>
-	        		</a> 
-	        	<hr>
-		        
 		    	</div>
 		    	<div class="large-6 column">
 		    		<a href="/news/">
@@ -155,7 +167,7 @@ get_header(); ?>
 	            </div>
 	            <hr>
 								<a href="/news/">
-									<p>View Archive</p>
+									<p>View News Archive</p>
 								</a> 
 							<hr>
 	            </a>

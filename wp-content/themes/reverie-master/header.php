@@ -102,21 +102,21 @@
         ?>
         <ul class="right">
           <li class="has-form hide-for-medium-down fr">
-                  <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <div class="row collapse search-box">
-                      <div class="large-8 columns">
-                        <input type="text" value="" name="s" id="s" placeholder="Search">
-                      </div>
-                      <div class="large-4 columns">
-                        <input type="submit" id="searchsubmit" class="button tiny">
+            <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+              <div class="row collapse search-box">
+                <div class="large-7 columns">
+                  <input type="text" value="" name="s" id="s" placeholder="Search">
+                </div>
+                <div class="large-4 columns">
+                  <input type="submit" id="searchsubmit" class="button tiny">
 
-                        </input>
-                      </div>
-                    </div>
-                  </form>
-                </li>
+                  </input>
+                </div>
+              </div>
+            </form>
+          </li>
         </ul>
-        </section>
+      </section>
     </nav>
     <!-- End of Top-Bar -->
   </div>

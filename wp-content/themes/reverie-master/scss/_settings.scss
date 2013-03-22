@@ -9,6 +9,7 @@
 @import "footer";
 @import "font";
 @import "ieset";
+@import "gform";
 
 //
 // Gen eral
@@ -200,6 +201,11 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 // Main
 //
 
+.top-bar-section {
+  ul.right{
+    max-width: 270px;
+  }
+}
   // Hero
   // 
 
@@ -256,7 +262,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       }
     }
     .masthead-photo-content{
-      margin-top: 130px;
+      margin-top: 90px;
     }
       .masthead-photo-extension{ 
       width: 100%; 
@@ -314,11 +320,11 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       .masthead-photo-content{
       float: left;
       padding:0 1.875em 0;
-      margin-top: 70px;
+      margin-top: 90px;
       padding-bottom: 12px;
       h1{
         font-weight: 400;
-        font-size: 2.8em;
+        font-size: 2.2em;
         line-height: 1.3;
       }
     }
@@ -382,10 +388,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         opacity: 1;
       }
       .orbit-container{
-        li{
-          opacity: 0;
-          @include transition( all, .5s)
-        }
         li.active{
           opacity: 1;
           @include transition( all, .5s)
@@ -472,6 +474,11 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
     }
     .case-study-item{ 
       padding: 0em 0em; 
+      label{
+        line-height:1.5em;
+        display: inline-block;
+        color: lighten(#6f6f6f, 20%);
+      }
       h2.subheader{
         font-size: 1.5em;
 
@@ -502,7 +509,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         background: white;
         li{
           height: auto;
-          opacity: 0;
             @include transition( all, .9s );
         }
         li.active{
@@ -603,6 +609,8 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
 
 
+
+
   //
   // Page Main
   //
@@ -687,7 +695,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         background: white;
         li{
           height: auto;
-          opacity: 0;
             @include transition( all, .9s );
         }
         li.active{
@@ -714,7 +721,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
     }  
     .case-studies-extension{
         li{
-          opacity: 0;
             @include transition( all, .9s );
         }
         li.active{

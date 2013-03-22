@@ -96,7 +96,10 @@ function reverie_entry_meta() {
 	echo '<p class="byline author">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
 }
 
-register_post_type('case study slider', array(	'label' => 'Case Studies','description' => '','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'exclude_from_search' => false,'supports' => array('title','editor','excerpt','trackbacks','custom-fields','comments','revisions','thumbnail','author','page-attributes',),'labels' => array (
+// 
+// Adds Case Study
+// 
+register_post_type('case-study', array( 'label' => 'Case Studies','description' => '','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'exclude_from_search' => false,'supports' => array('title','editor','excerpt','trackbacks','custom-fields','comments','revisions','thumbnail','author','page-attributes',),'labels' => array (
   'name' => 'Case Studies',
   'singular_name' => 'Case Study',
   'menu_name' => 'Case Studies',
@@ -112,5 +115,15 @@ register_post_type('case study slider', array(	'label' => 'Case Studies','descri
   'not_found_in_trash' => 'No Case Studies Found in Trash',
   'parent' => 'Parent Case Study',
 ),) );
+
+//
+// Styles GForm Button
+//
+
+add_filter("gform_submit_button", "form_submit_button", 10, 2);
+function form_submit_button($button, $form){
+    return "<input type='submit' id='gform_submit_button_{$form["id"]}' class='button gform_button radius small success' value='Submit' tabindex='7'>";
+}
+
 
 ?>
