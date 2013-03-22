@@ -25,15 +25,15 @@ get_header(); ?>
           <?php
           if(get_field('hero_title_line_1'))
           {
-            echo '<div> <h1 class="text-left hero-text">' . the_field('hero_title_line_1') . '</h1></div>';
+            echo '<div> <h1 class="text-left hero-text">' . get_field('hero_title_line_1') . '</h1></div>';
           }
           if(get_field('hero_title_line_2'))
           {
-            echo '<div> <h1 class="text-left hero-text">' . the_field('hero_title_line_2') . '</h1></div>';
+            echo '<div> <h1 class="text-left hero-text">' . get_field('hero_title_line_2') . '</h1></div>';
           }
           ?>
-        </div>
-       </div>
+        </div>	
+      </div>
     </div>
   </div>
   <div class="sidebar large-4 small-12 fl">
@@ -179,7 +179,7 @@ get_header(); ?>
 		
 		<?php /* Start loop */ ?>
 
-		<div class="page-main fr" role="main">
+		<div class="page-main fr text-left" role="main">
 	    <div class="s9999 page-main-extension fr">
 	      <div class="lftcont page-main-content content-sec fr">
 					<div class="pr98 pl98"> 

@@ -21,11 +21,11 @@
           <?php
           if(get_field('hero_title_line_1'))
           {
-            echo '<div> <h1 class="text-left hero-text">' . the_field('hero_title_line_1') . '</h1></div>';
+            echo '<div> <h1 class="text-left hero-text">' . get_field('hero_title_line_1') . '</h1></div>';
           }
           if(get_field('hero_title_line_2'))
           {
-            echo '<div> <h1 class="text-left hero-text">' . the_field('hero_title_line_2') . '</h1></div>';
+            echo '<div> <h1 class="text-left hero-text">' . get_field('hero_title_line_2') . '</h1></div>';
           }
           ?>
         </div>
