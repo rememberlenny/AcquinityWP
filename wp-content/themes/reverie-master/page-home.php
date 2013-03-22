@@ -43,11 +43,12 @@ get_header(); ?>
           <div id="featrap" class="  lftcont case-studies-content content-sec fl">
           <h4 class="pre-head subheader">Acquinity Stats</h4>
             <ul class="pre-head">
-              <li class="active case-row" data-orbit-slide>
+              <li class="active case-row">
               	<p><?php the_field('page_statistic_pretext'); ?></p>
               	<h5 class="subheader"><?php the_field('page_statistic_number'); ?></h5>
               	<p><?php the_field('page_statistic_text'); ?></p>
               </li>
+              <li class="but-un"><a href="/contact/" class="button small radius">Get in Touch</a></li>
             </ul>
           </div>
         </div>
@@ -119,24 +120,22 @@ get_header(); ?>
 	          	<div class="image-wrapper radius">
 		            <img class="centered " src="images/case/telecom.jpg" alt="">
 	            </div>
-	            <h2 class="subheader">Direct Energy</h2>
+	            <h2 class="subheader">Verde Energy USA</h2>
 	            <label for="">Customer Acquisition,</label>
 	            <label for="">Energy</label>
-	            <p class="">Acquinity's lead conversion team powered Direct Energy's customer acquisition efforts. &rarr;</p></a>
+	            <p class="">Acquinity's lead conversion team powered Verde Energy USA's customer acquisition efforts. &rarr;</p></a>
 	          </div>
-						<hr>
 	          <div class=" clear text">
-							<h4 class="subheader">Success Stories</h4>
 		          <ul class="circle column">
 		          	
 				        <li class="active case-row">
 				          	<a href="/success-story-telecom/" class="secondary">
-				            <p class="subheader text-left">Success Story: Telecom</p>
+				            <p class="subheader text-left">Success Story: Telecom &rarr;</p>
 				            </a>
 				        </li>
 				        <li class="active case-row">
 				          	<a href="/success-story-telecom/" class="secondary">
-				            <p class="subheader text-left">Success Story: Retail</p>
+				            <p class="subheader text-left">Success Story: Retail &rarr;</p>
 				            </a>
 				        </li>
 				      </ul>

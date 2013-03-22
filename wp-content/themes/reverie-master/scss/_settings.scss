@@ -35,6 +35,9 @@ display: block;
 font-weight: 500;
 margin-bottom: 1.1875em;
 }
+.button{
+  font-weight: 500 !important;
+}
 
 body{
   overflow-x: hidden;
@@ -381,7 +384,15 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
   #featrap{
     margin: 0 auto;
-      padding-top:2.1em;
+    margin-left: .5em;
+    padding-top:1.8em;
+    .but-un a{
+      color: darken(white,10%) !important;
+      margin-top: 1em;
+      &:hover{
+        color: darken(white,30%) !important;
+      }
+    }
       .pre-head{
         padding-left: 0.9375em;
         line-height: 1.5em;

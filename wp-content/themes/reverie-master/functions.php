@@ -126,4 +126,10 @@ function form_submit_button($button, $form){
 }
 
 
+//
+// Template for Case Studies
+//
+ 
+ 
+
 ?>

@@ -39,9 +39,10 @@
           <div id="featrap" class="  lftcont case-studies-content content-sec fr">
           <h4 class="pre-head subheader">Acquinity Stats</h4>
             <ul class="pre-head">
-              <li class="active case-row" data-orbit-slide>
-              	<h5 class="subheader"><?php the_field('page_statistic_number'); ?></h5>
-              	<h5><?php the_field('page_statistic_text'); ?></h5>
+              <li class="active case-row">
+                <p><?php the_field('page_statistic_pretext'); ?></p>
+                <h5 class="subheader"><?php the_field('page_statistic_number'); ?></h5>
+                <p><?php the_field('page_statistic_text'); ?></p>
               </li>
             </ul>
           </div>

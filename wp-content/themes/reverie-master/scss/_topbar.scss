@@ -54,6 +54,11 @@
       #searchsubmit{
         top: 24px;
         padding-top: 0em;
+        @include transition( all, .2s);
+        &:hover{
+          color: darken(white,30%) !important;
+          @include transition( all, .2s);
+        }
       }
       margin-bottom: 0em !important;
       li.name h1 {

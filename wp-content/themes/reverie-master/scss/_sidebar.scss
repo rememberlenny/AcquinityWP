@@ -137,6 +137,9 @@
       }
       a{
         color: white;
+        &:hover{
+          color: darken(white,30%) !important;
+        }
       }
       .email-box{
         padding-left: $left-spacing;

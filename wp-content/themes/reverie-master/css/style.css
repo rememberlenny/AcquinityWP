@@ -409,6 +409,19 @@ nav.top-bar input {
 .top-bar #searchsubmit {
   top: 24px;
   padding-top: 0em;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.top-bar #searchsubmit:hover {
+  color: #b3b3b3 !important;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .top-bar li.name h1 {
   line-height: 68px;
@@ -624,6 +637,9 @@ div.sidebar h4.subheader {
 
 .email-box a {
   color: white;
+}
+.email-box a:hover {
+  color: #b3b3b3 !important;
 }
 .email-box .email-box {
   padding-left: 0.08em;
@@ -1541,6 +1557,10 @@ label {
   margin-bottom: 1.1875em;
 }
 
+.button {
+  font-weight: 500 !important;
+}
+
 body {
   overflow-x: hidden;
   background: white;
@@ -1909,7 +1929,15 @@ hr.silent {
 }
 #featrap {
   margin: 0 auto;
-  padding-top: 2.1em;
+  margin-left: .5em;
+  padding-top: 1.8em;
+}
+#featrap .but-un a {
+  color: #e6e6e6 !important;
+  margin-top: 1em;
+}
+#featrap .but-un a:hover {
+  color: #b3b3b3 !important;
 }
 #featrap .pre-head {
   padding-left: 0.9375em;
