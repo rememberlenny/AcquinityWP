@@ -7,8 +7,8 @@
 </div>
 
 	
-<footer class="row full-width" role="contentinfo">
-	<div class="footer-full twelve">
+<footer class="row full-width " role="contentinfo">
+	<div class="footer-full twelve column">
 		<div class="row footer">
 			<div class="column">
 				<?php wp_nav_menu(array('theme_location' => 'utility', 'container' => 'nav', 'container_class' => '', 'menu_class' => 'inline-list small-block-grid-2')); ?>
@@ -22,6 +22,11 @@
 <script>
 	$(document).foundation();
 </script>
+	
+<?php if (is_page('home') ) { ?>
+<!--home page custom JS-->
+    <script type='text/javascript' src="<?php bloginfo('template_directory'); ?>/js/homeslide.js"></script>
+<?php } ?>
 	
 </body>
 </html>

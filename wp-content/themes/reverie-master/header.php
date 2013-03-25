@@ -46,6 +46,17 @@
       -moz-background-size:100% 100%; /* Old Firefox */
       background-size:100% 100%;
     }
+    <?php if (is_page('home') ) { ?>
+
+    <?php if (has_post_thumbnail( $post->ID ) ): ?>
+    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' ); ?>
+
+      .masthead-photo {
+        background: url("<?php echo $image[0]; ?>") center right no-repeat #FAF8F6;
+      }
+    <?php endif; ?>
+    
+    <?php } ?>
   </style>
 <?php wp_head(); ?>
 

@@ -8,6 +8,24 @@
       margin-left: .2em;
     }
   }
+  #sidebar{
+    padding-bottom: 4em !important;
+    .testimonials{
+      margin-bottom: 1.25em;
+    }
+    blockquote {
+      margin: 0 0 1.25em;
+      padding: 0.1625em 1.25em 0 1.1875em;
+      border-left: 1px solid #6f6f6f;
+    }
+    blockquote, blockquote p {
+      line-height: 1.6;
+      color: lighten(#afaeaf, 10%);
+    }
+    cite{
+      color: lighten(#afaeaf, 20%);
+    }
+  }
   @media only screen and (min-width: 768px){
     #sidebar.sidebar{
       margin-top: 1.4em;

@@ -4,21 +4,10 @@ Template Name: Home Page
 */
 get_header(); ?>
 
-<?php if (has_post_thumbnail( $post->ID ) ): ?>
-<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-
-<style type="text/css">
-	.masthead-photo {
-		background: url("<?php echo $image[0]; ?>") center right no-repeat #FAF8F6;
-	}
-</style>
-
-<?php endif; ?>
-
 <!-- Row for main content area -->
 	
 <div class="content hero-row row twelve">
-  <div class="main large-8 fl">
+  <div class="main large-12 fl"> x
     <div class="masthead-photo h300">
       <div class="s9999 masthead-photo-extension image-wrapper">
         <div class="masthead-photo-content">
@@ -31,32 +20,17 @@ get_header(); ?>
           {
             echo '<div> <h1 class="text-left hero-text">' . get_field('hero_title_line_2') . '</h1></div>';
           }
+          if(get_field('hero_para_1'))
+          {
+            echo '<div>' . get_field('hero_para_1') . '</div>';
+          }
           ?>
         </div>	
       </div>
     </div>
   </div>
-  <div class="sidebar large-4 small-12 fl">
-    <div class="company-facts hide-for-small"> 
-      <div class="s9999 company-facts-extension h300 fl">
-        <div class="company-facts-content content-sec">
-          <div id="featrap" class="  lftcont case-studies-content content-sec fl">
-          <h4 class="pre-head subheader">Acquinity Stats</h4>
-            <ul class="pre-head">
-              <li class="active case-row">
-              	<p><?php the_field('page_statistic_pretext'); ?></p>
-              	<h5 class="subheader"><?php the_field('page_statistic_number'); ?></h5>
-              	<p><?php the_field('page_statistic_text'); ?></p>
-              </li>
-              <li class="but-un"><a href="/contact/" class="button small radius">Get in Touch</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>	
-	
+   
 <div class="content brandwrap row twelve">
 	<div class="main large-12 columns ">
 	  <div class="brand-bar clearboth">
@@ -109,93 +83,187 @@ get_header(); ?>
 <div class="content content-main row twelve">
 	<div class="main large-8 columns "> 	
 		<div class="case-studies fr">
-		  <div class="s9999 case-studies-extension fr">
+		  <div class="s9999 case-studies-extension  fr">
 		    <div id="case-sliders" class="column lftcont case-studies-content content-sec fr">
-		    	<div class="large-6 column">
-		    		<a href="/success-stories/">
-		    			<h4 class="subheader">Featured Success</h4>
-			      </a>
-	          <div class="case-study-item text-left large-12 fl">
-	          	<a href="/success-story-energy/" class="secondary">
-	          	<div class="image-wrapper radius">
-		            <img class="centered " src="images/case/telecom.jpg" alt="">
-	            </div>
-	            <h2 class="subheader">Verde Energy USA</h2>
-	            <label for="">Customer Acquisition,</label>
-	            <label for="">Energy</label>
-	            <p class="">Acquinity's lead conversion team powered Verde Energy USA's customer acquisition efforts. &rarr;</p></a>
-	          </div>
-	          <div class=" clear text">
-		          <ul class="circle column">
-		          	
-				        <li class="active case-row">
-				          	<a href="/success-story-telecom/" class="secondary">
-				            <p class="subheader text-left">Success Story: Telecom &rarr;</p>
-				            </a>
-				        </li>
-				        <li class="active case-row">
-				          	<a href="/success-story-telecom/" class="secondary">
-				            <p class="subheader text-left">Success Story: Retail &rarr;</p>
-				            </a>
-				        </li>
-				      </ul>
-				      <hr>
-				      	<a href="/success-stories/">
-			        		<p class="subheader text-center">View Success Archive</p>
-		        		</a>
-	        		<hr>
-	          </div>
-		    	</div>
-		    	<div class="large-6 column">
-		    		<a href="/news/">
-		    			<h4 class="subheader">News</h4>
-			      </a>
-	          <div class="case-study-item text-center large-12 fl">
-	          	<a href="/news/" class="secondary">
-	          	<div class="image-wrapper radius">
-		            <img class="centered " src="images/case/news.jpg" alt="">
-	            </div>
-	            <div class="text-left">
-	            	<a href="http://localhost:4421/live-from-leadscon-las-vegas-2013/">
-			            <h2 class="subheader text-left">Live from LEADSCON</h2>
-			            <label for="">20 MAR '13</label>
-			            <p class="text-left">
-			            	An overview from Acquinity's EVP of Media, Don Silvestri &rarr; 
-		            	</p>
-	            	</a>
-	            </div>
-	            <hr>
-								<a href="/news/">
-									<p>View News Archive</p>
-								</a> 
-							<hr>
-	            </a>
-	          </div>
-		    	</div>
+		    	<div class="pr98 pl98 text-left column"> 
+						<header>
+							<h4 class="subheader"><?php the_field('home_section_title'); ?></h4>
+						</header>
+						<div class="entry-content">
+							<?php the_field('about_us_section'); ?>
+						</div>
+					</div>
 		    </div>
 		  </div>
-		</div>
-		
-		<?php /* Start loop */ ?>
-
+		</div>	
 		<div class="page-main fr text-left" role="main">
 	    <div class="s9999 page-main-extension fr">
 	      <div class="lftcont page-main-content content-sec fr">
-					<div class="pr98 pl98"> 
-						<?php while (have_posts()) : the_post(); ?>
-						<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-							<header>
-								<h4 class="subheader"><?php the_field('home_section_title'); ?></h4>
-								<?php // reverie_entry_meta(); ?>
-							</header>
-							<div class="entry-content">
-								<?php the_content(); ?>
-							</div>
-						</article>
-						<?php endwhile; // End the loop ?>
+		    	<div class="pr98 pl98 text-left column"> 
+			    	<div class=" column">
+	          	<a href="/success-stories/">
+	              <h4 class="subheader">Success Stories</h4>
+	            </a>
+
+	            <div class="case-study-item text-left large-12 fl">
+               <div class="featsucc"> 
+                  <ul id="featsucc" data-orbit>
+                    <li class="active text-left article-title" data-orbit-slide="headline-1">
+                      <div class="large-3 small-3 column mn93">
+
+                          <div class="hide-for-small image-wrapper radius th radius" >
+                            <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/Verde-Energy-USA-150x150.jpg" alt="">
+                          </div>
+                      </div>
+                      <div class="large-9 small-12 column pl98">
+                        <h5>
+                          <a href="/case-study/verde-energy-customer-acquisition/" data-orbit-slide="headline-2" class="secondary">
+                            Verde Energy USA
+                          </a>
+                        </h5> 
+                        <p>Acquinity's lead conversion team powered Verde Energy’s customer acquisition efforts. </p>
+                        <a href="/case-study/verde-energy-customer-acquisition/">Read More ›</a>
+                      </div>
+                    </li>
+                    <li class="active text-left article-title" data-orbit-slide="headline-2">
+                      <div class="large-3 small-3 column mn93">
+                         <div class="hide-for-small image-wrapper radius th radius" >
+                          <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/telecom1-150x150.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="large-9 small-12 column">
+                        <h5>
+                          <a href="/case-study/terracom-ad-targeting/" data-orbit-slide="headline-2" class="secondary">
+                            Terracom: Ad Targeting ›
+                          </a>
+                        </h5> 
+                        <p>Mobile provider Terracom/YourTel made the right call with Acquinity's targeting technology. </p>
+                        <a href="/case-study/terracom-ad-targeting/">Read More ›</a>
+                      </div>
+                    </li>
+                    <li class="active text-left article-title" data-orbit-slide="headline-3">
+                      <div class="large-3 small-3 column mn93">
+                        <div class="hide-for-small image-wrapper radius th radius" >
+                          <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/nuts1-150x150.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="large-9 small-12 column">
+                        <h5>
+                          <a href="/case-study/naturebox-boosting-online-orders/" data-orbit-slide="headline-3" class="secondary">
+                            NatureBox: Boosting Online Orders ›
+                          </a>
+                        </h5> 
+                        <p>bSaving.com and its social and email properties began working for healthfood distributor NatureBox in the spring of last year.
+                        </p>
+                        <a href="/case-study/naturebox-boosting-online-orders/">Read More ›</a>
+                      </div>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            <div class=" clear text">
+            </div>
+          </div>
 					</div>
-				</div>
-			</div>
+		    </div>
+		  </div>
+		</div>
+    <div class="page-main fr text-left" role="main">
+      <div class="s9999 page-main-extension whitebg fr">
+        <div class="lftcont page-main-content content-sec fr">
+          <div class="pr98 pl98 text-left column"> 
+            <div class=" ">
+ 
+            <div class="large-6 column featart-short borderrt" style=" border-right: 1px solid #E4E2E1;">
+                           <a href="/success-stories/">
+                <h4 class="subheader">Recent</h4>
+              </a>
+                <ul>
+                  <li>
+                    <div class="image-wrapper radius th" >
+                      <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/leadscon.jpg" alt="" style="max-width: 210px;">
+                    </div>
+                  </li>
+                </ul>
+                  <h5 class="article-title-line">
+                <a href="/success-story-telecom/" class="secondary">
+                    Live from LEADSCON
+                </a>
+                    </h5>
+                <p class=" text-left">
+                  An overview from Acquinity. 
+                                  <a href="/case-study/naturebox-boosting-online-orders/">Read Article ›</a> 
+                </p>
+
+             </div>
+             <div class="text-left large-6 column">
+              <a href="/success-stories/">
+                <h4 class="subheader">News</h4>
+              </a>
+              <ul class="">
+                <li class="active text-left article-title">
+
+                  <a href="/success-story-telecom/" class="secondary">
+                    Acquinity.com to relaunch ›
+                  </a>
+
+                </li>
+                <li class="active text-left article-title">
+
+                  <a href="/success-story-telecom/" class="secondary">
+                    Meet the Acquinity team at ad:tech ›
+                  </a>
+
+                </li>
+                <li class="active text-left article-title">
+
+                  <a href="/success-story-telecom/" class="secondary">
+                    Acquinity's new COO: Bob Hayes ›
+                  </a>
+
+                </li>                 
+                <li class="active text-left article-title">
+
+                  <a href="/success-story-telecom/" class="secondary">
+                    March State of the Industry ›
+                  </a>
+
+                </li>                
+                
+              </ul>
+                               <a href="/success-story-telecom/" class="secondary">
+                    See more News ›
+                  </a>
+            </div>
+            <div class=" clear text">
+
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    
+    
+		<div class="page-main fr text-left" role="main">
+	    <div class="s9999 page-main-extension borderbtm fr">
+	      <div class="lftcont page-main-content content-sec fr">
+		    	<div class="pr98 pl98 text-left column"> 
+            <div class="column">
+              <header>
+                <h4 class="subheader"><?php the_field('home_section2_title'); ?></h4>
+              </header>
+              <div class="entry-content">
+                <?php the_field('product_section'); ?>
+              </div>
+            </div>
+            <div class=" clear text">
+
+            </div>
+					</div>
+		    </div>
+		  </div>
 		</div>
 	</div>
 	<?php get_sidebar(); ?>

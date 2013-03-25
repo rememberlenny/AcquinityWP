@@ -38,7 +38,13 @@ margin-bottom: 1.1875em;
 .button{
   font-weight: 500 !important;
 }
-
+a{
+  @include transition(all, .2s);
+  &:hover{
+    color: lighten($primary-color, 20%) !important;
+    @include transition(all, .2s);
+  }
+}
 body{
   overflow-x: hidden;
   background: white;
@@ -74,9 +80,12 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   }
   .case-studies-extension{
     border-bottom: solid 1px #e6e6e6;
+    padding-bottom: 2em;
   }
   .social-block span {font-size: 2em; }
-
+.home .case-studies-extension{
+  padding-bottom: 0em;
+}
 //
 // Elements
 //
@@ -99,13 +108,14 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 // Layout
 //
  // .s9999{ width: 9999px; }     
-  .h300{ height: 250px; }
-  .h100{ height: 100px; }
-  .h120{ height: 120px; }
-  .b30{ padding-bottom: 30px; }    
-  .tp30{ padding-top: 30px; }
-  .mrn9{ margin-right: -0.9375em; }
-  .mln9{ margin-left: -0.9375em; }
+  .h300 { height: 250px; }
+  .home .h300 { height: 450px; }
+  .h100 { height: 100px; }
+  .h120 { height: 120px; }
+  .b30 { padding-bottom: 30px; }    
+  .tp30 { padding-top: 30px; }
+  .mrn9 { margin-right: -0.9375em; }
+  .mln9 { margin-left: -0.9375em; }
   .pr98 { padding-right: 1.875em; }
   .pl98 { padding-left: 1.875em; }
   .row-fluid{ max-width: none !important; }
@@ -115,6 +125,32 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   .pl02{
     padding-left: 0.2em;
   }
+  .mn93{
+    margin-left: -0.9375em;
+  }
+  .pos-bot-right{
+    position: absolute;
+    top: 9em;
+    right: 0%;
+  }
+
+
+//
+// Colors
+//
+
+div.whitebg{
+  background: white;
+}
+div.borderrt{
+  border-right: 1px solid #E4E2E1 !important;
+}
+.bdrleft{
+  border-left: 1px solid #E4E2E1;
+}
+.borderbtm{
+  border-bottom: 1px solid #E4E2E1;
+}
 
 //
 // Background
@@ -204,6 +240,12 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 // Main
 //
 
+.main{
+  label{
+    display: inline-block;
+    color: #a2a2a2;
+  }
+}
 .top-bar-section {
   ul.right{
     max-width: 270px;
@@ -215,7 +257,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
     
 
     .masthead-photo { 
-      background: url('../images/hero/hero-map.jpg') center center;
       overflow: hidden; 
       float: right; 
       width: 100%;
@@ -231,17 +272,32 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       float: left;
       padding:0 1.875em 0;
       h1{
-        font-weight: 100;
-        font-size: 1.7em;
+        font-weight: 500;
+        font-size: 2.7em;
         display:inline;
         clear: right;
         background:#1A1A1A;;
         background:rgb (26,26,26);
-        background:rgba(26,26,26,0.66);
+        background:rgba(26,26,26,0.3);
         color: white;
         margin: 0em;
         padding-left: .2em;
         padding-right: .2em;
+      }
+      p{
+        background:#1A1A1A;;
+        background:rgb (26,26,26);
+        background:rgba(26,26,26,0.3);
+        color: white;
+        padding-left: .4em;
+        padding-right: .2em;
+        font-size: 1.3em;
+      a{
+        color:white;
+        font-weight: 400;
+        padding-right: .4em;
+        padding-left: .2em;
+      }
       }
       @include transition(all, .2s); 
    
@@ -275,8 +331,66 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
     }
 
-    
+.main{
+  a{
+    &:hover{
+      p{
+        @include transition(all, .2s);
+        color: darken($primary-color, 10%) !important;
+      }
+    }  
+  }
+}
+.page-main, .page-main-extension, .page-main-content{
+  width: 100%;
+}
+.featsucc{
+  text-align: center;
+  .orbit-container{
+    background: none;
+  }
+  .orbit-next{ 
+    display: none;
+  }
+  .orbit-prev{     
+    display: none;
+  }
+  .orbit-timer{
+    display: none;
+  } 
+  .orbit-slide-number{
+    display: none;
+  }
+  .orbit-bullets{
+    display: inline-block;
+  }
+  .orbit-bullets li{
+    border-color:$secondary-color !important;
+    @include transition(all, .2s);
+    &.active{
+      @include transition(all, .2s);
+      background: $secondary-color !important;
+    }
+    &:hover{
+      @include transition(all, .2s);
+      background: $primary-color !important;
+      border-color: $primary-color !important;
+    }
+  }
+}
+#featsucc{
+  
 
+}
+.article-title, .archive-title{
+  margin-bottom: 0.4em;
+  h5{
+    
+  }
+}
+.article-title-line{
+
+}
   //
   // Case Study
   //
@@ -287,6 +401,11 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   .content-main{
     .main{
       border-right: 1px solid darken(#333, 20%);
+    }
+  }
+  .home{
+    .hero-row {
+      max-width:100% !important;
     }
   }
   .hero-row {
@@ -326,8 +445,8 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       margin-top: 90px;
       padding-bottom: 12px;
       h1{
-        font-weight: 400;
-        font-size: 2.2em;
+        font-weight: 300;
+        font-size: 3.2em;
         line-height: 1.3;
       }
     }
@@ -339,7 +458,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       float: right;
       .masthead-photo-content{
         float:right;
-        width: 667px;
+        width: 1007px;
         padding-left: 1.875em;
       }
     }
@@ -380,7 +499,10 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         overflow: visible;
       }
     }
+  .products-link-content{
+    max-width: 333px;
   }
+}
 
   #featrap{
     margin: 0 auto;
@@ -416,7 +538,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         }
       }
     ul.pre-head{
-      margin-top: 0.6em !important;
     }
     .case-row{
       h5{
@@ -424,10 +545,10 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         font-weight: 300;
         font-size: 4em;
         &.subheader{
-          font-size: 3  !important;
+          font-size: 4em  !important;
           margin-bottom: 0em;
           margin-top: 0em;
-          line-height: .8em;
+          line-height: 1.2em;
           color: #efefef;
           font-weight: 300;
         }
@@ -554,6 +675,13 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
     //Orbit
     //
 
+    .archive-link-lead{
+      p{
+        margin-top: 0.4em;
+        margin-bottom: 0.5em;
+      }
+    }
+
 
     //Brand logos
     .brandwrap{
@@ -630,7 +758,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   .page-main-extension{
     background: #FAF8F6;
     border-top: 1px solid #E4E2E1;
-    border-bottom: 1px solid #E4E2E1;
   }
   .page-main-content{
     padding-top: 1.5em;

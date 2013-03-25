@@ -31,7 +31,9 @@ require_once('lib/foundation.php'); // load Foundation specific functions like t
 4. lib/presstrends.php
     - add PressTrends, tracks how many people are using Reverie
 */
-require_once('lib/presstrends.php'); // load PressTrends to track the usage of Reverie across the web, comment this line if you don't want to be tracked
+// require_once('lib/presstrends.php'); // load PressTrends to track the usage of Reverie across the web, comment this line if you don't want to be tracked
+
+
 
 /**********************
 Add theme supports
@@ -96,25 +98,6 @@ function reverie_entry_meta() {
 	echo '<p class="byline author">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
 }
 
-// 
-// Adds Case Study
-// 
-register_post_type('case-study', array( 'label' => 'Case Studies','description' => '','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'exclude_from_search' => false,'supports' => array('title','editor','excerpt','trackbacks','custom-fields','comments','revisions','thumbnail','author','page-attributes',),'labels' => array (
-  'name' => 'Case Studies',
-  'singular_name' => 'Case Study',
-  'menu_name' => 'Case Studies',
-  'add_new' => 'Add Case Study',
-  'add_new_item' => 'Add New Case Study',
-  'edit' => 'Edit',
-  'edit_item' => 'Edit Case Study',
-  'new_item' => 'New Case Study',
-  'view' => 'View Case Study',
-  'view_item' => 'View Case Study',
-  'search_items' => 'Search Case Studies',
-  'not_found' => 'No Case Studies Found',
-  'not_found_in_trash' => 'No Case Studies Found in Trash',
-  'parent' => 'Parent Case Study',
-),) );
 
 //
 // Styles GForm Button
@@ -129,7 +112,6 @@ function form_submit_button($button, $form){
 //
 // Template for Case Studies
 //
- 
  
 
 ?>

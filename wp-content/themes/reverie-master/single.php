@@ -14,7 +14,7 @@
 <!-- Row for main content area -->
 	
 <div class="content hero-row row twelve">
-  <div class="main large-8 fl">
+  <div class="main large-8 fl" style="">
     <div class="masthead-photo h300">
       <div class="s9999 masthead-photo-extension image-wrapper">
         <div class="masthead-photo-content">
@@ -37,10 +37,8 @@
       <div class="s9999 company-facts-extension h300 fl">
         <div class="company-facts-content content-sec">
           <div id="featrap" class="  lftcont case-studies-content content-sec fr">
-          <h4 class="pre-head subheader">Acquinity Stats</h4>
             <ul class="pre-head">
               <li class="active case-row">
-                <p><?php the_field('page_statistic_pretext'); ?></p>
                 <h5 class="subheader"><?php the_field('page_statistic_number'); ?></h5>
                 <p><?php the_field('page_statistic_text'); ?></p>
               </li>
