@@ -6,11 +6,11 @@ get_header(); ?>
 
 <!-- Row for main content area -->
 	
-<div class="content hero-row row twelve">
-  <div class="main large-12 fl"> x
+<div class="content hero-row row">
+  <div class="main large-12"> 
     <div class="masthead-photo h300">
       <div class="s9999 masthead-photo-extension image-wrapper">
-        <div class="masthead-photo-content">
+        <div class="masthead-photo-content text-center">
           <?php
           if(get_field('hero_title_line_1'))
           {
@@ -83,18 +83,23 @@ get_header(); ?>
 <div class="content content-main row twelve">
 	<div class="main large-8 columns "> 	
 		<div class="case-studies fr">
-		  <div class="s9999 case-studies-extension  fr">
-		    <div id="case-sliders" class="column lftcont case-studies-content content-sec fr">
-		    	<div class="pr98 pl98 text-left column"> 
-						<header>
-							<h4 class="subheader"><?php the_field('home_section_title'); ?></h4>
-						</header>
-						<div class="entry-content">
-							<?php the_field('about_us_section'); ?>
-						</div>
-					</div>
-		    </div>
-		  </div>
+		  <div class="s9999 page-main-extension borderbtm fr">
+        <div class="lftcont page-main-content content-sec fr">
+          <div class="pr98 pl98 text-left column"> 
+            <div class="column">
+              <header>
+                <h4 class="subheader"><?php the_field('home_section2_title'); ?></h4>
+              </header>
+              <div class="entry-content">
+                <?php the_field('product_section'); ?>
+              </div>
+            </div>
+            <div class=" clear text">
+
+            </div>
+          </div>
+        </div>
+      </div>
 		</div>	
 		<div class="page-main fr text-left" role="main">
 	    <div class="s9999 page-main-extension fr">
@@ -118,7 +123,7 @@ get_header(); ?>
                       <div class="large-9 small-12 column pl98">
                         <h5>
                           <a href="/case-study/verde-energy-customer-acquisition/" data-orbit-slide="headline-2" class="secondary">
-                            Verde Energy USA
+                            Amping Up Acquisitions
                           </a>
                         </h5> 
                         <p>Acquinity's lead conversion team powered Verde Energy’s customer acquisition efforts. </p>
@@ -170,14 +175,14 @@ get_header(); ?>
 		  </div>
 		</div>
     <div class="page-main fr text-left" role="main">
-      <div class="s9999 page-main-extension whitebg fr">
+      <div class="s9999 page-main-extension whitebg last fr">
         <div class="lftcont page-main-content content-sec fr">
           <div class="pr98 pl98 text-left column"> 
             <div class=" ">
  
             <div class="large-6 column featart-short borderrt" style=" border-right: 1px solid #E4E2E1;">
                            <a href="/success-stories/">
-                <h4 class="subheader">Recent</h4>
+                <h4 class="subheader">Latest</h4>
               </a>
                 <ul>
                   <li>
@@ -244,27 +249,6 @@ get_header(); ?>
         </div>
       </div>
     </div>  
-    
-    
-		<div class="page-main fr text-left" role="main">
-	    <div class="s9999 page-main-extension borderbtm fr">
-	      <div class="lftcont page-main-content content-sec fr">
-		    	<div class="pr98 pl98 text-left column"> 
-            <div class="column">
-              <header>
-                <h4 class="subheader"><?php the_field('home_section2_title'); ?></h4>
-              </header>
-              <div class="entry-content">
-                <?php the_field('product_section'); ?>
-              </div>
-            </div>
-            <div class=" clear text">
-
-            </div>
-					</div>
-		    </div>
-		  </div>
-		</div>
 	</div>
 	<?php get_sidebar(); ?>
 </div>
