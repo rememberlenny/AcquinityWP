@@ -3,6 +3,27 @@
 //
 // Footer
 //
+//
+
+.footer{
+  .social-links{
+  text-align: right;
+  margin-top: 1.6em;
+  padding-right: .935em;
+  img{
+    padding-left: 1em;
+    @include transition(all, .2s);
+    &:hover{
+      @include transition(all, .2s);
+      opacity: .7;
+    }
+  }
+  }
+  .fix{
+    border-bottom: 1px solid #eee;
+  }
+}
+
 .footer-full{
   
   padding: 0px;
@@ -22,7 +43,6 @@
         padding-top:1em;
         padding-left:2.2em;
         padding-right:2.2em;
-        border-bottom: 1px solid #eee;
         li{
           text-align: center;
           margin-left: 0em;
