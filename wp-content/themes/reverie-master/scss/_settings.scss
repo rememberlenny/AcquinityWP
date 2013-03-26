@@ -49,9 +49,11 @@ body{
   overflow-x: hidden;
   background: white;
   border-top:5px solid $secondary-color;
-
 }
-
+a.svbt-line{
+  display: inline;
+  border-bottom: 1px dotted $primary-color;
+}
 .container{
   overflow-x: hidden;
   background: #333;
@@ -80,7 +82,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   }
   .case-studies-extension{
     border-bottom: solid 1px #e6e6e6;
-    padding-bottom: 2em;
+    padding-bottom: 0em;
   }
   .social-block span {font-size: 2em; }
 .home .case-studies-extension{
@@ -103,7 +105,9 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       color: lighten($secondary-color, 20%);
     }
   }
-
+  .mkup {
+    padding-left: 1em!important;
+  }
 
 // Layout
 //
@@ -246,11 +250,7 @@ div.borderrt{
     color: #a2a2a2;
   }
 }
-.top-bar-section {
-  ul.right{
-    max-width: 270px;
-  }
-}
+
   // Hero
   // 
 
@@ -368,6 +368,11 @@ div.borderrt{
   .orbit-bullets{
     display: inline-block;
   }
+  .orbit-bullets {
+    @include transition (all, .2s);
+    overflow: hidden;
+    position: relative;
+  }
   .orbit-bullets li{
     border-color:$secondary-color !important;
     @include transition(all, .2s);
@@ -443,6 +448,10 @@ div.borderrt{
   }
 
   @media only screen and (min-width:1000px){
+
+    .has-dropdown>a{
+      margin-right: 5px;
+    }
       .masthead-photo-content{
       padding:0 1.875em 0;
       margin-top: 90px;
@@ -506,6 +515,11 @@ div.borderrt{
       .orbit-container{
         background: transparent !important;
         overflow: visible;
+      }
+    }
+    .featsucc{
+      .orbit-bullets {
+
       }
     }
   .products-link-content{
@@ -614,6 +628,17 @@ div.borderrt{
       }
     }
     .case-study-item{ 
+      ol.orbit-bullets{
+        margin-top: 0em;
+        margin-bottom: 0em;
+        line-height: 0;
+      }
+      ul{
+      height: auto!important;
+      li{
+        margin-bottom: 0em!important;
+      }
+      }
       padding: 0em 0em; 
       label{
         line-height:1.5em;
@@ -627,6 +652,11 @@ div.borderrt{
       }
       p{
         font-size: 1em;
+        margin-bottom: 0em;
+        a{
+          display: inline;
+          border-bottom: 1px dotted $primary-color;
+        }
       }
     }
     .case-row{ 
@@ -717,8 +747,7 @@ div.borderrt{
         text-align:center;
       }
     }
-    #case-sliders{
-      padding-top: 1.5em;
+    .featsucc{
       padding-bottom: 1em;
       
       h4{text-align: left;}
@@ -729,16 +758,18 @@ div.borderrt{
         filter: alpha(opacity=80);
         opacity: .8;
         border: none;
+        width: 10px;
+        height: 10px;
       }
       .orbit-bullets li:hover {
-        background: $success-color!important;
+        background: grey !important;
         @include transition( all, .2s );
         border: none;
       }
       .orbit-bullets li.active {
         @include transition( all, .2s );
         background: none;
-        border: solid 2px $secondary-color;  
+        border: solid 2px grey;  
         &:hover{
           border: 0px;
         }
@@ -769,6 +800,7 @@ div.borderrt{
     border-top: 1px solid #E4E2E1;
     &.last{
       border-bottom: 1px solid #E4E2E1;
+      padding-bottom: 1em;
     }
   }
   .page-main-content{

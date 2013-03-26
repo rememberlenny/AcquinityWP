@@ -403,6 +403,14 @@ nav.top-bar input {
   background: #efefef !important;
 }
 
+.top-bar div input {
+  line-height: 1.5em !IMPORTANT;
+}
+
+#searchsubmit {
+  line-height: 1.8 !important;
+}
+
 .top-bar {
   margin-bottom: 0em !important;
 }
@@ -513,6 +521,10 @@ nav.top-bar input {
     border-radius: 3px;
   }
 }
+.top-bar-section ul.right {
+  max-width: 220px !important;
+}
+
 h3.subheader {
   font-size: 2em;
 }
@@ -564,7 +576,9 @@ div.sidebar hr:first-child {
   border-width: 0px;
 }
 div.sidebar a {
-  color: #afaeaf;
+  color: white;
+  display: inline-block;
+  border-bottom: 1px dotted grey;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
@@ -581,9 +595,6 @@ div.sidebar a:hover {
 }
 div.sidebar a .icon {
   font-size: 1.4em;
-}
-div.sidebar li {
-  color: #afaeaf !important;
 }
 div.sidebar h4.subheader {
   font-size: 1.9em;
@@ -619,7 +630,7 @@ div.sidebar h4.subheader {
 }
 
 .email-box label {
-  color: #AFAEAF;
+  color: white;
   margin-bottom: 1em;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
@@ -1608,6 +1619,11 @@ body {
   border-top: 5px solid #32345c;
 }
 
+a.svbt-line {
+  display: inline;
+  border-bottom: 1px dotted #696a97;
+}
+
 .container {
   overflow-x: hidden;
   background: #333;
@@ -1629,7 +1645,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
 .case-studies-extension {
   border-bottom: solid 1px #e6e6e6;
-  padding-bottom: 2em;
+  padding-bottom: 0em;
 }
 
 .social-block span {
@@ -1678,6 +1694,10 @@ hr.silent {
 }
 .secondary:hover {
   color: #56599e;
+}
+
+.mkup {
+  padding-left: 1em !important;
 }
 
 .h300 {
@@ -1840,10 +1860,6 @@ div.borderrt {
   color: #a2a2a2;
 }
 
-.top-bar-section ul.right {
-  max-width: 270px;
-}
-
 .masthead-photo {
   overflow: hidden;
   width: 100%;
@@ -1953,6 +1969,15 @@ div.borderrt {
 .featsucc .orbit-bullets {
   display: inline-block;
 }
+.featsucc .orbit-bullets {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+  overflow: hidden;
+  position: relative;
+}
 .featsucc .orbit-bullets li {
   border-color: #32345c !important;
   -webkit-transition: all 0.2s;
@@ -2024,6 +2049,10 @@ div.borderrt {
 }
 
 @media only screen and (min-width: 1000px) {
+  .has-dropdown > a {
+    margin-right: 5px;
+  }
+
   .masthead-photo-content {
     padding: 0 1.875em 0;
     margin-top: 90px;
@@ -2193,6 +2222,17 @@ div.borderrt {
 .case-study-item {
   padding: 0em 0em;
 }
+.case-study-item ol.orbit-bullets {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  line-height: 0;
+}
+.case-study-item ul {
+  height: auto !important;
+}
+.case-study-item ul li {
+  margin-bottom: 0em !important;
+}
 .case-study-item label {
   line-height: 1.5em;
   display: inline-block;
@@ -2204,6 +2244,11 @@ div.borderrt {
 }
 .case-study-item p {
   font-size: 1em;
+  margin-bottom: 0em;
+}
+.case-study-item p a {
+  display: inline;
+  border-bottom: 1px dotted #696a97;
 }
 
 .case-row {
@@ -2301,14 +2346,13 @@ div.borderrt {
   text-align: center;
 }
 
-#case-sliders {
-  padding-top: 1.5em;
+.featsucc {
   padding-bottom: 1em;
 }
-#case-sliders h4 {
+.featsucc h4 {
   text-align: left;
 }
-#case-sliders .orbit-bullets li {
+.featsucc .orbit-bullets li {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -2319,9 +2363,11 @@ div.borderrt {
   filter: alpha(opacity=80);
   opacity: .8;
   border: none;
+  width: 10px;
+  height: 10px;
 }
-#case-sliders .orbit-bullets li:hover {
-  background: #586ca8 !important;
+.featsucc .orbit-bullets li:hover {
+  background: grey !important;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -2329,22 +2375,22 @@ div.borderrt {
   transition: all 0.2s;
   border: none;
 }
-#case-sliders .orbit-bullets li.active {
+.featsucc .orbit-bullets li.active {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -ms-transition: all 0.2s;
   transition: all 0.2s;
   background: none;
-  border: solid 2px #32345c;
+  border: solid 2px grey;
 }
-#case-sliders .orbit-bullets li.active:hover {
+.featsucc .orbit-bullets li.active:hover {
   border: 0px;
 }
-#case-sliders .orbit-timer {
+.featsucc .orbit-timer {
   visibility: hidden;
 }
-#case-sliders .orbit-slide-number {
+.featsucc .orbit-slide-number {
   display: none !important;
 }
 
@@ -2366,6 +2412,7 @@ div.borderrt {
 }
 .page-main-extension.last {
   border-bottom: 1px solid #E4E2E1;
+  padding-bottom: 1em;
 }
 
 .page-main-content {

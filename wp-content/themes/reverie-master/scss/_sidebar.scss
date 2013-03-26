@@ -44,7 +44,9 @@
     background: $sidebar-main-color;
     color: $sidebar-text-color;
     a{
-      color: $sidebar-link-color ;
+        color: white ;
+        display: inline-block;
+        border-bottom: 1px dotted grey;
       @include transition( color, .2s );
       &:hover{
         color: $success-color;
@@ -55,7 +57,7 @@
       }
     }
     li{
-      color: $sidebar-link-color !important;
+
     }
     h4.subheader{
       font-size: 1.9em;
@@ -97,7 +99,7 @@
   }
   .email-box{
     label{
-        color: #AFAEAF;
+        color: white;
         margin-bottom: 1em;
         @include transition( color, .2s );
     }

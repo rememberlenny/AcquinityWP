@@ -119,7 +119,7 @@
                   <input type="text" value="" name="s" id="s" placeholder="Search">
                 </div>
                 <div class="large-4 columns">
-                  <input type="submit" id="searchsubmit" class="button tiny">
+                  <button type="submit" id="searchsubmit" class="button tiny radius">Submit</button>
 
                   </input>
                 </div>

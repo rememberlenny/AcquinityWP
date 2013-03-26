@@ -50,6 +50,13 @@
       }
     }
 
+    .top-bar div input {
+      line-height: 1.5em !IMPORTANT;
+    }
+    #searchsubmit{
+      line-height: 1.8 !important;
+    }
+
     .top-bar{
       #searchsubmit{
         top: 24px;
@@ -154,3 +161,8 @@
       }
     }
   }
+.top-bar-section {
+  ul.right{
+    max-width: 220px !important;
+  }
+}

@@ -83,7 +83,7 @@ get_header(); ?>
 <div class="content content-main row twelve">
 	<div class="main large-8 columns "> 	
 		<div class="case-studies fr">
-		  <div class="s9999 page-main-extension borderbtm fr">
+		  <div class="s9999 page-main-extension whitebg borderbtm fr">
         <div class="lftcont page-main-content content-sec fr">
           <div class="pr98 pl98 text-left column"> 
             <div class="column">
@@ -114,7 +114,7 @@ get_header(); ?>
                <div class="featsucc"> 
                   <ul id="featsucc" data-orbit>
                     <li class="active text-left article-title" data-orbit-slide="headline-1">
-                      <div class="large-3 small-3 column mn93">
+                      <div class="large-3 small-3 mkup column mn93">
 
                           <div class="hide-for-small image-wrapper radius th radius" >
                             <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/Verde-Energy-USA-150x150.jpg" alt="">
@@ -126,12 +126,14 @@ get_header(); ?>
                             Amping Up Acquisitions
                           </a>
                         </h5> 
-                        <p>Acquinity's lead conversion team powered Verde Energy’s customer acquisition efforts. </p>
-                        <a href="/case-study/verde-energy-customer-acquisition/">Read More ›</a>
+                        <p>Acquinity's lead conversion team powered Verde Energy’s customer acquisition efforts. Tony Mechaca, CMO from Verde Energy USA, worked alongside Acquinity.
+                        
+                        <a href="/case-study/verde-energy-customer-acquisition/">Read More ›</a></p>
+                        
                       </div>
                     </li>
                     <li class="active text-left article-title" data-orbit-slide="headline-2">
-                      <div class="large-3 small-3 column mn93">
+                      <div class="large-3 small-3 mkup column mn93">
                          <div class="hide-for-small image-wrapper radius th radius" >
                           <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/telecom1-150x150.jpg" alt="">
                         </div>
@@ -139,28 +141,26 @@ get_header(); ?>
                       <div class="large-9 small-12 column">
                         <h5>
                           <a href="/case-study/terracom-ad-targeting/" data-orbit-slide="headline-2" class="secondary">
-                            Terracom: Ad Targeting ›
+                            Terracom: Ad Targeting
                           </a>
                         </h5> 
-                        <p>Mobile provider Terracom/YourTel made the right call with Acquinity's targeting technology. </p>
-                        <a href="/case-study/terracom-ad-targeting/">Read More ›</a>
+                        <p>Mobile provider Terracom/YourTel made the right call with Acquinity's targeting technology. Acquinity helped Terracom maximize it's Lifeline campaign. <a href="/case-study/terracom-ad-targeting/">Read More ›</a></p>
+                        
                       </div>
                     </li>
                     <li class="active text-left article-title" data-orbit-slide="headline-3">
-                      <div class="large-3 small-3 column mn93">
+                      <div class="large-3 small-3 mkup column mn93">
                         <div class="hide-for-small image-wrapper radius th radius" >
                           <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/nuts1-150x150.jpg" alt="">
                         </div>
                       </div>
                       <div class="large-9 small-12 column">
                         <h5>
-                          <a href="/case-study/naturebox-boosting-online-orders/" data-orbit-slide="headline-3" class="secondary">
-                            NatureBox: Boosting Online Orders ›
-                          </a>
+                          <a href="/case-study/naturebox-boosting-online-orders/" data-orbit-slide="headline-3" class="secondary">Thinking inside the box</a>
                         </h5> 
-                        <p>bSaving.com and its social and email properties began working for healthfood distributor NatureBox in the spring of last year.
+                        <p>Natural food distributor NatureBox tasked Acquinity with boosting online orders. Partnering with Acquinity's bSavings has given NatureBox the sales advantage they needed. <a href="/case-study/naturebox-boosting-online-orders/">Read More ›</a>
                         </p>
-                        <a href="/case-study/naturebox-boosting-online-orders/">Read More ›</a>
+                        
                       </div>
                     </li>
                   </ul>
@@ -193,12 +193,12 @@ get_header(); ?>
                 </ul>
                   <h5 class="article-title-line">
                 <a href="/success-story-telecom/" class="secondary">
-                    Live from LEADSCON
+                    Live from LeadsCon
                 </a>
                     </h5>
                 <p class=" text-left">
                   An overview from Acquinity. 
-                                  <a href="/case-study/naturebox-boosting-online-orders/">Read Article ›</a> 
+                                  <a class="svbt-line" href="/case-study/naturebox-boosting-online-orders/">Read Article ›</a> 
                 </p>
 
              </div>
@@ -237,7 +237,7 @@ get_header(); ?>
                 </li>                
                 
               </ul>
-                               <a href="/success-story-telecom/" class="secondary">
+                               <a class="svbt-line" href="/success-story-telecom/" class="secondary">
                     See more News ›
                   </a>
             </div>

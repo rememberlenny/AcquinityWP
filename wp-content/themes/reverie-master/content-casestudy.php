@@ -10,8 +10,8 @@
 	<?php if (has_post_thumbnail( $post->ID ) ): ?>
     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' ); ?>
       <img src="<?php echo $image[0]; ?>">
-    <?php endif; ?>
 	<header>
+    <?php endif; ?>
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 		<?php reverie_entry_meta(); ?>
 	</header>
