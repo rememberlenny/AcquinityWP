@@ -1806,6 +1806,14 @@ hr.silent {
   padding-top: 1em;
 }
 
+.pb8em {
+  padding-bottom: 8em;
+}
+
+.mb08em {
+  margin-bottom: .8em;
+}
+
 .pos-bot-right {
   position: absolute;
   top: 9em;

@@ -116,10 +116,10 @@
             <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
               <div class="row collapse search-box">
                 <div class="large-7 columns">
-                  <input type="text" value="" name="s" id="s" placeholder="Search">
+                  <input type="text" value="" name="s" id="s" placeholder="">
                 </div>
                 <div class="large-4 columns">
-                  <button type="submit" id="searchsubmit" class="button tiny radius">Submit</button>
+                  <button type="submit" id="searchsubmit" class="button tiny radius">Search</button>
 
                   </input>
                 </div>

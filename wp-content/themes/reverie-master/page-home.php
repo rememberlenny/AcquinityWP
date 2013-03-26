@@ -83,7 +83,7 @@ get_header(); ?>
 <div class="content content-main row twelve">
 	<div class="main large-8 columns "> 	
 		<div class="case-studies fr">
-		  <div class="s9999 page-main-extension whitebg borderbtm fr">
+		  <div class="s9999 page-main-extension whitebg fr">
         <div class="lftcont page-main-content content-sec fr">
           <div class="pr98 pl98 text-left column"> 
             <div class="column">
@@ -175,7 +175,7 @@ get_header(); ?>
 		  </div>
 		</div>
     <div class="page-main fr text-left" role="main">
-      <div class="s9999 page-main-extension whitebg last fr">
+      <div class="s9999 page-main-extension whitebg borderbtm fr pb8em">
         <div class="lftcont page-main-content content-sec fr">
           <div class="pr98 pl98 text-left column"> 
             <div class=" ">
