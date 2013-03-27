@@ -45,6 +45,7 @@ get_header(); ?>
     <div class="case-studies fr">
       <div class="s9999 case-studies-extension fr">
         <div id="case-sliders" class="pr98 pl98 lftcont case-studies-content content-sec fr">
+        	<h4 class="subheader">Archive: Success Story</h4> 
             <?php $mypost = array( 'post_type' => 'success-story', );
         $loop = new WP_Query( $mypost ); ?>
         
@@ -52,7 +53,7 @@ get_header(); ?>
         
           <?php /* Start the Loop */ ?>
           <?php while ( have_posts() ) : the_post(); ?>
-            <?php get_template_part( 'content', get_post_format() ); ?>
+            <?php get_template_part( 'content', 'archive' ); ?>
           <?php endwhile; ?>
           
           <?php else : ?>

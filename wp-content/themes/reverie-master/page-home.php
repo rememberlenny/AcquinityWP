@@ -97,7 +97,7 @@ get_header(); ?>
                     <li class="active text-left article-title" data-orbit-slide="headline-1">
                       <div class="large-3 small-3 mkup column mn93">
 
-                          <div class="hide-for-small image-wrapper radius th radius" >
+                          <div class="hide-for-small image-wrapper circlewrapper radius" >
                             <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/Verde-Energy-USA-150x150.jpg" alt="">
                           </div>
                       </div>
@@ -115,7 +115,7 @@ get_header(); ?>
                     </li>
                     <li class="active text-left article-title" data-orbit-slide="headline-2">
                       <div class="large-3 small-3 mkup column mn93">
-                         <div class="hide-for-small image-wrapper radius th radius" >
+                         <div class="hide-for-small image-wrapper circlewrapper radius" >
                           <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/telecom1-150x150.jpg" alt="">
                         </div>
                       </div>
@@ -131,7 +131,7 @@ get_header(); ?>
                     </li>
                     <li class="active text-left article-title" data-orbit-slide="headline-3">
                       <div class="large-3 small-3 mkup column mn93">
-                        <div class="hide-for-small image-wrapper radius th radius" >
+                        <div class="hide-for-small image-wrapper circlewrapper radius" >
                           <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/nuts1-150x150.jpg" alt="">
                         </div>
                       </div>
