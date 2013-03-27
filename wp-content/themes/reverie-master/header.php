@@ -52,7 +52,7 @@
     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' ); ?>
 
       .masthead-photo {
-        background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;
+        background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6 !important;
       }
     <?php endif; ?>
     

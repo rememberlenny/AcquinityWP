@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Page News
+Template Name: No About Page
 */
 get_header(); ?>
 
@@ -45,27 +45,18 @@ get_header(); ?>
 		<div class="case-studies fr">
 		  <div class="s9999 case-studies-extension fr">
 		    <div id="case-sliders" class="pr98 pl98 lftcont case-studies-content content-sec fr">
-  
-          <?php if ( have_posts() ) : ?>
-          
-            <?php /* Start the Loop */ ?>
-            <?php while ( have_posts() ) : the_post(); ?>
-              <?php get_template_part( 'content', get_post_format() ); ?>
-            <?php endwhile; ?>
-            
-            <?php else : ?>
-              <?php get_template_part( 'content', 'none' ); ?>
-            
-          <?php endif; // end have_posts() check ?>
-          
-          <?php /* Display navigation to next/previous pages when applicable */ ?>
-          <?php if ( function_exists('reverie_pagination') ) { reverie_pagination(); } else if ( is_paged() ) { ?>
-            <nav id="post-nav">
-              <div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div>
-              <div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div>
-            </nav>
-          <?php } ?>
-
+	      <?php while (have_posts()) : the_post(); ?>
+					<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+						<header>
+							<h4 class="subheader"><?php the_title(); ?></h4>
+							<?php // reverie_entry_meta(); ?>
+						</header>
+						<div class="entry-content">
+              
+  						<?php the_content(); ?>
+						</div>
+					</article>
+				<?php endwhile; // End the loop ?>
 			  </div>
 			</div>
 		</div>

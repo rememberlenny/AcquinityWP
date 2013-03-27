@@ -3,6 +3,9 @@
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns" role="main">
 	
+	<?php $mypost = array( 'post_type' => 'post', );
+  $loop = new WP_Query( $mypost ); ?>
+	
 	<?php if ( have_posts() ) : ?>
 	
 		<?php /* Start the Loop */ ?>

@@ -1988,6 +1988,7 @@ div.borderrt {
 }
 
 .masthead-photo {
+  background: url("http://localhost:4421/wp-content/uploads/2013/03/hero-map.jpg") center center #faf8f6;
   overflow: hidden;
   width: 100%;
   border-right: 1px solid #222;
@@ -2017,8 +2018,6 @@ div.borderrt {
   text-shadow: 0px 0px 10px #000;
   color: white;
   margin: 0em;
-  padding-left: .2em;
-  padding-right: .2em;
 }
 .masthead-photo-content p {
   text-shadow: 2px 2px 5px #000;
@@ -2191,7 +2190,7 @@ div.borderrt {
   }
   .masthead-photo-content h1 {
     font-weight: 300;
-    font-size: 3.2em;
+    font-size: 2.2em;
     line-height: 1;
   }
 

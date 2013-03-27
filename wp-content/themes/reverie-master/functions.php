@@ -144,10 +144,10 @@ function form_submit_button($button, $form){
     return "<input type='submit' id='gform_submit_button_{$form["id"]}' class='button gform_button radius small success' value='Submit' tabindex='7'>";
 }
 
-
 //
-// Template for Case Studies
+// Excerpt length
 //
  
 
+ 
 ?>
