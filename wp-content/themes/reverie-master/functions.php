@@ -98,6 +98,27 @@ function reverie_entry_meta() {
 	echo '<p class="byline author">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
 }
 
+function get_related_cpt(){
+		$currentID = get_the_ID();
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $loop = new WP_Query( array(
+    'post_type' => 'success-story',
+    'posts_per_page' => 9,
+    'orderby'=> 'menu_order',
+    'paged'=>$paged,
+    'post__not_in' => array($currentID)
+    ) ); ?>    
+    <div class=" ">
+    	<h4 class="subheader">More Success Stories</h4>
+		    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+		    	<div class="large-4 fl pr98">
+				    <div class="accessory_image"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) { the_post_thumbnail('thumbnail'); } ?></a>
+				            <?php the_title( '<h5 class="accessory-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h5>' ); ?>
+				    </div>
+			    </div>
+		    <?php endwhile;?>
+    </div>
+<?php }
 
 //
 // Styles GForm Button

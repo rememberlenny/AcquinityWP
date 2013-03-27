@@ -9,7 +9,7 @@ get_header(); ?>
 
 <style type="text/css">
 	.masthead-photo {
-		background: url("<?php echo $image[0]; ?>") center right no-repeat #FAF8F6;
+		background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;
 	}
 </style>
 
@@ -18,7 +18,7 @@ get_header(); ?>
 <!-- Row for main content area -->
 	
 <div class="content hero-row row twelve">
-  <div class="main large-8 fl">
+  <div class="main large-12">
     <div class="masthead-photo h300">
       <div class="s9999 masthead-photo-extension image-wrapper">
         <div class="masthead-photo-content">
@@ -74,12 +74,13 @@ get_header(); ?>
 						</header>
 						<div class="entry-content">
 							<?php the_content(); ?>
-						</div>
-					</article>
-				<?php endwhile; // End the loop ?>
-			  </div>
-			</div>
-		</div>
+
+            </div>
+          </article>
+        <?php endwhile; // End the loop ?>
+        </div>
+      </div>
+    </div>
 	</div>
 	<?php get_sidebar(); ?>
 </div>

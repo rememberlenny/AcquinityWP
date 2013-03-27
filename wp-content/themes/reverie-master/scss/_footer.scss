@@ -83,6 +83,13 @@
       }
     }
 
+  .footer-full{
+    nav{
+      ul{
+        padding: 0.9375em;
+      }
+    }
+  }
   @media only screen and (min-width: 767px) {
   .footer-full nav ul li a:hover {
     opacity: 1;
@@ -100,8 +107,12 @@
     color: #32345C;
   }
   .footer-full{
+    margin-left: 1.175em;
     .row{
       max-width: 1000px;
+    }
+    p{
+      padding: 0px 0 9px 13px;
     }
     width: auto;
     .small-block-grid-2 > li {
@@ -116,7 +127,7 @@
     nav{
       ul{
         margin: 0em;
-        padding: 0.9375em;
+        padding: 0.9375em 0 0 0.9375em;
         li{
           &:first-child a{
               padding-left: 0px;

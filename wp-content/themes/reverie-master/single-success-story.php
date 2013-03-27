@@ -5,7 +5,7 @@
 
 <style type="text/css">
 	.masthead-photo {
-		background: url("<?php echo $image[0]; ?>") center right no-repeat #FAF8F6;
+		background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;
 	}
 </style>
 
@@ -14,7 +14,7 @@
 <!-- Row for main content area -->
 	
 <div class="content hero-row row twelve">
-  <div class="main large-8 fl" style="">
+  <div class="main large-12" style="">
     <div class="masthead-photo h300" style="">
       <div class="s9999 masthead-photo-extension image-wrapper">
         <div class="masthead-photo-content">
@@ -32,24 +32,9 @@
        </div>
     </div>
   </div>
-  <div class="sidebar large-4 small-12 fl">
-    <div class="company-facts hide-for-small"> 
-      <div class="s9999 company-facts-extension h300 fl">
-        <div class="company-facts-content content-sec">
-          <div id="featrap" class="  lftcont case-studies-content content-sec fr">
-            <ul class="pre-head">
-              <li class="active case-row">
-                <h5 class="subheader"><?php the_field('page_statistic_number'); ?></h5>
-                <p><?php the_field('page_statistic_text'); ?></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>	
 	 
+   
 	
 <div class="content content-main row twelve">
 	<div class="main large-8 columns "> 	
@@ -64,18 +49,20 @@
 							<?php // reverie_entry_meta(); ?>
 						</header>
 						<div class="entry-content">
-							<?php the_content(); ?>
+							<?php the_content(); ?>         
 						</div>
 						<footer>
 							<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'reverie'), 'after' => '</p></nav>' )); ?>
-							<p><?php the_tags(); ?></p>
-						</footer>
-					</article>
+							<p><?php the_tags();  ?></p>
+              <?php get_related_cpt(); ?>
+            </footer>
+          </article>
+          
+        </div>
 				<?php endwhile; // End the loop ?>
-			  </div>
 			</div>
 		</div>
-	</div>
-	<?php get_sidebar(); ?>
+  </div>
+  <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

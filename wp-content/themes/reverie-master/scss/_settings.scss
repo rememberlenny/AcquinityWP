@@ -423,11 +423,9 @@ div.borderrt{
       border-right: 1px solid darken(#333, 20%);
     }
   }
-  .home{
     .hero-row {
       max-width:100% !important;
     }
-  }
   .hero-row {
     .main{
       z-index: 1;
@@ -473,16 +471,10 @@ div.borderrt{
         line-height: 1;
       }
     }
-    .masthead-photo{
-      width: 9999px;
-      float: right;
-    }
-    .home{
       .masthead-photo{
         width: auto;
         float: none;
       }
-    }
     .masthead-photo-extension{ 
       .masthead-photo-content{
         width: 1000px;

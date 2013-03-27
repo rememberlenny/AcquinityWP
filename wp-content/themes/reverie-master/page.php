@@ -9,7 +9,7 @@ get_header(); ?>
 
 <style type="text/css">
 	.masthead-photo {
-		background: url("<?php echo $image[0]; ?>") center right no-repeat #FAF8F6;
+		background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;
 	}
 </style>
 
@@ -18,7 +18,7 @@ get_header(); ?>
 <!-- Row for main content area -->
 	
 <div class="content hero-row row twelve">
-  <div class="main large-8 fl">
+  <div class="main large-12">
     <div class="masthead-photo h300">
       <div class="s9999 masthead-photo-extension image-wrapper">
         <div class="masthead-photo-content">
@@ -34,24 +34,6 @@ get_header(); ?>
           ?>
         </div>
        </div>
-    </div>
-  </div>
-  <div class="sidebar large-4 small-12 fl">
-    <div class="company-facts hide-for-small"> 
-      <div class="s9999 company-facts-extension h300 fl">
-        <div class="company-facts-content content-sec">
-          <div id="featrap" class="  lftcont case-studies-content content-sec fr">
-          <h4 class="pre-head subheader">Acquinity Stats</h4>
-            <ul class="pre-head">
-              <li class="active case-row">
-                <p><?php the_field('page_statistic_pretext'); ?></p>
-                <h5 class="subheader"><?php the_field('page_statistic_number'); ?></h5>
-                <p><?php the_field('page_statistic_text'); ?></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>	
@@ -70,6 +52,7 @@ get_header(); ?>
 							<?php // reverie_entry_meta(); ?>
 						</header>
 						<div class="entry-content">
+              
 							<?php the_content(); ?>
 						</div>
 					</article>

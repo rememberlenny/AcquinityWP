@@ -10,8 +10,7 @@
 <footer class="row full-width " role="contentinfo">
 	<div class="footer-full twelve column">
 		<div class="row footer">
-
-				<?php wp_nav_menu(array('theme_location' => 'utility', 'container' => 'nav', 'container_class' => '', 'menu_class' => 'inline-list small-block-grid-2')); ?>
+			<?php wp_nav_menu(array('theme_location' => 'utility', 'container' => 'nav', 'container_class' => '', 'menu_class' => 'inline-list small-block-grid-2')); ?>
 				
 			<p>&copy; <?php echo date('Y'); ?> <a href="http://http://acquinityinteractive.com" rel="nofollow" title="Acquinity Interactive">Acquinity Interactive - All Rights Reserved</a>.</p>
 			
