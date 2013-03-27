@@ -10,6 +10,7 @@
 @import "font";
 @import "ieset";
 @import "gform";
+@import "widgets";
 
 //
 // Gen eral
@@ -140,6 +141,9 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   .pt1em{ padding-top: 1em; }
   .pb8em{padding-bottom: 8em;}
   .mb08em{ margin-bottom: .8em; }
+  .mb2em{ margin-bottom: 2em !important; }
+  .mb1em{ margin-bottom: 1em !important; }
+  .pr1em{ padding-right: 1em; }
   .pos-bot-right{
     position: absolute;
     top: 9em;
@@ -148,11 +152,18 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   .white{
     color: white !important;
   }
-
+  .row.panel{
+    margin-left: 0em !important;
+  }
+  .acq-cir-sm{
+    max-width: 80px;
+    padding: 1em .7em 0em .2em;
+  }
 
 //
 // Colors
 //
+   
 
 div.whitebg{
   background: white;
@@ -456,6 +467,9 @@ div.borderrt{
     }
   }
 
+.case-studies-content{
+  padding-bottom: 2em;
+}
   @media only screen and (min-width:1000px){
 
     .has-dropdown>a{

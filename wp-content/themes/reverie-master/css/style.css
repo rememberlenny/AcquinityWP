@@ -1607,6 +1607,42 @@ h4.subheader {
   border-radius: 3px;
 }
 
+.accessory_image {
+  background: white;
+  text-align: center;
+  padding: 1em 0.6em 0.3em;
+  border-radius: 3px;
+  border: 2px solid #d9d9d9;
+}
+.accessory_image .accessory-title {
+  text-align: left;
+  padding: .3em .5em;
+  font-size: .9em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: .5em;
+}
+.accessory_image img {
+  border-radius: 3px;
+  opacity: .7;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  transition: all 0.6s;
+}
+.accessory_image img:hover {
+  opacity: 1;
+}
+
+.about.panel p {
+  font-size: .9em;
+  margin-bottom: .5em !important;
+}
+.about.panel h4 {
+  margin-bottom: 0em;
+}
+
 ul, li, ol {
   list-style: none;
 }
@@ -1822,6 +1858,18 @@ hr.silent {
   margin-bottom: .8em;
 }
 
+.mb2em {
+  margin-bottom: 2em !important;
+}
+
+.mb1em {
+  margin-bottom: 1em !important;
+}
+
+.pr1em {
+  padding-right: 1em;
+}
+
 .pos-bot-right {
   position: absolute;
   top: 9em;
@@ -1830,6 +1878,15 @@ hr.silent {
 
 .white {
   color: white !important;
+}
+
+.row.panel {
+  margin-left: 0em !important;
+}
+
+.acq-cir-sm {
+  max-width: 80px;
+  padding: 1em .7em 0em .2em;
 }
 
 div.whitebg {
@@ -2116,6 +2173,10 @@ div.borderrt {
   opacity: .7;
   font-size: 1.4em !important;
   display: inline;
+}
+
+.case-studies-content {
+  padding-bottom: 2em;
 }
 
 @media only screen and (min-width: 1000px) {

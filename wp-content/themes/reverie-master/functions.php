@@ -98,6 +98,20 @@ function reverie_entry_meta() {
 	echo '<p class="byline author">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
 }
 
+function about_us_panel(){
+		?>
+		<div class="large-12 panel row clearboth mb1em radius about">
+			<img src="http://localhost:4421/wp-content/uploads/2013/03/acquinity-a-circle.png" class="fl acq-cir-sm" >
+			<a href="/about/"><h4 class="subheader">About Acquinity Interactive</h4></a>
+			<p>Acquinity Interactive turns consumers into brand investors. A performance, product marketing and lead generation company, Acquinity’s many platforms of expertise include niche online communities, their accompanying email titles, telemarketing, and consumer services in the fields of sweepstakes, health, couponing and political polling. 
+			<br>
+			<a href="/about/" class="secondary svbt-line">Read more about Acquinity Interactive ›</a> 
+			</p>
+			
+		</div>
+		<?php
+}
+
 function get_related_cpt(){
 		$currentID = get_the_ID();
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -108,12 +122,13 @@ function get_related_cpt(){
     'paged'=>$paged,
     'post__not_in' => array($currentID)
     ) ); ?>    
-    <div class=" ">
-    	<h4 class="subheader">More Success Stories</h4>
+    <div class="large-12 clearboth mb2em radius">
+    	<a href="/success-story/"><h4 class="subheader">More Success Stories</h4></a>
 		    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-		    	<div class="large-4 fl pr98">
-				    <div class="accessory_image"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) { the_post_thumbnail('thumbnail'); } ?></a>
-				            <?php the_title( '<h5 class="accessory-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h5>' ); ?>
+		    	<div class="large-4 fl pr1em">
+				    <div class="accessory_image radius">
+				    	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) { the_post_thumbnail('thumbnail'); } ?></a>
+				            <?php the_title( '<h5 class="accessory-title"><a class="secondary" href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h5>' ); ?>
 				    </div>
 			    </div>
 		    <?php endwhile;?>
