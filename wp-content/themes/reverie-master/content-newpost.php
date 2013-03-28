@@ -22,7 +22,7 @@
       <?php the_title(); ?>
     </a>
   </h5>
-  <p class=" text-left">
+  <p class=" text-left clearboth pt1em">
     <?php
       $excerpt = get_the_excerpt();
       echo string_limit_words($excerpt,10);
