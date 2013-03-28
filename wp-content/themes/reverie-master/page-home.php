@@ -94,63 +94,28 @@ get_header(); ?>
               <div class="case-study-item text-left large-12 fl">
                <div class="featsucc"> 
                   <ul id="featsucc" data-orbit>
-                    <li class="active text-left article-title" data-orbit-slide="headline-1">
-                      <div class="large-3 small-3 mkup column mn93">
+                    <?php 
+                    rewind_posts();
+                    $mypost = array( 'post_type' => 'success-story' );
+                    $my_query = new WP_Query( $mypost ); ?>
 
-                          <div class="hide-for-small image-wrapper circlewrapper radius" >
-                            <img class="centered " src="<?php echo site_url(); ?>/wp-content/uploads/2013/03/Verde-Energy-USA-150x150.jpg" alt="">
-                          </div>
-                      </div>
-                      <div class="large-9 small-12 column pl98">
-                        <h5>
-                          <a href="/success-story/verde-energy-usa-customer-acquisition/" data-orbit-slide="headline-2" class="secondary">
-                            Amping Up Acquisitions
-                          </a>
-                        </h5> 
-                        <p>Acquinity's lead conversion team powered Verde Energy’s customer acquisition efforts. Tony Mechaca, CMO from Verde Energy USA, worked alongside Acquinity.
-                        
-                        <a href="/success-story/verde-energy-usa-customer-acquisition/">Read More ›</a></p>
-                        
-                      </div>
-                    </li>
-                    <li class="active text-left article-title" data-orbit-slide="headline-2">
-                      <div class="large-3 small-3 mkup column mn93">
-                         <div class="hide-for-small image-wrapper circlewrapper radius" >
-                          <img class="centered " src="<?php echo site_url(); ?>/wp-content/uploads/2013/03/telecom1-150x150.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="large-9 small-12 column">
-                        <h5>
-                          <a href="/success-story/terracom-ad-targeting/" data-orbit-slide="headline-2" class="secondary">
-                            Terracom: Ad Targeting
-                          </a>
-                        </h5> 
-                        <p>Mobile provider Terracom/YourTel made the right call with Acquinity's targeting technology. Acquinity helped Terracom maximize it's Lifeline campaign. <a href="/success-story/terracom-ad-targeting/">Read More ›</a></p>
-                        
-                      </div>
-                    </li>
-                    <li class="active text-left article-title" data-orbit-slide="headline-3">
-                      <div class="large-3 small-3 mkup column mn93">
-                        <div class="hide-for-small image-wrapper circlewrapper radius" >
-                          <img class="centered " src="<?php echo site_url(); ?>/wp-content/uploads/2013/03/nuts1-150x150.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="large-9 small-12 column">
-                        <h5>
-                          <a href="/success-story/naturebox-boosting-online-orders/" data-orbit-slide="headline-3" class="secondary">Thinking inside the box</a>
-                        </h5> 
-                        <p>Natural food distributor NatureBox tasked Acquinity with boosting online orders. Partnering with Acquinity's bSavings has given NatureBox the sales advantage they needed. <a href="/success-story/naturebox-boosting-online-orders/">Read More ›</a>
-                        </p>
-                        
-                      </div>
-                    </li>
+                    <?php if ( have_posts() ) : ?>
+
+                    <?php /* Start the Loop */ ?>
+                    <?php while ( $my_query->have_posts()) :  $my_query->the_post(); ?>
+                    <?php get_template_part( 'content', 'homeslide' ); ?>
+                    <?php endwhile; ?>
+
+                    <?php else : ?>
+                    <?php get_template_part( 'content', 'none' ); ?>
+
+                    <?php endif; // end have_posts() check 
+                    wp_reset_query();?>
                   </ul>
-
                 </div>
               </div>
-            <div class=" clear text">
+            <div class=" clear text"></div>
             </div>
-          </div>
           </div>
         </div>
       </div>
@@ -162,63 +127,32 @@ get_header(); ?>
             <div class=" ">
  
             <div class="large-6 column featart-short borderrt" style=" border-right: 1px solid #E4E2E1;">
-                           <a href="/success-story/">
+              <a href="/success-story/">
                 <h4 class="subheader">Latest</h4>
               </a>
-                <ul style="margin-bottom: 0.4em;">
-                  <li>
-                    <div class="image-wrapper radius" >
-                      <img class="centered " src="<?php echo site_url(); ?>/wp-content/uploads/2013/03/leadscon.jpg" alt="" style="max-height: 50px;">
-                    </div>
-                  </li>
-                </ul>
-                  <h5 class="article-title-line" style="line-height:1.2;">
-                <a href="/success-story-telecom/" class="secondary">
-                    Live from LeadsCon
-                </a>
-                    </h5>
-                <p class=" text-left">
-                 There is a definite buzz about the industry changing for the better, with the evaporation...
-                                  <a class="svbt-line" href="<?php echo site_url(); ?>/2013/03/live-from-leadscon-las-vegas-2013/">Read Article ›</a> 
-                </p>
+                <?php 
+                rewind_posts();
+                $mypost = array( 'post_type' => 'post' );
+                $my_query = new WP_Query( $mypost ); ?>
 
+                <?php if ( have_posts() ) : ?>
+
+                <?php $i=1 /* Start the Loop */ ?>
+                <?php while ( $i<2 && $my_query->have_posts()) :  $my_query->the_post(); ?>
+                <?php get_template_part( 'content', 'newpost' ); ?> 
+                <?php $i++; endwhile; ?>
              </div>
              <div class="text-left large-6 column">
               <a href="/success-stories/">
                 <h4 class="subheader">News</h4>
               </a>
               <ul class="" style="margin-bottom: 1.8em;">
-                <li class="active text-left article-title" >
-
-                  <a href="/success-story-telecom/" class="secondary">
-                    Acquinity.com to relaunch ›
-                  </a>
-
-                </li>
-                <li class="active text-left article-title">
-
-                  <a href="/success-story-telecom/" class="secondary">
-                    Meet the Acquinity team at ad:tech ›
-                  </a>
-
-                </li>
-                <li class="active text-left article-title">
-
-                  <a href="/success-story-telecom/" class="secondary">
-                    Acquinity's new COO: Bob Hayes ›
-                  </a>
-
-                </li>                 
-                <li class="active text-left article-title">
-
-                  <a href="/2013/03/shopping-community-bsaving-com-reaches-4-5mm-members-partners-include-livingsocial-naturebox-att-wireless/" class="secondary">
-                    bSaving.com reaches 4.5MM ›
-                  </a>
-
-                </li>                
-                
+                <?php while ( $i<5 && $my_query->have_posts()) :  $my_query->the_post(); ?>
+                <?php get_template_part( 'content', 'notnewpost' ); ?>
+                <?php $i++; endwhile; ?>
+                <?php endif; // end have_posts() check ?>               
               </ul>
-                               <a class="svbt-line" href="/success-story-telecom/" class="secondary">
+                  <a class="svbt-line" href="/success-story-telecom/" class="secondary">
                     See more News ›
                   </a>
             </div>
