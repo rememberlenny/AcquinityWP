@@ -125,39 +125,38 @@ get_header(); ?>
 	      <div class="lftcont page-main-content content-sec fr">
 		      <div class="pr98 pl98 text-left column"> 
             <div class=" ">
- 
-            <div class="large-6 column featart-short borderrt" style=" border-right: 1px solid #E4E2E1;">
-              <a href="/success-story/">
-                <h4 class="subheader">Latest</h4>
-              </a>
-                <?php 
-                rewind_posts();
-                $mypost = array( 'post_type' => 'post' );
-                $my_query = new WP_Query( $mypost ); ?>
+              <div class="large-6 column featart-short borderrt" style=" border-right: 1px solid #E4E2E1;">
+                <a href="/success-story/">
+                  <h4 class="subheader">Latest</h4>
+                </a>
+                  <?php 
+                  rewind_posts();
+                  $mypost = array( 'post_type' => 'post' );
+                  $my_query = new WP_Query( $mypost ); ?>
 
-                <?php if ( have_posts() ) : ?>
+                  <?php if ( have_posts() ) : ?>
 
-                <?php $i=1 /* Start the Loop */ ?>
-                <?php while ( $i<2 && $my_query->have_posts()) :  $my_query->the_post(); ?>
-                <?php get_template_part( 'content', 'newpost' ); ?> 
-                <?php $i++; endwhile; ?>
-             </div>
-             <div class="text-left large-6 column">
-              <a href="/success-stories/">
-                <h4 class="subheader">News</h4>
-              </a>
-              <ul class="" style="margin-bottom: 1.8em;">
-                <?php while ( $i<5 && $my_query->have_posts()) :  $my_query->the_post(); ?>
-                <?php get_template_part( 'content', 'notnewpost' ); ?>
-                <?php $i++; endwhile; ?>
-                <?php endif; // end have_posts() check ?>               
-              </ul>
-                  <a class="svbt-line" href="/success-story-telecom/" class="secondary">
-                    See more News ›
-                  </a>
-            </div>
-            <div class=" clear text">
-
+                  <?php $i=1 /* Start the Loop */ ?>
+                  <?php while ( $i<2 && $my_query->have_posts()) :  $my_query->the_post(); ?>
+                  <?php get_template_part( 'content', 'newpost' ); ?> 
+                  <?php $i++; endwhile; ?>
+               </div>
+               <div class="text-left large-6 column">
+                <a href="/success-stories/">
+                  <h4 class="subheader">News</h4>
+                </a>
+                <ul class="" style="margin-bottom: 1.8em;">
+                  <?php while ( $i<5 && $my_query->have_posts()) :  $my_query->the_post(); ?>
+                  <?php get_template_part( 'content', 'notnewpost' ); ?>
+                  <?php $i++; endwhile; ?>
+                  <?php endif; // end have_posts() check 
+                  wp_reset_query(); ?>               
+                </ul>
+                    <a class="svbt-line" href="/success-story-telecom/" class="secondary">
+                      See more News ›
+                    </a>
+              </div>
+              <div class=" clear text"></div>
             </div>
           </div>
 		    </div>
@@ -176,7 +175,6 @@ get_header(); ?>
               </div>
             </div>
             <div class=" clear text">
-
             </div>
           </div>
         </div>
