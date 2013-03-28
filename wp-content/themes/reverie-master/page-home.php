@@ -122,11 +122,11 @@ get_header(); ?>
 		</div>	
 		<div class="page-main fr text-left" role="main">
 	    <div class="s9999 page-main-extension fr">
-	      <div class="lftcont page-main-content content-sec fr">
+	      <div class="lftcont page-main-content content-sec fr pb15em">
 		      <div class="pr98 pl98 text-left column"> 
             <div class=" ">
-              <div class="large-6 column featart-short borderrt" style=" border-right: 1px solid #E4E2E1;">
-                <a href="/success-story/">
+              <div class="large-6 column featart-short borderrt">
+                <a href="/news/">
                   <h4 class="subheader">Latest</h4>
                 </a>
                   <?php 
@@ -142,7 +142,7 @@ get_header(); ?>
                   <?php $i++; endwhile; ?>
                </div>
                <div class="text-left large-6 column">
-                <a href="/success-stories/">
+                <a href="/news/">
                   <h4 class="subheader">News</h4>
                 </a>
                 <ul class="" style="margin-bottom: 1.8em;">
