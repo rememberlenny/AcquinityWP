@@ -10,7 +10,7 @@
  <li class="active text-left article-title" data-orbit-slide="headline-1">
   <ul style="margin-bottom: 0.4em;">
     <li>
-      <div class="image-wrapper circlewrapper radius" >
+      <div class="special-news image-wrapper circlewrapper radius" >
         <?php if (has_post_thumbnail( $post->ID ) ): ?>
           <?php $image = wp_get_attachment_image_src( the_post_thumbnail( 'thumbnail' ), 'single-post-thumbnail' ); ?>
         <?php endif; ?>

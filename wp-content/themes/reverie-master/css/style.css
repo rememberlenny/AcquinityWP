@@ -2027,6 +2027,12 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   color: #a2a2a2;
 }
 
+.special-news.circlewrapper {
+  max-width: 108px;
+  float: left;
+  margin-right: 2em;
+}
+
 .masthead-photo {
   background: url("http://acquinity.it/wp-content/uploads/2013/03/hero-map.jpg") center center #faf8f6;
   overflow: hidden;
