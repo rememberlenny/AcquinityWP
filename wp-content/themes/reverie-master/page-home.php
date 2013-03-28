@@ -98,7 +98,7 @@ get_header(); ?>
                       <div class="large-3 small-3 mkup column mn93">
 
                           <div class="hide-for-small image-wrapper circlewrapper radius" >
-                            <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/Verde-Energy-USA-150x150.jpg" alt="">
+                            <img class="centered " src="<?php echo site_url(); ?>/wp-content/uploads/2013/03/Verde-Energy-USA-150x150.jpg" alt="">
                           </div>
                       </div>
                       <div class="large-9 small-12 column pl98">
@@ -116,7 +116,7 @@ get_header(); ?>
                     <li class="active text-left article-title" data-orbit-slide="headline-2">
                       <div class="large-3 small-3 mkup column mn93">
                          <div class="hide-for-small image-wrapper circlewrapper radius" >
-                          <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/telecom1-150x150.jpg" alt="">
+                          <img class="centered " src="<?php echo site_url(); ?>/wp-content/uploads/2013/03/telecom1-150x150.jpg" alt="">
                         </div>
                       </div>
                       <div class="large-9 small-12 column">
@@ -132,7 +132,7 @@ get_header(); ?>
                     <li class="active text-left article-title" data-orbit-slide="headline-3">
                       <div class="large-3 small-3 mkup column mn93">
                         <div class="hide-for-small image-wrapper circlewrapper radius" >
-                          <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/nuts1-150x150.jpg" alt="">
+                          <img class="centered " src="<?php echo site_url(); ?>/wp-content/uploads/2013/03/nuts1-150x150.jpg" alt="">
                         </div>
                       </div>
                       <div class="large-9 small-12 column">
@@ -168,7 +168,7 @@ get_header(); ?>
                 <ul style="margin-bottom: 0.4em;">
                   <li>
                     <div class="image-wrapper radius" >
-                      <img class="centered " src="http://localhost:4421/wp-content/uploads/2013/03/leadscon.jpg" alt="" style="max-height: 50px;">
+                      <img class="centered " src="<?php echo site_url(); ?>/wp-content/uploads/2013/03/leadscon.jpg" alt="" style="max-height: 50px;">
                     </div>
                   </li>
                 </ul>
@@ -179,7 +179,7 @@ get_header(); ?>
                     </h5>
                 <p class=" text-left">
                  There is a definite buzz about the industry changing for the better, with the evaporation...
-                                  <a class="svbt-line" href="http://localhost:4421/2013/03/live-from-leadscon-las-vegas-2013/">Read Article ›</a> 
+                                  <a class="svbt-line" href="<?php echo site_url(); ?>/2013/03/live-from-leadscon-las-vegas-2013/">Read Article ›</a> 
                 </p>
 
              </div>

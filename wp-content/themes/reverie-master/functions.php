@@ -101,7 +101,7 @@ function reverie_entry_meta() {
 function about_us_panel(){
 		?>
 		<div class="large-12 panel row clearboth mb1em radius about">
-			<img src="http://localhost:4421/wp-content/uploads/2013/03/acquinity-a-circle.png" class="fl acq-cir-sm" >
+			<img src="<?php echo site_url(); ?>/wp-content/uploads/2013/03/acquinity-a-circle.png" class="fl acq-cir-sm" >
 			<a href="/about/"><h4 class="subheader">About Acquinity Interactive</h4></a>
 			<p>Acquinity Interactive turns consumers into brand investors. A performance, product marketing and lead generation company, Acquinity’s many platforms of expertise include niche online communities, their accompanying email titles, telemarketing, and consumer services in the fields of sweepstakes, health, couponing and political polling. 
 			<br>
