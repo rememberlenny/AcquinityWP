@@ -116,7 +116,7 @@ function page_bottom_box(){
   if( get_field('page_bottom_statistic_toggle') )
   { ?>
     <div class="pageBottomBox large-12 panel row clearboth mb1em radius about">
-        <h4 class="subheader">
+        <h4 class="subheader title">
           <?php
             the_field('page_bottom_statistic_title'); 
           ?>
@@ -214,15 +214,11 @@ function lkbg_head_style(){
     .linkedin{
       background: url('<?php the_field('facebook_icon', 'option'); ?>') center center;
     }
-    <?php if (is_page('home') ): ?>
-
-      <?php if (has_post_thumbnail( $post->ID ) ){ ?>
-        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' ); ?>
-
-          .masthead-photo {
-            background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6 !important;
-          }
-      <?php } ?> 
+    <?php if (is_page('home') ):
+      $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' ); ?>
+        .masthead-photo {
+          background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6 !important;
+        }
     <?php elseif (is_home() ): ?>
       div.masthead-photo {
         background: url("<?php the_field('blog_top_header', 'option') ?>
