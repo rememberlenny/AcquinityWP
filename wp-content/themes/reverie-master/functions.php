@@ -127,15 +127,12 @@ function page_bottom_box(){
             the_field('page_bottom_statistic_number'); 
           ?> 
           </h4>
-          <p>
-          <?php 
-            the_field('page_bottom_statistic_short_desc'); 
-          ?> 
-          </p>
         </div>
         <div class="large-6 column">              
-          <p>
-            
+         <p>
+            <?php 
+              the_field('page_bottom_statistic_short_desc'); 
+            ?> 
           </p>
   			</div>
 		</div>
