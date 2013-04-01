@@ -55,11 +55,10 @@
             background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6 !important;
           }
       <?php } ?>  
-    <?php elseif (!is_page_template('archive-success-story.php') ): 
-      $imagess = the_field('success_stories_archive_header', 'option');
+    <?php elseif (is_page_template('archive-success-story.php') ): 
     ?>
       .masthead-photo {
-        background: url("<?php echo $imagess; ?>
+        background: url("<?php the_field('success_stories_archive_header', 'option') ?>
           ") center center no-repeat #FAF8F6;
       }
     <?php endif;?>
