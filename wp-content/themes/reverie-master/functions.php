@@ -128,7 +128,7 @@ function page_bottom_box(){
           ?> 
           </h4>
         </div>
-        <div class="large-6 column">              
+        <div class="large-6 fl">              
          <p>
             <?php 
               the_field('page_bottom_statistic_short_desc'); 
