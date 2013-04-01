@@ -9,14 +9,16 @@ class Testimonials_Widget_Settings {
 	const id					= 'testimonialswidget_settings';
 
 	public static $default		= array(
-			'id'      			=> 'default_field',
-			'section' 			=> 'general',
-			'title'   			=> '',
-			'desc'    			=> '',
-			'type'    			=> 'text',
-			'choices' 			=> array(),
-			'std'     			=> '',
-			'class'   			=> ''
+			'id'      				=> 'default_field',
+			'section' 				=> 'general',
+			'title'   				=> '',
+			'desc'    				=> '',
+			'type'    				=> 'text', // textarea, checkbox, radio, select, hidden, heading, password, expand_begin, expand_end
+			'choices' 				=> array(), // key => value
+			'std'     				=> '', // default key or value
+			'class'   				=> '',
+			'validate'				=> '', // required, term, slug, slugs, ids, order, single paramater PHP functions
+			'widget'				=> 1, // show in widget options, 0 off
 	);
 	public static $defaults		= array();
 	public static $sections		= array();
@@ -25,8 +27,8 @@ class Testimonials_Widget_Settings {
 
 
 	public function __construct() {
-		self::load_sections();
-		self::load_settings();
+		self::sections();
+		self::settings();
 
 		add_action( 'admin_init', array( &$this, 'admin_init' ) );
 		add_action( 'admin_menu', array( &$this, 'admin_menu' ) );
@@ -34,7 +36,7 @@ class Testimonials_Widget_Settings {
 	}
 
 
-	public static function load_sections() {
+	public static function sections() {
 		self::$sections['general']		= __( 'General' , 'testimonials-widget');
 		self::$sections['selection']	= __( 'Selection' , 'testimonials-widget');
 		self::$sections['ordering']		= __( 'Ordering' , 'testimonials-widget');
@@ -48,18 +50,20 @@ class Testimonials_Widget_Settings {
 	}
 
 
-	public static function load_settings() {
+	public static function settings() {
 		// Widget
 		self::$settings['title']	= array(
 			'section'			=> 'widget',
 			'title'   			=> __( 'Widget Title', 'testimonials-widget' ),
 			'std'     			=> __( 'Testimonials', 'testimonials-widget' ),
+			'validate'			=> 'wp_kses_post',
 		);
 
 		self::$settings['title_link']	= array(
 			'section'			=> 'widget',
 			'title'   			=> __( 'Title Link', 'testimonials-widget' ),
 			'desc'    			=> __( 'URL or Post ID to link widget title to. Ex: 123 or http://example.com', 'testimonials-widget' ),
+			'validate'			=> 'wp_kses_data',
 		);
 
 		self::$settings['keep_whitespace']	= array(
@@ -69,16 +73,25 @@ class Testimonials_Widget_Settings {
 			'type'				=> 'checkbox',
 		);
 
+		self::$settings['height']	= array(
+			'section'			=> 'widget',
+			'title'   			=> __( 'Height', 'testimonials-widget' ),
+			'desc'				=> __( 'Testimonials height, in pixels. Overrides minimum and maximum height', 'testimonials-widget' ),
+			'validate'			=> 'absint',
+		);
+
 		self::$settings['min_height']	= array(
 			'section'			=> 'widget',
 			'title'   			=> __( 'Minimum Height', 'testimonials-widget' ),
 			'desc'				=> __( 'Set for minimum display height, in pixels', 'testimonials-widget' ),
+			'validate'			=> 'absint',
 		);
 
 		self::$settings['max_height']	= array(
 			'section'			=> 'widget',
 			'title'   			=> __( 'Maximum Height', 'testimonials-widget' ),
 			'desc'				=> __( 'Set for maximum display height, in pixels', 'testimonials-widget' ),
+			'validate'			=> 'absint',
 		);
 
 		self::$settings['refresh_interval']	= array(
@@ -86,6 +99,7 @@ class Testimonials_Widget_Settings {
 			'title'   			=> __( 'Rotation Speed', 'testimonials-widget' ),
 			'desc'				=> __( 'Number of seconds between testimonial rotations or 0 for no rotation at all refresh', 'testimonials-widget' ),
 			'std'				=> 5,
+			'validate'			=> 'absint',
 		);
 
 		// General
@@ -97,6 +111,7 @@ class Testimonials_Widget_Settings {
 		self::$settings['char_limit']	= array(
 			'title'   			=> __( 'Character Limit', 'testimonials-widget' ),
 			'desc'				=> __( 'Number of characters to limit non-single testimonial views to', 'testimonials-widget' ),
+			'validate'			=> 'absint',
 		);
 
 		self::$settings['hide_not_found']	= array(
@@ -154,12 +169,14 @@ class Testimonials_Widget_Settings {
 		self::$settings['target']	= array(
 			'title'   			=> __( 'URL Target', 'testimonials-widget' ),
 			'desc'				=> __( 'Adds target to all URLs; leave blank if none', 'testimonials-widget' ),
+			'validate'			=> 'term',
 		);
 
 		self::$settings['bottom_text']	= array(
 			'title'   			=> __( 'Testimonial Bottom Text', 'testimonials-widget' ),
 			'desc'				=> __( 'Custom text or HTML for bottom of testimonials', 'testimonials-widget' ),
 			'type'    			=> 'textarea',
+			'validate'    		=> 'wp_kses_post',
 		);
 
 		self::$settings['paging']	= array(
@@ -173,6 +190,7 @@ class Testimonials_Widget_Settings {
 				'after'			=> __( 'After testimonials', 'testimonials-widget' ),
 			),
 			'std'				=> 1,
+			'widget'			=> 0,
 		);
 
 		self::$settings['remove_hentry']	= array(
@@ -196,12 +214,14 @@ class Testimonials_Widget_Settings {
 			'section'   		=> 'selection',
 			'title'   			=> __( 'Category Filter', 'testimonials-widget' ),
 			'desc'    			=> __( 'Comma separated category slug-names. Ex: category-a, another-category', 'testimonials-widget' ),
+			'validate'			=> 'slugs',
 		);
 
 		self::$settings['tags']	= array(
 			'section'   		=> 'selection',
 			'title'   			=> __( 'Tags Filter', 'testimonials-widget' ),
 			'desc'    			=> __( 'Comma separated tag slug-names. Ex: tag-a, another-tag', 'testimonials-widget' ),
+			'validate'			=> 'slugs',
 		);
 
 		self::$settings['tags_all']	= array(
@@ -215,12 +235,14 @@ class Testimonials_Widget_Settings {
 			'section'   		=> 'selection',
 			'title'   			=> __( 'Include IDs Filter', 'testimonials-widget' ),
 			'desc'				=> __( 'Comma separated testimonial IDs. Ex: 3,1,2', 'testimonials-widget' ),
+			'validate'			=> 'ids',
 		);
 
 		self::$settings['exclude']	= array(
 			'section'   		=> 'selection',
 			'title'   			=> __( 'Exclude IDs Filter', 'testimonials-widget' ),
 			'desc'				=> __( 'Comma separated testimonial IDs. Ex: 3,1,2', 'testimonials-widget' ),
+			'validate'			=> 'ids',
 		);
 
 		self::$settings['limit']	= array(
@@ -228,6 +250,7 @@ class Testimonials_Widget_Settings {
 			'title'   			=> __( 'Limit', 'testimonials-widget' ),
 			'desc'				=> __( 'Number of testimonials to select per instance', 'testimonials-widget' ),
 			'std'				=> 10,
+			'validate'			=> 'intval',
 		);
 
 		self::$settings['selection_expand_end']	= array(
@@ -257,11 +280,13 @@ class Testimonials_Widget_Settings {
 			'choices'			=> array(
 				'ID'			=> __( 'Testimonial ID', 'testimonials-widget' ),
 				'author'		=> __( 'Author', 'testimonials-widget' ),
-				'title'			=> __( 'Source', 'testimonials-widget' ),
 				'date'			=> __( 'Date', 'testimonials-widget' ),
+				'menu_order'	=> __( 'Menu Order', 'testimonials-widget' ),
+				'title'			=> __( 'Source', 'testimonials-widget' ),
 				'none'			=> __( 'No order', 'testimonials-widget' ),
 			),
 			'std'				=> 'ID',
+			'validate'			=> 'term',
 		);
 
 		self::$settings['meta_key']	= array(
@@ -276,6 +301,7 @@ class Testimonials_Widget_Settings {
 				'testimonials-widget-company' 	=> __( 'Company' , 'testimonials-widget'),
 				'testimonials-widget-url' 		=> __( 'URL' , 'testimonials-widget'),
 			),
+			'validate'			=> 'slug',
 		);
 
 		self::$settings['order']	= array(
@@ -287,6 +313,7 @@ class Testimonials_Widget_Settings {
 				'ASC'			=> __( 'Ascending', 'testimonials-widget' ),
 			),
 			'std'				=> 'DESC',
+			'validate'			=> 'order',
 		);
 
 		self::$settings['ordering_expand_end']	= array(
@@ -296,10 +323,11 @@ class Testimonials_Widget_Settings {
 
 		// Debug
 		self::$settings['debug_mode'] = array(
-			'section' => 'testing',
-			'title'   => __( 'Debug Mode?' , 'testimonials-widget'),
-			'desc'	  => __( 'Not implemented yet', 'testimonials-widget' ),
-			'type'    => 'checkbox',
+			'section'			=> 'testing',
+			'title'				=> __( 'Debug Mode?' , 'testimonials-widget'),
+			'desc'				=> __( 'Not implemented yet', 'testimonials-widget' ),
+			'type'				=> 'checkbox',
+			'widget'			=> 0,
 		);
 
 		// Post Type
@@ -308,6 +336,7 @@ class Testimonials_Widget_Settings {
 			'title'				=> __( 'Allow Comments?' , 'testimonials-widget'),
 			'desc'				=> __( 'If checked, allows commenting on testimonial single-view pages', 'testimonials-widget' ),
 			'type'				=> 'checkbox',
+			'widget'			=> 0,
 		);
 
 		$desc					= __( 'URL slug-name for <a href="%1s">testimonials archive</a> page. After changing, you must click "Save Changes" on <a href="%2s">Permalink Settings</a> to update them.', 'testimonials-widget' );
@@ -319,6 +348,8 @@ class Testimonials_Widget_Settings {
 			'title'				=> __( 'Archive Page URL' , 'testimonials-widget'),
 			'desc'				=> sprintf( $desc, $site_url, $url ),
 			'std'				=> 'testimonials',
+			'validate'			=> 'sanitize_title',
+			'widget'			=> 0,
 		);
 
 		$desc					= __( 'URL slug-name for testimonial view pages. After changing, you must click "Save Changes" on <a href="%1s">Permalink Settings</a> to update them.', 'testimonials-widget' );
@@ -327,64 +358,67 @@ class Testimonials_Widget_Settings {
 			'title'				=> __( 'Testimonial Page URL' , 'testimonials-widget'),
 			'desc'				=> sprintf( $desc, $url ),
 			'std'				=> 'testimonial',
+			'validate'			=> 'sanitize_title',
+			'widget'			=> 0,
 		);
 
 		// Reset
 		self::$settings['reset_defaults'] = array(
-			'section' => 'reset',
-			'title'   => __( 'Reset to Defaults?' , 'testimonials-widget'),
-			'type'    => 'checkbox',
-			'class'   => 'warning', // Custom class for CSS
-			'desc'    => __( 'Check this box to reset options to their defaults' , 'testimonials-widget')
+			'section'			=> 'reset',
+			'title'				=> __( 'Reset to Defaults?' , 'testimonials-widget'),
+			'type'				=> 'checkbox',
+			'class'				=> 'warning', // Custom class for CSS
+			'desc'				=> __( 'Check this box to reset options to their defaults' , 'testimonials-widget'),
+			'widget'			=> 0,
 		);
 
 		// Reference
 		if ( false ) {
 		self::$settings['example_text'] = array(
-			'title'   => __( 'Example Text Input' , 'testimonials-widget'),
-			'desc'    => __( 'This is a description for the text input.' , 'testimonials-widget'),
-			'std'     => 'Default value',
+			'title'				=> __( 'Example Text Input' , 'testimonials-widget'),
+			'desc'				=> __( 'This is a description for the text input.' , 'testimonials-widget'),
+			'std'				=> 'Default value',
 		);
 
 		self::$settings['example_textarea'] = array(
-			'title'   => __( 'Example Textarea Input' , 'testimonials-widget'),
-			'desc'    => __( 'This is a description for the textarea input.' , 'testimonials-widget'),
-			'std'     => 'Default value',
-			'type'    => 'textarea',
+			'title'				=> __( 'Example Textarea Input' , 'testimonials-widget'),
+			'desc'				=> __( 'This is a description for the textarea input.' , 'testimonials-widget'),
+			'std'				=> 'Default value',
+			'type'				=> 'textarea',
 		);
 
 		self::$settings['example_checkbox'] = array(
-			'title'   => __( 'Example Checkbox' , 'testimonials-widget'),
-			'desc'    => __( 'This is a description for the checkbox.' , 'testimonials-widget'),
-			'type'    => 'checkbox',
-			'std'     => 1 // Set to 1 to be checked by default, 0 to be unchecked by default.
+			'title'				=> __( 'Example Checkbox' , 'testimonials-widget'),
+			'desc'				=> __( 'This is a description for the checkbox.' , 'testimonials-widget'),
+			'type'				=> 'checkbox',
+			'std'				=> 1 // Set to 1 to be checked by default, 0 to be unchecked by default.
 		);
 
 		self::$settings['example_heading'] = array(
-			'title'   => '', // Not used for headings.
-			'desc'    => 'Example Heading',
-			'type'    => 'heading'
+			'title'				=> '', // Not used for headings.
+			'desc'				=> 'Example Heading',
+			'type'				=> 'heading'
 		);
 
 		self::$settings['example_radio'] = array(
-			'title'   => __( 'Example Radio' , 'testimonials-widget'),
-			'desc'    => __( 'This is a description for the radio buttons.' , 'testimonials-widget'),
-			'type'    => 'radio',
-			'choices' => array(
-				'choice1' => 'Choice 1',
-				'choice2' => 'Choice 2',
-				'choice3' => 'Choice 3'
+			'title'				=> __( 'Example Radio' , 'testimonials-widget'),
+			'desc'				=> __( 'This is a description for the radio buttons.' , 'testimonials-widget'),
+			'type'				=> 'radio',
+			'choices'			=> array(
+				'choice1'			=> 'Choice 1',
+				'choice2'			=> 'Choice 2',
+				'choice3'			=> 'Choice 3'
 			)
 		);
 
 		self::$settings['example_select'] = array(
-			'title'   => __( 'Example Select' , 'testimonials-widget'),
-			'desc'    => __( 'This is a description for the drop-down.' , 'testimonials-widget'),
-			'type'    => 'select',
-			'choices' => array(
-				'choice1' => 'Other Choice 1',
-				'choice2' => 'Other Choice 2',
-				'choice3' => 'Other Choice 3'
+			'title'				=> __( 'Example Select' , 'testimonials-widget'),
+			'desc'				=> __( 'This is a description for the drop-down.' , 'testimonials-widget'),
+			'type'				=> 'select',
+			'choices'			=> array(
+				'choice1'			=> 'Other Choice 1',
+				'choice2'			=> 'Other Choice 2',
+				'choice3'			=> 'Other Choice 3'
 			)
 		);
 		}
@@ -399,7 +433,7 @@ class Testimonials_Widget_Settings {
 
 	public static function get_defaults() {
 		if ( empty( self::$defaults ) )
-			self::load_settings();
+			self::settings();
 
 		foreach ( self::$settings as $id => $parts ) {
 			self::$defaults[$id]	= isset( $parts[ 'std' ] ) ? $parts[ 'std' ] : '';
@@ -411,7 +445,7 @@ class Testimonials_Widget_Settings {
 
 	public static function get_settings() {
 		if ( empty( self::$settings ) )
-			self::load_settings();
+			self::settings();
 
 		return self::$settings;
 	}
@@ -489,7 +523,7 @@ class Testimonials_Widget_Settings {
 			<p>When ready, <a href="'.get_admin_url().'edit.php?post_type=testimonials-widget">view</a>
 			or <a href="'.get_admin_url().'post-new.php?post_type=testimonials-widget">add</a> testimonials.</p>
 
-			<p>If you like this plugin, <a href="http://aihr.us/about-aihrus/donate/" title="Donate for Good Karma">please donate</a> or <a href="http://aihr.us/wordpress/testimonials-widget-premium/" title="purchase Testimonials Widget Premium">purchase Testimonials Widget Premium</a> to help fund further development and <a href="http://wordpress.org/support/plugin/testimonials-widget" title="Support forums">support</a>.</p>
+			<p>If you like this plugin, <a href="http://aihr.us/about-aihrus/donate/" title="Donate for Good Karma">please donate</a> or <a href="http://aihr.us/testimonials-widget-premium/" title="purchase Testimonials Widget Premium">purchase Testimonials Widget Premium</a> to help fund further development and <a href="http://wordpress.org/support/plugin/testimonials-widget" title="Support forums">support</a>.</p>
 		';
 
 		$text					= __( 'Copyright &copy;%1$s %2$s.' , 'testimonials-widget');
@@ -576,15 +610,23 @@ EOD;
 	}
 
 
-	public static function display_setting( $args = array() ) {
+	public static function display_setting( $args = array(), $do_echo = true, $input = null ) {
+		$content				= '';
+
 		extract( $args );
 
-		$options				= get_option( self::id );
+		if ( is_null( $input ) ) {
+			$options			= get_option( self::id );
+		} else {
+			$options			= array();
+			$options[$id]		= $input;
+		}
 
-		if ( ! isset( $options[$id] ) && $type != 'checkbox' )
+		if ( ! isset( $options[$id] ) && $type != 'checkbox' ) {
 			$options[$id]		= $std;
-		elseif ( ! isset( $options[$id] ) )
+		} elseif ( ! isset( $options[$id] ) ) {
 			$options[$id]		= 0;
+		}
 
 		$field_class			= '';
 		if ( ! empty( $class ) )
@@ -592,89 +634,112 @@ EOD;
 
 		switch ( $type ) {
 
-			case 'heading':
-				echo '</td></tr><tr valign="top"><td colspan="2"><h4>' . $desc . '</h4>';
-				break;
-
 			case 'checkbox':
-				echo '<input class="checkbox' . $field_class . '" type="checkbox" id="' . $id . '" name="' . self::id . '[' . $id . ']" value="1" ' . checked( $options[$id], 1, false ) . ' /> ';
+				$content		.= '<input class="checkbox' . $field_class . '" type="checkbox" id="' . $id . '" name="' . self::id . '[' . $id . ']" value="1" ' . checked( $options[$id], 1, false ) . ' /> ';
 
 				if ( ! empty( $desc ) )
-					echo '<label for="' . $id . '"><span class="description">' . $desc . '</span></label>';
+					$content	.= '<label for="' . $id . '"><span class="description">' . $desc . '</span></label>';
 
 				break;
 
-			case 'select':
-				echo '<select class="select' . $field_class . '" name="' . self::id . '[' . $id . ']">';
-
-				foreach ( $choices as $value => $label )
-					echo '<option value="' . esc_attr( $value ) . '"' . selected( $options[$id], $value, false ) . '>' . $label . '</option>';
-
-				echo '</select>';
+			case 'file':
+		 		$content		.= '<input class="regular-text' . $field_class . '" type="file" id="' . $id . '" name="' . self::id . '[' . $id . ']" />';
 
 				if ( ! empty( $desc ) )
-					echo '<br /><span class="description">' . $desc . '</span>';
+		 			$content	.= '<br /><span class="description">' . $desc . '</span>';
+
+		 		break;
+
+			case 'heading':
+				$content		.= '</td></tr><tr valign="top"><td colspan="2"><h4>' . $desc . '</h4>';
+				break;
+
+			case 'hidden':
+		 		$content		.= '<input type="hidden" id="' . $id . '" name="' . self::id . '[' . $id . ']" value="' . esc_attr( $options[$id] ) . '" />';
+
+		 		break;
+
+			case 'password':
+				$content		.= '<input class="regular-text' . $field_class . '" type="password" id="' . $id . '" name="' . self::id . '[' . $id . ']" value="' . esc_attr( $options[$id] ) . '" />';
+
+				if ( ! empty( $desc ) )
+					$content	.= '<br /><span class="description">' . $desc . '</span>';
 
 				break;
 
 			case 'radio':
-				$i				= 0;
-				$count_options	= count( $options ) - 1;
+				$i				= 1;
+				$count_choices	= count( $choices );
 				foreach ( $choices as $value => $label ) {
-					echo '<input class="radio' . $field_class . '" type="radio" name="' . self::id . '[' . $id . ']" id="' . $id . $i . '" value="' . esc_attr( $value ) . '" ' . checked( $options[$id], $value, false ) . '> <label for="' . $id . $i . '">' . $label . '</label>';
-					if ( $i < $count_options )
-						echo '<br />';
+					$content	.= '<input class="radio' . $field_class . '" type="radio" name="' . self::id . '[' . $id . ']" id="' . $id . $i . '" value="' . esc_attr( $value ) . '" ' . checked( $options[$id], $value, false ) . '> <label for="' . $id . $i . '">' . $label . '</label>';
+
+					if ( $i < $count_choices )
+						$content	.= '<br />';
+
 					$i++;
 				}
 
 				if ( ! empty( $desc ) )
-					echo '<br /><span class="description">' . $desc . '</span>';
-
-				break;
-
-			case 'textarea':
-				echo '<textarea class="' . $field_class . '" id="' . $id . '" name="' . self::id . '[' . $id . ']" placeholder="' . $std . '" rows="5" cols="30">' . wp_htmledit_pre( $options[$id] ) . '</textarea>';
-
-				if ( ! empty( $desc ) )
-					echo '<br /><span class="description">' . $desc . '</span>';
-
-				break;
-
-			case 'password':
-				echo '<input class="regular-text' . $field_class . '" type="password" id="' . $id . '" name="' . self::id . '[' . $id . ']" value="' . esc_attr( $options[$id] ) . '" />';
-
-				if ( ! empty( $desc ) )
-					echo '<br /><span class="description">' . $desc . '</span>';
+					$content	.= '<br /><span class="description">' . $desc . '</span>';
 
 				break;
 
 			case 'readonly':
-				echo '<input class="regular-text' . $field_class . '" type="text" id="' . $id . '" name="' . self::id . '[' . $id . ']" value="' . esc_attr( $options[$id] ) . '" readonly="readonly" />';
+				$content		.= '<input class="regular-text' . $field_class . '" type="text" id="' . $id . '" name="' . self::id . '[' . $id . ']" value="' . esc_attr( $options[$id] ) . '" readonly="readonly" />';
 
 				if ( ! empty( $desc ) )
-					echo '<br /><span class="description">' . $desc . '</span>';
+					$content	.= '<br /><span class="description">' . $desc . '</span>';
+
+				break;
+
+			case 'select':
+				$content		.= '<select class="select' . $field_class . '" name="' . self::id . '[' . $id . ']">';
+
+				foreach ( $choices as $value => $label )
+					$content	.= '<option value="' . esc_attr( $value ) . '"' . selected( $options[$id], $value, false ) . '>' . $label . '</option>';
+
+				$content		.= '</select>';
+
+				if ( ! empty( $desc ) )
+					$content	.= '<br /><span class="description">' . $desc . '</span>';
 
 				break;
 
 			case 'text':
-		 		echo '<input class="regular-text' . $field_class . '" type="text" id="' . $id . '" name="' . self::id . '[' . $id . ']" placeholder="' . $std . '" value="' . esc_attr( $options[$id] ) . '" />';
+		 		$content		.= '<input class="regular-text' . $field_class . '" type="text" id="' . $id . '" name="' . self::id . '[' . $id . ']" placeholder="' . $std . '" value="' . esc_attr( $options[$id] ) . '" />';
 
 				if ( ! empty( $desc ) )
-		 			echo '<br /><span class="description">' . $desc . '</span>';
+		 			$content	.= '<br /><span class="description">' . $desc . '</span>';
 
 		 		break;
+
+			case 'textarea':
+				$content		.= '<textarea class="' . $field_class . '" id="' . $id . '" name="' . self::id . '[' . $id . ']" placeholder="' . $std . '" rows="5" cols="30">' . wp_htmledit_pre( $options[$id] ) . '</textarea>';
+
+				if ( ! empty( $desc ) )
+					$content	.= '<br /><span class="description">' . $desc . '</span>';
+
+				break;
 
 			default:
 		 		break;
+		}
+
+		if ( $do_echo ) {
+			echo $content;
+		} else {
+			return $content;
 		}
 	}
 
 
 	public function initialize_settings() {
 		$defaults				= self::get_defaults();
-		$defaults['version']	= self::$version;
+		$current				= get_option( self::id );
+		$current				= wp_parse_args( $current, $defaults );
+		$current['version']		= self::$version;
 
-		update_option( self::id, $defaults );
+		update_option( self::id, $current );
 	}
 
 
@@ -706,58 +771,150 @@ EOD;
 	}
 
 
-	public static function validate_settings( $input ) {
-		if ( ! empty( $input['reset_defaults'] ) ) {
-			foreach ( self::$defaults as $id => $std ) {
-				$input[$id]		= $std;
-			}
+	public static function validate_settings( $input, $options = null, $do_errors = false ) {
+		$errors					= array();
 
-			unset( $input['reset_defaults']	);
+		if ( is_null( $options ) ) {
+			$options			= self::get_settings();
+			$defaults			= self::get_defaults();
+
+			if ( ! empty( $input['reset_defaults'] ) ) {
+				foreach ( $defaults as $id => $std ) {
+					$input[$id]	= $std;
+				}
+
+				unset( $input['reset_defaults']	);
+			}
 		}
 
-		$input['allow_comments']	= empty( $input['allow_comments'] ) ? 0 : self::is_true_int( $input['allow_comments'] );
-		$input['bottom_text']	= wp_kses_post( $input['bottom_text'] );
-		$input['category']		= ( empty( $input['category'] ) || preg_match( '#^[\w-]+(,\s?[\w-]+)*$#', $input['category'] ) ) ? preg_replace( "#\s#", '', $input['category'] ) : self::$defaults['category'];
-		$input['char_limit']	= ( empty( $input['char_limit'] ) || ( is_numeric( $input['char_limit'] ) && 0 <= $input['char_limit'] ) ) ? $input['char_limit'] : self::$defaults['char_limit'];
-		$input['exclude']		= ( empty( $input['exclude'] ) || preg_match( '#^\d+(,\d+)*$#', $input['exclude'] ) ) ? $input['exclude'] : self::$defaults['exclude'];
-		$input['has_archive']	= sanitize_title( $input['has_archive'] );
-		$input['hide_company']	= empty( $input['hide_company'] ) ? 0 : self::is_true_int( $input['hide_company'] );
-		$input['hide_content']	= empty( $input['hide_content'] ) ? 0 : self::is_true_int( $input['hide_content'] );
-		$input['hide_email']	= empty( $input['hide_email'] ) ? 0 : self::is_true_int( $input['hide_email'] );
-		$input['hide_gravatar']	= empty( $input['hide_gravatar'] ) ? 0 : self::is_true_int( $input['hide_gravatar'] );
-		$input['hide_image']	= empty( $input['hide_image'] ) ? 0 : self::is_true_int( $input['hide_image'] );
-		$input['hide_location']	= empty( $input['hide_location'] ) ? 0 : self::is_true_int( $input['hide_location'] );
-		$input['hide_not_found']	= empty( $input['hide_not_found'] ) ? 0 : self::is_true_int( $input['hide_not_found'] );
-		$input['hide_source']	= empty( $input['hide_source'] ) ? 0 : self::is_true_int( $input['hide_source'] );
-		$input['hide_title']	= empty( $input['hide_title'] ) ? 0 : self::is_true_int( $input['hide_title'] );
-		$input['hide_url']		= empty( $input['hide_url'] ) ? 0 : self::is_true_int( $input['hide_url'] );
-		$input['ids']			= ( empty( $input['ids'] ) || preg_match( '#^\d+(,\d+)*$#', $input['ids'] ) ) ? $input['ids'] : self::$defaults['ids'];
-		$input['keep_whitespace']	= empty( $input['keep_whitespace'] ) ? 0 : self::is_true_int( $input['keep_whitespace'] );
-		$input['limit']			= ( empty( $input['limit'] ) || ( is_numeric( $input['limit'] ) && 0 < $input['limit'] ) ) ? $input['limit'] : self::$defaults['limit'];
-		$input['max_height']	= ( empty( $input['max_height'] ) || ( is_numeric( $input['max_height'] ) && 0 <= $input['max_height'] ) ) ? $input['max_height'] : self::$defaults['max_height'];
-		$input['meta_key']		= ( empty( $input['meta_key'] ) || preg_match( '#^[\w-,]+$#', $input['meta_key'] ) ) ? $input['meta_key'] : self::$defaults['meta_key'];
-		$input['min_height']	= ( empty( $input['min_height'] ) || ( is_numeric( $input['min_height'] ) && 0 <= $input['min_height'] ) ) ? $input['min_height'] : self::$defaults['min_height'];
-		$input['order']			= ( empty( $input['order'] ) || preg_match( '#^desc|asc$#i', $input['order'] ) ) ? $input['order'] : self::$defaults['order'];
-		$input['orderby']		= ( empty( $input['orderby'] ) || preg_match( '#^\w+$#', $input['orderby'] ) ) ? $input['orderby'] : self::$defaults['orderby'];
-		$input['random']		= empty( $input['random'] ) ? 0 : self::is_true_int( $input['random'] );
-		$input['refresh_interval']	= ( empty( $input['refresh_interval'] ) || ( is_numeric( $input['refresh_interval'] ) && 0 <= $input['refresh_interval'] ) ) ? $input['refresh_interval'] : self::$defaults['refresh_interval'];
-		$input['remove_hentry']		= empty( $input['remove_hentry'] ) ? 0 : self::is_true_int( $input['remove_hentry'] );
-		$input['rewrite_slug']	= sanitize_title( $input['rewrite_slug'] );
-		$input['tags']			= ( empty( $input['tags'] ) || preg_match( '#^[\w-]+(,\s?[\w-]+)*$#', $input['tags'] ) ) ? preg_replace( "#\s#", '', $input['tags'] ) : self::$defaults['tags'];
-		$input['tags_all']		= empty( $input['tags_all'] ) ? 0 : self::is_true_int( $input['tags_all'] );
-		$input['target']		= ( empty( $input['target'] ) || preg_match( '#^\w+$#', $input['target'] ) ) ? $input['target'] : self::$defaults['target'];
-		$input['title']			= wp_kses_post( $input['title'] );
-		$input['title_link']	= wp_kses_data( trim( $input['title_link'] ) );
+		foreach( $options as $id => $parts ) {
+			$default			= $parts['std'];
+			$type				= $parts['type'];
+			$validations		= ! empty( $parts['validate'] ) ? $parts['validate'] : array();
+			if ( ! empty( $validations ) )
+				$validations	= explode( ',', $validations );
+
+			if ( ! isset( $input[ $id ] ) ) {
+				if ( 'checkbox' != $type ) {
+					$input[ $id ]	= $default;
+				} else {
+					$input[ $id ]	= 0;
+				}
+			}
+
+			if ( $default == $input[ $id ] && ! in_array( 'required', $validations ) )
+				continue;
+			
+			if ( 'checkbox' == $type ) {
+				// is_true allows for true, 'true', 1, 'yes' to be true
+				if ( self::is_true( $input[ $id ] ) )
+					$input[ $id ]	= 1;
+				else
+					$input[ $id ]	= 0;
+			} elseif ( in_array( $type, array( 'radio', 'select' ) ) ) {
+				// single choices only
+				$keys			= array_keys( $parts['choices'] );
+
+				if ( ! in_array( $input[ $id ], $keys ) ) {
+					if ( self::is_true( $input[ $id ] ) )
+						$input[ $id ]	= 1;
+					else
+						$input[ $id ]	= 0;
+				}
+			}
+
+			if ( ! empty( $validations ) ) {
+				foreach ( $validations as $validate ) {
+					switch( $validate ) {
+					case 'ids':
+						$input[ $id ]	= self::validate_ids( $input[ $id ], $default );
+						break;
+
+					case 'order':
+						$input[ $id ]	= self::validate_order( $input[ $id ], $default );
+						break;
+
+					case 'required':
+						if ( empty( $input[ $id ] ) ) {
+							$errors[ $id ]	= __( 'Required' );
+							break 2;
+						}
+						break;
+
+					case 'slug':
+						$input[ $id ]	= self::validate_slug( $input[ $id ], $default );
+						break;
+
+					case 'slugs':
+						$input[ $id ]	= self::validate_slugs( $input[ $id ], $default );
+						break;
+
+					case 'term':
+						$input[ $id ]	= self::validate_term( $input[ $id ], $default );
+						break;
+
+					default:
+						$input[ $id ]	= $validate( $input[ $id ] );
+						break;
+					}
+				}
+			}
+		}
+
 		$input['version']		= self::$version;
 
-		$input					= apply_filters( 'testimonials_widget_validate_settings', $input );
+		$input					= apply_filters( 'testimonials_widget_validate_settings', $input, $errors );
 
-		return $input;
+		if ( empty( $do_errors ) ) {
+			$validated			= $input;
+		} else {
+			$validated			= array(
+				'input'				=> $input,
+				'errors'			=> $errors,
+			);
+		}
+
+		return $validated;
 	}
 
 
-	public static function is_true_int( $value = null ) {
-		return self::is_true( $value, false );
+	public static function validate_ids( $input, $default ) {
+		if ( preg_match( '#^\d+(,\s?\d+)*$#', $input['exclude'] ) )
+			return preg_replace( "#\s#", '', $input );
+
+		return $default;
+	}
+
+
+	public static function validate_order( $input, $default ) {
+		if ( preg_match( '#^desc|asc$#i', $input ) )
+			return $input;
+
+		return $default;
+	}
+
+
+	public static function validate_slugs( $input, $default ) {
+		if ( preg_match( '#^[\w-]+(,\s?[\w-]+)*$#', $input ) )
+			return preg_replace( "#\s#", '', $input );
+
+		return $default;
+	}
+
+
+	public static function validate_slug( $input, $default ) {
+		if ( preg_match( '#^[\w-]+$#', $input ) )
+			return $input;
+
+		return $default;
+	}
+
+
+	public static function validate_term( $input, $default ) {
+		if ( preg_match( '#^\w+$#', $input ) )
+			return $input;
+
+		return $default;
 	}
 
 
@@ -781,10 +938,12 @@ $Testimonials_Widget_Settings	= new Testimonials_Widget_Settings();
 
 
 function tw_get_options() {
-	$options					= get_option( Testimonials_Widget_Settings::id, false );
+	$options					= get_option( Testimonials_Widget_Settings::id );
 
-	if ( false === $options )
-		return Testimonials_Widget_Settings::get_defaults();
+	if ( false === $options ) {
+		$options				= Testimonials_Widget_Settings::get_defaults();
+		update_option( Testimonials_Widget_Settings::id, $options );
+	}
 
 	return $options;
 }

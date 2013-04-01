@@ -1,0 +1,29 @@
+[28-Mar-2013 15:45:07] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 146
+[28-Mar-2013 15:50:30] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 146
+[28-Mar-2013 16:35:32] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 51
+[28-Mar-2013 16:35:34] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 51
+[28-Mar-2013 16:39:26] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 51
+[28-Mar-2013 17:00:40] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 51
+[28-Mar-2013 17:01:50] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/capabilities.php on line 1075
+[28-Mar-2013 17:01:50] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/capabilities.php on line 1075
+[28-Mar-2013 17:24:10] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[28-Mar-2013 17:25:15] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[28-Mar-2013 17:26:36] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/capabilities.php on line 1075
+[28-Mar-2013 17:26:36] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/capabilities.php on line 1075
+[28-Mar-2013 17:26:37] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/capabilities.php on line 1075
+[28-Mar-2013 17:26:37] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/capabilities.php on line 1075
+[28-Mar-2013 17:28:22] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[28-Mar-2013 19:11:36] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[28-Mar-2013 20:22:08] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[28-Mar-2013 20:32:26] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[28-Mar-2013 21:07:59] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[28-Mar-2013 21:19:36] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/capabilities.php on line 1075
+[29-Mar-2013 15:25:12] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[29-Mar-2013 15:25:15] PHP Warning:  parse_url(http://?#) [<a href='function.parse-url'>function.parse-url</a>]: Unable to parse URL in /home1/acquinit/public_html/wp-includes/class-http.php on line 119
+[29-Mar-2013 17:06:55] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[29-Mar-2013 17:07:00] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[29-Mar-2013 17:30:52] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[01-Apr-2013 13:55:53] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 83
+[01-Apr-2013 13:56:55] PHP Notice:  Undefined index:  rows in /home1/acquinit/public_html/wp-content/plugins/google-analytics-dashboard-for-wp/functions.php on line 51
+[01-Apr-2013 13:58:26] WordPress database error The used table type doesn't support FULLTEXT indexes for query ALTER TABLE wp_posts ADD FULLTEXT `yarpp_title` ( `post_title` ) made by require_once('wp-admin/admin.php'), do_action('settings_page_yarpp'), call_user_func_array, YARPP_Admin->options_page, require('/plugins/yet-another-related-posts-plugin/options.php'), YARPP->enable_fulltext
+[01-Apr-2013 13:58:26] WordPress database error The used table type doesn't support FULLTEXT indexes for query ALTER TABLE wp_posts ADD FULLTEXT `yarpp_content` ( `post_content` ) made by require_once('wp-admin/admin.php'), do_action('settings_page_yarpp'), call_user_func_array, YARPP_Admin->options_page, require('/plugins/yet-another-related-posts-plugin/options.php'), YARPP->enable_fulltext

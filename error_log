@@ -1,0 +1,8 @@
+[28-Mar-2013 17:06:41] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
+[28-Mar-2013 18:32:05] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
+[28-Mar-2013 18:32:07] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
+[29-Mar-2013 11:37:54] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
+[29-Mar-2013 15:28:55] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
+[29-Mar-2013 23:15:25] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
+[01-Apr-2013 13:58:45] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
+[01-Apr-2013 14:00:35] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
