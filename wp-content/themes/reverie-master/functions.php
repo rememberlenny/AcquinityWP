@@ -230,7 +230,7 @@ function lkbg_head_style(){
             background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6 !important;
           }
       <?php } ?> 
-    <?php elseif (is_page('blog') ): ?>
+    <?php elseif (is_page('news') ): ?>
       div.masthead-photo {
         background: url("<?php the_field('blog_top_header', 'option') ?>
           ") center center no-repeat #FAF8F6;
