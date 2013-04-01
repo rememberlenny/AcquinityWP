@@ -84,6 +84,10 @@
 .lt-ie9 .row:before, .row:after { content: " "; display: table; }
 .lt-ie9 .row:after { clear: both; }
 
+.lt-ie9 .orbit-container{ overflow: hidden !important;}
+.lt-ie9 .orbit-container li{ display: none !important;}
+.lt-ie9 .orbit-container li.active{ display: block !important;}
+
 .masthead-photo-content{
   h1{
     background:#000;

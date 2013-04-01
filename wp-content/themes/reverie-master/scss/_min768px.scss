@@ -98,5 +98,21 @@
           overflow:visible;
       }
 
-    }    
+    }  
+   .masthead-photo-content h1 {
+      font-weight: 300;
+      font-size: 3.2em;
+      line-height: 1;
+    }
+    .content-block{
+      .rgtcont.text-c, ul.text-c{
+        text-align:left !important;
+      }
+    }
+    .masthead-photo-content{
+      margin-top: 140px;
+    }
+      .masthead-photo-extension{ 
+      width: 100%; 
+    }
   }
