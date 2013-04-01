@@ -6,14 +6,10 @@ get_header(); ?>
 
 <style type="text/css">
   .masthead-photo {
-    background: url("<?php 
-      if(get_field('success_stories_archive_header')){
-      the_field('success_stories_archive_header') 
-      } ?>") center center no-repeat #FAF8F6;
+    background: url("<?php get_field('success_stories_archive_header') ?>
+      ") center center no-repeat #FAF8F6;
   }
 </style>
-
-<?php endif; ?>
 
 <!-- Row for main content area -->
   
