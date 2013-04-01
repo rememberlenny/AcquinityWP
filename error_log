@@ -6,3 +6,9 @@
 [29-Mar-2013 23:15:25] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
 [01-Apr-2013 13:58:45] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
 [01-Apr-2013 14:00:35] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
+[01-Apr-2013 14:47:53] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
+[01-Apr-2013 14:55:22] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
+[01-Apr-2013 14:55:31] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
+[01-Apr-2013 15:02:36] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
+[01-Apr-2013 15:09:31] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
+[01-Apr-2013 15:09:32] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
