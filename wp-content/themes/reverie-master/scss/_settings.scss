@@ -14,6 +14,10 @@
 @import "widgets";
 @import "archive";
 
+
+@import "min5875em";
+@import "min768px";
+@import "min1000px"
 //
 // Gen eral
 //
@@ -34,11 +38,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 // Media Queries
 //
 
-@media only screen and (min-width: 58.75em){
-  .top-bar-section li a:not(.button) {
-    padding: 0 20px;
-  }
-}
+
 
 
   .home{
@@ -360,79 +360,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 .case-studies-content{
   padding-bottom: 2em;
 }
-  @media only screen and (min-width:1000px){
-
-    .has-dropdown>a{
-      margin-right: 5px;
-    }
-      .masthead-photo-content{
-      padding:0 1.875em 0;
-      margin-top: 230px;
-      padding-bottom: 12px;
-      h1{
-        font-weight: 300;
-        font-size: 2.2em;
-        line-height: 1;
-      }
-    }
-      .masthead-photo{
-        width: auto;
-        float: none;
-      }
-    .masthead-photo-extension{ 
-      .masthead-photo-content{
-        width: 1000px;
-        padding-left: 1.875em;
-        margin-right: auto;
-        margin-left: auto;
-      }
-    }
-    .company-facts-extension{
-      width: 9999px !important;
-      background: #1A1A1A;
-      float:left;
-      .company-facts-content{
-        float: left;
-      }
-    }
-    .case-studies-extension{
-      width: 9999px !important;
-      background: white;
-      float:right;
-      #case-sliders{
-        float: right;
-        width: 667px;
-      }
-    }
-    .page-main-extension{
-      background: #FAF8F6;
-      width: 9999px !important;
-      float: right;
-
-      .page-main-content{
-        float: right;
-        width: 667px;
-      }
-    }
-   .company-facts-extension{
-      #featrap{
-        float: right;
-        width: 667px;
-      }
-      .orbit-container{
-        background: transparent !important;
-        overflow: visible;
-      }
-    }
-    .featsucc{
-      .orbit-bullets {
-
-      }
-    }
-  .products-link-content{
-    max-width: 333px;
-  }
-}
+ 
 
   #featrap{
     margin: 0 auto;
@@ -725,104 +653,9 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       display: none;
     }
   }
-  @media only screen and (min-width:768px) {
-     .brand-bar-extension{
-      background: #262626 !important;
-      margin: 0 auto !important;
-      #brandslider{
-        max-width: 1000px !important;
-      }
-      .orbit-prev{ 
-        visibility: visible !important;
-        position: absolute;
-        top: 0%!important;
-        margin-top: 0px!important;
-        background-color: transparent!important;
-        width: 9999px!important;
-        margin-left: -9999px!important;
-      }
-     }
-     .case-studies-extension{
-    }
-     .brand-bar-extension{ 
-     .orbit-next{ 
-        visibility: visible !important;
-        position: absolute;
-        top: 0%!important;
-        margin-top: 0px!important;
-        background-color: transparent!important;
-        width: 9999px!important;
-        margin-right: -9999px!important;
-      }  
-    }
-    .company-facts-extension{
-      #featrap{
-      .orbit-container{
-        height: 350px;
-      }
-        .orbit-slide-number{
-          display: none !important;
-        }
-      .orbit-prev{ 
-        visibility: hidden !important;
-      }
-     .orbit-next{ 
-        visibility: visible !important;
-        position: absolute;
-        top: 0%!important;
-        margin-top: 0px!important;
-        background-color: transparent!important;
-        width: 9999px!important;
-        margin-right: -9999px!important;
-      } 
-    }
-  }
-    #featrap{
-      max-width: $max-right;
-    }
-    .case-studies-extension{
-        background: white;
-        li{
-          height: auto;
-            @include transition( all, .9s );
-        }
-        li.active{
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-        filter: alpha(opacity=60);
-        opacity: 1;
-        @include transition( all, .2s );
-        }
-        .case-row{
-          padding-left: 0em;
-          padding-right: 0em;
-          &.active{
-            padding-left: 0em;
-            padding-right: 0em;
-          }
-        }
+  
+  .pageBottomBox{
+    .stat-number{
 
-      .orbit-container{ 
-          background: none !important; 
-          text-align: left;
-          overflow:visible;
-      }
-
-    }  
-    .case-studies-extension{
-        li{
-            @include transition( all, .9s );
-        }
-        li.active{
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-        filter: alpha(opacity=60);
-        opacity: 1;
-        @include transition( all, .2s );
-        }
-      .orbit-container{ 
-          background: none !important; 
-          text-align: left;
-          overflow:visible;
-      }
-
-    }    
+    }
   }
