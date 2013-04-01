@@ -532,7 +532,7 @@ a.svbt-line {
 }
 
 .ml0 {
-  margin-left: 0em;
+  margin-left: 0em !important;
 }
 
 .pl02 {
@@ -1938,9 +1938,10 @@ h4.subheader {
   margin-bottom: 0em;
 }
 .pageBottomBox p {
-  line-height: 0;
-  margin-top: 1.5em !important;
+  margin-top: .9em !important;
   font-size: 1.2em !important;
+  padding-left: 1.2em;
+  line-height: 1.4;
 }
 .pageBottomBox .title {
   color: #6f6f6f;

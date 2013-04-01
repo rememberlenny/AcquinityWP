@@ -11,6 +11,7 @@
   padding: 1em .6em .3em ;
   border-radius: 3px;
   border: 2px solid #d9d9d9;
+
   .accessory_image{
     background: white;
     text-align: center;
@@ -51,9 +52,10 @@
     }
   }
   p{
-    line-height: 0;
-    margin-top: 1.5em !important;
+    margin-top: .9em !important;
     font-size: 1.2em !important;
+    padding-left: 1.2em;
+    line-height: 1.4;
   }
   .title{
     color: #6f6f6f;
