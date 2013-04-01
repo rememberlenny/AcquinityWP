@@ -56,9 +56,9 @@
 							<p><?php the_tags();  ?></p>
               <?php about_us_panel(); ?>
               <?php 
-              if( get_field('page_bottom_statistic_toggle') )
+              if( the_field('page_bottom_statistic_toggle') )
               {
-                get_field('page_bottom_statistic'); 
+                the_field('page_bottom_statistic'); 
               }
               ?>
               <?php get_related_cpt(); ?>
