@@ -54,9 +54,13 @@
       .masthead-photo {
         background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6 !important;
       }
-    <?php endif; ?>
-    
-    <?php } ?>
+    <?php elseif (is_page_template('archive-success-story.php') ): ?>
+      .masthead-photo {
+        background: url("<?php get_field('success_stories_archive_header', 'option') ?>
+          ") center center no-repeat #FAF8F6;
+      }
+    <?php endif;
+    } ?>
   </style>
 <?php wp_head(); ?>
 

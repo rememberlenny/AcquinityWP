@@ -4,13 +4,6 @@ Template Name: Page News
 */
 get_header(); ?>
 
-<style type="text/css">
-  .masthead-photo {
-    background: url("<?php get_field('success_stories_archive_header') ?>
-      ") center center no-repeat #FAF8F6;
-  }
-</style>
-
 <!-- Row for main content area -->
   
 <div class="content hero-row row twelve">
