@@ -114,7 +114,7 @@ function about_us_panel(){
 
 function page_bottom_box(){
 		?>
-		<div class="large-12 panel row clearboth mb1em radius about">
+		<div class="pageBottomBox large-12 panel row clearboth mb1em radius about">
         <h4 class="subheader">
           <?php 
             if( get_field('page_bottom_statistic_toggle') )
@@ -124,7 +124,7 @@ function page_bottom_box(){
           ?>
         </h4>
         <div class="large-6 column">  
-          <h4 class="subheader white stat-number">            
+          <h4 class="subheader stat-number">            
           <?php 
             if( get_field('page_bottom_statistic_toggle') )
             {
@@ -229,7 +229,13 @@ function lkbg_head_style(){
           .masthead-photo {
             background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6 !important;
           }
-      <?php } ?>  
+      <?php } ?> 
+    <?php if (is_page('blog') ): ?>
+      div.masthead-photo {
+        background: url("<?php the_field('blog_top_header', 'option') ?>
+          ") center center no-repeat #FAF8F6;
+      }
+       
     <?php elseif (get_post_type() == 'success-story' ): 
     ?>
       div.masthead-photo {
