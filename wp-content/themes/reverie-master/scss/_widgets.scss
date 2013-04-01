@@ -33,7 +33,7 @@
     @include transition (all, .6s);
   }
   &:hover{
-    a
+    a{
       color: lighten(#222222, 40%);
     }
     img{
