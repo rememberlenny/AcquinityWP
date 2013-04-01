@@ -19,9 +19,9 @@ if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
   define('WP_ENV', 'local');
   define('WP_DEBUG', true);
 
-  define('DB_NAME', 'acquinit_wor1');
-  define('DB_USER', 'acquinit_wor1');
-  define('DB_PASSWORD', 'w8QncpV9');
+  define('DB_NAME', 'ai_wl');
+  define('DB_USER', 'root');
+  define('DB_PASSWORD', 'root');
   define('DB_HOST', 'localhost');
 
 } elseif ( file_exists( dirname( __FILE__ ) . '/../env_production' ) ) {
@@ -30,7 +30,11 @@ if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
     define('WP_ENV', 'playground');
     define('WP_DEBUG', true);
 
-    // ... playground db constants
+    define('DB_NAME', 'acquinit_wor1');
+    define('DB_USER', 'acquinit_wor1');
+    define('DB_PASSWORD', 'w8QncpV9');
+    define('DB_HOST', 'localhost');
+
 } else {
 
     // Production Environment
@@ -89,7 +93,7 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', true);
+
 define('SAVEQUERIES', true);
 
 /* That's all, stop editing! Happy blogging. */
