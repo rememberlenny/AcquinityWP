@@ -9,7 +9,7 @@ get_header(); ?>
     background: url("<?php 
       if(get_field('success_stories_archive_header')){
       the_field('success_stories_archive_header') 
-      }?>") center center no-repeat #FAF8F6;
+      } ?>") center center no-repeat #FAF8F6;
   }
 </style>
 
