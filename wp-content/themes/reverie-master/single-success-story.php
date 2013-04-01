@@ -54,7 +54,7 @@
 						<footer>
 							<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'reverie'), 'after' => '</p></nav>' )); ?>
 							<p><?php the_tags();  ?></p>
-              <?php about_us_panel(); ?>
+              <?php // about_us_panel(); ?>
               <?php page_bottom_box(); ?>
               <?php get_related_cpt(); ?>
             </footer>
