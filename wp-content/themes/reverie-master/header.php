@@ -55,7 +55,7 @@
             background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6 !important;
           }
       <?php } ?>  
-    <?php elseif (get_post_type() = 'success-story' ): 
+    <?php elseif (get_post_type() == 'success-story' ): 
     ?>
       .masthead-photo {
         background: url("<?php the_field('success_stories_archive_header', 'option') ?>
