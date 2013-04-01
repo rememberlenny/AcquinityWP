@@ -2131,7 +2131,7 @@ h4.subheader {
 
   .masthead-photo-content {
     padding: 0 1.875em 0;
-    margin-top: 230px;
+    margin-top: 170px;
     padding-bottom: 12px;
   }
   .masthead-photo-content h1 {
@@ -2321,7 +2321,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 }
 
 .masthead-photo-content {
-  margin-top: 60px;
+  margin-top: 85px;
 }
 
 .masthead-photo-content {
