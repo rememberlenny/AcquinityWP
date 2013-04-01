@@ -35,35 +35,13 @@
 
   <script type="text/javascript" src="//use.typekit.net/hxm2vop.js?forced1"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  <style type="text/css">
-    .facebook{
-      background: url('<?php the_field('linkedin_icon', 'option'); ?>') center center;
-      -moz-background-size:100% 100%; /* Old Firefox */
-      background-size:100% 100%;
-    }
-    .linkedin{
-      background: url('<?php the_field('facebook_icon', 'option'); ?>') center center;
-      -moz-background-size:100% 100%; /* Old Firefox */
-      background-size:100% 100%;
-    }
-    <?php if (is_page('home') ): ?>
-
-      <?php if (has_post_thumbnail( $post->ID ) ){ ?>
-        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' ); ?>
-
-          .masthead-photo {
-            background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6 !important;
-          }
-      <?php } ?>  
-    <?php elseif (get_post_type() == 'success-story' ): 
-    ?>
-      div.masthead-photo {
-        background: url("<?php the_field('success_stories_archive_header', 'option') ?>
-          ") center center no-repeat #FAF8F6;
-      }
-    <?php endif;?>
-  </style>
-<?php wp_head(); ?>
+  
+  
+  
+<?php 
+  lkbg_head_style();
+  wp_head(); 
+?>
 
 </head>
 
