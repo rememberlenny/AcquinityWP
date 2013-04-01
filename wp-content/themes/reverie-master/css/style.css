@@ -1881,10 +1881,15 @@ h4.subheader {
 .accessory_image .accessory-title {
   text-align: left;
   padding: .3em .5em;
-  font-size: .9em;
-  font-weight: 600;
+  font-family: "franklin-gothic-urw-comp";
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #222222 !important;
   line-height: 1.3;
   margin-bottom: .5em;
+}
+.accessory_image .accessory-title:hover {
+  color: #555555;
 }
 .accessory_image img {
   border-radius: 3px;

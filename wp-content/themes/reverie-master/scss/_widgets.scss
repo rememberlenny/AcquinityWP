@@ -7,10 +7,15 @@
   .accessory-title{
     text-align: left;
     padding: .3em .5em;
-    font-size: .9em;
-    font-weight: 600;
+    font-family: "franklin-gothic-urw-comp";
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #222222 !important;
     line-height: 1.3;
     margin-bottom: .5em;
+    &:hover{
+      color: lighten(#222222, 20%);
+    }
   }
   img{
     border-radius: 3px;
