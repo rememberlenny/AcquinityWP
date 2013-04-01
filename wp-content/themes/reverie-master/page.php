@@ -59,6 +59,7 @@ get_header(); ?>
               ?>       
 						</div>
 					</article>
+          
 				<?php endwhile; // End the loop ?>
 			  </div>
 			</div>
