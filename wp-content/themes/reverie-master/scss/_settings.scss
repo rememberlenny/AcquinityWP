@@ -13,9 +13,6 @@
 @import "gform";
 @import "widgets";
 @import "archive";
-@import "min5875em";
-@import "min768px";
-@import "min1000px";
 //
 // Gen eral
 //
@@ -23,6 +20,7 @@
 
 
 .container{
+
   overflow-x: hidden;
   background: #333;
 }
@@ -628,3 +626,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
     }
   }
 
+@import "min5875em";
+@import "min768px";
+@import "min1000px";
