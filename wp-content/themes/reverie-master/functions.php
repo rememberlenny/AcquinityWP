@@ -99,15 +99,38 @@ function reverie_entry_meta() {
 }
 
 function about_us_panel(){
+    ?>
+    <div class="large-12 panel row clearboth mb1em radius about">
+      <img src="<?php echo site_url(); ?>/wp-content/uploads/2013/03/acquinity-a-circle.png" class="fl acq-cir-sm" >
+      <a href="/about/"><h4 class="subheader">About Acquinity Interactive</h4></a>
+      <p>Acquinity Interactive turns consumers into brand investors. A performance, product marketing and lead generation company, Acquinity’s many platforms of expertise include niche online communities, their accompanying email titles, telemarketing, and consumer services in the fields of sweepstakes, health, couponing and political polling. 
+      <br>
+      <a href="/about/" class="secondary svbt-line">Read more about Acquinity Interactive ›</a> 
+      </p>
+      
+    </div>
+    <?php
+}
+
+function page_bottom_box(){
 		?>
 		<div class="large-12 panel row clearboth mb1em radius about">
-			<img src="<?php echo site_url(); ?>/wp-content/uploads/2013/03/acquinity-a-circle.png" class="fl acq-cir-sm" >
-			<a href="/about/"><h4 class="subheader">About Acquinity Interactive</h4></a>
-			<p>Acquinity Interactive turns consumers into brand investors. A performance, product marketing and lead generation company, Acquinity’s many platforms of expertise include niche online communities, their accompanying email titles, telemarketing, and consumer services in the fields of sweepstakes, health, couponing and political polling. 
-			<br>
-			<a href="/about/" class="secondary svbt-line">Read more about Acquinity Interactive ›</a> 
-			</p>
-			
+        <h4 class="subheader">
+          <?php 
+            if( get_field('page_bottom_statistic_toggle') )
+            {
+              the_field('page_bottom_statistic_title'); 
+            }
+          ?>
+        </h4>
+        <p>              
+          <?php 
+            if( get_field('page_bottom_statistic_toggle') )
+            {
+              the_field('page_bottom_statistic'); 
+            }
+          ?> 
+  			</p>
 		</div>
 		<?php
 }
