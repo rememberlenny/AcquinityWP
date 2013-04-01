@@ -10,19 +10,15 @@ get_header(); ?>
   <div class="main large-12"> 
     <div class="masthead-photo h300">
       <div class="s9999 masthead-photo-extension image-wrapper">
-        <div class="masthead-photo-content text-center">
+        <div class="masthead-photo-content">
           <?php
           if(get_field('hero_title_line_1'))
           {
-            echo '<div> <h1 class="text-left hero-text">' . get_field('hero_title_line_1') . '</h1></div>';
-          }
-          if(get_field('hero_title_line_2'))
-          {
-            echo '<div> <h1 class="text-left hero-text">' . get_field('hero_title_line_2') . '</h1></div>';
+            echo '<div> <h1 class="text-left hero-text">' . get_field('hero_title_line_1') . '</h1><br>';
           }
           if(get_field('hero_para_1'))
           {
-            echo '<div>' . get_field('hero_para_1') . '</div>';
+            echo '<span><p class="hero-text">' . get_field('hero_para_1') . '</p></span></div>';
           }
           ?>
         </div>	

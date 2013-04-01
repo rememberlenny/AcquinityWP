@@ -1848,6 +1848,23 @@ h4.subheader {
   clear: both;
 }
 
+.masthead-photo-content h1 {
+  background: #000;
+  background: rgb 0, 0, 0;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+  zoom: 1;
+  background: rgba(0, 0, 0, 0.3);
+}
+.masthead-photo-content p span {
+  background: #000;
+  background: rgb 0, 0, 0;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+  zoom: 1;
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .gform_body label {
   font-weight: 300;
 }
@@ -2049,11 +2066,12 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 }
 
 .masthead-photo-content {
-  margin-top: 145px;
+  margin-top: 60px;
 }
 
 .masthead-photo-content {
-  padding: 0 1.875em 0;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -2061,30 +2079,38 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   transition: all 0.2s;
 }
 .masthead-photo-content h1 {
-  font-weight: 500;
+  font-weight: 300;
   font-size: 2.7em;
-  display: inline;
   clear: right;
-  text-shadow: 0px 0px 10px #000;
+  background: #000;
+  background: rgb 0, 0, 0;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 20px 0 0 rgba(0, 0, 0, 0.4), -20px 0 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.4), -20px 0 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.4), -20px 0 0 rgba(0, 0, 0, 0.4);
   color: white;
-  margin: 0em;
+  display: inline-block;
+  margin-bottom: .5em;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 .masthead-photo-content p {
-  text-shadow: 2px 2px 5px #000;
   color: white;
-  margin-top: 1em;
-  padding-left: .4em;
-  padding-right: .2em;
-  font-size: 1.3em;
-  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1.3;
+  font-weight: 300;
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #000;
+  background: rgb 0, 0, 0;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 20px 0 0 rgba(0, 0, 0, 0.4), -20px 0 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.4), -20px 0 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.4), -20px 0 0 rgba(0, 0, 0, 0.4);
 }
 .masthead-photo-content p a {
   color: white;
-  font-weight: 600;
-  padding-right: .4em;
-  padding-left: .2em;
-  display: inline-block;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 @media only screen and (max-width: 767px) {
@@ -2104,7 +2130,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   }
 
   .masthead-photo-content {
-    margin-top: 90px;
+    margin-top: 190px;
   }
 
   .masthead-photo-extension {
@@ -2235,7 +2261,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
   .masthead-photo-content {
     padding: 0 1.875em 0;
-    margin-top: 90px;
+    margin-top: 230px;
     padding-bottom: 12px;
   }
   .masthead-photo-content h1 {
