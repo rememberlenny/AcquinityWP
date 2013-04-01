@@ -1,11 +1,11 @@
 /*
 Syntax error: Invalid CSS after "      color:": expected pseudoclass or pseudoelement, was " lighten(#22222..."
-        on line 29 of /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/_widgets.scss
+        on line 38 of /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/_widgets.scss
         from line 14 of /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/_settings.scss
         from line 4 of /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/style.scss
 
 Backtrace:
-/Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/_widgets.scss:29
+/Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/_widgets.scss:38
 /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/_settings.scss:14
 /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/style.scss:4
 /Users/lkbogdonoff/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/scss/parser.rb:1148:in `expected'
@@ -34,7 +34,7 @@ Backtrace:
 /Users/lkbogdonoff/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/scss/parser.rb:535:in `block'
 /Users/lkbogdonoff/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/scss/parser.rb:529:in `ruleset'
 /Users/lkbogdonoff/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/scss/parser.rb:553:in `block_child'
-/Users/lkbogdonoff/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/scss/parser.rb:543:in `block_contents'
+/Users/lkbogdonoff/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/scss/parser.rb:546:in `block_contents'
 /Users/lkbogdonoff/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/scss/parser.rb:82:in `stylesheet'
 /Users/lkbogdonoff/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/scss/parser.rb:27:in `parse'
 /Users/lkbogdonoff/.rvm/gems/ruby-1.9.3-p385/gems/sass-3.2.7/lib/sass/engine.rb:342:in `_to_tree'
@@ -106,4 +106,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"      color:\": expected pseudoclass or pseudoelement, was \" lighten(#22222...\"\A         on line 29 of /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/_widgets.scss\A         from line 14 of /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/_settings.scss\A         from line 4 of /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/style.scss"; }
+  content: "Syntax error: Invalid CSS after \"      color:\": expected pseudoclass or pseudoelement, was \" lighten(#22222...\"\A         on line 38 of /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/_widgets.scss\A         from line 14 of /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/_settings.scss\A         from line 4 of /Users/lkbogdonoff/sites/ai/local/wp/wp-content/themes/reverie-master/scss/style.scss"; }
