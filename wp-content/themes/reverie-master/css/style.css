@@ -2785,7 +2785,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   font-size: 1.5em;
   line-height: 0;
 }
-.pageBottomBox .subheader {
+.pageBottomBox .title {
   color: #6f6f6f;
 }
 
