@@ -54,9 +54,8 @@ get_header(); ?>
 						<div class="entry-content">
               
   						<?php the_content(); ?>
-              <?php  
-                about_us_panel(); 
-              ?>       
+              <?php //about_us_panel(); ?>    
+              <?php page_bottom_box(); ?>   
 						</div>
 					</article>
           

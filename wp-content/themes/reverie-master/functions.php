@@ -123,14 +123,29 @@ function page_bottom_box(){
             }
           ?>
         </h4>
-        <p>              
+        <div class="large-6 column">  
+          <h4 class="subheader white stat-number">            
           <?php 
             if( get_field('page_bottom_statistic_toggle') )
             {
-              the_field('page_bottom_statistic'); 
+              the_field('page_bottom_statistic_number'); 
             }
           ?> 
-  			</p>
+          </h4>
+          <p>
+          <?php 
+            if( get_field('page_bottom_statistic_toggle') )
+            {
+              the_field('page_bottom_statistic_short_desc'); 
+            }
+          ?> 
+          </p>
+        </div>
+        <div class="large-6 column">              
+          <p>
+            
+          </p>
+  			</div>
 		</div>
 		<?php
 }
