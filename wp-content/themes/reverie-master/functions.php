@@ -113,31 +113,23 @@ function about_us_panel(){
 }
 
 function page_bottom_box(){
-		?>
-		<div class="pageBottomBox large-12 panel row clearboth mb1em radius about">
+  if( get_field('page_bottom_statistic_toggle') )
+  { ?>
+    <div class="pageBottomBox large-12 panel row clearboth mb1em radius about">
         <h4 class="subheader">
-          <?php 
-            if( get_field('page_bottom_statistic_toggle') )
-            {
-              the_field('page_bottom_statistic_title'); 
-            }
+          <?php
+            the_field('page_bottom_statistic_title'); 
           ?>
         </h4>
         <div class="large-6 column">  
           <h4 class="subheader stat-number">            
           <?php 
-            if( get_field('page_bottom_statistic_toggle') )
-            {
-              the_field('page_bottom_statistic_number'); 
-            }
+            the_field('page_bottom_statistic_number'); 
           ?> 
           </h4>
           <p>
           <?php 
-            if( get_field('page_bottom_statistic_toggle') )
-            {
-              the_field('page_bottom_statistic_short_desc'); 
-            }
+            the_field('page_bottom_statistic_short_desc'); 
           ?> 
           </p>
         </div>
@@ -147,7 +139,8 @@ function page_bottom_box(){
           </p>
   			</div>
 		</div>
-		<?php
+	<?php 
+  }
 }
 
 function page_stat_panel(){
