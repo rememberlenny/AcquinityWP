@@ -121,7 +121,7 @@ function page_bottom_box(){
             the_field('page_bottom_statistic_title'); 
           ?>
         </h4>
-        <div class="large-6 column">  
+        <div class="large-6 column left">  
           <h4 class="subheader stat-number">            
           <?php 
             the_field('page_bottom_statistic_number'); 
