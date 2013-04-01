@@ -164,7 +164,7 @@ function get_related_cpt(){
     'paged'=>$paged,
     'post__not_in' => array($currentID)
     ) ); ?>    
-    <div class="large-12 clearboth mb2em radius">
+    <div class="large-12 clearboth mb2em radius accessory-block">
     	<a href="/success-story/"><h4 class="subheader">More Success Stories</h4></a>
 		    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		    	<div class="large-4 fl pr1em">
