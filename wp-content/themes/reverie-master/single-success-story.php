@@ -56,7 +56,7 @@
 							<p><?php the_tags();  ?></p>
               <?php about_us_panel(); ?>
               <?php 
-              if( the_field('page_bottom_statistic_toggle') )
+              if( get_field('page_bottom_statistic_toggle') )
               {
                 the_field('page_bottom_statistic'); 
               }
