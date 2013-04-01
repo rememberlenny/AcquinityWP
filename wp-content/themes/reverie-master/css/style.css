@@ -2106,7 +2106,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 }
 .masthead-photo-content h1 {
   font-weight: 300;
-  font-size: 2.7em;
+  font-size: 2em;
   clear: right;
   background: #000;
   background: rgb 0, 0, 0;
@@ -2702,8 +2702,11 @@ h4.subheader {
 
   .masthead-photo-content h1 {
     font-weight: 300;
-    font-size: 3.2em;
+    font-size: 2.6em;
     line-height: 1;
+  }
+  .masthead-photo-content p {
+    font-size: 1.5em;
   }
 
   .content-block .rgtcont.text-c, .content-block ul.text-c {
@@ -2739,7 +2742,7 @@ h4.subheader {
   }
   .masthead-photo-content h1 {
     font-weight: 300;
-    font-size: 2.2em;
+    font-size: 2.8em;
     line-height: 1;
   }
 
