@@ -22,6 +22,7 @@ if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
   define('DB_NAME', 'acquinit_wor1');
   define('DB_USER', 'acquinit_wor1');
   define('DB_PASSWORD', 'w8QncpV9');
+  define('DB_HOST', 'localhost');
 
 } elseif ( file_exists( dirname( __FILE__ ) . '/../env_production' ) ) {
 
