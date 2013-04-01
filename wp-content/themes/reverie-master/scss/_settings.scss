@@ -308,6 +308,10 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 .article-title-line{
 
 }
+.facebook, .linkedin{
+  -moz-background-size:100% 100%; /* Old Firefox */
+  background-size:100% 100%;
+}
   //
   // Case Study
   //
