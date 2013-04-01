@@ -200,6 +200,6 @@ function lkbg_head_style(){
       }
     <?php endif;?>
   </style>
+<?php
 }
-
 ?>
