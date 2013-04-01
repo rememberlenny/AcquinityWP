@@ -167,7 +167,7 @@ function get_related_cpt(){
     <div class="large-12 clearboth mb2em radius accessory-block">
     	<a href="/success-story/"><h4 class="subheader">More Success Stories</h4></a>
 		    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-		    	<div class="large-4 fl pr1em">
+		    	<div class="large-4 column pr1em">
 				    <div class="accessory_image radius">
 				    	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) { the_post_thumbnail('thumbnail'); } ?></a>
 				            <?php the_title( '<h5 class="accessory-title"><a class="secondary" href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h5>' ); ?>
