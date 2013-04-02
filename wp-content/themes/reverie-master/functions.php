@@ -113,19 +113,17 @@ function about_us_panel(){
 }
 
 function page_bottom_box(){
-  if( get_field('page_bottom_statistic_toggle') )
-  { ?>
+  if( get_field('page_bottom_statistic_toggle') ): 
+    $statTitle = get_field('page_bottom_statistic_title');
+    $statNumber = get_field('page_bottom_statistic_number'); 
+    ?>
     <div class="pageBottomBox large-12 panel row clearboth mb1em radius about">
         <h4 class="subheader title">
-          <?php
-            the_field('page_bottom_statistic_title'); 
-          ?>
+          <?php echo $statTitle; ?>
         </h4>
         <div class="large-6 column left">  
           <h4 class="subheader stat-number">            
-          <?php 
-            the_field('page_bottom_statistic_number'); 
-          ?> 
+          <?php echo $statNumber; ?> 
           </h4>
         </div>
         <div class="large-6 column">              
@@ -137,7 +135,7 @@ function page_bottom_box(){
   			</div>
 		</div>
 	<?php 
-  }
+  endif;
 }
 
 function page_stat_panel(){
