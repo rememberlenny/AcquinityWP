@@ -2091,6 +2091,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   overflow: hidden;
   width: 100%;
   border-right: 1px solid #222;
+  box-shadow: inset 0px 0px 55px black;
 }
 
 .masthead-photo-extension {
