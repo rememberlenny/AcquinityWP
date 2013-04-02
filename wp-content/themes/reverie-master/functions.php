@@ -255,14 +255,20 @@ function lkbg_head_style(){
     endif;?>
 
   </style>
-  
+
   <?php
 }
 
 function hero_text_block(){
-    if(get_field('hero_title_line_1')){
-      $hero_text_content = get_field('hero_title_line_1');
-      echo '<div> <h1 class="text-left hero-text">' . $hero_text_content . '</h1></div>';
+    function header_text_block_template($content) {
+      echo '<div> <h1 class="text-left hero-text">' . $content . '</h1></div>';
     }
+    if (get_field('hero_title_line_1' && !is_post_type_archive('success-story'))){
+      $hero_text_content = get_field('hero_title_line_1');
+      header_text_block_template ($hero_text_content);
+    }
+    elseif (is_post_type_archive('success-story')):
+      $hero_text_content = get_field('archive_success_story_head', 'option');
+    endif;
 }
 ?>
