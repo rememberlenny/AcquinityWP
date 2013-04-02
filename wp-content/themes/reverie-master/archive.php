@@ -34,7 +34,7 @@ get_header(); ?>
     <div class="case-studies fr">
       <div class="s9999 case-studies-extension fr">
         <div id="case-sliders" class="pr98 pl98 lftcont case-studies-content content-sec fr">
-        	<h4 class="subheader">Archive: Success Story</h4> 
+        	<h4 class="subheader">Recent News</h4> 
             <?php $mypost = array( 'post_type' => 'post', );
         $loop = new WP_Query( $mypost ); ?>
         
