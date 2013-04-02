@@ -204,6 +204,10 @@ function string_limit_words($string, $word_limit)
 // Seperating style modification on pages
 //
  
+function heroBackgroundImage($url){
+    echo '.masthead-photo { background: url("' . $url . '") center center no-repeat #FAF8F6 !important; }';
+}
+
 function lkbg_head_style(){
   ?>
   <style type="text/css">
@@ -214,24 +218,44 @@ function lkbg_head_style(){
       background: url('<?php the_field('facebook_icon', 'option'); ?>') center center;
     }
     <?php if (is_page('home') ):
-      $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' ); ?>
-        .masthead-photo {
-          background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6 !important;
-        }
-    <?php elseif (is_home() ): ?>
-      div.masthead-photo {
-        background: url("<?php the_field('blog_top_header', 'option') ?>
-          ") center center no-repeat #FAF8F6;
-      }
+      $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' );
+        
+      echo heroBackgroundImage($image[0]);
+
+    elseif (is_home() ): 
+
+      $url = get_field('blog_top_header', 'option');
+      heroBackgroundImage($url);
        
-    <?php elseif (is_post_type_archive('success-story') ): 
-    ?>
-      div.masthead-photo {
-        background: url("<?php the_field('success_stories_archive_header', 'option') ?>
-          ") center center no-repeat #FAF8F6;
-      }
-    <?php endif;?>
+    elseif (is_post_type_archive('success-story') ): 
+      
+      $url = get_field('success_stories_archive_header', 'option');
+      heroBackgroundImage($url);
+      
+    elseif (is_home() ): 
+   
+      $url = get_field('blog_all_post_feed_image', 'option');
+      heroBackgroundImage($url);
+
+    elseif (is_category('press-release') ): 
+    
+      $url = get_field('blog-category__press_release_image', 'option');
+      heroBackgroundImage($url);
+    
+    elseif (is_category('event-appearances') ): 
+    
+      $url = get_field('blog-category_event_appearance_image', 'option');
+      heroBackgroundImage($url);
+    
+    elseif (is_category('industry-news') ): 
+    
+      $url = get_field('blog-category_industry_news_image', 'option');
+      heroBackgroundImage($url);
+    
+    endif;?>
+
   </style>
+  
   <?php
 }
 
