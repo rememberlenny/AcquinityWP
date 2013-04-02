@@ -18,8 +18,10 @@
 	<header>
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 	</header>
+  <div class="content-block"> 
 		<?php the_excerpt(''); ?>
 		<a class="svbt-line d-inline" href="<?php the_permalink(); ?>"> Read More</a>
+  </div>  
 	<footer>
 		<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
 	</footer>
