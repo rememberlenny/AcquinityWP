@@ -209,14 +209,20 @@ function heroBackgroundImage($url){
 }
 
 function lkbg_head_style(){
-  ?>
+  $linkedinIcon = get_field('linkedin_icon', 'option');
+  $facebookIcon = get_field('facebook_icon', 'option');
+  
+  function social_icon_style($selector, $url){
+    echo ' .' . $selector . '{ background: url("' . $url . '") center center; }';
+  } ?>
+  
   <style type="text/css">
-    .facebook{
-      background: url('<?php the_field('linkedin_icon', 'option'); ?>') center center;
-    }
-    .linkedin{
-      background: url('<?php the_field('facebook_icon', 'option'); ?>') center center;
-    }
+    
+    <?php
+      social_icon_style('linkedin', $linkedinIcon);  
+      social_icon_style('facebook', $facebookIcon);  
+    ?>
+
     <?php if (is_page('home') ):
       $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' );
         
