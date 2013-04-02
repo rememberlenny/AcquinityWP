@@ -47,7 +47,9 @@ get_header(); ?>
               <div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div>
               <div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div>
             </nav>
-          <?php } ?>
+          <?php } 
+						page_bottom_box();
+          ?>
 
         </div>
       </div>
