@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Case Study
+Template Name: Job Boards
 */
 get_header(); ?>
 
