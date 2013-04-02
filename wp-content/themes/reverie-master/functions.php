@@ -234,4 +234,12 @@ function lkbg_head_style(){
   </style>
   <?php
 }
+
+function hero_text_block(){
+    if(get_field('hero_title_line_1')){
+      echo "<div> <h1 class='text-left hero-text'>";
+        the_field('hero_title_line_1');
+      echo "</h1></div>";
+    }
+}
 ?>
