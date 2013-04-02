@@ -790,6 +790,7 @@ h4.subheader {
 }
 
 #sidebar {
+  background: #333;
   padding-bottom: 4em !important;
 }
 #sidebar h4 {
