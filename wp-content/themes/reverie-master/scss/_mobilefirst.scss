@@ -141,9 +141,10 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
     .masthead-photo { 
       background: url('http://acquinity.it/wp-content/uploads/2013/03/hero-map.jpg') center center  #FAF8F6;
-      overflow: hidden; 
+      overflow: hidden;
       width: 100%;
       border-right: 1px solid #222;
+      -webkit-box-shadow: inset 0px 0px 55px black;
       box-shadow: inset 0px 0px 55px black;
     }
     .masthead-photo-extension{ 
