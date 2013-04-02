@@ -137,7 +137,7 @@ function page_bottom_box(){
         </div>
         <div class="large-6 column">              
           <p>
-            <?php $statDesc; ?> 
+            <?php echo $statDesc; ?> 
           </p>
   			</div>
 		</div>
