@@ -224,7 +224,7 @@ function lkbg_head_style(){
           ") center center no-repeat #FAF8F6;
       }
        
-    <?php elseif (get_post_type() == 'success-story' ): 
+    <?php elseif (is_post_type_archive('success-story') ): 
     ?>
       div.masthead-photo {
         background: url("<?php the_field('success_stories_archive_header', 'option') ?>
