@@ -16,7 +16,7 @@
   <p class=" text-left clearboth pt1em">
     <?php
       $excerpt = get_the_excerpt();
-      echo string_limit_words($excerpt,30);
+      echo string_limit_words($excerpt,14);
     ?>...
     <a class="svbt-line" href="<?php the_permalink(); ?>">Read Article ›</a>
   </p>  
