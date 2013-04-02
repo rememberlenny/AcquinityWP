@@ -1,12 +1,4 @@
-.about.panel{
-  p{
-    font-size: .9em;
-    margin-bottom: .5em !important;
-  }
-  h4{
-    margin-bottom: 0em;
-  }
-}
+
 .accessory-block{
   padding: 1em .6em .3em ;
   border-radius: 3px;
@@ -52,6 +44,7 @@
     }
   }
   p{
+    display:inline-block !important;
     margin-top: .9em !important;
     font-size: 1.2em !important;
     padding-left: 1.2em;
