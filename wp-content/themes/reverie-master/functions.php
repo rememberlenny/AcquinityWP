@@ -114,23 +114,33 @@ function about_us_panel(){
 
 function page_bottom_box(){
   if( get_field('page_bottom_statistic_toggle') ): 
-    $statTitle = get_field('page_bottom_statistic_title');
     $statNumber = get_field('page_bottom_statistic_number'); 
+    $statDesc = get_field('page_bottom_statistic_short_desc');
+    
+    if( is_home() ):
+      $statNumber = get_field('archive-blog-all-number', 'option'); 
+      $statDesc = get_field('archive-blog-all-text', 'option');
+    elseif( is_category('event-appearances') ):
+      $statNumber = get_field('archive-blog-events-number', 'option'); 
+      $statDesc = get_field('archive-blog-events-text', 'option'); 
+    elseif( is_category('industry-news') ):
+      $statNumber = get_field('archive-blog-industry-number', 'option'); 
+      $statDesc = get_field('archive-blog-industry-text', 'option'); 
+    elseif( is_category('press-release') ):
+      $statNumber = get_field('archive-blog-press-number', 'option'); 
+      $statDesc = get_field('archive-blog-press-text', 'option'); 
+    endif;
+    
     ?>
     <div class="pageBottomBox large-12 panel row clearboth mb1em radius about">
-        <h4 class="subheader title">
-          <?php echo $statTitle; ?>
-        </h4>
         <div class="large-6 column left">  
           <h4 class="subheader stat-number">            
-          <?php echo $statNumber; ?> 
+            <?php echo $statNumber; ?> 
           </h4>
         </div>
         <div class="large-6 column">              
-         <p>
-            <?php 
-              the_field('page_bottom_statistic_short_desc'); 
-            ?> 
+          <p>
+            <?php $statDesc; ?> 
           </p>
   			</div>
 		</div>

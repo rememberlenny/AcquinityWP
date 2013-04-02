@@ -24,7 +24,7 @@
   		<?php the_excerpt(''); ?>
   		<a class="svbt-line d-inline" href="<?php the_permalink(); ?>"> Read More</a>
     <footer>
-      <?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
+      
     </footer>
   </div>  
 	<hr />
