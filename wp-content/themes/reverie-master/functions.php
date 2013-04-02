@@ -237,8 +237,9 @@ function lkbg_head_style(){
 
 function hero_text_block(){
     if(get_field('hero_title_line_1')){
+      $hero_text_content = the_field('hero_title_line_1');
       echo "<div> <h1 class='text-left hero-text'>";
-        the_field('hero_title_line_1');
+      echo $hero_text_content;
       echo "</h1></div>";
     }
 }
