@@ -27,33 +27,14 @@ get_header(); ?>
        </div>
     </div>
   </div>
-  <div class="sidebar large-4 small-12 fl">
-    <div class="company-facts hide-for-small"> 
-      <div class="s9999 company-facts-extension h300 fl">
-        <div class="company-facts-content content-sec">
-          <div id="featrap" class="  lftcont case-studies-content content-sec fr">
-          <h4 class="pre-head subheader">Acquinity Stats</h4>
-            <ul class="pre-head">
-              <li class="active case-row">
-                <p><?php the_field('page_statistic_pretext'); ?></p>
-                <h5 class="subheader"><?php the_field('page_statistic_number'); ?></h5>
-                <p><?php the_field('page_statistic_text'); ?></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>  
    
   
 <div class="content content-main row twelve">
   <div class="main large-8 columns ">   
     
-    <?php query_posts( 'post_type=case-studies'); ?>
 
-    <?php /* Start loop */ ?>
+
     <div class="case-studies fr">
       <div class="s9999 case-studies-extension fr">
         <div id="case-sliders" class="pr98 pl98 lftcont case-studies-content content-sec fr">
