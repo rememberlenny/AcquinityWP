@@ -8,7 +8,7 @@
 ?>
 	
  <li class="active text-left article-title" data-orbit-slide="headline-1">
-  <h5 class="article-title-line" style="line-height:1.2;">
+  <h5 class="article-title-line" style="line-height:1.08;">
     <a href="<?php the_permalink(); ?>" class="secondary">
       <?php the_title(); ?>
     </a>
