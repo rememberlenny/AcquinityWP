@@ -35,14 +35,14 @@ get_header(); ?>
       <div class="s9999 case-studies-extension fr">
         <div id="case-sliders" class="pr98 pl98 lftcont case-studies-content content-sec fr">
         	<h4 class="subheader">Archive: Success Story</h4> 
-            <?php $mypost = array( 'post_type' => 'success-story', );
+            <?php $mypost = array( 'post_type' => 'post', );
         $loop = new WP_Query( $mypost ); ?>
         
         <?php if ( have_posts() ) : ?>
         
           <?php /* Start the Loop */ ?>
           <?php while ( have_posts() ) : the_post(); ?>
-            <?php get_template_part( 'content', 'post' ); ?>
+            <?php get_template_part( 'content', 'archive' ); ?>
           <?php endwhile; ?>
           
           <?php else : ?>
