@@ -113,7 +113,7 @@ function about_us_panel(){
 }
 
 function page_bottom_box(){
-  if( get_field('page_bottom_statistic_toggle') || ishome() || is_category('event-appearances') || is_category('event-appearances') || is_category('industry-news') || is_category('press-release') || get_field('page_bottom_statistic_toggle') ):
+  if( get_field('page_bottom_statistic_toggle') || is_home() || is_category('event-appearances') || is_category('event-appearances') || is_category('industry-news') || is_category('press-release') || get_field('page_bottom_statistic_toggle') ):
     
     if( is_home() ):
       $statNumber = get_field('archive-blog-all-number', 'option'); 
