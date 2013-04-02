@@ -269,6 +269,7 @@ function hero_text_block(){
     
     elseif (is_post_type_archive('success-story')):
       $hero_text_content = get_field('archive_success_story_head', 'option');
+      header_text_block_template ($hero_text_content);
     endif;
 }
 ?>
