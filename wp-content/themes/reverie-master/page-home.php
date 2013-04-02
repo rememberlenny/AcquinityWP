@@ -12,9 +12,9 @@ get_header(); ?>
       <div class="s9999 masthead-photo-extension image-wrapper">
         <div class="masthead-photo-content">
           <?php
-          if(get_field('hero_title_line_1'))
+          if(get_field('home_section_title'))
           {
-            echo '<div> <h1 class="text-left hero-text">' . get_field('hero_title_line_1') . '</h1><br>';
+            echo '<div> <h1 class="text-left hero-text">' . get_field('home_section_title') . '</h1><br>';
           }
           if(get_field('hero_para_1'))
           {
