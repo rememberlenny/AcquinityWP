@@ -2146,6 +2146,10 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   color: white;
 }
 
+#resumator-logo {
+  display: none;
+}
+
 @media only screen and (max-width: 767px) {
   .content-block .rgtcont.text-c, .content-block ul.text-c {
     text-align: center !important;

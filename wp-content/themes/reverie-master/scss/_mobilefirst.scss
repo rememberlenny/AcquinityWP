@@ -194,6 +194,10 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       @include transition(all, .2s); 
    
     }
+
+    #resumator-logo{
+      display: none;
+    }
     @media only screen and (max-width: 767px){
       .content-block{
         .rgtcont.text-c, ul.text-c{
