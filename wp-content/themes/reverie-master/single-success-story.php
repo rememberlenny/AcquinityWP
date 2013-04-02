@@ -47,7 +47,11 @@
 							<p><?php the_tags();  ?></p>
               
               <?php page_bottom_box(); ?>
-              <?php get_related_cpt(); ?>
+              <?php 
+                if (is_post_type('success-story')):  
+                  get_related_cpt(); 
+                endif;
+              ?>
        
           </footer>
           </article>
