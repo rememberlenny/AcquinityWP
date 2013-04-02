@@ -57,8 +57,7 @@ get_header(); ?>
     <div class="case-studies fr">
       <div class="s9999 case-studies-extension fr">
         <div id="case-sliders" class="pr98 pl98 lftcont case-studies-content content-sec fr">
-        <iframe name="resumator-job-frame" id="resumator-job-frame" class="resumator-advanced-widget" src="http://acquinityinteractive.theresumator.com/apply/jobs/" width="100%" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        <script>function resizeResumatorIframe(height,nojump){if(nojump== 0){window.scrollTo(0,0);}document.getElementById("resumator-job-frame").height = parseInt(height)+20;}</script>
+        <script type="text/javascript" src="http://app.theresumator.com/widgets/basic/create/acquinityinteractive" charset="utf-8"></script>
         </div>
       </div>
     </div>
