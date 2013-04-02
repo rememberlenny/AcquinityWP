@@ -1971,6 +1971,13 @@ h4.subheader {
   display: inline;
 }
 
+.content-block {
+  display: block;
+  width: 66%;
+  float: left;
+  padding-bottom: 1em;
+}
+
 .container {
   overflow-x: hidden;
   background: #333;
