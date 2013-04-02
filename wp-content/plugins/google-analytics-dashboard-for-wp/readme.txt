@@ -3,7 +3,7 @@ Contributors: Deconf
 Tags: google, analytics, statistics, dashboard, widget, ga, stats
 Requires at least: 2.8
 Tested up to: 3.5.1
-Stable tag: 3.1.1
+Stable tag: 3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,11 +26,13 @@ Main benefits:
 - option to display Visitors by Country on Geo Map
 - option to display Traffic Overview in Pie Charts
 - simple Authorization process
+- has multilingual support, a POT file is available for translations. If you have a complete translation, send me the translation file or upload it to our forum and will be included in next release.
 
 Related Links:
 
+* <a href="http://forum.deconf.com/en/wordpress-plugins-f182/google-analytics-dashboard-for-wp-translations-t532.html">Submit Google Analytics Dashboard translations</a>
+
 * <a href="http://www.deconf.com/en/projects/google-analytics-dashboard-for-wordpress/" title="Google Analytics Dashboard for WP Plugin">Google Analytics Dashboard Plugin Homepage</a>
-* <a href="http://forum.deconf.com/en/wordpress-plugins-f182/" title="Google Analytics Dashboard for WP Plugin">Google Analytics Dashboard Plugin Support</a>
 
 == Installation ==
 
