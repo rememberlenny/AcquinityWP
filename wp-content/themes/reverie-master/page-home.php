@@ -6,26 +6,7 @@ get_header(); ?>
 
 <!-- Row for main content area -->
 	
-<div class="content hero-row row">
-  <div class="main large-12"> 
-    <div class="masthead-photo h300">
-      <div class="s9999 masthead-photo-extension image-wrapper">
-        <div class="masthead-photo-content">
-          <?php
-          if(get_field('home_section_title'))
-          {
-            echo '<div> <h1 class="text-left hero-text">' . get_field('home_section_title') . '</h1><br>';
-          }
-          if(get_field('hero_para_1'))
-          {
-            echo '<span><p class="hero-text">' . get_field('hero_para_1') . '</p></span></div>';
-          }
-          ?>
-        </div>	
-      </div>
-    </div>
-  </div>
-</div>	
+<?php content_header_function(); ?>
    
 <div class="content brandwrap row twelve">
 	<div class="main large-12 columns ">

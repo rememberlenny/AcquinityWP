@@ -214,7 +214,7 @@ function string_limit_words($string, $word_limit)
 //
  
 function heroBackgroundImage($url){
-    echo '.masthead-photo { background: url("' . $url . '") center center no-repeat #888 !important; }';
+    echo '.masthead-photo { background: url("' . $url . '") center center no-repeat #111 !important; }';
 }
 
 function lkbg_head_style(){
@@ -289,5 +289,32 @@ function hero_text_block(){
       header_text_block_template ($hero_text_content);
 
     endif;
+}
+
+function content_header_function(){ ?>
+  <div class="content hero-row row">
+    <div class="main large-12"> 
+      <div class="masthead-photo h300">
+        <div class="s9999 masthead-photo-extension image-wrapper">
+          <div class="masthead-photo-content">
+            
+            <?php
+            if(is_page('home')):
+              if(get_field('home_section_title')):
+                echo '<div> <h1 class="text-left hero-text">' . get_field('home_section_title') . '</h1><br>';
+              endif;
+              if(get_field('hero_para_1')):
+                echo '<span><p class="hero-text">' . get_field('hero_para_1') . '</p></span></div>';
+              endif;
+            elseif():
+              hero_text_block(); 
+            endif;
+            ?>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>  
+  <?php
 }
 ?>
