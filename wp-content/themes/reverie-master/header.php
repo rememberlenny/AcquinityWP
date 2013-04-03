@@ -35,8 +35,17 @@
 
   <script type="text/javascript" src="//use.typekit.net/hxm2vop.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  
+
+    
   <script src="http://yui.yahooapis.com/3.9.1/build/yui/yui-min.js"></script>
+
+  <script>
+  // Create a new YUI instance and populate it with the required modules.
+  YUI().use('imageloader', function (Y) {
+      // ImageLoader is available and ready for use. Add implementation
+      // code here.
+  });
+  </script>
   
   
 <?php 
@@ -95,22 +104,6 @@
                 ) ),
             ) );
         ?>
-        <ul class="right">
-          <li class="has-form hide-for-medium-down fr">
-            <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-              <div class="row collapse search-box">
-                <div class="large-7 columns">
-                  <input type="text" value="" name="s" id="s" placeholder="">
-                </div>
-                <div class="large-4 columns">
-                  <button type="submit" id="searchsubmit" class="button tiny radius">Search</button>
-
-                  </input>
-                </div>
-              </div>
-            </form>
-          </li>
-        </ul>
       </section>
     </nav>
     <!-- End of Top-Bar -->
