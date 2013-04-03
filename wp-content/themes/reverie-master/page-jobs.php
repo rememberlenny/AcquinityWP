@@ -48,8 +48,8 @@ get_header(); ?>
               
               <?php the_content(); ?>
             
-            <script type="text/javascript" src="http://app.theresumator.com/widgets/basic/create/acquinityinteractive" charset="utf-8"></script>
-
+              <script type="text/javascript" src="http://app.theresumator.com/widgets/basic/create/acquinityinteractive" charset="utf-8"></script>
+              <?php page_bottom_box(); ?>
             </div>
           </article>
         <?php endwhile; // End the loop ?>
