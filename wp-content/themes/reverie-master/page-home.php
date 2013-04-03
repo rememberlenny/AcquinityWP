@@ -6,6 +6,14 @@ get_header(); ?>
 
 <!-- Row for main content area -->
 	
+ <style type="text/css">
+    <?php
+    if ( get_field('background_2000')){
+      echo '.masthead-photo{ background-size: 2000px; }';
+    }
+    ?>
+ </style>
+   
 <!-- Hero Image and Text -->  
 <?php content_header_function(); ?>
 <!-- End Hero Image and Text -->  
