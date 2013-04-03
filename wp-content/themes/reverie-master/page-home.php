@@ -6,7 +6,9 @@ get_header(); ?>
 
 <!-- Row for main content area -->
 	
+<!-- Hero Image and Text -->  
 <?php content_header_function(); ?>
+<!-- End Hero Image and Text -->  
    
 <div class="content brandwrap row twelve">
 	<div class="main large-12 columns ">

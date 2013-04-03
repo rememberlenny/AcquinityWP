@@ -216,6 +216,8 @@ function string_limit_words($string, $word_limit)
 function heroBackgroundImage($url){
     echo '.masthead-photo { background: url("' . $url . '") center center no-repeat #111 !important; }';
 }
+// End heroBackgroundImage()
+
 
 function lkbg_head_style(){
   $linkedinIcon = get_field('linkedin_icon', 'option');
@@ -273,6 +275,7 @@ function lkbg_head_style(){
 
   <?php
 }
+// End lkbg_head_style()
 
 function hero_text_block(){
     function header_text_block_template($content) {
@@ -290,10 +293,28 @@ function hero_text_block(){
 
     endif;
 }
+// End hero_text_block()
 
 function content_header_function(){ ?>
   <div class="content hero-row row">
     <div class="main large-12"> 
+      <div class="windows8">
+        <div class="wBall" id="wBall_1">
+          <div class="wInnerBall"></div>
+        </div>
+        <div class="wBall" id="wBall_2">
+          <div class="wInnerBall"></div>
+        </div>
+        <div class="wBall" id="wBall_3">
+          <div class="wInnerBall"></div>
+        </div>
+        <div class="wBall" id="wBall_4">
+          <div class="wInnerBall"></div>
+        </div>
+        <div class="wBall" id="wBall_5">
+          <div class="wInnerBall"></div>
+        </div>
+      </div>
       <div class="masthead-photo h300">
         <div class="s9999 masthead-photo-extension image-wrapper">
           <div class="masthead-photo-content">
@@ -317,4 +338,6 @@ function content_header_function(){ ?>
   </div>  
   <?php
 }
+//End content_header_function()
+
 ?>

@@ -17,7 +17,9 @@ get_header(); ?>
 
 <!-- Row for main content area -->
 	
-<?php content_header_function(); ?>	
+<!-- Hero Image and Text -->  
+<?php content_header_function(); ?>
+<!-- End Hero Image and Text -->  
 	
 <div class="content content-main row twelve">
 	<div class="main large-8 columns "> 	
