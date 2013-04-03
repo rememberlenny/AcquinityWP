@@ -298,16 +298,17 @@ function content_header_function(){ ?>
         <div class="s9999 masthead-photo-extension image-wrapper">
           <div class="masthead-photo-content">
             <?php
-            if(is_page('home')):
-              if(get_field('home_section_title')):
+            if(is_page('home')){
+              if(get_field('home_section_title')){
                 echo '<div> <h1 class="text-left hero-text">' . get_field('home_section_title') . '</h1><br>';
-              endif;
-              if(get_field('hero_para_1')):
+              }
+              if(get_field('hero_para_1')){
                 echo '<span><p class="hero-text">' . get_field('hero_para_1') . '</p></span></div>';
-              endif;
-            elseif():
+              }
+            }
+            else {
               hero_text_block(); 
-            endif;
+            }
             ?>
           </div>  
         </div>
