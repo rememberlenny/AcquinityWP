@@ -214,7 +214,7 @@ function string_limit_words($string, $word_limit)
 //
  
 function heroBackgroundImage($url){
-    echo '.masthead-photo { background: url("' . $url . '") center center no-repeat #FAF8F6 !important; }';
+    echo '.masthead-photo { background: url("' . $url . '") center center no-repeat #888 !important; }';
 }
 
 function lkbg_head_style(){
