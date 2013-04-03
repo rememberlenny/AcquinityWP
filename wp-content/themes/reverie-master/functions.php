@@ -228,12 +228,7 @@ function lkbg_head_style(){
   } ?>
   
   <style type="text/css">
-    
-    <?php
-    if ( the_field('background_2000', 'option')){
-      echo '.masthead-photo{ background-size: 2000px; }';
-    }
-    ?>
+
 
     <?php
       social_icon_style('linkedin', $linkedinIcon);  
