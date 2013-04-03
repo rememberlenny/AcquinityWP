@@ -12,7 +12,7 @@ get_header(); ?>
 		background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;
 	}
       <?php
-    if ( the_field('background_2000', 'option')){
+    if ( the_field('background_2000')){
       echo '.masthead-photo{ background-size: 2000px; }';
     }
     ?>
