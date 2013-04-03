@@ -218,10 +218,6 @@ function heroBackgroundImage($url){
 }
 // End heroBackgroundImage()
 
-function heroBackgroundImageFunc( $location ) {
-  $url = get_field(' $location ', 'option');
-  heroBackgroundImage($url);
-}
 
 function lkbg_head_style(){
   $linkedinIcon = get_field('linkedin_icon', 'option');
@@ -234,6 +230,12 @@ function lkbg_head_style(){
   <style type="text/css">
     
     <?php
+    if ( the_field('background_2000', 'option')){
+      echo '.masthead-photo{ background-size: 2000px; }';
+    }
+    ?>
+
+    <?php
       social_icon_style('linkedin', $linkedinIcon);  
       social_icon_style('facebook', $facebookIcon);  
     ?>
@@ -244,22 +246,34 @@ function lkbg_head_style(){
       echo heroBackgroundImage($image[0]);
 
     elseif (is_home() ): 
-      heroBackgroundImageFunc( 'blog_top_header' );
+
+      $url = get_field('blog_top_header', 'option');
+      heroBackgroundImage($url);
        
     elseif (is_post_type_archive('success-story') ): 
-      heroBackgroundImageFunc( 'success_stories_archive_header' );
+      
+      $url = get_field('success_stories_archive_header', 'option');
+      heroBackgroundImage($url);
       
     elseif (is_home() ): 
-      heroBackgroundImageFunc( 'blog_all_post_feed_image' );
+   
+      $url = get_field('blog_all_post_feed_image', 'option');
+      heroBackgroundImage($url);
 
     elseif (is_category('press-release') ): 
-      heroBackgroundImageFunc( 'blog-category__press_release_image' );
+    
+      $url = get_field('blog-category__press_release_image', 'option');
+      heroBackgroundImage($url);
     
     elseif (is_category('event-appearances') ): 
-      heroBackgroundImageFunc( 'blog-category_event_appearance_image' );
+    
+      $url = get_field('blog-category_event_appearance_image', 'option');
+      heroBackgroundImage($url);
     
     elseif (is_category('industry-news') ): 
-      heroBackgroundImageFunc( 'blog-category_industry_news_image' );
+    
+      $url = get_field('blog-category_industry_news_image', 'option');
+      heroBackgroundImage($url);
     
     endif;?>
 
@@ -297,7 +311,7 @@ function loading_balls(){
   ?> 
   </div>
 <?php }
-// End loading_balls();
+// End loading_balls()
 
 function content_header_function(){ ?>
   <div class="content hero-row row">
