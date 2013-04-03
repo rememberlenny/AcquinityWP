@@ -17,37 +17,7 @@ get_header(); ?>
 
 <!-- Row for main content area -->
 	
-<div class="content hero-row row twelve">
-  <div class="main large-12">
-    <div class="windows8">
-      <div class="wBall" id="wBall_1">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_2">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_3">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_4">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_5">
-        <div class="wInnerBall"></div>
-      </div>
-    </div>
-    <div class="masthead-photo h300">
-      <div class="s9999 masthead-photo-extension image-wrapper">
-        <div class="masthead-photo-content">
-          <?php hero_text_block(); ?>
-          
-          
-        </div>
-       </div>
-    </div>
-  </div>
-</div>	
-	 
+<?php content_header_function(); ?>
 	
 <div class="content content-main row twelve">
 	<div class="main large-8 columns "> 	
