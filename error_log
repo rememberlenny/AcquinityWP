@@ -12,3 +12,15 @@
 [01-Apr-2013 15:02:36] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
 [01-Apr-2013 15:09:31] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
 [01-Apr-2013 15:09:32] PHP Fatal error:  Call to undefined function  the_field() in /home1/acquinit/public_html/wp-content/themes/reverie-master/header.php on line 40
+[03-Apr-2013 14:29:30] PHP Notice:  Undefined property: wpdb::$queries in /home1/acquinit/public_html/wp-includes/wp-db.php on line 575
+[03-Apr-2013 14:29:30] PHP Notice:  Indirect modification of overloaded property wpdb::$queries has no effect in /home1/acquinit/public_html/wp-includes/wp-db.php on line 1202
+[03-Apr-2013 14:34:10] PHP Notice:  Undefined property: wpdb::$queries in /home1/acquinit/public_html/wp-includes/wp-db.php on line 575
+[03-Apr-2013 14:34:10] PHP Notice:  Indirect modification of overloaded property wpdb::$queries has no effect in /home1/acquinit/public_html/wp-includes/wp-db.php on line 1202
+[03-Apr-2013 14:40:41] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
+[03-Apr-2013 14:40:49] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
+[03-Apr-2013 16:08:31] PHP Notice:  Undefined property: wpdb::$queries in /home1/acquinit/public_html/wp-includes/wp-db.php on line 575
+[03-Apr-2013 16:08:31] PHP Notice:  Indirect modification of overloaded property wpdb::$queries has no effect in /home1/acquinit/public_html/wp-includes/wp-db.php on line 1202
+[03-Apr-2013 16:10:30] PHP Notice:  Undefined property: wpdb::$queries in /home1/acquinit/public_html/wp-includes/wp-db.php on line 575
+[03-Apr-2013 16:10:30] PHP Notice:  Indirect modification of overloaded property wpdb::$queries has no effect in /home1/acquinit/public_html/wp-includes/wp-db.php on line 1202
+[03-Apr-2013 16:14:30] PHP Notice:  Undefined property: wpdb::$queries in /home1/acquinit/public_html/wp-includes/wp-db.php on line 575
+[03-Apr-2013 16:14:30] PHP Notice:  Indirect modification of overloaded property wpdb::$queries has no effect in /home1/acquinit/public_html/wp-includes/wp-db.php on line 1202
