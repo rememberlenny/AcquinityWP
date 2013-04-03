@@ -33,9 +33,10 @@
   <!-- Startup Image iPhone (320x460) -->
   <link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 
-  <script type="text/javascript" src="//use.typekit.net/hxm2vop.js?forced1"></script>
+  <script type="text/javascript" src="//use.typekit.net/hxm2vop.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   
+  <script src="http://yui.yahooapis.com/3.9.1/build/yui/yui-min.js"></script>
   
   
 <?php 
