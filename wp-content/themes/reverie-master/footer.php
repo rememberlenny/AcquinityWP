@@ -39,5 +39,13 @@
     <script type='text/javascript' src="<?php bloginfo('template_directory'); ?>/js/homeslide.js"></script>
 <?php } ?>
 	
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    $('.masthead-photo').animate({opacity:1.0, 'margin-left':'0em'});
+  });
+
+</script>
+   
 </body>
 </html>

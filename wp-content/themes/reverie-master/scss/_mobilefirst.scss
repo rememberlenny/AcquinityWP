@@ -18,7 +18,8 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 // Media Queries
 //
 
-
+.masthead-photo { opacity:0; margin-left: -50px;}
+.hero-row .main { background: #111; }
 
 
   .home{
@@ -140,7 +141,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
     }
 
     .masthead-photo { 
-      background: url('http://acquinity.it/wp-content/uploads/2013/03/hero-map.jpg') center center  #FAF8F6;
       overflow: hidden;
       width: 100%;
       border-right: 1px solid #222;

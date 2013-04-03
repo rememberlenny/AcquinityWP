@@ -2333,6 +2333,15 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   color: white;
 }
 
+.masthead-photo {
+  opacity: 0;
+  margin-left: -50px;
+}
+
+.hero-row .main {
+  background: #111;
+}
+
 .home .case-studies-extension {
   border-bottom: none;
 }
@@ -2439,7 +2448,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 }
 
 .masthead-photo {
-  background: url("http://acquinity.it/wp-content/uploads/2013/03/hero-map.jpg") center center #faf8f6;
   overflow: hidden;
   width: 100%;
   border-right: 1px solid #222;

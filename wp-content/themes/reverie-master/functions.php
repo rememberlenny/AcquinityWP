@@ -214,7 +214,7 @@ function string_limit_words($string, $word_limit)
 //
  
 function heroBackgroundImage($url){
-    echo '.masthead-photo { background: url("' . $url . '") center center no-repeat #111 !important; }';
+    echo '#masthead-photo { background: url("' . $url . '") center center no-repeat #111 !important; }';
 }
 // End heroBackgroundImage()
 
@@ -263,7 +263,7 @@ function lkbg_head_style(){
     elseif (is_category('event-appearances') ): 
     
       $url = get_field('blog-category_event_appearance_image', 'option');
-      heroBackgroundImage($url);
+       groundImage($url);
     
     elseif (is_category('industry-news') ): 
     
@@ -274,7 +274,7 @@ function lkbg_head_style(){
 
   </style>
 
-    <img src="<?php echo $url; ?>" alt="" id="headerImage" style="display: none;">
+    <img src="<?php echo $url ?>" alt="" id="headerImage" style="display: none;">
 
   <?php
 }
@@ -312,7 +312,7 @@ function loading_balls(){
 
 function content_header_function(){ ?>
   <div class="content hero-row row">
-    <div class="main large-12"> 
+    <div class="main large-12 masthead-background"> 
       <?php // loading_balls(); ?>
       <div class="masthead-photo h300">
         <div class="s9999 masthead-photo-extension image-wrapper">
