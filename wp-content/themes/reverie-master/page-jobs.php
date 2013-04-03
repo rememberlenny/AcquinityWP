@@ -22,7 +22,7 @@ get_header(); ?>
     <div class="masthead-photo h300">
       <div class="s9999 masthead-photo-extension image-wrapper">
         <div class="masthead-photo-content">
-          <?php hero_text_block(); ?>
+            <?php hero_text_block(); ?>
         </div>
        </div>
     </div>
@@ -38,7 +38,21 @@ get_header(); ?>
     <div class="case-studies fr">
       <div class="s9999 case-studies-extension fr">
         <div id="case-sliders" class="pr98 pl98 lftcont case-studies-content content-sec fr">
-        <script type="text/javascript" src="http://app.theresumator.com/widgets/basic/create/acquinityinteractive" charset="utf-8"></script>
+          <?php while (have_posts()) : the_post(); ?>
+          <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+            <header>
+              <h4 class="subheader"><?php the_title(); ?></h4>
+              <?php // reverie_entry_meta(); ?>
+            </header>
+            <div class="entry-content">
+              
+              <?php the_content(); ?>
+            
+            <script type="text/javascript" src="http://app.theresumator.com/widgets/basic/create/acquinityinteractive" charset="utf-8"></script>
+
+            </div>
+          </article>
+        <?php endwhile; // End the loop ?>
         </div>
       </div>
     </div>
