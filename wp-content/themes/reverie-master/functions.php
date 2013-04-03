@@ -297,7 +297,6 @@ function content_header_function(){ ?>
       <div class="masthead-photo h300">
         <div class="s9999 masthead-photo-extension image-wrapper">
           <div class="masthead-photo-content">
-            
             <?php
             if(is_page('home')):
               if(get_field('home_section_title')):
