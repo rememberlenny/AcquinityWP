@@ -218,6 +218,10 @@ function heroBackgroundImage($url){
 }
 // End heroBackgroundImage()
 
+function heroBackgroundImageFunc( $location ) {
+  $url = get_field(' $location ', 'option');
+  heroBackgroundImage($url);
+}
 
 function lkbg_head_style(){
   $linkedinIcon = get_field('linkedin_icon', 'option');
@@ -240,34 +244,22 @@ function lkbg_head_style(){
       echo heroBackgroundImage($image[0]);
 
     elseif (is_home() ): 
-
-      $url = get_field('blog_top_header', 'option');
-      heroBackgroundImage($url);
+      heroBackgroundImageFunc( 'blog_top_header' );
        
     elseif (is_post_type_archive('success-story') ): 
-      
-      $url = get_field('success_stories_archive_header', 'option');
-      heroBackgroundImage($url);
+      heroBackgroundImageFunc( 'success_stories_archive_header' );
       
     elseif (is_home() ): 
-   
-      $url = get_field('blog_all_post_feed_image', 'option');
-      heroBackgroundImage($url);
+      heroBackgroundImageFunc( 'blog_all_post_feed_image' );
 
     elseif (is_category('press-release') ): 
-    
-      $url = get_field('blog-category__press_release_image', 'option');
-      heroBackgroundImage($url);
+      heroBackgroundImageFunc( 'blog-category__press_release_image' );
     
     elseif (is_category('event-appearances') ): 
-    
-      $url = get_field('blog-category_event_appearance_image', 'option');
-      heroBackgroundImage($url);
+      heroBackgroundImageFunc( 'blog-category_event_appearance_image' );
     
     elseif (is_category('industry-news') ): 
-    
-      $url = get_field('blog-category_industry_news_image', 'option');
-      heroBackgroundImage($url);
+      heroBackgroundImageFunc( 'blog-category_industry_news_image' );
     
     endif;?>
 
@@ -295,26 +287,22 @@ function hero_text_block(){
 }
 // End hero_text_block()
 
+function loading_balls(){
+    echo '<div class="windows8">';
+    for ( $i = 0; $i < 5; $i++ ){
+      echo '<div class="wBall" id="wBall_' . $i . '">';
+      echo '<div class="wInnerBall"></div>';
+      echo '</div>';
+    }
+  ?> 
+  </div>
+<?php }
+// End loading_balls();
+
 function content_header_function(){ ?>
   <div class="content hero-row row">
     <div class="main large-12"> 
-      <div class="windows8">
-        <div class="wBall" id="wBall_1">
-          <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_2">
-          <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_3">
-          <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_4">
-          <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_5">
-          <div class="wInnerBall"></div>
-        </div>
-      </div>
+      <?php loading_balls(); ?>
       <div class="masthead-photo h300">
         <div class="s9999 masthead-photo-extension image-wrapper">
           <div class="masthead-photo-content">
