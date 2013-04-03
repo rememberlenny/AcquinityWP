@@ -49,6 +49,7 @@ get_header(); ?>
               <?php the_content(); ?>
             
               <script type="text/javascript" src="http://app.theresumator.com/widgets/basic/create/acquinityinteractive" charset="utf-8"></script>
+              <hr>
               <?php page_bottom_box(); ?>
             </div>
           </article>
