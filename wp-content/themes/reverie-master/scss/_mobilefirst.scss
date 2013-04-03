@@ -18,7 +18,8 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 // Media Queries
 //
 
-.masthead-photo { opacity:0; margin-left: -50px;}
+.masthead-photo { opacity:0; }
+.masthead-photo-extension { opacity:0;  margin-left: 100px;}
 .hero-row .main { background: #111; }
 
 

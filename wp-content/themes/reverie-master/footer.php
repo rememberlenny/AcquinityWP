@@ -40,11 +40,10 @@
 <?php } ?>
 	
 <script type="text/javascript">
-
   $(document).ready(function() {
-    $('.masthead-photo').animate({opacity:1.0, 'margin-left':'0em'});
+    $('.masthead-photo').animate({opacity:1.0}, 'linear');
+    $('.masthead-photo-extension').animate({opacity:1.0, 'margin-left':'0em'}, 'linear');
   });
-
 </script>
    
 </body>

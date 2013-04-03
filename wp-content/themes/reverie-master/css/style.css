@@ -2335,7 +2335,11 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
 .masthead-photo {
   opacity: 0;
-  margin-left: -50px;
+}
+
+.masthead-photo-extension {
+  opacity: 0;
+  margin-left: 100px;
 }
 
 .hero-row .main {
