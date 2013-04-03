@@ -4,7 +4,7 @@ Plugin Name: Google Analytics Dashboard for WP
 Plugin URI: http://www.deconf.com
 Description: This plugin will display Google Analytics data and statistics into Admin Dashboard. 
 Author: Deconf.com
-Version: 3.2
+Version: 3.2.1
 Author URI: http://www.deconf.com
 */  
 
@@ -150,7 +150,7 @@ function ga_dash_content() {
 			$profile_switch.= "</select></form><br />";
 			$client->setUseObjects(false);
 		} catch (exception $e) {
-			$profile_switch.= "<div style='padding:20px;'>".__("Can't retrive your Google Analytics Profiles", 'ga-dash')."</div>";
+			echo "<div style='padding:20px;'>".__("Can't retrive your Google Analytics Profiles", 'ga-dash')."</div>";
 			return;
 		}
 	}
