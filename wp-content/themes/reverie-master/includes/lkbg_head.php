@@ -142,7 +142,7 @@ function content_header_function(){ ?>
 function postHeaderStyleCall(){
 
   if(is_page()):
-    $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); 
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' );
   endif;
   ?>
   <style type="text/css">

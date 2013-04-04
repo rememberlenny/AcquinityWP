@@ -6,18 +6,14 @@ get_header(); ?>
 
 <!-- Row for main content area -->
   
-<div class="content hero-row row twelve">
-  <div class="main large-12">
-    <div class="masthead-photo h300">
-      <div class="s9999 masthead-photo-extension image-wrapper">
-        <div class="masthead-photo-content">
-          <?php hero_text_block(); ?>
-        </div>
-       </div>
-    </div>
-  </div>
-</div>  
-   
+<style type="text/css">
+<?php 
+  $url = get_field('success_stories_archive_header', 'option');
+  heroBackgroundImage($url); 
+?>
+</style>  
+  
+<?php content_header_function(); ?>
   
 <div class="content content-main row twelve">
   <div class="main large-8 columns ">   

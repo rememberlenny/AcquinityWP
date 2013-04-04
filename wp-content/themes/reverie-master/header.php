@@ -111,4 +111,4 @@
 </div>
 
 <!-- Start the main container -->
-<section class="" role="document">
+<section class="sectioned" role="document">
