@@ -274,7 +274,7 @@ function lkbg_head_style(){
 
   </style>
 
-    <img src="<?php echo $url ?>" alt="" id="headerImage" style="display: none;">
+    <!-- <img src="<?php //echo $url ?>" alt="" id="headerImage" style="display: none;"> -->
 
   <?php
 }
