@@ -637,7 +637,25 @@ nav.top-bar input {
   top: 24px;
 }
 
-.top-bar-section .left li a:not(.button) {
+@media only screen and (min-width: 768px) {
+  .top-bar-section .has-dropdown > a:after {
+    top: 37px !important;
+  }
+}
+.top-bar-section ul li > a {
+  height: auto !important;
+}
+
+@media only screen and (min-width: 58.75em) {
+  .top-bar-section .dropdown li a {
+    color: #222222;
+    line-height: 4.5 !important;
+    white-space: nowrap;
+    padding: 7px 25px;
+    background: white;
+  }
+}
+.top-bar-section .left > li a:not(.button) {
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
   -o-transition: all .2s;
@@ -645,21 +663,13 @@ nav.top-bar input {
   transition: all .2s;
   color: #353230 !important;
 }
-.top-bar-section .left li a:not(.button):hover {
+.top-bar-section .left > li a:not(.button):hover {
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
   -o-transition: all .2s;
   -ms-transition: all .2s;
   transition: all .2s;
   background: #efefef !important;
-}
-
-.top-bar div input {
-  line-height: 1.5em !IMPORTANT;
-}
-
-#searchsubmit {
-  line-height: 1.8 !important;
 }
 
 .top-bar {
