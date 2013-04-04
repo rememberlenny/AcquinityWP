@@ -30,8 +30,6 @@ function lkbg_head_style(){
   } ?>
   
   <style type="text/css">
-
-
     <?php
       social_icon_style('linkedin', $linkedinIcon);  
       social_icon_style('facebook', $facebookIcon);  
@@ -144,7 +142,7 @@ function content_header_function(){ ?>
 function postHeaderStyleCall(){
 
   if(is_page()):
-    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); 
   endif;
   ?>
   <style type="text/css">
@@ -157,6 +155,6 @@ function postHeaderStyleCall(){
       }
     ?>
   </style>
-  
+
   <?php
 }
