@@ -132,3 +132,13 @@ function postHeaderStyleCall(){
 
   <?php
 }
+
+function inlineCSScall(){
+  echo '<style type="text/css">';
+    echo '.masthead-photo {';
+      echo 'background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;';
+    echo '}';
+  echo '</style>';
+}
+
+?>

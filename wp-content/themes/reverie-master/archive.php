@@ -24,6 +24,16 @@ get_header(); ?>
 <!-- Row for main content area -->
   
 <?php content_header_function(); ?> 
+
+<?php
+  // Is it a Category Archive
+  if ( is_category() ) {
+    global $cat;
+    $curr_cat = get_category( $cat );
+    $cat_name = ( $curr_cat ) ? $curr_cat->cat_name : 'Recent News';
+  }
+  // End Category Archive Title
+?>
   
 <div class="content content-main row twelve">
   <div class="main large-8 columns ">   
@@ -31,7 +41,7 @@ get_header(); ?>
     <div class="case-studies fr">
       <div class="s9999 case-studies-extension fr">
         <div id="case-sliders" class="pr98 pl98 lftcont case-studies-content content-sec fr">
-        	<h4 class="subheader">Recent News</h4> 
+        	<h4 class="subheader"><?php echo $cat_name; ?></h4> 
             <?php $mypost = array( 'post_type' => 'post', );
         $loop = new WP_Query( $mypost ); ?>
         
