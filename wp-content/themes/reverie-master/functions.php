@@ -299,7 +299,7 @@ function hero_text_block(){
 // End hero_text_block()
 
 function loading_balls(){
-    echo '<div class="windows8">';
+    echo '<div class="windows8" id="windows8">';
     for ( $i = 0; $i < 5; $i++ ){
       echo '<div class="wBall" id="wBall_' . $i . '">';
       echo '<div class="wInnerBall"></div>';
@@ -313,7 +313,7 @@ function loading_balls(){
 function content_header_function(){ ?>
   <div class="content hero-row row">
     <div class="main large-12 masthead-background"> 
-      <?php // loading_balls(); ?>
+      <?php loading_balls(); ?>
       <div class="masthead-photo h300" id="masthead-photo">
         <div class="s9999 masthead-photo-extension image-wrapper">
           <div class="masthead-photo-content">
