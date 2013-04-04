@@ -2965,6 +2965,10 @@ h4.subheader {
   .top-bar-section li a:not(.button) {
     padding: 0 20px;
   }
+
+  .case-studies-extension {
+    min-height: 675px;
+  }
 }
 h3.subheader {
   font-size: 2em;
