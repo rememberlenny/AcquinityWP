@@ -35,42 +35,16 @@ function lkbg_head_style(){
       social_icon_style('facebook', $facebookIcon);  
     ?>
 
-    <?php if (is_page('home') ):
+  <?php 
+
+    if (is_page('home') ):
 
       $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' );    
       echo heroBackgroundImage($image[0]);
 
-    elseif (is_home() ): 
-
-      $url = get_field('blog_top_header', 'option');
-      heroBackgroundImage($url);
-       
-    elseif (is_post_type_archive('success-story') ): 
-      
-      $url = get_field('success_stories_archive_header', 'option');
-      heroBackgroundImage($url);
-      
-    elseif (is_home() ): 
-   
-      $url = get_field('blog_all_post_feed_image', 'option');
-      heroBackgroundImage($url);
-
-    elseif (is_category('press-release') ): 
-    
-      $url = get_field('blog-category__press_release_image', 'option');
-      heroBackgroundImage($url);
-    
-    elseif (is_category('event-appearances') ): 
-    
-      $url = get_field('blog-category_event_appearance_image', 'option');
-       groundImage($url);
-    
-    elseif (is_category('industry-news') ): 
-    
-      $url = get_field('blog-category_industry_news_image', 'option');
-      heroBackgroundImage($url);
-      
-    endif;?>
+    endif;
+  
+  ?>
 
   </style>
 

@@ -4,20 +4,26 @@ Template Name: Page News
 */
 get_header(); ?>
 
+<style type="text/css">
+  <?php
+   if (is_category('press-release') ):    
+      $url = get_field('blog-category__press_release_image', 'option');
+      heroBackgroundImage($url);   
+    elseif (is_category('event-appearances') ):    
+      $url = get_field('blog-category_event_appearance_image', 'option');
+       heroBackgroundImage($url);    
+    elseif (is_category('industry-news') ):     
+      $url = get_field('blog-category_industry_news_image', 'option');
+      heroBackgroundImage($url);
+    else :   
+      $url = get_field('blog_all_post_feed_image', 'option');
+      heroBackgroundImage($url);
+    endif;
+  ?>
+</style>
 <!-- Row for main content area -->
   
-<div class="content hero-row row twelve">
-  <div class="main large-12">
-    <div class="masthead-photo h300">
-      <div class="s9999 masthead-photo-extension image-wrapper">
-        <div class="masthead-photo-content">
-          <?php hero_text_block(); ?>
-        </div>
-       </div>
-    </div>
-  </div>
-</div>  
-   
+<?php content_header_function(); ?> 
   
 <div class="content content-main row twelve">
   <div class="main large-8 columns ">   
