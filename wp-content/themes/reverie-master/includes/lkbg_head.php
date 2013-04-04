@@ -1,5 +1,20 @@
 <?php
 
+/*-------------------------------------------------------------------------------------
+
+TABLE OF CONTENTS
+
+- Hero Background Image 
+- LKBG Head Style 
+- Hero Text Block 
+- Loading Balls 
+- Content Header Function 
+- Background ACF Declaration 
+- Stretch Background Image 
+- Post Style Header Call 
+
+-------------------------------------------------------------------------------------*/
+
 function heroBackgroundImage($url){
     echo '#masthead-photo { background: url("' . $url . '") center center no-repeat #111 !important; }';
 }
@@ -23,8 +38,8 @@ function lkbg_head_style(){
     ?>
 
     <?php if (is_page('home') ):
-      $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' );
-        
+
+      $image = wp_get_attachment_image_src( get_post_thumbnail_id( 36 ), 'single-post-thumbnail' );    
       echo heroBackgroundImage($image[0]);
 
     elseif (is_home() ): 
@@ -126,28 +141,22 @@ function content_header_function(){ ?>
 }
 //End content_header_function()
 
-function backgroundACFdeclaration(){
-  ?>
-  .masthead-photo {
-    background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;
-  }
-  <?php
-}
-
-function stretchBackgroundImage(){
-    if ( get_field('background_2000')){
-      echo '.masthead-photo{ background-size: 2000px; }';
-    }
-}
-
 function postHeaderStyleCall(){
-?>
+
+  if(is_page()):
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
+  endif;
+  ?>
   <style type="text/css">
-
-    <?php backgroundACFdeclaration(); ?>
-
-    <?php stretchBackgroundImage(); ?>
-
+    .masthead-photo {
+      background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;
+    }
+    <?php
+      if ( get_field('background_2000')){
+        echo '.masthead-photo{ background-size: 2000px; }';
+      }
+    ?>
   </style>
-<?php
+  
+  <?php
 }

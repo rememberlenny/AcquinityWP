@@ -1,4 +1,13 @@
 <?php
+
+/*-------------------------------------------------------------------------------------
+
+TABLE OF CONTENTS
+
+- Sidebar Stuff
+
+-------------------------------------------------------------------------------------*/
+
 // create widget areas: sidebar, footer
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {

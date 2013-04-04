@@ -4,12 +4,7 @@ Template Name: Page
 */
 get_header(); ?>
 
-<?php if (has_post_thumbnail( $post->ID ) ): ?>
-<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-
 <?php postHeaderStyleCall(); ?>
-
-<?php endif; ?>
 
 <!-- Row for main content area -->
 	
@@ -30,7 +25,6 @@ get_header(); ?>
 							<?php // reverie_entry_meta(); ?>
 						</header>
 						<div class="entry-content">
-              
   						<?php the_content(); ?>
               <?php //about_us_panel(); ?>    
               <?php page_bottom_box(); ?>   

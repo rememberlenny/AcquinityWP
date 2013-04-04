@@ -1,4 +1,16 @@
 <?php
+
+/*-------------------------------------------------------------------------------------
+
+TABLE OF CONTENTS
+
+- About Us Panel
+- Page Bottom Box
+- Page Stat Panel
+- Get Related Post CPT
+
+-------------------------------------------------------------------------------------*/
+
 function about_us_panel(){
     ?>
     <div class="large-12 panel row clearboth mb1em radius about">
@@ -87,4 +99,6 @@ function get_related_cpt(){
           </div>
         <?php endwhile;?>
     </div>
-<?php } ?>
+<?php } 
+
+?>
