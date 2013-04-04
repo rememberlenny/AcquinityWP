@@ -339,4 +339,31 @@ function content_header_function(){ ?>
 }
 //End content_header_function()
 
+function backgroundACFdeclaration(){
+  ?>
+  .masthead-photo {
+    background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;
+  }
+  <?php
+}
+
+function stretchBackgroundImage(){
+    if ( get_field('background_2000')){
+      echo '.masthead-photo{ background-size: 2000px; }';
+    }
+}
+
+function postHeaderStyleCall(){
+?>
+  <style type="text/css">
+
+    <?php backgroundACFdeclaration(); ?>
+
+    <?php stretchBackgroundImage(); ?>
+
+  </style>
+<?php
+}
+
+
 ?>

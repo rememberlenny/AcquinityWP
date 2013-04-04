@@ -7,16 +7,7 @@ get_header(); ?>
 <?php if (has_post_thumbnail( $post->ID ) ): ?>
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
-<style type="text/css">
-	.masthead-photo {
-		background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;
-	}
-    <?php
-    if ( get_field('background_2000')){
-      echo '.masthead-photo{ background-size: 2000px; }';
-    }
-    ?>
-</style>
+<?php postHeaderStyleCall(); ?>
 
 <?php endif; ?>
 
