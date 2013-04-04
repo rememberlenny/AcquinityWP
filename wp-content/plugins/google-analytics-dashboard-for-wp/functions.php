@@ -116,9 +116,9 @@
 			catch(exception $e) {
 			echo "<br />".__("ERROR LOG:")."<br /><br />".$e; 
 		}	
-		if (!$data['rows']){
-			return 0;
-		}
+		//if (!$data['rows']){
+		//	return 0;
+		//}
 		
 		$ga_dash_data="";
 		$i=0;
