@@ -41,9 +41,14 @@
 	
 <script type="text/javascript">
   $(document).ready(function() {
-    $('.masthead-photo').animate({opacity:1.0}, 'linear');
-    $('.masthead-photo-extension').animate({opacity:1.0, 'margin-left':'0em'}, 'linear');
-    $('#headerImage').load($('#windows8').animate({opacity:0, 'margin-left':'-70px'}, 'linear'));
+    $('#masthead-photo').delay(500).animate({opacity:1.0}, 'linear', function(){ 
+      console.log("itworks 1");
+      $('#windows8').animate({opacity:0, 'margin-left':'-70px'}, 'linear', function(){ 
+        console.log("itworks 2");
+        $('#masthead-photo-extension').animate({opacity:1.0, 'margin-left':'0em'}, 'linear', function(){ console.log("itworks 3")});
+      });
+    });
+    
   });
 </script>
    

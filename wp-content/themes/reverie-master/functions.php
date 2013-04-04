@@ -315,7 +315,7 @@ function content_header_function(){ ?>
     <div class="main large-12 masthead-background"> 
       <?php loading_balls(); ?>
       <div class="masthead-photo h300" id="masthead-photo">
-        <div class="s9999 masthead-photo-extension image-wrapper">
+        <div class="s9999 masthead-photo-extension image-wrapper" id="masthead-photo-extension">
           <div class="masthead-photo-content">
             <?php
             if(is_page('home')){
