@@ -141,4 +141,8 @@ function inlineCSScall(){
   echo '</style>';
 }
 
+function defaultNewsHeader(){
+  $url = get_field('blog_all_post_feed_image', 'option');
+  heroBackgroundImage($url);
+}
 ?>
