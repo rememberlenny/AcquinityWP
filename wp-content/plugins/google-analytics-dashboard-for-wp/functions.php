@@ -43,7 +43,7 @@
 			$serial='gadash_qr4'.str_replace(array('ga:',',','-',date('Y')),"",$projectId.$from.$to);
 			$transient = get_transient($serial);
 			if ( empty( $transient ) ){
-				$data = $service->data_ga->get('ga:'.$projectId, $from, $to, $metrics, array('dimensions' => $dimensions, 'sort' => '-ga:pageviews', 'max-results' => '20', 'filters' => 'ga:pagePath!=/'));
+				$data = $service->data_ga->get('ga:'.$projectId, $from, $to, $metrics, array('dimensions' => $dimensions, 'sort' => '-ga:pageviews', 'max-results' => '24', 'filters' => 'ga:pagePath!=/'));
 				set_transient( $serial, $data, get_option('ga_dash_cachetime') );
 			}else{
 				$data = $transient;	
@@ -75,7 +75,7 @@
 			$serial='gadash_qr5'.str_replace(array('ga:',',','-',date('Y')),"",$projectId.$from.$to);
 			$transient = get_transient($serial);
 			if ( empty( $transient ) ){
-				$data = $service->data_ga->get('ga:'.$projectId, $from, $to, $metrics, array('dimensions' => $dimensions, 'sort' => '-ga:visits', 'max-results' => '20', 'filters' => 'ga:medium==referral'));	
+				$data = $service->data_ga->get('ga:'.$projectId, $from, $to, $metrics, array('dimensions' => $dimensions, 'sort' => '-ga:visits', 'max-results' => '24', 'filters' => 'ga:medium==referral'));	
 				set_transient( $serial, $data, get_option('ga_dash_cachetime') );
 			}else{
 				$data = $transient;		
@@ -107,7 +107,7 @@
 			$serial='gadash_qr6'.str_replace(array('ga:',',','-',date('Y')),"",$projectId.$from.$to);
 			$transient = get_transient($serial);
 			if ( empty( $transient ) ){
-				$data = $service->data_ga->get('ga:'.$projectId, $from, $to, $metrics, array('dimensions' => $dimensions, 'sort' => '-ga:visits', 'max-results' => '20', 'filters' => 'ga:keyword!=(not provided);ga:keyword!=(not set)'));
+				$data = $service->data_ga->get('ga:'.$projectId, $from, $to, $metrics, array('dimensions' => $dimensions, 'sort' => '-ga:visits', 'max-results' => '24', 'filters' => 'ga:keyword!=(not provided);ga:keyword!=(not set)'));
 				set_transient( $serial, $data, get_option('ga_dash_cachetime') );
 			}else{
 				$data = $transient;		
@@ -116,9 +116,9 @@
 			catch(exception $e) {
 			echo "<br />".__("ERROR LOG:")."<br /><br />".$e; 
 		}	
-		//if (!$data['rows']){
-		//	return 0;
-		//}
+		if (!$data['rows']){
+			return 0;
+		}
 		
 		$ga_dash_data="";
 		$i=0;

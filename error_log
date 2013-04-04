@@ -526,3 +526,18 @@
 [04-Apr-2013 17:55:48] PHP Notice:  Undefined variable: post in /home1/acquinit/public_html/wp-content/themes/reverie-master/includes/lkbg_head.php on line 147
 [04-Apr-2013 17:55:48] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-content/themes/reverie-master/includes/lkbg_head.php on line 147
 [04-Apr-2013 18:55:32] PHP Fatal error:  Call to undefined function  groundimage() in /home1/acquinit/public_html/wp-content/themes/reverie-master/includes/lkbg_head.php on line 66
+[04-Apr-2013 19:04:02] PHP Fatal error:  Call to undefined function  groundimage() in /home1/acquinit/public_html/wp-content/themes/reverie-master/includes/lkbg_head.php on line 66
+[04-Apr-2013 19:12:23] PHP Fatal error:  Call to undefined function  groundimage() in /home1/acquinit/public_html/wp-content/themes/reverie-master/includes/lkbg_head.php on line 66
+[04-Apr-2013 19:33:57] PHP Warning:  preg_grep() [<a href='function.preg-grep'>function.preg-grep</a>]: Compilation failed: missing ) at offset 44 in /home1/acquinit/public_html/wp-content/plugins/vaultpress/vp-scanner.php on line 121
+[04-Apr-2013 19:43:53] PHP Warning:  preg_grep() [<a href='function.preg-grep'>function.preg-grep</a>]: Compilation failed: missing ) at offset 44 in /home1/acquinit/public_html/wp-content/plugins/vaultpress/vp-scanner.php on line 121
+[04-Apr-2013 19:48:36] PHP Warning:  preg_grep() [<a href='function.preg-grep'>function.preg-grep</a>]: Compilation failed: missing ) at offset 44 in /home1/acquinit/public_html/wp-content/plugins/vaultpress/vp-scanner.php on line 121
+[04-Apr-2013 19:53:38] PHP Warning:  preg_grep() [<a href='function.preg-grep'>function.preg-grep</a>]: Compilation failed: missing ) at offset 44 in /home1/acquinit/public_html/wp-content/plugins/vaultpress/vp-scanner.php on line 121
+[04-Apr-2013 20:00:58] PHP Warning:  preg_grep() [<a href='function.preg-grep'>function.preg-grep</a>]: Compilation failed: missing ) at offset 44 in /home1/acquinit/public_html/wp-content/plugins/vaultpress/vp-scanner.php on line 121
+[04-Apr-2013 20:04:37] PHP Warning:  preg_grep() [<a href='function.preg-grep'>function.preg-grep</a>]: Compilation failed: missing ) at offset 44 in /home1/acquinit/public_html/wp-content/plugins/vaultpress/vp-scanner.php on line 121
+[04-Apr-2013 20:09:37] PHP Warning:  preg_grep() [<a href='function.preg-grep'>function.preg-grep</a>]: Compilation failed: missing ) at offset 44 in /home1/acquinit/public_html/wp-content/plugins/vaultpress/vp-scanner.php on line 121
+[04-Apr-2013 20:13:38] PHP Warning:  preg_grep() [<a href='function.preg-grep'>function.preg-grep</a>]: Compilation failed: missing ) at offset 44 in /home1/acquinit/public_html/wp-content/plugins/vaultpress/vp-scanner.php on line 121
+[04-Apr-2013 20:28:28] PHP Notice:  Undefined property: wpdb::$queries in /home1/acquinit/public_html/wp-includes/wp-db.php on line 575
+[04-Apr-2013 20:28:28] PHP Notice:  Indirect modification of overloaded property wpdb::$queries has no effect in /home1/acquinit/public_html/wp-includes/wp-db.php on line 1202
+[04-Apr-2013 20:35:44] PHP Notice:  Undefined index:  HTTP_CF_CONNECTING_IP in /home1/acquinit/public_html/wp-content/plugins/cloudflare/cloudflare.php on line 44
+[04-Apr-2013 20:52:12] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
+[04-Apr-2013 21:30:32] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
