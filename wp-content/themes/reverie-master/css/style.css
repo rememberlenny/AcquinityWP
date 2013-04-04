@@ -648,7 +648,6 @@ nav.top-bar input {
 
   .top-bar-section .dropdown li a {
     color: #222222;
-    line-height: 4.5 !important;
     white-space: nowrap;
     padding: 7px 25px;
     background: white;
