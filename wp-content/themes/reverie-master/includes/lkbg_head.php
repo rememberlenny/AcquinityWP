@@ -170,7 +170,7 @@ function inlineCSScall(){
 
 function defaultNewsHeader(){
 
-  $url = get_field('blog_all_post_feed_image', 'option');
+  $url = get_field('default_-_single_post_-_hero_image', 'option');
   heroBackgroundImage($url);
 }
 
