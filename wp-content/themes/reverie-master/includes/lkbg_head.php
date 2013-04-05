@@ -79,7 +79,7 @@ function hero_text_block(){
       $hero_text_content = get_field('blog-category_industry_news_head', 'option');
       header_text_block_template ($hero_text_content);
     elseif  (is_category('blog') ):     
-      $hero_text_content = get_field('blog-category_blog_text', 'option');
+      $hero_text_content = get_field('blog-category_blog_head', 'option');
       header_text_block_template ($hero_text_content);
 
     else:
