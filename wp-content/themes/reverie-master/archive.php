@@ -8,22 +8,22 @@ get_header(); ?>
   <?php
    if       (is_category('press-release') ):    
       $url = get_field('blog-category__press_release_image', 'option');
-      $hero_text_content = get_field('blog-category__press_release_news', 'option');
+      $hero_text_content = get_field('blog-category__press_release_text', 'option');
       heroBackgroundImage($url);  
       header_text_block_template ($hero_text_content); 
     elseif  (is_category('event-appearances') ):    
       $url = get_field('blog-category_event_appearance_image', 'option');
-      $hero_text_content = get_field('blog-category_event_appearance_news', 'option');
+      $hero_text_content = get_field('blog-category_event_appearance_text', 'option');
        heroBackgroundImage($url);  
        header_text_block_template ($hero_text_content);  
     elseif  (is_category('industry-news') ):     
       $url = get_field('blog-category_industry_news_image', 'option');
-      $hero_text_content = get_field('blog-category_industry_news_news', 'option');
+      $hero_text_content = get_field('blog-category_industry_news_text', 'option');
       heroBackgroundImage($url);
       header_text_block_template ($hero_text_content);
     elseif  (is_category('blog') ):     
       $url = get_field('blog-category_blog_image', 'option');
-      $hero_text_content = get_field('blog-category_blog_news', 'option');
+      $hero_text_content = get_field('blog-category_blog_text', 'option');
       heroBackgroundImage($url);
       header_text_block_template ($hero_text_content);
     else :   
