@@ -2472,7 +2472,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 }
 
 .masthead-photo-content {
-  margin-top: 85px;
+  margin-top: 275px;
 }
 
 .masthead-photo-content {
@@ -2969,6 +2969,10 @@ h4.subheader {
   .case-studies-extension {
     min-height: 700px;
   }
+
+  .home .mast-head-photo-content {
+    margin-top: 170px;
+  }
 }
 h3.subheader {
   font-size: 2em;
@@ -2980,6 +2984,10 @@ h4.subheader {
 }
 
 @media only screen and (min-width: 768px) {
+  .home .mast-head-photo-content {
+    margin-top: 155px;
+  }
+
   .brand-bar-extension {
     background: #262626 !important;
     margin: 0 auto !important;
@@ -3102,7 +3110,7 @@ h4.subheader {
   }
 
   .masthead-photo-content {
-    margin-top: 140px;
+    margin-top: 270px;
   }
 
   .masthead-photo-extension {
@@ -3125,13 +3133,17 @@ h4.subheader {
 
   .masthead-photo-content {
     padding: 0 1.875em 0;
-    margin-top: 170px;
+    margin-top: 270px;
     padding-bottom: 12px;
   }
   .masthead-photo-content h1 {
     font-weight: 300;
     font-size: 2.8em;
     line-height: 1;
+  }
+
+  .home .mast-head-photo-content {
+    margin-top: 170px;
   }
 
   .masthead-photo {

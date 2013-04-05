@@ -5,17 +5,20 @@
     .has-dropdown>a{
       margin-right: 5px;
     }
+
       .masthead-photo-content{
       padding:0 1.875em 0;
-      margin-top: 170px;
+      margin-top: 270px;
       padding-bottom: 12px;
-      h1{
-        font-weight: 300;
-        font-size: 2.8em;
-        line-height: 1;
+        h1{
+          font-weight: 300;
+          font-size: 2.8em;
+          line-height: 1;
+        }
       }
-
-    }
+      .home .mast-head-photo-content{
+        margin-top:170px;
+      }
       .masthead-photo{
         width: auto;
         float: none;
@@ -73,4 +76,5 @@
   .products-link-content{
     max-width: 333px;
   }
+
 }
