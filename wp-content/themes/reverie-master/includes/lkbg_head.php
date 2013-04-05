@@ -161,7 +161,28 @@ function inlineCSScall(){
 }
 
 function defaultNewsHeader(){
+
   $url = get_field('blog_all_post_feed_image', 'option');
   heroBackgroundImage($url);
 }
+
+function archiveConditionalStyleCalls(){
+
+   if (is_category('press-release') ):    
+      $url = get_field('blog-category_press_release_image', 'option');
+      heroBackgroundImage($url);   
+    elseif  (is_category('event-appearances') ):    
+      $url = get_field('blog-category_event_appearance_image', 'option');
+       heroBackgroundImage($url);    
+    elseif  (is_category('industry-news') ):     
+      $url = get_field('blog-category_industry_news_image', 'option');
+      heroBackgroundImage($url);
+    elseif  (is_category('blog') ):     
+      $url = get_field('blog-category_blog_image', 'option');
+      heroBackgroundImage($url);
+    else :   
+      defaultNewsHeader(); 
+    endif;
+}
+
 ?>
