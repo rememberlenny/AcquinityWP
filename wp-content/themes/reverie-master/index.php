@@ -11,7 +11,7 @@ get_header(); ?>
     inlineCSScall(); 
   else:
     echo '<style>';
-    defaultNewsHeader(); 
+      defaultNewsHeader();  
     echo '</style>';
   endif;
   ?>

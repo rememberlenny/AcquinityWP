@@ -59,12 +59,9 @@ function header_text_block_template($content) {
 }
 
 function hero_text_block(){
-    if (get_field('hero_title_line_1')):
 
-      $hero_text_content = get_field('hero_title_line_1');
-      header_text_block_template ($hero_text_content);
     
-    elseif (is_post_type_archive('success-story')):
+    if (is_post_type_archive('success-story')):
 
       $hero_text_content = get_field('archive_success_story_head', 'option');
       header_text_block_template ($hero_text_content);
@@ -80,6 +77,11 @@ function hero_text_block(){
       header_text_block_template ($hero_text_content);
     elseif  (is_category('blog') ):     
       $hero_text_content = get_field('blog-category_blog_text', 'option');
+      header_text_block_template ($hero_text_content);
+
+    elseif (get_field('hero_title_line_1')):
+
+      $hero_text_content = get_field('hero_title_line_1');
       header_text_block_template ($hero_text_content);
 
     else:
