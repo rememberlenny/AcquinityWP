@@ -70,7 +70,7 @@ function hero_text_block(){
       header_text_block_template ($hero_text_content);
 
     elseif  (is_category('press-release') ):    
-      $hero_text_content = get_field('blog-category__press_release_head', 'option');
+      $hero_text_content = get_field('blog-category_press_release_head', 'option');
       header_text_block_template ($hero_text_content);   
     elseif  (is_category('event-appearances') ):    
       $hero_text_content = get_field('blog-category_event_appearance_head', 'option');
