@@ -534,8 +534,8 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         }
       }
       .orbit-slide-number{ visibility: hidden; }
-      .orbit-prev{ visibility: hidden; } 
-      .orbit-next{ visibility: hidden; } 
+      .orbit-prev{ visibility: hidden;         background-color: transparent!important; } 
+      .orbit-next{ visibility: hidden;         background-color: transparent!important; } 
       .orbit-timer{ visibility: hidden; }
       ol.orbit-bullets {
       }
@@ -616,3 +616,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       display: none;
     }
   }
+
+  .home .masthead-photo-content{
+      margin-top: 45px;
+    }

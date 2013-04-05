@@ -15,6 +15,7 @@ z;(function ($, window, document, undefined) {
       stack_on_small: true,
       container_class: 'orbit-container',
       stack_on_small_class: 'orbit-stack-on-small',
+      show_navigation: 'true',
       next_class: 'orbit-next',
       prev_class: 'orbit-prev',
       timer_container_class: 'orbit-timer',
