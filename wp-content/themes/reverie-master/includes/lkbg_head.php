@@ -59,7 +59,7 @@ function header_text_block_template($content) {
 }
 
 function hero_text_block(){
-    if (get_field('hero_title_line_1') && !is_post_type_archive('success-story')):
+    if (get_field('hero_title_line_1')):
 
       $hero_text_content = get_field('hero_title_line_1');
       header_text_block_template ($hero_text_content);
@@ -67,6 +67,24 @@ function hero_text_block(){
     elseif (is_post_type_archive('success-story')):
 
       $hero_text_content = get_field('archive_success_story_head', 'option');
+      header_text_block_template ($hero_text_content);
+
+    elseif  (is_category('press-release') ):    
+      $hero_text_content = get_field('blog-category__press_release_head', 'option');
+      header_text_block_template ($hero_text_content);   
+    elseif  (is_category('event-appearances') ):    
+      $hero_text_content = get_field('blog-category_event_appearance_head', 'option');
+      header_text_block_template ($hero_text_content);   
+    elseif  (is_category('industry-news') ):     
+      $hero_text_content = get_field('blog-category_industry_news_head', 'option');
+      header_text_block_template ($hero_text_content);
+    elseif  (is_category('blog') ):     
+      $hero_text_content = get_field('blog-category_blog_text', 'option');
+      header_text_block_template ($hero_text_content);
+
+    else:
+
+      $hero_text_content = get_field('blog_all_post_feed_head', 'option');
       header_text_block_template ($hero_text_content);
 
     endif;
