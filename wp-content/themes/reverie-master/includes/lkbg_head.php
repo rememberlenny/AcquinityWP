@@ -155,10 +155,16 @@ function postHeaderStyleCall(){
 }
 
 function inlineCSScall(){
+  
+  if (has_post_thumbnail() ):
+  $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); 
+  endif;
+
   echo '<style type="text/css">';
-    echo '.masthead-photo {';
-      echo 'background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;';
-    echo '}';
+  echo '.masthead-photo { background: url("';
+  echo $image[0];
+  echo '") center center no-repeat #FAF8F6;';
+  echo '}';
   echo '</style>';
 }
 
