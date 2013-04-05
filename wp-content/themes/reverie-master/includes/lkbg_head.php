@@ -54,10 +54,11 @@ function lkbg_head_style(){
 }
 // End lkbg_head_style()
 
+function header_text_block_template($content) {
+  echo '<div> <h1 class="text-left hero-text">' . $content . '</h1></div>';
+}
+
 function hero_text_block(){
-    function header_text_block_template($content) {
-      echo '<div> <h1 class="text-left hero-text">' . $content . '</h1></div>';
-    }
     if (get_field('hero_title_line_1') && !is_post_type_archive('success-story')):
 
       $hero_text_content = get_field('hero_title_line_1');
@@ -90,7 +91,7 @@ function content_header_function(){ ?>
       <?php loading_balls(); ?>
       <div class="masthead-photo h300" id="masthead-photo">
         <div class="s9999 masthead-photo-extension image-wrapper" id="masthead-photo-extension">
-          <div class="masthead-photo-content">
+          <div class="masthead-photo-content" id="masthead-photo-content">
             <?php
             if(is_page('home')){
               if(get_field('home_section_title')){
