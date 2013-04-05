@@ -2970,7 +2970,7 @@ h4.subheader {
     min-height: 700px;
   }
 
-  .home .mast-head-photo-content {
+  .home .masthead-photo-content {
     margin-top: 170px;
   }
 }
@@ -2984,7 +2984,7 @@ h4.subheader {
 }
 
 @media only screen and (min-width: 768px) {
-  .home .mast-head-photo-content {
+  .home .masthead-photo-content {
     margin-top: 155px;
   }
 
@@ -3131,6 +3131,10 @@ h4.subheader {
     margin-right: 5px;
   }
 
+  .home .masthead-photo-content {
+    margin-top: 170px;
+  }
+
   .masthead-photo-content {
     padding: 0 1.875em 0;
     margin-top: 270px;
@@ -3140,10 +3144,6 @@ h4.subheader {
     font-weight: 300;
     font-size: 2.8em;
     line-height: 1;
-  }
-
-  .home .mast-head-photo-content {
-    margin-top: 170px;
   }
 
   .masthead-photo {
