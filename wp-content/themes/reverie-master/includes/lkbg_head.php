@@ -158,6 +158,8 @@ function inlineCSScall(){
   
   if (has_post_thumbnail() ):
   $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); 
+  else:
+    
   endif;
 
   echo '<style type="text/css">';

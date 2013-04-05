@@ -3,12 +3,12 @@
 <?php if (has_post_thumbnail( $post->ID ) ): ?>
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
-<style type="text/css">
-  <?php defaultNewsHeader(); ?>
-</style>
-
 <?php inlineCSScall(); ?>
 
+<?php else : ?>
+<style type="text/css">	
+<?php defaultNewsHeader(); ?>
+</style>
 <?php endif; ?>
 
 <!-- Row for main content area -->
