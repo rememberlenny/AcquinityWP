@@ -140,6 +140,8 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   }
 }
 
+
+
   // Hero
   // 
     .special-news.circlewrapper{
@@ -627,3 +629,20 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   .home .masthead-photo-content{
       margin-top: 45px;
     }
+
+.home{
+  .masthead-photo-content{
+    h1{
+      background:rgba(0,0,0,0.5);
+      box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
+      -moz-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
+      -webkit-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
+    }
+    p{
+      background:rgba(0,0,0,0.5);
+      box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
+      -moz-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
+      -webkit-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
+    }
+  }
+}
