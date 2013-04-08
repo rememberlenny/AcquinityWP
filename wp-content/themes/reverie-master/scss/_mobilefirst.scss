@@ -18,6 +18,11 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 // Media Queries
 //
 
+.newsynew{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 .masthead-photo { opacity:0; }
 .masthead-photo-extension { opacity:0;  margin-left: 100px;}
 .hero-row .main { background: #111; }

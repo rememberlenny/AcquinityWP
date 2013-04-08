@@ -32,22 +32,7 @@
 
 <script>
 	$(document).foundation();
-  $(document).ready(function() {
-    $('#masthead-photo').delay(200).animate({opacity:1.0}, 'linear', function(){ 
-      $('#windows8').animate({opacity:0, 'margin-left':'-70px'}, 'linear');
-      $('#masthead-photo-extension').animate({opacity:1.0, 'margin-left':'0em'}, 'linear', function(){});
-    });
-  });
 </script>
-	
-<?php if (is_page('home') ) { ?>
-<!--home page custom JS-->
-    <script type='text/javascript' src="<?php bloginfo('template_directory'); ?>/js/homeslide.js"></script>
-<?php } ?>
-	
-<script type="text/javascript">
 
-</script>
-   
 </body>
 </html>

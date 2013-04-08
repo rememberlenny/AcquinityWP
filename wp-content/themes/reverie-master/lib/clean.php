@@ -110,6 +110,9 @@ function reverie_scripts_and_styles() {
     // modernizr (without media query polyfill)
     wp_register_script( 'reverie-modernizr', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', array(), '2.6.2', false );
 
+    // respondjs
+    wp_register_script( 'respondjs', get_template_directory_uri() . '/js/respond.min.js', array());
+
     // ie-only style sheet
     wp_register_style( 'reverie-ie-only', get_template_directory_uri() . '/css/ie.css', array(), '' );
 
@@ -125,12 +128,15 @@ function reverie_scripts_and_styles() {
     wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
     
 
-       wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
+    wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
+
+    wp_register_script ( 'appjs', get_template_directory_uri() . '/js/app.js', array('jquery'));
 
 
     // enqueue styles and scripts
     wp_enqueue_script( 'reverie-modernizr' );
-    wp_enqueue_style('reverie-ie-only');
+    wp_enqueue_script( 'respondjs' );
+    wp_enqueue_style( 'reverie-ie-only' );
     /*
     I recommend using a plugin to call jQuery
     using the google cdn. That way it stays cached
@@ -139,6 +145,7 @@ function reverie_scripts_and_styles() {
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'reverie-js' );
     wp_enqueue_script( 'html5shiv' );
+    wp_enqueue_script( 'appjs' );
 
   }
 }

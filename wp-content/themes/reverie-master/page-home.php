@@ -61,7 +61,7 @@ get_header(); ?>
       </div>
 		</div>	
 		<div class="page-main fr text-left" role="main">
-	    <div class="s9999 page-main-extension fr">
+	    <div class="s9999 page-main-extension newsynew fr">
 	      <div class="lftcont page-main-content content-sec fr pb15em">
 		      <div class="pr98 pl98 text-left column"> 
             <div class=" ">
