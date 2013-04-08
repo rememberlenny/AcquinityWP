@@ -2255,7 +2255,7 @@ h4.subheader {
 }
 .accessory-block .accessory_image {
   background: white;
-  text-align: center;
+  text-align: left;
 }
 .accessory-block .accessory_image .accessory-title {
   text-align: left;

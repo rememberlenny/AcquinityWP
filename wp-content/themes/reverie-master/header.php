@@ -35,18 +35,6 @@
 
   <script type="text/javascript" src="//use.typekit.net/hxm2vop.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    
-  <script src="http://yui.yahooapis.com/3.9.1/build/yui/yui-min.js"></script>
-
-  <script>
-  // Create a new YUI instance and populate it with the required modules.
-  YUI().use('imageloader', function (Y) {
-      // ImageLoader is available and ready for use. Add implementation
-      // code here.
-  });
-  </script>
-  
   
 <?php 
   lkbg_head_style();

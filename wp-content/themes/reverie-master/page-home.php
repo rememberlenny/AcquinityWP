@@ -32,8 +32,8 @@ get_header(); ?>
               </a>
 
               <div class="case-study-item text-left large-12 fl">
-               <div class="featsucc"> 
-                  <ul id="featsucc" data-orbit>
+               <div class="featsucc" id="pausetarget"  > 
+                  <ul id="featsucc" data-orbit data-options="timer_speed: 0;">
                     <?php 
                     rewind_posts();
                     $mypost = array( 'post_type' => 'success-story' );
