@@ -50,7 +50,7 @@ function page_bottom_box(){
           <h5 class="subheader stat-number">            
             <?php echo $statNumber; ?> 
           </h5>              
-          <h4 class="subheader">
+          <h4 class="subheader" style="color:#999;">
             <?php echo $statDesc; ?> 
           </h4>
         </div>
