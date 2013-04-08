@@ -2344,6 +2344,10 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   color: white;
 }
 
+.post-96 header h4.subheader {
+  display: none;
+}
+
 .newsynew {
   padding-top: 1em;
   padding-bottom: 1em;
