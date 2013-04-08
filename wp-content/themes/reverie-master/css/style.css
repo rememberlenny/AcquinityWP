@@ -476,7 +476,7 @@ hr.silent {
 }
 
 .stat-number {
-  font-weight: 300 !important;
+  font-weight: 500 !important;
   line-height: 1 !important;
   font-size: 3em;
   margin-bottom: 0em !important;
@@ -2284,9 +2284,13 @@ h4.subheader {
   opacity: 1;
 }
 
+.pageBottomBox .stat-number {
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  margin-bottom: 0em !important;
+}
 .pageBottomBox .left .stat-number {
   font-size: 7em;
-  line-height: 1;
   margin-top: 0em;
   margin-bottom: 0em;
 }
@@ -2294,7 +2298,6 @@ h4.subheader {
   display: inline-block !important;
   margin-top: .9em !important;
   font-size: 1.2em !important;
-  padding-left: 1.2em;
   line-height: 1.4;
 }
 .pageBottomBox .title {
