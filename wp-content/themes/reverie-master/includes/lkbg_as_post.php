@@ -27,4 +27,12 @@ function string_limit_words($string, $word_limit)
   return implode(' ', $words);
 }
 
+function replace_excerpt($content) {
+       return str_replace('[...]',
+               '<a href="'. get_permalink() .'">...Continue Reading</a>',
+               $content
+       );
+}
+add_filter('the_excerpt', 'replace_excerpt');
+
 ?>

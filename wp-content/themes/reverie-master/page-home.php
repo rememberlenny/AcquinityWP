@@ -92,7 +92,7 @@ get_header(); ?>
                   <?php endif; // end have_posts() check 
                   wp_reset_query(); ?>               
                 </ul>
-                    <a class="svbt-line" href="/success-story-telecom/" class="secondary">
+                    <a class="svbt-line" href="/news/" class="secondary">
                       See more News ›
                     </a>
               </div>

@@ -22,7 +22,6 @@
       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     </header>
   		<?php the_excerpt(''); ?>
-  		<a class="svbt-line d-inline" href="<?php the_permalink(); ?>"> Read More</a>
     <footer>
       
     </footer>
