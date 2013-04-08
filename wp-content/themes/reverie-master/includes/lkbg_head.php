@@ -113,6 +113,7 @@ function content_header_function(){ ?>
         <div class="s9999 masthead-photo-extension image-wrapper" id="masthead-photo-extension">
           <div class="masthead-photo-content" id="masthead-photo-content">
             <?php
+            
             if(is_page('home')){
               if(get_field('home_section_title')){
                 echo '<div> <h1 class="text-left hero-text">' . get_field('home_section_title') . '</h1><br>';
