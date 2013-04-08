@@ -46,13 +46,13 @@ function page_bottom_box(){
     endif;  ?>
     
     <div class="pageBottomBox large-12 panel row clearboth mb1em radius about">
-        <div class="large-6 column left">  
+        <div class="large-12 column left">  
           <h5 class="subheader stat-number">            
             <?php echo $statNumber; ?> 
           </h5>              
-          <p>
+          <h4 class="subheader">
             <?php echo $statDesc; ?> 
-          </p>
+          </h4>
         </div>
     </div>
   <?php 
