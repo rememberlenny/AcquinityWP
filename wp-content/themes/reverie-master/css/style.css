@@ -1974,7 +1974,7 @@ h4.subheader {
 
 /* The Grid ---------------------- */
 .lt-ie9 .row {
-  width: 940px;
+  width: 1000px;
   max-width: 100%;
   min-width: 768px;
   margin: 0 auto;
