@@ -121,7 +121,7 @@ function content_header_function(){ ?>
                 echo '<span><p class="hero-text">' . get_field('hero_para_1') . '</p></span></div>';
               }
             }
-            elseif( is_single() && ((get_post_type() == 'post')) {
+            elseif( is_single() && (get_post_type() == 'post') {
             }
             else {
               hero_text_block(); 
