@@ -1,4 +1,8 @@
 
+
+# BEGIN WPSuperCache
+# END WPSuperCache
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -10,3 +14,7 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+AuthName "ROOT"
+AuthUserFile "/home1/acquinit/.htpasswds/public_html/passwd"
+AuthType Basic
+require valid-user
