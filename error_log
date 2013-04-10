@@ -1186,3 +1186,4 @@
 [10-Apr-2013 04:41:35] PHP Notice:  Use of undefined constant EMPTY_TRASH_DAYS - assumed 'EMPTY_TRASH_DAYS' in /home1/acquinit/public_html/wp-includes/post.php on line 2308
 [10-Apr-2013 04:41:35] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post.php on line 3091
 [10-Apr-2013 04:41:35] PHP Notice:  Use of undefined constant WP_POST_REVISIONS - assumed 'WP_POST_REVISIONS' in /home1/acquinit/public_html/wp-includes/post.php on line 4928
+[10-Apr-2013 21:40:21] PHP Notice:  Trying to get property of non-object in /home1/acquinit/public_html/wp-includes/post-template.php on line 29
