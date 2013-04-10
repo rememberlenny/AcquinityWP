@@ -1,5 +1,6 @@
 #   BULLETPROOF .48.2 >>>>>>> SECURE .HTACCESS     
 
+<<<<<<< HEAD
 # If you edit the  BULLETPROOF .48.2 >>>>>>> SECURE .HTACCESS text above
 # you will see error messages on the BPS Security Status page
 # BPS is reading the version number in the htaccess file to validate checks
@@ -7,6 +8,12 @@
 # will need to edit the BPS /includes/functions.php file to match your changes
 # If you update your WordPress Permalinks the code between BEGIN WordPress and
 # END WordPress is replaced by WP htaccess code.
+=======
+
+# BEGIN WPSuperCache
+# END WPSuperCache
+
+>>>>>>> c910d948c4dda9d6b2f8011c2828c06a76f82c0f
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -18,6 +25,7 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+<<<<<<< HEAD
 # This removes all of the BPS security code and replaces it with just the default WP htaccess code
 # To restore this file use BPS Restore or activate BulletProof Mode for your Root folder again.
 
@@ -69,3 +77,9 @@ Allow from all
 # You should monitor your site very closely for at least a week if you add a bad bots list
 # to see if any website traffic problems or other problems occur.
 # Copy and paste your bad bots user agent code list directly below.
+=======
+AuthName "ROOT"
+AuthUserFile "/home1/acquinit/.htpasswds/public_html/passwd"
+AuthType Basic
+require valid-user
+>>>>>>> c910d948c4dda9d6b2f8011c2828c06a76f82c0f
