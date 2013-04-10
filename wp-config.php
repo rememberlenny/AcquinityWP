@@ -40,6 +40,11 @@ if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
     // Production Environment
     define('WP_ENV', 'production');
     define('WP_DEBUG', false);
+    
+    define('DB_NAME', 'lkb_acquinity');
+    define('DB_USER', 'acquinity');
+    define('DB_PASSWORD', ')Ml^4FCUHpLJ');
+    define('DB_HOST', 'localhost');
 
     // ... production db constants
 }
