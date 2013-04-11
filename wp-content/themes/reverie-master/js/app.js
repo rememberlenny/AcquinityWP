@@ -18,10 +18,14 @@ $(document).ready(function()    {
             $('#brand-logo-li-4').delay().animate({opacity:1.0}, 'linear', function(){ 
               $('#brand-logo-li-5').delay().animate({opacity:1.0}, 'linear', function(){ 
                 $('#brand-logo-li-6').delay().animate({opacity:1.0}, 'linear', function(){
-                  $('.brand-logo-ul').delay(5400).animate({opacity:1.0}, 'linear',
+                  $('.brand-logo-ul').delay(4000).animate({opacity:1.0}, 'linear',
                   function(){
-                    $('#brand-logo-case').addClass("active-now");
+
                     // Places a containing css selector to make sure the second round of slides all come in opacity:1
+                    $('#brand-logo-case').addClass("active-now");
+                    
+                    // Remove height class after load
+                    $('#brandbar-heightfix').removeClass("logo-strict-height");
                   });
                 });
               });

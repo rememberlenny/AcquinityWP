@@ -130,7 +130,7 @@ function reverie_scripts_and_styles() {
 
     wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
 
-    wp_register_script ( 'appjs', get_template_directory_uri() . '/js/app.js?comments', array('jquery'));
+    wp_register_script ( 'appjs', get_template_directory_uri() . '/js/app.js', array('jquery'));
 
 
     // enqueue styles and scripts
