@@ -17,8 +17,9 @@ get_header(); ?>
 <!-- Hero Image and Text -->  
 <?php content_header_function(); ?>
 <!-- End Hero Image and Text -->  
-
+<div class="brand-color-back logo-strict-height ofhdn">
 <?php brandBarHome(); ?>
+</div>
 	
 <div class="content content-main row twelve">
 	<div class="main large-8 columns "> 	
