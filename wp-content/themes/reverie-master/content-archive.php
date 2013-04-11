@@ -13,7 +13,7 @@
   <div class="large-4 column">
   	<div class="thumb-wrapper circlewrapper">
   	<?php if (has_post_thumbnail( $post->ID ) ): ?>
-      <?php $image = wp_get_attachment_image_src( the_post_thumbnail( 'thumbnail' ), 'single-post-thumbnail' ); ?>
+      <a href="<?php the_permalink(); ?>"><?php $image = wp_get_attachment_image_src( the_post_thumbnail( 'thumbnail' ), 'single-post-thumbnail' ); ?></a>
     <?php endif; ?>
     </div>
   </div>
