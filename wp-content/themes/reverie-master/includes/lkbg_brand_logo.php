@@ -4,8 +4,8 @@ function brandBarLogoContent(){
 
 ?>
 
-<ul data-orbit>
-  <li class="active brand-row" data-orbit-slide>
+<ul id="brand-logo-ul" data-orbit style="opacity:0;">
+  <li class="active brand-row" data-orbit-slide style="">
     <div>
       <ul class="large-block-grid-6 small-block-grid-4">
         <li><img src="images/logos/netflix-logo.png" alt=""></li>
@@ -41,7 +41,7 @@ function brandBarLogoContent(){
       </ul>
     </div> 
   </li>
-    <li class="active brand-row" data-orbit-slide>
+    <li class="brand-row" data-orbit-slide>
     <div>
       <ul class="large-block-grid-6 small-block-grid-4">
         <li><img src="images/logos/netflix-logo.png" alt=""></li>
@@ -77,7 +77,7 @@ function brandBarLogoContent(){
       </ul>
     </div> 
   </li>
-    <li class="active brand-row" data-orbit-slide>
+    <li class=" brand-row" data-orbit-slide>
     <div>
       <ul class="large-block-grid-6 small-block-grid-4">
         <li><img src="images/logos/netflix-logo.png" alt=""></li>
@@ -121,10 +121,10 @@ function brandBarLogoContent(){
 function brandBarHome(){
 ?>
 <div class="content brandwrap row twelve">
-  <div class="main large-12 columns ">
-    <div class="brand-bar clearboth">
-      <div class="brand-bar-extension">
-        <div id="brandslider" class="brand-bar-content">
+  <div class="main large-12 columns" >
+    <div class="brand-bar clearboth" >
+      <div class="brand-bar-extension" >
+        <div id="brandslider" class="brand-bar-content brand-color-back">
           <?php brandBarLogoContent(); ?>
         </div>
       </div>
