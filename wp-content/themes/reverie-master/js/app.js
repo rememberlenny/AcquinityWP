@@ -23,9 +23,7 @@ $(document).ready(function()    {
 
                     // Places a containing css selector to make sure the second round of slides all come in opacity:1
                     $('#brand-logo-case').addClass("active-now");
-                    
-                    // Remove height class after load
-                    $('#brandbar-heightfix').removeClass("logo-strict-height");
+
                   });
                 });
               });
