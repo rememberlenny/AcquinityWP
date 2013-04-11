@@ -447,6 +447,10 @@ hr.silent {
   border: 0px solid transparent !important;
 }
 
+.logo-strict-height {
+  height: 72px;
+}
+
 .top-nav-wrapper {
   background: white;
 }
@@ -465,6 +469,10 @@ hr.silent {
 }
 .secondary:hover {
   color: #56599e;
+}
+
+.brand-color-back {
+  background: #f9f8f6;
 }
 
 .mkup {
@@ -2432,8 +2440,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 .brand-row {
   padding: 0 .5em;
   background: #FAF8F6;
-  border-bottom: 1px solid #E4E2E1;
-  border-top: 1px solid #E4E2E1;
 }
 .brand-row img {
   max-height: 50px;
