@@ -17,7 +17,7 @@ get_header(); ?>
 <!-- Hero Image and Text -->  
 <?php content_header_function(); ?>
 <!-- End Hero Image and Text -->  
-<div class="brand-color-back logo-strict-height ofhdn">
+<div id="brandbar-heightfix" class="brand-color-back logo-strict-height ofhdn">
 <?php brandBarHome(); ?>
 </div>
 	

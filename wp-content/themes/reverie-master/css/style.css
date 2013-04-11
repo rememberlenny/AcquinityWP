@@ -448,7 +448,7 @@ hr.silent {
 }
 
 .logo-strict-height {
-  height: 72px;
+  height: 70px;
 }
 
 .top-nav-wrapper {
@@ -473,6 +473,11 @@ hr.silent {
 
 .brand-color-back {
   background: #f9f8f6;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .mkup {

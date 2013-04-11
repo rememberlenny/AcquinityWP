@@ -46,7 +46,7 @@ label {
   hr.silent{ 
     border: 0px solid transparent !important; 
   }
-  .logo-strict-height{ height: 72px; }
+  .logo-strict-height{ height: 70px; }
   .top-nav-wrapper{ background: white; }
   .clearboth{ clear: both; }
   .secondary{
@@ -56,7 +56,7 @@ label {
       color: lighten($secondary-color, 20%);
     }
   }
-  .brand-color-back{ background: #f9f8f6; }
+  .brand-color-back{ background: #f9f8f6; @include transition(all, .2s); }
   .mkup {
     padding-left: 1em!important;
   }
