@@ -63,7 +63,7 @@ if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
  * @since 2.6.0
  */
 //define('WP_CACHE', true); //Added by WP-Cache Manager
-define( 'WPCACHEHOME', '/home1/acquinit/public_html/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
+
 define('AUTH_KEY',         '(WQvpC.Xe!1J5sQG);h./U=&w%_=B_$9x:_d;#YhJFV=mZfR[It?I5Y=aZNZC+ e');
 define('SECURE_AUTH_KEY',  '}GK&=v*D+e*8m)GV04Q9T3Izkq-P[A.xct`wc2?[)@=w)7T}2x;s+zYczK=c+Mi_');
 define('LOGGED_IN_KEY',    '2])qD~iG|TFmDd+tz#JB,s7]~qHn^U,39[9X$W-,w+|B4uE*az@4t~(|cEnZsdR8');
