@@ -9,3 +9,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 
+AuthName "ROOT"
+AuthUserFile "/home1/acquinit/.htpasswds/public_html/passwd"
+AuthType Basic
+require valid-user
