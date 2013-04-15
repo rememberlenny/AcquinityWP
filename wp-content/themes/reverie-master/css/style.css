@@ -619,6 +619,10 @@ a.svbt-line {
   margin: .4em .4em .4em .4em;
 }
 
+.mr1p5em {
+  margin-right: 1.5em;
+}
+
 div.whitebg {
   background: white;
 }
