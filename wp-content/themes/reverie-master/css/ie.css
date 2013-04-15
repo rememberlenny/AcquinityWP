@@ -102,5 +102,5 @@
   position: relative;
 }
 .top-bar-section .has-dropdown a:after {
-  display:none;
+  display:none !important;
 }
