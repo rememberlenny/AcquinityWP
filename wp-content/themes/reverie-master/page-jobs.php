@@ -34,7 +34,7 @@ get_header(); ?>
               <?php the_content(); ?>
             
               <h4 class="subheader">Opportunities in Florida</h4>
-              <iframe name="resumator-job-frame" id="resumator-job-frame" class="resumator-advanced-widget" src="http://acquinityinteractive.theresumator.com/apply/jobs?s_state=FL" height="500" width="100%" scrolling="yes" frameborder="0" allowTransparency="true"></iframe>
+              <iframe name="resumator-job-frame" id="resumator-job-frame" class="resumator-advanced-widget" src="http://acquinityinteractive.theresumator.com/apply/jobs?s_state=FL" height="550" width="100%" scrolling="yes" frameborder="0" allowTransparency="true"></iframe>
               <script>function resizeResumatorIframe(height,nojump){if(nojump== 0){window.scrollTo(0,0);}document.getElementById("resumator-job-frame").height = parseInt(height)+20;}</script>              
               <h4 class="subheader">Opportunities in New York</h4>
               <iframe name="resumator-job-frame2" id="resumator-job-frame" class="resumator-advanced-widget" src="http://acquinityinteractive.theresumator.com/apply/jobs?s_state=NY" height="300" width="100%" scrolling="yes" frameborder="0" allowTransparency="true"></iframe>
