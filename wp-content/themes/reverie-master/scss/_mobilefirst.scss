@@ -537,7 +537,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       .orbit-container{ 
         background: none !important; 
          > ul{
-          height: 70px !important;
+          height: auto !important;
         }
       }
       .orbit-slide-number{ visibility: hidden; }

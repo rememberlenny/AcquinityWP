@@ -20,10 +20,8 @@ $(document).ready(function()    {
                 $('#brand-logo-li-6').delay().animate({opacity:1.0}, 'linear', function(){
                   $('.brand-logo-ul').delay(4000).animate({opacity:1.0}, 'linear',
                   function(){
-
                     // Places a containing css selector to make sure the second round of slides all come in opacity:1
                     $('#brand-logo-case').addClass("active-now");
-
                   });
                 });
               });

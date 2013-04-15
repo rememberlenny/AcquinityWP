@@ -2920,7 +2920,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   background: none !important;
 }
 .brandwrap .orbit-container > ul {
-  height: 70px !important;
+  height: auto !important;
 }
 .brandwrap .orbit-slide-number {
   visibility: hidden;
