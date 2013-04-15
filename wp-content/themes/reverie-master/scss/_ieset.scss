@@ -88,23 +88,26 @@
 .lt-ie9 .orbit-container li{ display: none !important;}
 .lt-ie9 .orbit-container li.active{ display: block !important;}
 
-.masthead-photo-content{
-  h1{
-    background:#000;
-    background:rgb (0,0,0);
-    background:transparent;
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000); 
-    zoom: 1;
-    background:rgba(0,0,0,0.3);
-  }
-  p{
-    span{
-      background:#000;
-      background:rgb (0,0,0);
-      background:transparent;
-      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000); 
-      zoom: 1;
-      background:rgba(0,0,0,0.3);
+.lt-ie9 .masthead-photo-content{
+  display: none;
+}
+
+.lt-ie9{
+  // Right and Left Navigation that stacked by default
+  .top-bar-section {
+    position: relative;
+    width: auto;
+    // Styling for list items that have a dropdown within them.
+    .has-dropdown {
+      position: relative;
+
+      & > a {
+        &:after {
+          content: '&#9663;';
+          position: absolute;
+          top: 0px;
+        }
+      }
     }
   }
 }

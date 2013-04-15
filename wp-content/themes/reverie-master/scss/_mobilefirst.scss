@@ -32,7 +32,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
   .home{
     .case-studies-extension{
-      min-height: 540px;
       border-bottom: none;
     }
   }
@@ -611,6 +610,9 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
     }
   }
   .page-main-content{
+    .content-sec{
+      min-height: 550px;
+    }
     padding-top: 1.5em;
     padding-bottom: 1em;
     .info-gr{

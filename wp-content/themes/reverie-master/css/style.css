@@ -2273,21 +2273,21 @@ h4.subheader {
   display: block !important;
 }
 
-.masthead-photo-content h1 {
-  background: #000;
-  background: rgb 0, 0, 0;
-  background: transparent;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
-  zoom: 1;
-  background: rgba(0, 0, 0, 0.3);
+.lt-ie9 .masthead-photo-content {
+  display: none;
 }
-.masthead-photo-content p span {
-  background: #000;
-  background: rgb 0, 0, 0;
-  background: transparent;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
-  zoom: 1;
-  background: rgba(0, 0, 0, 0.3);
+
+.lt-ie9 .top-bar-section {
+  position: relative;
+  width: auto;
+}
+.lt-ie9 .top-bar-section .has-dropdown {
+  position: relative;
+}
+.lt-ie9 .top-bar-section .has-dropdown > a:after {
+  content: '&#9663;';
+  position: absolute;
+  top: 0px;
 }
 
 .gform_body label {
@@ -2419,7 +2419,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 }
 
 .home .case-studies-extension {
-  min-height: 530px;
   border-bottom: none;
 }
 
@@ -3006,6 +3005,9 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 .page-main-content {
   padding-top: 1.5em;
   padding-bottom: 1em;
+}
+.page-main-content .content-sec {
+  min-height: 550px;
 }
 .page-main-content .info-gr {
   padding: 3em 0 5em;
