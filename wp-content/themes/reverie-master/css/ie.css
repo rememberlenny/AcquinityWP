@@ -101,6 +101,6 @@
 .top-bar-section .has-dropdown {
   position: relative;
 }
-.top-bar-section .has-dropdown > a:after {
+.top-bar-section .has-dropdown a:after {
   display:none;
 }
