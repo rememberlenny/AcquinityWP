@@ -2919,9 +2919,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 .brandwrap .orbit-container {
   background: none !important;
 }
-.brandwrap .orbit-container > ul {
-  height: auto !important;
-}
 .brandwrap .orbit-slide-number {
   visibility: hidden;
 }
