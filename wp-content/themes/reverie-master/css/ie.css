@@ -102,7 +102,5 @@
   position: relative;
 }
 .top-bar-section .has-dropdown > a:after {
-  content: '&#9663;';
-  position: absolute;
-  top: 0px;
+  display:none;
 }
