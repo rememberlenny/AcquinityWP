@@ -493,7 +493,7 @@ hr.silent {
 }
 
 .stat-number {
-  font-weight: 500 !important;
+  font-weight: 300 !important;
   line-height: 1 !important;
   font-size: 3em;
   margin-bottom: 0em !important;
