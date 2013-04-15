@@ -486,6 +486,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       }
     }
     .case-studies-extension{
+        min-height: 750px;
         background: white;
         li{
           height: auto;

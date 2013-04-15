@@ -493,7 +493,7 @@ hr.silent {
 }
 
 .stat-number {
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   line-height: 1 !important;
   font-size: 3em;
   margin-bottom: 0em !important;
@@ -2872,6 +2872,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 }
 
 .case-studies-extension {
+  min-height: 750px;
   background: white;
 }
 .case-studies-extension li {
