@@ -2805,6 +2805,10 @@ h4.subheader {
     margin-top: 0em;
     margin-bottom: 0em;
   }
+
+  .home #sidebar img {
+    display: none;
+  }
 }
 .home .masthead-photo-content {
   margin-top: 105px;
@@ -2974,6 +2978,10 @@ h4.subheader {
 
   .home .masthead-photo-content {
     margin-top: 170px;
+  }
+
+  .home #sidebar img {
+    display: inline-block;
   }
 
   .masthead-photo-content {
