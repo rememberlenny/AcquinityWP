@@ -2806,8 +2806,8 @@ h4.subheader {
     margin-bottom: 0em;
   }
 
-  .home #sidebar img {
-    display: none;
+  .home .widget-icon {
+    display: none !important;
   }
 }
 .home .masthead-photo-content {
@@ -2980,7 +2980,7 @@ h4.subheader {
     margin-top: 170px;
   }
 
-  .home #sidebar img {
+  .home .widget-icon {
     display: inline-block;
   }
 
