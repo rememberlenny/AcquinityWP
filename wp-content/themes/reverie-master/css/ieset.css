@@ -250,7 +250,7 @@
   display: none;
 }
 
-.top-bar-section {
+.top-bar {
   position: relative;
   width: auto;
 }
@@ -259,7 +259,7 @@
   position: relative;
 }
 
-.top-bar-section .has-dropdown a:after {
+.top-bar .has-dropdown a:after {
   display: none;
 }
 
@@ -292,7 +292,7 @@
   padding: 0 25px;
   background: white;
   margin-top: 0px;
-  line-height: 75px;
+  line-height: 60px;
 }
 
 .top-nav .divider {
