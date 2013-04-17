@@ -1,9 +1,9 @@
 /* The Grid ---------------------- */
 .row { max-width: 1000px!important; min-width: 1000px!important; margin: 0 auto; }
-.row .row { width: 1000px!important; max-width: 1000px!important; min-width: 1000px!important;; margin: 0 -15px; }
+.row .row { width: auto!important; max-width: auto!important; min-width: auto!important;; margin: 0 -15px; }
 .row.large-collapse .column, 
 .row.large-collapse .columns { padding: 0; }
-.row .row { width: 1000px!important;  max-width: 1000px!important; min-width: 1000px!important; margin: 0 -15px; }
+.row .row { width: auto!important;  max-width: auto!important; min-width: auto!important; margin: 0 -15px; }
 .row .row.large-collapse { margin: 0; }
  
 .column, .columns { float: left; min-height: 1px; padding: 0 15px; position: relative; }
