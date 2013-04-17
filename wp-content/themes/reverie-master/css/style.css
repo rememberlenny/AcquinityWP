@@ -2083,7 +2083,7 @@ h4.subheader {
   margin-bottom: 0em !important;
 }
 .pageBottomBox .left .stat-number {
-  font-size: 7em;
+  font-size: 3em;
   margin-top: 0em;
   margin-bottom: 0em;
 }
@@ -2799,6 +2799,12 @@ h4.subheader {
   .home .masthead-photo-content {
     margin-top: 170px;
   }
+
+  .pageBottomBox .stat-number {
+    font-size: 6em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
 }
 .home .masthead-photo-content {
   margin-top: 105px;
@@ -2956,6 +2962,12 @@ h4.subheader {
 }
 
 @media only screen and (min-width: 1000px) {
+  .pageBottomBox .stat-number {
+    font-size: 7em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+
   .has-dropdown > a {
     margin-right: 5px;
   }
