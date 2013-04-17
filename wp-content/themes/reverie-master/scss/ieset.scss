@@ -101,7 +101,7 @@
 .top-bar-section .has-dropdown {
   position: relative;
 }
-.top-bar-section .has-dropdown a:after {
+.top-bar-section .has-dropdown > a:after{
   display:none;
 }
 
@@ -114,9 +114,10 @@
 .top-bar .name h1 a { width: 181px!important; height: 76px!important;}
 #brandbar-heightfix{display: none;}
 .circlewrapper{ display: none; }
-.top-bar-section li a:not(.button) {
+.top-bar-section li a {
     padding: 0 25px;
-    line-height: 40px;
+    line-height: 75px;
     background: white;
     margin-top: 17px;
 }
+.email
