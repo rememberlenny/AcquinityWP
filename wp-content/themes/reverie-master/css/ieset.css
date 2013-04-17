@@ -1,13 +1,14 @@
 /* The Grid ---------------------- */
 .row {
-  width: 1000px !important;
+  max-width: 1000px !important;
+  min-width: 1000px !important;
   margin: 0 auto;
 }
 
 .row .row {
-  width: auto;
-  max-width: none;
-  min-width: 0;
+  width: 1000px !important;
+  max-width: 1000px !important;
+  min-width: 1000px !important;
   margin: 0 -15px;
 }
 
@@ -17,9 +18,9 @@
 }
 
 .row .row {
-  width: auto;
-  max-width: none;
-  min-width: 0;
+  width: 1000px !important;
+  max-width: 1000px !important;
+  min-width: 1000px !important;
   margin: 0 -15px;
 }
 
@@ -262,7 +263,7 @@
   display: none;
 }
 
-.case-studies-extension, .page-main-extension, .company-facts-extension, .page-main-extension {
+.case-studies-extension, .page-main-extension, .company-facts-extension, .page-main-extension, .email-alerts-extension, .social-block-extension, .products-link-extension {
   width: auto !important;
 }
 
@@ -281,4 +282,15 @@
 
 #brandbar-heightfix {
   display: none;
+}
+
+.circlewrapper {
+  display: none;
+}
+
+.top-bar-section li a:not(.button) {
+  padding: 0 25px;
+  line-height: 40px;
+  background: white;
+  margin-top: 17px;
 }
