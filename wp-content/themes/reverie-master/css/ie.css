@@ -98,10 +98,10 @@
   width: auto;
 }
   // Styling for list items that have a dropdown within them.
-.top-bar-section .has-dropdown {
+.has-dropdown {
   position: relative;
 }
-.top-bar .has-dropdown a:after {
+.has-dropdown a:after {
   display:none;
 }
 
