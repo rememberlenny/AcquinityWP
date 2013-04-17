@@ -19,7 +19,7 @@
     <a href="<?php the_permalink(); ?>"><?php 
       // Check if post has a Post Custom Thumbnail set
       if( get_field('toggle_post_custom_thumbnaill') ):?>
-        <img style="max-width: 145px; src="<?php the_field('image_post_custom_thumbnail'); ?>" alt="" />
+        <img style="max-width: 145px;" src="<?php the_field('image_post_custom_thumbnail'); ?>" alt="" />
         <?php
       // Else display normal post thumbnail
       else:

@@ -29,7 +29,7 @@
 						</header>
 						<div class="entry-content">
 							<?php	if( get_field('toggle_post_custom_thumbnaill') ):?>
-								<div class="thumb-wrapper d-inline fl circlewrapper mr1p5em" style="margin-right:1.5em;"><img src="<?php the_field('image_post_custom_thumbnail'); ?>" alt="" /></div>
+								<div class="thumb-wrapper d-inline fl circlewrapper mr1p5em" style="margin-right:1.5em;"><img style="max-width:145px;" src="<?php the_field('image_post_custom_thumbnail'); ?>" alt="" /></div>
 							<?php endif; ?>
 							<?php the_content(); ?>
 						</div>
