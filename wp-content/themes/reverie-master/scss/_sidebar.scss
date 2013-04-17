@@ -233,6 +233,9 @@
       }
       .social-icon{
         display:inline-block !important;
+        a{
+          border-bottom: none;
+        }
         .social-icon-case{
           margin: 0 auto;
           border-radius: 3px;

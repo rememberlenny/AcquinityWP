@@ -104,3 +104,13 @@
 .top-bar-section .has-dropdown a:after {
   display:none;
 }
+
+.case-studies-extension, .page-main-extension, .company-facts-extension, .page-main-extension{ width: auto !important; }
+
+#sidebar img{
+  display: none!important;
+}
+.mkup{ display: none !important; }
+.top-bar .name h1 a { width: 181px!important; height: 76px!important;}
+#brandbar-heightfix{display: none;}
+.circlewrapper{ display: none; }
