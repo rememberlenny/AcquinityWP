@@ -114,9 +114,9 @@
 .top-bar .name h1 a { width: 181px!important; height: 76px!important;}
 #brandbar-heightfix{display: none;}
 .circlewrapper{ display: none; }
-.top-bar-section li a:not(.button) {
+.top-nav li a {
     padding: 0 25px;
-    line-height: 40px;
     background: white;
-    margin-top: 17px;
+    margin-top: 50px;
 }
+.top-nav .divider{ visibility: hidden; }

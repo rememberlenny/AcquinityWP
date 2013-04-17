@@ -1,9 +1,9 @@
 /* The Grid ---------------------- */
 .row { max-width: 1000px!important; min-width: 1000px!important; margin: 0 auto; }
-.row .row { width: auto!important; max-width: auto!important; min-width: auto!important;; margin: 0 -15px; }
+.row .row { width: 1000px!important; max-width: 1000px!important; min-width: 1000px!important;; margin: 0 -15px; }
 .row.large-collapse .column, 
 .row.large-collapse .columns { padding: 0; }
-.row .row { width: auto!important;  max-width: auto!important; min-width: auto!important; margin: 0 -15px; }
+.row .row { width: 1000px!important;  max-width: 1000px!important; min-width: 1000px!important; margin: 0 -15px; }
 .row .row.large-collapse { margin: 0; }
  
 .column, .columns { float: left; min-height: 1px; padding: 0 15px; position: relative; }
@@ -101,7 +101,7 @@
 .top-bar-section .has-dropdown {
   position: relative;
 }
-.top-bar-section .has-dropdown > a:after{
+.top-bar-section .has-dropdown a:after {
   display:none;
 }
 
@@ -114,10 +114,9 @@
 .top-bar .name h1 a { width: 181px!important; height: 76px!important;}
 #brandbar-heightfix{display: none;}
 .circlewrapper{ display: none; }
-.top-bar-section li a {
+.top-nav li a {
     padding: 0 25px;
-    line-height: 75px;
     background: white;
-    margin-top: 17px;
+    margin-top: 50px;
 }
-.email
+.top-nav .divider{ visibility: hidden; }
