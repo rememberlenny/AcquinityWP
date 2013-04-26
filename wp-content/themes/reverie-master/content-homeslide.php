@@ -7,19 +7,42 @@
  */
 ?>
 <style>
+h4.subheader{
+  display:inline-block;
+  border-top: 5px solid #9a373f;
+  color: #333;
+}
+#sidebar h4.subheader{
+  border-top:none !important;
+}
   .orbit-next, .orbit-prev, .orbit-slide-number, .orbit-timer{ display:none; }
+  .masthead-photo {
+overflow: hidden;
+width: 100%;
+border-right: none;
+-webkit-box-shadow: inset 0px 0px 20px black;
+box-shadow: inset 0px 0px 20px black;
+height:200px;
+}
+#masthead-photo{
 
+}
+@media only screen and (min-width: 1000px){
+.home .masthead-photo-content {
+margin-top: 60px;
+}
+}
 </style>	
  <li class="active text-left article-title" data-orbit-slide="headline-1">
    <div id="post-<?php the_ID(); ?>">
       <div class="large-12 small-12 column pl98">
        <header>
         <div class="row">
-        <h5 style="margin-top:0em;">
+        <p style="margin-top:0em;">
           <a href="<?php the_permalink(); ?>" data-orbit-slide="headline-2" class="secondary">
             <?php the_title(); ?>
           </a>
-        </h5> 
+        </p> 
         </div>
     	</header>
     		<div class="row">

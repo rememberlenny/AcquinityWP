@@ -116,10 +116,10 @@ function content_header_function(){ ?>
             
             if(is_page('home')){
               if(get_field('home_section_title')){
-                echo '<div> <h1 class="text-left hero-text">' . get_field('home_section_title') . '</h1><br>';
+                echo '<div class="text-center"> <h1 class="text-center hero-text">' . get_field('home_section_title') . '</h1><br>';
               }
               if(get_field('hero_para_1')){
-                echo '<span><p class="hero-text">' . get_field('hero_para_1') . '</p></span></div>';
+                echo '</div>';
               }
             }
             else {

@@ -12,7 +12,7 @@
       <img src="<?php echo $image[0]; ?>">
 	<header>
     <?php endif; ?>
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
 		<?php reverie_entry_meta(); ?>
 	</header>
 	<div class="entry-content">

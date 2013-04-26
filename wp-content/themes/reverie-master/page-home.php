@@ -12,12 +12,17 @@ get_header(); ?>
       echo '.masthead-photo{ background-size: 2000px; }';
     }
     ?>
+    
+    .container{max-width: 1100px; margin:0 auto; box-shadow: 0px 0px 0px 15px #eee; border: 1px solid #E4E2E1; border-top: 5px solid #9a373f!important;}
+    body{ background:#ddd !important; margin-top: 2em; border-top: none!important;}
+    body #sidebar{ padding-bottom: 0em !important;}
+    .footer-full{background: none !important;}
  </style>
    
 <!-- Hero Image and Text -->  
 <?php content_header_function(); ?>
 <!-- End Hero Image and Text -->  
-<div id="brandbar-heightfix" class="brand-color-back logo-strict-height ofhdn">
+<div id="brandbar-heightfix" class="brand-color-back">
 <?php brandBarHome(); ?>
 </div>
 	
@@ -42,10 +47,10 @@ get_header(); ?>
           <div class="pr98 pl98 text-left column stats"> 
             <div class=" column">
               <div class="row">
+                <div class="column">
+                  <h4 class="subheader text-left">A Few Stats</h4>
+                </div>
                 <div class="large-4 column">
-                  <h4 class="subheader">
-                    Email
-                  </h4>
                   <div class="textwidget">
                     <div class="d-inline">
                       <h5 class="subheader white stat-number">
@@ -58,9 +63,6 @@ get_header(); ?>
                   </div>
                 </div>
                 <div class="large-4 column">
-                  <h4 class="subheader">
-                    Websites
-                  </h4>
                   <div class="textwidget">
                     <div class="d-inline">
                       <h5 class="subheader white stat-number">
@@ -73,9 +75,6 @@ get_header(); ?>
                   </div>
                 </div>
                 <div class="large-4 column">
-                  <h4 class="subheader">
-                    Call Centers
-                  </h4>
                   <div class="textwidget">
                     <div class="d-inline">
                       <h5 class="subheader white stat-number">
@@ -111,9 +110,14 @@ get_header(); ?>
 
                     <?php if ( have_posts() ) : ?>
 
-                    <?php /* Start the Loop */ ?>
+                    <?php /* Start the Loop */
+                          $i= 0; ?>
                     <?php while ( $my_query->have_posts()) :  $my_query->the_post(); ?>
-                    <?php get_template_part( 'content', 'homeslide' ); ?>
+                      <?php if ($i < 3): 
+                        $i++ ?>
+                        <?php get_template_part( 'content', 'homeslide' ); ?>
+                
+                      <?php endif; ?>
                     <?php endwhile; ?>
 
                     <?php else : ?>
