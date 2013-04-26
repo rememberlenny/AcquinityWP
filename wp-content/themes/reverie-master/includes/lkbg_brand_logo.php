@@ -5,7 +5,7 @@ function brandBarLogoContent(){
 ?>
 <style>
   .brand-logo-ul img{
-    width: 125px;
+    width: 110px;
   }
   .row .row.spacing{
     margin-top:2%;
@@ -30,6 +30,16 @@ function brandBarLogoContent(){
         <li><img src="images/logos/overstock-logo.png" alt=""></li>
         <li><img src="images/logos/jsp-logo.png" alt=""></li>
         <li><img src="images/logos/shoedazzle.png" alt=""></li>
+      </ul>
+    </div>
+    <div class="" style="clear:both;">
+      <ul class="large-block-grid-1 small-block-grid-4  brand-logo-ul d-inline"  style="display:inline-block !important;">
+        <li style="border-radius: 10px;
+border: 2px solid grey;">
+          <h5 class="subheader" style="line-height: 1; margin-bottom:.1em; margin-top:.3em;">
+            And hundreds more.
+          </h5>
+        </li>
       </ul>
     </div>
      <!--  <div class="d-inline" style="clear:both;">
