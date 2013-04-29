@@ -13,8 +13,6 @@ get_header(); ?>
     }
     ?>
     
-    .container{max-width: 1100px; margin:0 auto; box-shadow: 0px 0px 0px 15px #eee; border: 1px solid #E4E2E1; border-top: 5px solid #9a373f!important;}
-    body{ background:#ddd !important; margin-top: 2em; border-top: none!important;}
     body #sidebar{ padding-bottom: 0em !important;}
     .footer-full{background: none !important;}
  </style>

@@ -662,6 +662,30 @@ nav.top-bar input {
   height: auto !important;
 }
 
+.top-nav-wrapper {
+  background: none !important;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: none !important;
+}
+
+li.divider {
+  display: none;
+}
+
+.top-bar {
+  background: none !important;
+}
+
+.top-bar-section ul {
+  background: none !important;
+}
+
+.top-bar-section li a:not(.button) {
+  background: none !important;
+}
+
 @media only screen and (min-width: 58.75em) {
   .top-bar-section .has-dropdown > a:after {
     top: 37px !important;
@@ -671,7 +695,7 @@ nav.top-bar input {
     color: #222222;
     white-space: nowrap;
     padding: 7px 25px;
-    background: white;
+    background: none;
   }
 }
 .top-bar-section .left > li a:not(.button) {
@@ -688,7 +712,7 @@ nav.top-bar input {
   -o-transition: all .2s;
   -ms-transition: all .2s;
   transition: all .2s;
-  background: #efefef !important;
+  background: none !important;
 }
 
 .top-bar {
@@ -2505,7 +2529,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   font-size: 4em;
 }
 #featrap .case-row h5.subheader {
-  font-size: 4em !important;
+  font-size: 4em  !important;
   margin-bottom: 0em;
   margin-top: 0em;
   line-height: 1.2em;
@@ -5890,7 +5914,7 @@ form.custom .custom.disabled {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: white;
+  background: #111111;
 }
 
 .fixed {
@@ -5906,7 +5930,7 @@ form.custom .custom.disabled {
   height: 75px;
   line-height: 75px;
   position: relative;
-  background: white;
+  background: #111111;
   margin-bottom: 1.875em;
 }
 .top-bar ul {
@@ -5992,7 +6016,7 @@ form.custom .custom.disabled {
   background: transparent;
 }
 .top-bar.expanded .title-area {
-  background: white;
+  background: #111111;
 }
 .top-bar.expanded .toggle-topbar a {
   color: #888888;
@@ -6014,13 +6038,13 @@ form.custom .custom.disabled {
   width: 100%;
   height: auto;
   display: block;
-  background: white;
+  background: #333333;
   font-size: 16px;
   margin: 0;
 }
 .top-bar-section .divider {
-  border-bottom: solid 1px white;
-  border-top: solid 1px #e6e6e6;
+  border-bottom: solid 1px #4d4d4d;
+  border-top: solid 1px #1a1a1a;
   clear: both;
   height: 1px;
   width: 100%;
@@ -6033,11 +6057,11 @@ form.custom .custom.disabled {
   padding-left: 25px;
   font-size: 0.8125em;
   font-weight: bold;
-  background: white;
+  background: #333333;
   height: 75px;
 }
 .top-bar-section ul li > a:hover {
-  background: #f7f7f7;
+  background: #2b2b2b;
 }
 .top-bar-section ul li > a.button {
   background: #696a97;
@@ -6065,7 +6089,7 @@ form.custom .custom.disabled {
   background: #893d10;
 }
 .top-bar-section ul li.active a {
-  background: #f7f7f7;
+  background: #2b2b2b;
 }
 .top-bar-section .has-form {
   padding: 25px;
@@ -6134,7 +6158,7 @@ form.custom .custom.disabled {
 
 @media only screen and (min-width: 58.75em) {
   .top-bar {
-    background: white;
+    background: #111111;
     *zoom: 1;
     overflow: visible;
   }
@@ -6164,7 +6188,7 @@ form.custom .custom.disabled {
     top: 8px;
   }
   .top-bar.expanded {
-    background: white;
+    background: #111111;
   }
 
   .contain-to-grid .top-bar {
@@ -6192,10 +6216,10 @@ form.custom .custom.disabled {
   .top-bar-section li a:not(.button) {
     padding: 0 25px;
     line-height: 75px;
-    background: white;
+    background: #111111;
   }
   .top-bar-section li a:not(.button):hover {
-    background: #b3b3b3;
+    background: black;
   }
   .top-bar-section .has-dropdown > a {
     padding-right: 35px !important;
@@ -6235,11 +6259,11 @@ form.custom .custom.disabled {
     line-height: 1;
     white-space: nowrap;
     padding: 7px 25px;
-    background: white;
+    background: #1e1e1e;
   }
   .top-bar-section .dropdown li label {
     white-space: nowrap;
-    background: white;
+    background: #1e1e1e;
   }
   .top-bar-section .dropdown li .dropdown {
     left: 100%;
@@ -6248,14 +6272,14 @@ form.custom .custom.disabled {
   .top-bar-section > ul > .divider {
     border-bottom: none;
     border-top: none;
-    border-right: solid 1px white;
-    border-left: solid 1px #e6e6e6;
+    border-right: solid 1px #2b2b2b;
+    border-left: solid 1px black;
     clear: none;
     height: 75px;
     width: 0px;
   }
   .top-bar-section .has-form {
-    background: white;
+    background: #111111;
     padding: 0 25px;
     height: 75px;
   }

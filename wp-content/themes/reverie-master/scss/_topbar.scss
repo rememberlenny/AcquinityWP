@@ -7,7 +7,7 @@
   //
 
     /* Background color for the top bar */
-    $topbar-bg: #fff;
+    //$topbar-bg: none;
 
     /* Height and margin */
     $topbar-height: 75px;
@@ -19,7 +19,7 @@
     $topbar-link-color: #222;
 
     /* Style the top bar dropdown elements */
-    $topbar-dropdown-bg: #fff;
+    //$topbar-dropdown-bg: none;
     $topbar-dropdown-link-color: #222;
     $topbar-dropdown-toggle-color: #222;
 
@@ -30,11 +30,32 @@
     nav.top-bar input{
       top: 24px;
     }
+    //SHAME
     .top-bar-section .left > li.has-dropdown a:not(.button){
     }
     .top-bar-section ul li > a {
       height: auto !important;
     }
+    .top-nav-wrapper{
+      background: none!important;
+      position: absolute;
+      z-index: 1000;
+      width: 100%;
+      border-bottom: none !important; 
+    }
+    li.divider{
+      display: none;
+    }
+    .top-bar{
+      background: none !important;
+    }
+    .top-bar-section ul{
+      background: none !important;
+    }
+    .top-bar-section li a:not(.button){
+      background: none!important;
+    }
+    //!SHAME
     @media only screen and (min-width: 58.75em){
       .top-bar-section .has-dropdown > a:after {
         top: 37px !important;
@@ -43,7 +64,7 @@
         color: #222222;
         white-space: nowrap;
         padding: 7px 25px;
-        background: white;
+        background: none;
       }
     }
     .top-bar-section .left > li a{
@@ -62,7 +83,7 @@
           -o-transition: all .2s;
           -ms-transition: all .2s;
           transition: all .2s;
-          background: #efefef !important;
+          background: none !important;
         }
       }
     }
