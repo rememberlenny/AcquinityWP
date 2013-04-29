@@ -13,7 +13,7 @@ function brandBarLogoContent(){
 </style>
 <div class="spacing row"></div>
 
-<div class="large-5 column">
+<div class="large-5 push-1 column">
   <h4 class="subheader text-center" style="color:#333;">Proud partners</h4>
   <h3>
   We'll help you surpass your goals.</h3> 
@@ -23,7 +23,7 @@ function brandBarLogoContent(){
   <a href="#" class="button radius">Read Acquinity success stories</a>
   <div class="spacing row"></div>
 </div>
-<div class="large-7 column">
+<div class="large-6 column">
   <div class="spacing row"></div>
   <ul >
     <li class="" class="text-center" style="text-align:center!important;">

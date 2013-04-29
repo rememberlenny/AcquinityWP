@@ -11,13 +11,15 @@ function statBarContent(){
     margin-top:5%;
   }
   .stat-number{
-    color: #333!important;
+    color: #333!important; 
+    font-size: 2.4em !important;
   }
 </style>
 <div class="spacing-t row"></div>
 
-<div class="large-6 column">
-  <h4 class="subheader text-center" style="color:#333;">Company statistics</h4>
+
+<div class="large-5 push-1 column " style="margin-top:4em;">
+  <h5 class="text-center subheader">Statistics Collected March 2013 from Quantcast</h5>
   <div class="row">
     <div class="large-4 column">
       <div class="textwidget">
@@ -26,7 +28,7 @@ function statBarContent(){
             20MM
           </h5>
           <p>
-            monthly pageviews in the last year. Projected to have over 120 MM by the end of 2013.
+            monthly pageviews in the last year.
           </p>
         </div>
       </div>
@@ -50,16 +52,16 @@ function statBarContent(){
             2.6MM
           </h5>
           <p>
-            leads qualified monthly on paths produced by Acquinity properties.
+            leads qualified monthly on paths.
           </p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <div class="large-6 column">
-  <div class="spacing row"></div>
+  
+    <h4 class="subheader text-center" style="color:#333;">Company statistics</h4>
   <h3>
   We've done the math.</h3> 
   <p>
