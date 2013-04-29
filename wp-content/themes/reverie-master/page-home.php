@@ -41,6 +41,7 @@ get_header(); ?>
 <!-- End Hero Image and Text -->  
 <div id="brandbar-heightfix" class="brand-color-back">
 <?php brandBarHome(); ?>
+
 </div>
 	<script>
   (document)
@@ -61,60 +62,10 @@ get_header(); ?>
   }
 </style>
 
+<?php statBarHome(); ?>
+
 <div class="content content-main row twelve">
 	<div class="main large-8 columns "> 	
-		<div class="case-studies fr">
-		  <div class="s9999 page-main-extension whitebg fr">
-        <div class="lftcont page-main-content content-sec fr">
-          <div class="pr98 pl98 text-left column stats"> 
-            <div class=" column">
-              <div class="row">
-                <div class="column">
-                  <h4 class="subheader text-left">A Few Stats</h4>
-                </div>
-                <div class="large-4 column">
-                  <div class="textwidget">
-                    <div class="d-inline">
-                      <h5 class="subheader white stat-number">
-                        80MM
-                      </h5>
-                      <p>
-                        in-house database
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="large-4 column">
-                  <div class="textwidget">
-                    <div class="d-inline">
-                      <h5 class="subheader white stat-number">
-                        20MM
-                      </h5>
-                      <p>
-                        monthly pageviews
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="large-4 column">
-                  <div class="textwidget">
-                    <div class="d-inline">
-                      <h5 class="subheader white stat-number">
-                        2.6MM
-                      </h5>
-                      <p>
-                        leads qualified monthly
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <div class=" clear text"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-		</div>	
 		<div class="page-main fr text-left" role="main">
 	    <div class="s9999 page-main-extension newsynew fr">
 	      <div class="lftcont page-main-content content-sec fr pb15em">
