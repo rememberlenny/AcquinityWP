@@ -116,7 +116,38 @@ function content_header_function(){ ?>
             
             if(is_page('home')){
               if(get_field('home_section_title')){
-                echo '<div class="text-center"> <h1 class="text-center hero-text"><span>We turn our members into</span><br><br><span class="kick" style="line-height: 0.5em !important;">Your Customers</span></h1><br>';
+                echo '<div class="text-center"> <h1 class="text-center hero-text"><span>We turn our members into</span><br><br><span class="kick" style="line-height: 0.3em !important;">Your Customers</span></h1><br>';
+              
+              echo '<div class="threebuttons text-center">';
+                echo '<ul class="large-block-grid-3">';
+                  echo '<li><ul><li style="margin: 0 auto; width:200px; height: 200px; background:url(\'';
+                    if( get_field('first_hero_button', 'option') ):
+                    ?><?php the_field('first_hero_button', 'option'); ?>')"><?php
+                  endif;
+                  echo '<span style="font-weight: 800;
+font-size: 1.5em;
+line-height: 8em;">Advertisers</span>';
+                  echo '</li></ul></li>';
+                  echo '<li><ul><li style="margin: 0 auto; width:200px; height: 200px; background:url(\'';
+                    if( get_field('second_hero_button', 'option') ):
+                    ?><?php the_field('second_hero_button', 'option'); ?>')"><?php
+                  endif;
+                  echo '<span style="font-weight: 800;
+font-size: 1.5em;
+line-height: 8em;">Products</span>';
+                  echo '</li></ul></li>';
+                  echo '<li><ul><li style="margin: 0 auto; width:200px; height: 200px; background:url(\'';
+                    if( get_field('third_hero_button', 'option') ):
+                    ?><?php the_field('third_hero_button', 'option'); ?>')"><?php
+                  endif;
+                  echo '<span style="font-weight: 800;
+font-size: 1.5em;
+line-height: 8em;">Services</span>';
+                  echo '</li></ul></li>';
+                echo '</ul>';
+              echo '</div>';
+              echo '<h1 style="font-size: 1.5em !important;
+font-weight: 400;" class="text-center hero-text"> We generate a large volume of high-quality customers for our advertisers at their target CPA</h1>';
               }
               if(get_field('hero_para_1')){
                 echo '</div>';

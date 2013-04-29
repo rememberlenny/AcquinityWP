@@ -31,7 +31,7 @@ get_header(); ?>
     }
  
     .home .masthead-photo-content {
-      margin-top: 140px !important;
+      margin-top: 90px !important;
     }
 
  </style>
@@ -42,7 +42,9 @@ get_header(); ?>
 <div id="brandbar-heightfix" class="brand-color-back">
 <?php brandBarHome(); ?>
 </div>
-	
+	<script>
+  (document)
+  </script>
 <style>
   .stats h4{
     color: #333 !important;
@@ -54,6 +56,9 @@ get_header(); ?>
   }
   .orbit-bullets{ display: none;}
   .orbit-container{ background: none; }
+  #masthead-photo{
+    height:590px !important;
+  }
 </style>
 
 <div class="content content-main row twelve">

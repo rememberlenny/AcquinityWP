@@ -37,11 +37,11 @@ margin-top: 60px;
       <div class="large-12 small-12 column pl98">
        <header>
         <div class="row">
-        <p style="margin-top:0em;">
-          <a href="<?php the_permalink(); ?>" data-orbit-slide="headline-2" class="secondary">
-            <?php the_title(); ?>
-          </a>
-        </p> 
+          <p style="margin-top:0em;">
+            <a href="<?php the_permalink(); ?>" data-orbit-slide="headline-2" class="secondary">
+              <?php the_title(); ?>
+            </a>
+          </p> 
         </div>
     	</header>
     		<div class="row">
