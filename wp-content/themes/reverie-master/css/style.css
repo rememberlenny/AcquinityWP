@@ -660,6 +660,7 @@ nav.top-bar input {
 
 .top-bar-section ul li > a {
   height: auto !important;
+  font-size: 1em !important;
 }
 
 .top-nav-wrapper {
@@ -684,6 +685,14 @@ li.divider {
 
 .top-bar-section li a:not(.button) {
   background: none !important;
+}
+
+section.top-bar-section li a:not(.button) {
+  padding: 0 5px;
+}
+
+ul.left {
+  float: right !important;
 }
 
 @media only screen and (min-width: 58.75em) {
@@ -776,7 +785,7 @@ li.divider {
 
   section.top-bar-section ul li > a {
     color: #333;
-    font-size: .9em;
+    font-size: 1.2em;
     font-weight: 600;
   }
 }
@@ -2319,12 +2328,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   font-weight: 300;
   font-size: 2em;
   clear: right;
-  background: #000;
-  background: rgb 0, 0, 0;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
   color: white;
   display: inline-block;
   margin-bottom: .5em;
@@ -2341,10 +2344,10 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   padding-bottom: 20px;
   background: #000;
   background: rgb 0, 0, 0;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
+  background: rgba(50, 52, 92, 0.8);
+  box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -moz-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -webkit-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
 }
 .masthead-photo-content p a {
   color: white;
@@ -2683,7 +2686,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
 .archive-link-lead p {
   margin-top: 0.4em;
-  margin-bottom: 0.5em;
+  margin-bottom: .8em;
 }
 
 .brandwrap .orbit-container {
@@ -2793,17 +2796,17 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   margin-top: 25px;
 }
 
-.home .masthead-photo-content h1 {
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
+.home .masthead-photo-content h1 span {
+  background: rgba(50, 52, 92, 0.8);
+  box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -moz-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -webkit-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
 }
 .home .masthead-photo-content p {
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
+  background: rgba(50, 52, 92, 0.8);
+  box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -moz-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -webkit-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
 }
 
 h3.subheader {

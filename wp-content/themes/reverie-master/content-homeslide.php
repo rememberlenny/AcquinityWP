@@ -22,7 +22,6 @@ width: 100%;
 border-right: none;
 -webkit-box-shadow: inset 0px 0px 20px black;
 box-shadow: inset 0px 0px 20px black;
-height:200px;
 }
 #masthead-photo{
 

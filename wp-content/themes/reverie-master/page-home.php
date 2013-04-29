@@ -14,7 +14,22 @@ get_header(); ?>
     ?>
     
     body #sidebar{ padding-bottom: 0em !important;}
-    .footer-full{background: none !important;}
+    .footer-full{background: none !important;} 
+
+    #masthead-photo-content h1.hero-text span.kick{
+      font-size: 2em!important;
+      
+    }
+    #masthead-photo-content h1.hero-text{
+      font-weight: 600;
+      font-size: 2.3em!important;
+      color: #eee;
+    }
+ 
+    .home .masthead-photo-content {
+      margin-top: 140px !important;
+    }
+
  </style>
    
 <!-- Hero Image and Text -->  

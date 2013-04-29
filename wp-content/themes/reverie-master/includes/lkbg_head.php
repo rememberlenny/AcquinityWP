@@ -116,7 +116,7 @@ function content_header_function(){ ?>
             
             if(is_page('home')){
               if(get_field('home_section_title')){
-                echo '<div class="text-center"> <h1 class="text-center hero-text">' . get_field('home_section_title') . '</h1><br>';
+                echo '<div class="text-center"> <h1 class="text-center hero-text"><span>We turn our members into</span><br><br><span class="kick" style="line-height: 0.5em !important;">Your Customers</span></h1><br>';
               }
               if(get_field('hero_para_1')){
                 echo '</div>';
