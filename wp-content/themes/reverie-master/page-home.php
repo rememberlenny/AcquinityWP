@@ -25,6 +25,10 @@ get_header(); ?>
       font-size: 2.3em!important;
       color: #eee;
     }
+
+    #masthead-photo{
+      background: rgb(50,52,92)!important;
+    }
  
     .home .masthead-photo-content {
       margin-top: 140px !important;

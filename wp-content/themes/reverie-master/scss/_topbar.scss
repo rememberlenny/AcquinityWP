@@ -10,26 +10,34 @@
     //$topbar-bg: none;
 
     /* Height and margin */
-    $topbar-height: 75px;
+    $topbar-height: 1em;
     $topbar-margin-bottom: emCalc(30px);
 
     /* Control Input height for top bar */
 
     /* Set the link colors and styles for top-level nav */
-    $topbar-link-color: #222;
+    $topbar-link-color: #ccc;
 
     /* Style the top bar dropdown elements */
     //$topbar-dropdown-bg: none;
-    $topbar-dropdown-link-color: #222;
-    $topbar-dropdown-toggle-color: #222;
+    $topbar-dropdown-link-color: #32345C;
+    $topbar-dropdown-toggle-color: #32345C;
 
     /* Top menu icon styles */
-    $topbar-menu-link-color: #222;
-    $topbar-menu-icon-color: #222;
+    $topbar-menu-link-color: #ccc;
+    $topbar-menu-icon-color: #ccc;
 
     nav.top-bar input{
       top: 24px;
     }
+    .menu-item{margin: 1.79em 0em!important;}
+    .menu-item-33{
+      background: #9a373f !important;
+      margin: 1.59em 1.6em 1.59em  0em!important;
+      line-height: 1em!important;
+      padding: 5px 10px 6px!important;
+      border-radius: 30px!important;
+    }    
     //SHAME
     .top-bar-section .left > li.has-dropdown a:not(.button){
     }
@@ -66,7 +74,7 @@
         top: 37px !important;
       }
       .top-bar-section .dropdown li a {
-        color: #222222;
+        color: #ccc;
         white-space: nowrap;
         padding: 7px 25px;
         background: none;
@@ -81,7 +89,7 @@
         -o-transition: all .2s;
         -ms-transition: all .2s;
         transition: all .2s;
-        color: #353230 !important;
+        color: #ccc !important;
         &:hover {
           -webkit-transition: all .2s;
           -moz-transition: all .2s;
@@ -148,7 +156,7 @@
         padding: 0 20px;
       }
     section.top-bar-section ul li > a {
-      color: #333;
+      color: #ccc;
       font-size: 1.2em;
       font-weight: 600;
     }

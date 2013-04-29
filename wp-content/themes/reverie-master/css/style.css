@@ -658,6 +658,18 @@ nav.top-bar input {
   top: 24px;
 }
 
+.menu-item {
+  margin: 1.79em 0em !important;
+}
+
+.menu-item-33 {
+  background: #9a373f !important;
+  margin: 1.59em 1.6em 1.59em 0em !important;
+  line-height: 1em !important;
+  padding: 5px 10px 6px !important;
+  border-radius: 30px !important;
+}
+
 .top-bar-section ul li > a {
   height: auto !important;
   font-size: 1em !important;
@@ -701,7 +713,7 @@ ul.left {
   }
 
   .top-bar-section .dropdown li a {
-    color: #222222;
+    color: #ccc;
     white-space: nowrap;
     padding: 7px 25px;
     background: none;
@@ -713,7 +725,7 @@ ul.left {
   -o-transition: all .2s;
   -ms-transition: all .2s;
   transition: all .2s;
-  color: #353230 !important;
+  color: #ccc !important;
 }
 .top-bar-section .left > li a:not(.button):hover {
   -webkit-transition: all .2s;
@@ -784,7 +796,7 @@ ul.left {
   }
 
   section.top-bar-section ul li > a {
-    color: #333;
+    color: #ccc;
     font-size: 1.2em;
     font-weight: 600;
   }
@@ -5930,8 +5942,8 @@ form.custom .custom.disabled {
 
 .top-bar {
   overflow: hidden;
-  height: 75px;
-  line-height: 75px;
+  height: 1em;
+  line-height: 1em;
   position: relative;
   background: #111111;
   margin-bottom: 1.875em;
@@ -5959,21 +5971,21 @@ form.custom .custom.disabled {
   position: relative;
 }
 .top-bar .name {
-  height: 75px;
+  height: 1em;
   margin: 0;
   font-size: 16px;
 }
 .top-bar .name h1 {
-  line-height: 75px;
+  line-height: 1em;
   font-size: 1.0625em;
   margin: 0;
 }
 .top-bar .name h1 a {
   font-weight: bold;
-  color: #222222;
+  color: #cccccc;
   width: 50%;
   display: block;
-  padding: 0 25px;
+  padding: 0 0.33333em;
 }
 .top-bar .toggle-topbar {
   position: absolute;
@@ -5981,18 +5993,18 @@ form.custom .custom.disabled {
   top: 0;
 }
 .top-bar .toggle-topbar a {
-  color: #222222;
+  color: #cccccc;
   text-transform: uppercase;
   font-size: 0.8125em;
   font-weight: bold;
   position: relative;
   display: block;
-  padding: 0 25px;
-  height: 75px;
-  line-height: 75px;
+  padding: 0 0.33333em;
+  height: 1em;
+  line-height: 1em;
 }
 .top-bar .toggle-topbar.menu-icon {
-  right: 25px;
+  right: 0.33333em;
   top: 50%;
   margin-top: -16px;
   padding-left: 40px;
@@ -6003,7 +6015,7 @@ form.custom .custom.disabled {
   height: 34px;
   line-height: 33px;
   padding: 0;
-  color: #222222;
+  color: #cccccc;
 }
 .top-bar .toggle-topbar.menu-icon a span {
   position: absolute;
@@ -6011,8 +6023,8 @@ form.custom .custom.disabled {
   display: block;
   width: 16px;
   height: 0;
-  -webkit-box-shadow: 0 10px 0 1px #222222, 0 16px 0 1px #222222, 0 22px 0 1px #222222;
-  box-shadow: 0 10px 0 1px #222222, 0 16px 0 1px #222222, 0 22px 0 1px #222222;
+  -webkit-box-shadow: 0 10px 0 1px #cccccc, 0 16px 0 1px #cccccc, 0 22px 0 1px #cccccc;
+  box-shadow: 0 10px 0 1px #cccccc, 0 16px 0 1px #cccccc, 0 22px 0 1px #cccccc;
 }
 .top-bar.expanded {
   height: auto;
@@ -6055,13 +6067,13 @@ form.custom .custom.disabled {
 .top-bar-section ul li > a {
   display: block;
   width: 100%;
-  color: #222222;
+  color: #cccccc;
   padding: 12px 0 12px 0;
-  padding-left: 25px;
+  padding-left: 0.33333em;
   font-size: 0.8125em;
   font-weight: bold;
   background: #333333;
-  height: 75px;
+  height: 1em;
 }
 .top-bar-section ul li > a:hover {
   background: #2b2b2b;
@@ -6095,7 +6107,7 @@ form.custom .custom.disabled {
   background: #2b2b2b;
 }
 .top-bar-section .has-form {
-  padding: 25px;
+  padding: 0.33333em;
 }
 .top-bar-section .has-dropdown {
   position: relative;
@@ -6106,8 +6118,8 @@ form.custom .custom.disabled {
   width: 0;
   height: 0;
   border: solid 5px;
-  border-color: transparent transparent transparent rgba(34, 34, 34, 0.5);
-  margin-right: 25px;
+  border-color: transparent transparent transparent rgba(50, 52, 92, 0.5);
+  margin-right: 0.33333em;
   margin-top: -4.5px;
   position: absolute;
   top: 22px;
@@ -6131,18 +6143,18 @@ form.custom .custom.disabled {
 }
 .top-bar-section .dropdown li a {
   font-weight: normal;
-  padding: 8px 25px;
+  padding: 8px 0.33333em;
 }
 .top-bar-section .dropdown li.title h5 {
   margin-bottom: 0;
 }
 .top-bar-section .dropdown li.title h5 a {
-  color: #222222;
-  line-height: 37.5px;
+  color: #cccccc;
+  line-height: 0.5em;
   display: block;
 }
 .top-bar-section .dropdown label {
-  padding: 8px 25px 2px;
+  padding: 8px 0.33333em 2px;
   margin-bottom: 0;
   text-transform: uppercase;
   color: #555555;
@@ -6217,8 +6229,8 @@ form.custom .custom.disabled {
     display: none;
   }
   .top-bar-section li a:not(.button) {
-    padding: 0 25px;
-    line-height: 75px;
+    padding: 0 0.33333em;
+    line-height: 1em;
     background: #111111;
   }
   .top-bar-section li a:not(.button):hover {
@@ -6233,7 +6245,7 @@ form.custom .custom.disabled {
     width: 0;
     height: 0;
     border: solid 5px;
-    border-color: rgba(34, 34, 34, 0.5) transparent transparent transparent;
+    border-color: rgba(50, 52, 92, 0.5) transparent transparent transparent;
     margin-top: -2.5px;
   }
   .top-bar-section .has-dropdown.moved {
@@ -6258,10 +6270,10 @@ form.custom .custom.disabled {
     min-width: 100%;
   }
   .top-bar-section .dropdown li a {
-    color: #222222;
+    color: #32345c;
     line-height: 1;
     white-space: nowrap;
-    padding: 7px 25px;
+    padding: 7px 0.33333em;
     background: #1e1e1e;
   }
   .top-bar-section .dropdown li label {
@@ -6278,13 +6290,13 @@ form.custom .custom.disabled {
     border-right: solid 1px #2b2b2b;
     border-left: solid 1px black;
     clear: none;
-    height: 75px;
+    height: 1em;
     width: 0px;
   }
   .top-bar-section .has-form {
     background: #111111;
-    padding: 0 25px;
-    height: 75px;
+    padding: 0 0.33333em;
+    height: 1em;
   }
   .top-bar-section ul.right li .dropdown {
     left: auto;
