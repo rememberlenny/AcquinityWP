@@ -674,9 +674,6 @@ nav.top-bar input {
   padding-top: 0.9em !important;
   padding-bottom: 0.9em !important;
 }
-.menu-item .dropdown li:first-child a {
-  border-radius: 10px;
-}
 
 .menu-item-33 {
   background: #9a373f !important;
@@ -2843,6 +2840,46 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
   -moz-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
   -webkit-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+}
+
+.head-button-styles {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+
+.casing-text {
+  font-weight: 800;
+  font-size: 1.5em;
+  line-height: 8em;
+}
+
+.stats h4 {
+  color: #333 !important;
+  margin-bottom: 0em;
+}
+
+.stats h5 {
+  color: #333 !important;
+  margin-top: 0em;
+}
+
+.orbit-bullets {
+  display: none;
+}
+
+.orbit-container {
+  background: none;
+}
+
+#masthead-photo {
+  height: auto !important;
+}
+
+.head-button-styles:hover span {
+  font-size: 1.7em;
+  color: white;
+  line-height: 7em;
 }
 
 h3.subheader {

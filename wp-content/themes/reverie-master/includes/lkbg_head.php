@@ -112,6 +112,47 @@ function content_header_function(){ ?>
       <div class="masthead-photo h300" id="masthead-photo">
         <div class="s9999 masthead-photo-extension image-wrapper" id="masthead-photo-extension">
           <div class="masthead-photo-content" id="masthead-photo-content">
+            
+            <?php 
+            if( get_field('first_hero_button', 'option') ): 
+              $firstherobutton = get_field('first_hero_button', 'option'); 
+            endif; 
+            if( get_field('second_hero_button', 'option') ): 
+              $secondherobutton = get_field('second_hero_button', 'option'); 
+            endif; 
+            if( get_field('third_hero_button', 'option') ): 
+              $thirdherobutton = get_field('third_hero_button', 'option'); 
+            endif; 
+            if( get_field('first_hero_button', 'option') ): 
+              $firstherobuttonhover = get_field('first_hero_button_hover', 'option'); 
+            endif; 
+            if( get_field('second_hero_button', 'option') ): 
+              $secondherobuttonhover = get_field('second_hero_button_hover', 'option'); 
+            endif; 
+            if( get_field('third_hero_button', 'option') ): 
+              $thirdherobuttonhover = get_field('third_hero_button_hover', 'option'); 
+            endif; 
+            ?>
+            <style>
+              #firstherobutton{
+                background:url('<?php echo $firstherobutton; ?>');
+              }
+              #secondherobutton{
+                background:url('<?php echo $secondherobutton; ?>');
+              }
+              #thirdherobutton{
+                background:url('<?php echo $thirdherobutton; ?>');
+              }               
+              #firstherobutton:hover{
+                background:url('<?php echo $firstherobuttonhover; ?>');
+              }
+              #secondherobutton:hover{
+                background:url('<?php echo $secondherobuttonhover; ?>');
+              }
+              #thirdherobutton:hover{
+                background:url('<?php echo $thirdherobuttonhover; ?>');
+              } 
+            </style>
             <?php
             
             if(is_page('home')){
@@ -119,30 +160,15 @@ function content_header_function(){ ?>
                 echo '<div class="text-center"> <h1 class="text-center hero-text"><span>We turn our members into</span><br><br><span class="kick" style="line-height: 0.3em !important;">Your Customers</span></h1><br>';
               
               echo '<div class="threebuttons text-center">';
-                echo '<ul class="large-block-grid-3">';
-                  echo '<li><ul><li style="margin: 0 auto; width:200px; height: 200px; background:url(\'';
-                    if( get_field('first_hero_button', 'option') ):
-                    ?><?php the_field('first_hero_button', 'option'); ?>')"><?php
-                  endif;
-                  echo '<span style="font-weight: 800;
-font-size: 1.5em;
-line-height: 8em;">Advertisers</span>';
+                echo '<ul class="large-block-grid-3 small-block-grid-1">';
+                  echo '<li><ul><li class="head-button-styles" id="firstherobutton">';
+                  echo '<span class="casing-text">Advertisers</span>';
                   echo '</li></ul></li>';
-                  echo '<li><ul><li style="margin: 0 auto; width:200px; height: 200px; background:url(\'';
-                    if( get_field('second_hero_button', 'option') ):
-                    ?><?php the_field('second_hero_button', 'option'); ?>')"><?php
-                  endif;
-                  echo '<span style="font-weight: 800;
-font-size: 1.5em;
-line-height: 8em;">Products</span>';
+                  echo '<li><ul><li class="head-button-styles" id="secondherobutton">';
+                  echo '<span class="casing-text">Products</span>';
                   echo '</li></ul></li>';
-                  echo '<li><ul><li style="margin: 0 auto; width:200px; height: 200px; background:url(\'';
-                    if( get_field('third_hero_button', 'option') ):
-                    ?><?php the_field('third_hero_button', 'option'); ?>')"><?php
-                  endif;
-                  echo '<span style="font-weight: 800;
-font-size: 1.5em;
-line-height: 8em;">Services</span>';
+                  echo '<li><ul><li class="head-button-styles" id="thirdherobutton">';
+                  echo '<span class="casing-text">Services</span>';
                   echo '</li></ul></li>';
                 echo '</ul>';
               echo '</div>';

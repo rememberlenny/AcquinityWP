@@ -67,7 +67,7 @@
 <div class="top-nav-wrapper twelve">
   <div class="row top-nav">
     <!-- Starting the Top-Bar -->
-    <nav class="top-bar">
+    <nav class="top-bar sticky">
         <ul class="title-area">
             <li class="name">
               <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

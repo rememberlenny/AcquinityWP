@@ -46,22 +46,6 @@ get_header(); ?>
 	<script>
   (document)
   </script>
-<style>
-  .stats h4{
-    color: #333 !important;
-    margin-bottom:0em;
-  }
-  .stats h5{
-    color: #333 !important;
-    margin-top:0em;
-  }
-  .orbit-bullets{ display: none;}
-  .orbit-container{ background: none; }
-  #masthead-photo{
-    height:590px !important;
-  }
-</style>
-
 <?php statBarHome(); ?>
 
 <div class="content content-main row twelve">
