@@ -55,7 +55,29 @@ get_header(); ?>
 	      <div class="lftcont page-main-content content-sec fr pb15em">
 		      <div class="pr98 pl98 text-left column"> 
             <div class=" ">
-              <div class="large-6 column featart-short borderrt">
+               <div class="text-left large-6 column">
+                <a href="/news/">
+                  <h4 class="subheader">Acquinity News</h4>
+                </a>
+                <ul class="" style="margin-bottom: 1.8em;">
+                  <?php 
+                  rewind_posts();
+                  $mypost = array( 'post_type' => 'post' );
+                  $my_query = new WP_Query( $mypost ); ?>
+
+                  <?php if ( have_posts() ) : ?>
+                  <?php $i=1 /* Start the Loop */ ?>
+                  <?php while ( $i<5 && $my_query->have_posts()) :  $my_query->the_post(); ?>
+                  <?php get_template_part( 'content', 'notnewpost' ); ?>
+                  <?php $i++; endwhile; ?>
+                  <?php endif; // end have_posts() check 
+                  wp_reset_query(); ?>               
+                </ul>
+                    <a class="svbt-line" href="/news/" class="secondary">
+                      See more News ›
+                    </a>
+              </div>
+              <div class="large-6 column featart-short">
                 <a href="/success-story/">
                   <h4 class="subheader">Recent Success Stories</h4>
                 </a>
@@ -84,28 +106,6 @@ get_header(); ?>
                     wp_reset_query();?>
                   </ul>  
                </div>
-               <div class="text-left large-6 column">
-                <a href="/news/">
-                  <h4 class="subheader">Acquinity News</h4>
-                </a>
-                <ul class="" style="margin-bottom: 1.8em;">
-                  <?php 
-                  rewind_posts();
-                  $mypost = array( 'post_type' => 'post' );
-                  $my_query = new WP_Query( $mypost ); ?>
-
-                  <?php if ( have_posts() ) : ?>
-                  <?php $i=1 /* Start the Loop */ ?>
-                  <?php while ( $i<5 && $my_query->have_posts()) :  $my_query->the_post(); ?>
-                  <?php get_template_part( 'content', 'notnewpost' ); ?>
-                  <?php $i++; endwhile; ?>
-                  <?php endif; // end have_posts() check 
-                  wp_reset_query(); ?>               
-                </ul>
-                    <a class="svbt-line" href="/news/" class="secondary">
-                      See more News ›
-                    </a>
-              </div>
               <div class=" clear text"></div>
             </div>
           </div>

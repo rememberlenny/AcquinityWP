@@ -16,6 +16,7 @@ function reverie_theme_support() {
 	add_theme_support('menus');
 	register_nav_menus(array(
 		'primary' => __('Primary Navigation', 'reverie'),
+		'top' => __('Top Navigation', 'reverie'),
 		'utility' => __('Utility Navigation', 'reverie')
 	));
 	add_theme_support( 'custom-background',

@@ -659,7 +659,7 @@ nav.top-bar input {
 }
 
 .menu-item {
-  margin: 1.79em 0em;
+  margin: 1.78em 0em;
 }
 .menu-item .dropdown {
   margin-top: 1em;
@@ -681,6 +681,30 @@ nav.top-bar input {
   line-height: 1em !important;
   padding: 5px 10px 6px !important;
   border-radius: 30px !important;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  -ms-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.menu-item-33:hover {
+  background: #742a30 !important;
+  -webkit-transition: background 0.1s;
+  -moz-transition: background 0.1s;
+  -o-transition: background 0.1s;
+  -ms-transition: background 0.1s;
+  transition: background 0.1s;
+}
+
+section.top-bar-section .left > li.has-dropdown .dropdown li a:not(.button):hover {
+  background: #4f1c20 !important;
+}
+
+section.top-bar-section .left > li.has-dropdown .dropdown li:nth-child(even) a:not(.button) {
+  background: #bd4750 !important;
+}
+section.top-bar-section .left > li.has-dropdown .dropdown li:nth-child(even) a:not(.button):hover {
+  background: #4f1c20 !important;
 }
 
 .top-bar-section ul li > a {
