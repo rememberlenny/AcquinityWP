@@ -21,8 +21,11 @@ function statBarContent(){
 <div class="large-5 push-1 column " style="margin-top:4em;">
   <h5 class="text-center subheader">Statistics Collected March 2013 from Quantcast</h5>
   <div class="row">
+    <div id="raph-graph"></div>
+  </div>
+  <div class="row">
     <div class="large-4 column">
-      <div class="textwidget">
+      <div class="textwidget stat-case">
         <div class="d-inline">
           <h5 class="subheader white stat-number">
             20MM
@@ -34,7 +37,7 @@ function statBarContent(){
       </div>
     </div>
     <div class="large-4 column">
-      <div class="textwidget">
+      <div class="textwidget stat-case">
         <div class="d-inline">
           <h5 class="subheader white stat-number">
             80MM
@@ -46,7 +49,7 @@ function statBarContent(){
       </div>
     </div>
     <div class="large-4 column">
-      <div class="textwidget">
+      <div class="textwidget stat-case">
         <div class="d-inline">
           <h5 class="subheader white stat-number">
             2.6MM
