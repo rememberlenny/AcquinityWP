@@ -659,7 +659,23 @@ nav.top-bar input {
 }
 
 .menu-item {
-  margin: 1.79em 0em !important;
+  margin: 1.79em 0em;
+}
+.menu-item .dropdown {
+  margin-top: 1em;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.menu-item .dropdown .menu-item {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+.menu-item .dropdown li a {
+  padding-top: 0.9em !important;
+  padding-bottom: 0.9em !important;
+}
+.menu-item .dropdown li:first-child a {
+  border-radius: 10px;
 }
 
 .menu-item-33 {
@@ -707,13 +723,21 @@ ul.left {
   float: right !important;
 }
 
+.top-bar-section .dropdown li a:not(.button) {
+  background: #9a373f !important;
+}
+
+.top-bar-section .dropdown li a:not(.button):hover {
+  background: #cb6c74 !important;
+}
+
 @media only screen and (min-width: 58.75em) {
   .top-bar-section .has-dropdown > a:after {
     top: 37px !important;
   }
 
   .top-bar-section .dropdown li a {
-    color: #ccc;
+    color: #eee;
     white-space: nowrap;
     padding: 7px 25px;
     background: none;
@@ -725,7 +749,7 @@ ul.left {
   -o-transition: all .2s;
   -ms-transition: all .2s;
   transition: all .2s;
-  color: #ccc !important;
+  color: #eee !important;
 }
 .top-bar-section .left > li a:not(.button):hover {
   -webkit-transition: all .2s;
@@ -796,7 +820,7 @@ ul.left {
   }
 
   section.top-bar-section ul li > a {
-    color: #ccc;
+    color: #eee;
     font-size: 1.2em;
     font-weight: 600;
   }
@@ -5982,7 +6006,7 @@ form.custom .custom.disabled {
 }
 .top-bar .name h1 a {
   font-weight: bold;
-  color: #cccccc;
+  color: #eeeeee;
   width: 50%;
   display: block;
   padding: 0 0.33333em;
@@ -5993,7 +6017,7 @@ form.custom .custom.disabled {
   top: 0;
 }
 .top-bar .toggle-topbar a {
-  color: #cccccc;
+  color: #eeeeee;
   text-transform: uppercase;
   font-size: 0.8125em;
   font-weight: bold;
@@ -6015,7 +6039,7 @@ form.custom .custom.disabled {
   height: 34px;
   line-height: 33px;
   padding: 0;
-  color: #cccccc;
+  color: #eeeeee;
 }
 .top-bar .toggle-topbar.menu-icon a span {
   position: absolute;
@@ -6023,8 +6047,8 @@ form.custom .custom.disabled {
   display: block;
   width: 16px;
   height: 0;
-  -webkit-box-shadow: 0 10px 0 1px #cccccc, 0 16px 0 1px #cccccc, 0 22px 0 1px #cccccc;
-  box-shadow: 0 10px 0 1px #cccccc, 0 16px 0 1px #cccccc, 0 22px 0 1px #cccccc;
+  -webkit-box-shadow: 0 10px 0 1px #eeeeee, 0 16px 0 1px #eeeeee, 0 22px 0 1px #eeeeee;
+  box-shadow: 0 10px 0 1px #eeeeee, 0 16px 0 1px #eeeeee, 0 22px 0 1px #eeeeee;
 }
 .top-bar.expanded {
   height: auto;
@@ -6067,7 +6091,7 @@ form.custom .custom.disabled {
 .top-bar-section ul li > a {
   display: block;
   width: 100%;
-  color: #cccccc;
+  color: #eeeeee;
   padding: 12px 0 12px 0;
   padding-left: 0.33333em;
   font-size: 0.8125em;
@@ -6149,7 +6173,7 @@ form.custom .custom.disabled {
   margin-bottom: 0;
 }
 .top-bar-section .dropdown li.title h5 a {
-  color: #cccccc;
+  color: #eeeeee;
   line-height: 0.5em;
   display: block;
 }

@@ -16,7 +16,7 @@
     /* Control Input height for top bar */
 
     /* Set the link colors and styles for top-level nav */
-    $topbar-link-color: #ccc;
+    $topbar-link-color: #eee;
 
     /* Style the top bar dropdown elements */
     //$topbar-dropdown-bg: none;
@@ -24,13 +24,39 @@
     $topbar-dropdown-toggle-color: #32345C;
 
     /* Top menu icon styles */
-    $topbar-menu-link-color: #ccc;
-    $topbar-menu-icon-color: #ccc;
+    $topbar-menu-link-color: #eee;
+    $topbar-menu-icon-color: #eee;
 
     nav.top-bar input{
       top: 24px;
     }
-    .menu-item{margin: 1.79em 0em!important;}
+    .menu-item{
+      margin: 1.79em 0em;
+
+      .dropdown{
+        margin-top:1em;
+        border-radius: 10px;
+        overflow: hidden;
+        .menu-item{
+          margin-top: 0em;
+          margin-bottom: 0em;
+        }
+        li{
+          a{
+            padding-top: .9em!important;
+            padding-bottom: .9em!important;
+          }
+          &:first-child{
+            a{
+              border-radius: 10px;
+            }
+          }
+          &:last-child{
+            a{}
+          }
+        }
+      }
+    }
     .menu-item-33{
       background: #9a373f !important;
       margin: 1.59em 1.6em 1.59em  0em!important;
@@ -68,13 +94,21 @@
       padding: 0 5px;
     }
     ul.left{ float: right !important; }
+    
+    //Hover dropdown
+    .top-bar-section .dropdown li a:not(.button){
+      background: #9a373f !important;
+    }
+    .top-bar-section .dropdown li a:not(.button):hover{
+      background: lighten(#9a373f, 20%) !important;
+    }
     //!SHAME
     @media only screen and (min-width: 58.75em){
       .top-bar-section .has-dropdown > a:after {
         top: 37px !important;
       }
       .top-bar-section .dropdown li a {
-        color: #ccc;
+        color: #eee;
         white-space: nowrap;
         padding: 7px 25px;
         background: none;
@@ -89,7 +123,7 @@
         -o-transition: all .2s;
         -ms-transition: all .2s;
         transition: all .2s;
-        color: #ccc !important;
+        color: #eee !important;
         &:hover {
           -webkit-transition: all .2s;
           -moz-transition: all .2s;
@@ -156,7 +190,7 @@
         padding: 0 20px;
       }
     section.top-bar-section ul li > a {
-      color: #ccc;
+      color: #eee;
       font-size: 1.2em;
       font-weight: 600;
     }
