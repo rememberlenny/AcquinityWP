@@ -2524,6 +2524,12 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   padding-bottom: 2em;
 }
 
+.orbit-container {
+  background: none !important;
+  text-align: left;
+  overflow: visible;
+}
+
 #featrap {
   margin: 0 auto;
   margin-left: .5em;
@@ -2697,11 +2703,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   -o-transition: all 0.2s;
   -ms-transition: all 0.2s;
   transition: all 0.2s;
-}
-.case-studies-extension .orbit-container {
-  background: none !important;
-  text-align: left;
-  overflow: visible;
 }
 
 .case-studies-content .orbit-bullets {
