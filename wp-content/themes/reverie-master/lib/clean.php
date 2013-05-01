@@ -125,6 +125,8 @@ function reverie_scripts_and_styles() {
     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null, true);
     
     // adding Foundation scripts file in the footer
+    wp_register_script( 'lazyload', get_template_directory_uri() . '/js/lazyload.min.js', array( 'jquery' ), '', true );
+
     wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
     
     wp_register_script( 'raphael', get_template_directory_uri() . '/js/raphael-min.js', false, true );
@@ -146,6 +148,7 @@ function reverie_scripts_and_styles() {
     and your site will load faster.
     */
     wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'lazyload' );
     wp_enqueue_script( 'raphael' );
     wp_enqueue_script( 'raphael-graph' );
     wp_enqueue_script( 'reverie-js' );
