@@ -12,28 +12,6 @@ get_header(); ?>
       echo '.masthead-photo{ background-size: 2000px; }';
     }
     ?>
-    
-    body #sidebar{ padding-bottom: 0em !important;}
-    .footer-full{background: none !important;} 
-
-    #masthead-photo-content h1.hero-text span.kick{
-      font-size: 2em!important;
-      
-    }
-    #masthead-photo-content h1.hero-text{
-      font-weight: 600;
-      font-size: 2.3em!important;
-      color: #eee;
-    }
-
-    #masthead-photo{
-      background: rgb(50,52,92)!important;
-    }
- 
-    .home .masthead-photo-content {
-      margin-top: 90px !important;
-    }
-
  </style>
    
 <!-- Hero Image and Text -->  

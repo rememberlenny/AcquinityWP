@@ -560,6 +560,10 @@ a.svbt-line {
   padding-left: 0.2em;
 }
 
+.mb02 {
+  margin-bottom: 0.2em;
+}
+
 .mn93 {
   margin-left: -0.9375em;
 }
@@ -2915,6 +2919,32 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   font-size: 1.7em;
   color: white;
   line-height: 7em;
+}
+
+body #sidebar {
+  padding-bottom: 0em !important;
+}
+
+.footer-full {
+  background: none !important;
+}
+
+.home #masthead-photo-content h1.hero-text span.kick {
+  font-size: 2em !important;
+}
+
+.home #masthead-photo-content h1.hero-text {
+  font-weight: 600;
+  font-size: 2.3em !important;
+  color: #eee;
+}
+
+.home #masthead-photo {
+  background: #32345c !important;
+}
+
+.home .masthead-photo-content {
+  margin-top: 90px !important;
 }
 
 h3.subheader {

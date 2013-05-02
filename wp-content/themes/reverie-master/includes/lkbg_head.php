@@ -199,7 +199,7 @@ function postHeaderStyleCall(){
   endif;
   ?>
   <style type="text/css">
-    .masthead-photo {
+    #masthead-photo {
       background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;
     }
     <?php

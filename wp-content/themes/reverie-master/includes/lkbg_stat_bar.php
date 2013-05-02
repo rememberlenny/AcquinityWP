@@ -25,36 +25,51 @@ function statBarContent(){
   <div class="row">
     <div class="large-4 column">
       <div class="textwidget stat-case">
-        <div class="d-inline">
-          <h5 class="subheader white stat-number">
-            20MM
-          </h5>
-          <p>
-            monthly pageviews in the last year.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="large-4 column">
-      <div class="textwidget stat-case">
-        <div class="d-inline">
-          <h5 class="subheader white stat-number">
+        <div class="d-inline text-center">
+          <h4 style="text-transform:uppercase; font-size:1em;">
+            <u>
+             Email
+            </u>
+          </h4>
+          <h5 class="subheader white stat-number mb02">
             80MM
           </h5>
           <p>
-            in-house database accumulated over one year. 
+            in-house database
           </p>
         </div>
       </div>
     </div>
     <div class="large-4 column">
       <div class="textwidget stat-case">
-        <div class="d-inline">
-          <h5 class="subheader white stat-number">
-            2.6MM
+        <div class="d-inline text-center">
+          <h4 style="text-transform:uppercase; font-size:1em;">
+            <u>
+             Websites
+            </u>
+          </h4>
+          <h5 class="subheader white stat-number mb02">
+            3.8MM
           </h5>
           <p>
-            leads qualified monthly on paths.
+            monthly uniques 
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="large-4 column">
+      <div class="textwidget stat-case">
+        <div class="d-inline text-center">
+          <h4 style="text-transform:uppercase; font-size:1em;">
+            <u>
+             Call Centers
+            </u>
+          </h4>
+          <h5 class="subheader white stat-number mb02">
+            400
+          </h5>
+          <p>
+            seats, domestic and abroad
           </p>
         </div>
       </div>
