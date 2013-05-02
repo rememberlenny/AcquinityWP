@@ -83,9 +83,13 @@ function snapshot_destination_get_object_from_type($type) {
 function snapshot_destination_listing_panel() {
 	//echo "_REQUEST<pre>"; print_r($_REQUEST); echo "</pre>";
 	if ((isset($_REQUEST['snapshot-action']))
+<<<<<<< HEAD
 	 && ((sanitize_text_field($_REQUEST['snapshot-action']) == 'add')
 	  || (sanitize_text_field($_REQUEST['snapshot-action']) == 'edit')
 	  || (sanitize_text_field($_REQUEST['snapshot-action']) == 'update'))  )
+=======
+	 && (($_REQUEST['snapshot-action'] == 'add') || ($_REQUEST['snapshot-action'] == 'edit') || ($_REQUEST['snapshot-action'] == 'update'))  )
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 	{
 		snapshot_destination_edit_panel();
 	} else {
@@ -168,19 +172,31 @@ function snapshot_destination_edit_panel() {
 			$item = 0;
 			if (isset($_REQUEST['snapshot-action'])) {
 
+<<<<<<< HEAD
 				if (sanitize_text_field($_REQUEST['snapshot-action']) == "edit") {
+=======
+				if ($_REQUEST['snapshot-action'] == "edit") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 					?>
 					<h2><?php _ex("Edit Snapshot Destination", "Snapshot Plugin Page Title", SNAPSHOT_I18N_DOMAIN); ?></h2>
 					<p><?php _ex("", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN); ?></p>
 					<?php
 					if (isset($_REQUEST['item'])) {
+<<<<<<< HEAD
 						$item_key = sanitize_text_field($_REQUEST['item']);
+=======
+						$item_key = esc_attr($_REQUEST['item']);
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 						if (isset($wpmudev_snapshot->config_data['destinations'][$item_key])) {
 							$item = $wpmudev_snapshot->config_data['destinations'][$item_key];
 						}
 					}
+<<<<<<< HEAD
 				} else if (sanitize_text_field($_REQUEST['snapshot-action']) == "add") {
+=======
+				} else if ($_REQUEST['snapshot-action'] == "add") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 					?>
 					<h2><?php _ex("Add Snapshot Destination", "Snapshot Plugin Page Title", SNAPSHOT_I18N_DOMAIN); ?></h2>
 					<p><?php _ex("", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN); ?></p>
@@ -189,9 +205,15 @@ function snapshot_destination_edit_panel() {
 					$item = array();
 
 					if (isset($_REQUEST['type'])) {
+<<<<<<< HEAD
 						$item['type'] = sanitize_text_field($_REQUEST['type']);
 					}
 				} else if (sanitize_text_field($_REQUEST['snapshot-action']) == "update") {
+=======
+						$item['type'] = esc_attr($_REQUEST['type']);
+					}
+				} else if ($_REQUEST['snapshot-action'] == "update") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 					?>
 					<h2><?php _ex("Edit Snapshot Destination", "Snapshot Plugin Page Title", SNAPSHOT_I18N_DOMAIN); ?></h2>
@@ -206,6 +228,7 @@ function snapshot_destination_edit_panel() {
 			if ($item) {
 				snapshot_utility_form_ajax_panels();
 				?>
+<<<<<<< HEAD
 				<form action="<?php echo $wpmudev_snapshot->snapshot_get_setting('SNAPSHOT_MENU_URL'); ?>snapshots_destinations_panel&amp;snapshot-action=<?php echo urlencode(sanitize_text_field($_GET['snapshot-action'])); ?>&amp;type=<?php echo urlencode($item['type']); ?>" method="post">
 					<?php
 						if ((sanitize_text_field($_GET['snapshot-action']) == "edit") || (sanitize_text_field($_GET['snapshot-action']) == "update")) {
@@ -215,6 +238,17 @@ function snapshot_destination_edit_panel() {
 							<?php wp_nonce_field('snapshot-update-destination', 'snapshot-noonce-field'); ?>
 							<?php
 						} else if (sanitize_text_field($_GET['snapshot-action']) == "add") {
+=======
+				<form action="<?php echo $wpmudev_snapshot->snapshot_get_setting('SNAPSHOT_MENU_URL'); ?>snapshots_destinations_panel&amp;snapshot-action=<?php echo $_GET['snapshot-action']; ?>&amp;type=<?php echo $item['type']; ?>" method="post">
+					<?php
+						if (($_GET['snapshot-action'] == "edit") || ($_GET['snapshot-action'] == "update")) {
+							?>
+							<input type="hidden" name="snapshot-action" value="update" />
+							<input type="hidden" name="item" value="<?php echo $_GET['item']; ?>" />
+							<?php wp_nonce_field('snapshot-update-destination', 'snapshot-noonce-field'); ?>
+							<?php
+						} else if ($_GET['snapshot-action'] == "add") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 							?>
 							<input type="hidden" name="snapshot-action" value="add" />
 							<?php wp_nonce_field('snapshot-add-destination', 'snapshot-noonce-field'); ?>

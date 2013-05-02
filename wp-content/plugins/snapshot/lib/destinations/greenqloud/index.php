@@ -44,10 +44,17 @@ if ((!class_exists('SnapshotDestinationGreenQloud')) && (version_compare(phpvers
 
 			function load_scripts() {
 
+<<<<<<< HEAD
 				if ((!isset($_GET['page'])) || (sanitize_text_field($_GET['page']) != "snapshots_destinations_panel"))
 					return;
 
 				if ((!isset($_GET['type'])) || (sanitize_text_field($_GET['type']) != $this->name_slug))
+=======
+				if ((!isset($_GET['page'])) || ($_GET['page'] != "snapshots_destinations_panel"))
+					return;
+
+				if ((!isset($_GET['type'])) || ($_GET['type'] != $this->name_slug))
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 					return;
 
 				wp_enqueue_script('snapshot-destination-greenqloud-js', plugins_url('/js/snapshot_destination_greenqloud.js', __FILE__), array('jquery'));	 		 	  	  						 
@@ -177,7 +184,11 @@ if ((!class_exists('SnapshotDestinationGreenQloud')) && (version_compare(phpvers
 
 				$this->load_class_destination($destination_info);
 
+<<<<<<< HEAD
 				if (sanitize_text_field($_POST['snapshot_action']) == "connection-test") {
+=======
+				if ($_POST['snapshot_action'] == "connection-test") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 					if (!$this->login()) {
 						echo json_encode($this->error_array);
@@ -193,7 +204,11 @@ if ((!class_exists('SnapshotDestinationGreenQloud')) && (version_compare(phpvers
 					echo json_encode($this->error_array);
 					die();
 
+<<<<<<< HEAD
 				} else if (sanitize_text_field($_POST['snapshot_action']) == "aws-get-bucket-list") {
+=======
+				} else if ($_POST['snapshot_action'] == "aws-get-bucket-list") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 					//echo "_POST<pre>"; print_r($_POST); echo "</pre>";
 					//echo "destination_info<pre>"; print_r($this->destination_info); echo "</pre>";
 					//die();

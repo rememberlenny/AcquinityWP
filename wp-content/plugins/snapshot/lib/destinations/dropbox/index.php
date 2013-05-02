@@ -68,7 +68,11 @@ if (!class_exists('SnapshotDestinationDropbox')) {
 			// When returning from Dropbox Authorize the URL Query String contains the parameter 'oauth_token'. On this indicator
 			// we load the stored item option and grab the new access token. Then store the options and redirect the user to
 			// the Destination Dropbox form where they will finally save the destination info.
+<<<<<<< HEAD
 			if ((isset($_GET['page'])) && (sanitize_text_field($_GET['page']) == 'snapshots_destinations_panel')) {
+=======
+			if ((isset($_GET['page'])) && ($_GET['page'] == 'snapshots_destinations_panel')) {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 				//require_once( dirname( __FILE__ ) . '/includes/Dropbox/autoload.php' );
 				//set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . DIRECTORY_SEPARATOR . 'includes/PEAR_Includes');
@@ -129,7 +133,11 @@ if (!class_exists('SnapshotDestinationDropbox')) {
 				}
 
 				if (isset($_POST['item']))
+<<<<<<< HEAD
 					$d_info['item'] = sanitize_text_field($_POST['item']);
+=======
+					$d_info['item'] = $_POST['item'];
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 				//require_once( dirname( __FILE__ ) . '/includes/Dropbox/autoload.php' );
 				//set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . DIRECTORY_SEPARATOR . 'includes/PEAR_Includes');
@@ -309,7 +317,11 @@ if (!class_exists('SnapshotDestinationDropbox')) {
 						?>
 						<?php
 							if ( (isset($_GET['dropbox-authorize']))
+<<<<<<< HEAD
 								&& (wp_verify_nonce(sanitize_text_field($_GET['dropbox-authorize']), 'snapshot-destination-dropbox-authorize')) ) {
+=======
+								&& (wp_verify_nonce($_GET['dropbox-authorize'], 'snapshot-destination-dropbox-authorize')) ) {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 								$item = get_option('snapshot-dropbox-tokens');
 								//echo "item<pre>"; print_r($item); echo "</pre>";
@@ -557,7 +569,11 @@ if (!class_exists('SnapshotDestinationDropbox')) {
 
 			foreach($sync_files['included'] as $section => $section_files) {
 				$file_counter_section = count($section_files);
+<<<<<<< HEAD
 				$this->snapshot_logger->log_message("Files sync start for section: ". $section ." ". $file_counter_section ." files ---------------------");
+=======
+				$this->snapshot_logger->log_message("Files sync start for section: ". $section ." ". $file_counter_section ." files ---------------------");	 		 	  	  						 
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 				$file_consecutive_errors = 0;
 				$file_send_success_count = 0;
@@ -599,7 +615,11 @@ if (!class_exists('SnapshotDestinationDropbox')) {
 
 					if (strstr($_file, $this->sync_excluded_file_chars) !== false) {
 						//echo "File contains an invalid character not allowed by Dropbox. ". $_r_filename;
+<<<<<<< HEAD
 						$this->snapshot_logger->log_message("[". $file_send_ratio ."] File contains an invalid character not allowed by Dropbox. ". $_r_filename);	 		 	  	  						 
+=======
+						$this->snapshot_logger->log_message("[". $file_send_ratio ."] File contains an invalid character not allowed by Dropbox. ". $_r_filename);
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 						unset($sync_files['included'][$section][$file_idx]);
 						$sync_files['excluded']['dropbox'][$section][] = $filename;
 						update_option($sync_files_option, $sync_files);

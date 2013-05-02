@@ -42,10 +42,17 @@ if ((!class_exists('SnapshotDestinationAWS')) && (version_compare(phpversion(), 
 
 			function load_scripts() {
 
+<<<<<<< HEAD
 				if ((!isset($_GET['page'])) || (sanitize_text_field($_GET['page']) != "snapshots_destinations_panel"))
 					return;
 
 				if ((!isset($_GET['type'])) || (sanitize_text_field($_GET['type']) != $this->name_slug))
+=======
+				if ((!isset($_GET['page'])) || ($_GET['page'] != "snapshots_destinations_panel"))
+					return;
+
+				if ((!isset($_GET['type'])) || ($_GET['type'] != $this->name_slug))
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 					return;
 
 				wp_enqueue_script('snapshot-destination-aws-js', plugins_url('/js/snapshot_destination_aws.js', __FILE__), array('jquery'));	 		 	  	  						 
@@ -79,6 +86,7 @@ if ((!class_exists('SnapshotDestinationAWS')) && (version_compare(phpversion(), 
 				);
 
 				$this->_regions = array(
+<<<<<<< HEAD
 					AmazonS3::REGION_US_E1				=>	__('US Standard', SNAPSHOT_I18N_DOMAIN),
 					AmazonS3::REGION_US_W2				=>	__('US West (Oregon) Region', SNAPSHOT_I18N_DOMAIN),
 					AmazonS3::REGION_US_W1				=>	__('US West (Northern California) Region', SNAPSHOT_I18N_DOMAIN),
@@ -87,6 +95,15 @@ if ((!class_exists('SnapshotDestinationAWS')) && (version_compare(phpversion(), 
 					's3-ap-southeast-2.amazonaws.com'	=>	__('Asia Pacific (Sydney) Region', SNAPSHOT_I18N_DOMAIN),
 					AmazonS3::REGION_APAC_NE1			=>	__('Asia Pacific (Tokyo) Region', SNAPSHOT_I18N_DOMAIN),
 					AmazonS3::REGION_SA_E1				=>	__('South America (Sao Paulo) Region', SNAPSHOT_I18N_DOMAIN)
+=======
+					AmazonS3::REGION_US_E1		=>	__('US Standard', SNAPSHOT_I18N_DOMAIN),
+					AmazonS3::REGION_US_W2		=>	__('US West (Oregon) Region', SNAPSHOT_I18N_DOMAIN),
+					AmazonS3::REGION_US_W1		=>	__('US West (Northern California) Region', SNAPSHOT_I18N_DOMAIN),
+					AmazonS3::REGION_EU_W1		=>	__('EU (Ireland) Region', SNAPSHOT_I18N_DOMAIN),
+					AmazonS3::REGION_APAC_SE1	=>	__('Asia Pacific (Singapore) Region', SNAPSHOT_I18N_DOMAIN),
+					AmazonS3::REGION_APAC_NE1	=>	__('Asia Pacific (Tokyo) Region', SNAPSHOT_I18N_DOMAIN),
+					AmazonS3::REGION_SA_E1		=>	__('South America (Sao Paulo) Region', SNAPSHOT_I18N_DOMAIN)
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 				);
 
 				$this->_storage = array(
@@ -578,17 +595,29 @@ if ((!class_exists('SnapshotDestinationAWS')) && (version_compare(phpversion(), 
 						<tr class="form-field">
 							<th scope="row"><label for="snapshot-destination-name"><?php _e('Destination Name', SNAPSHOT_I18N_DOMAIN); ?></label></th>
 							<td><input type="text" name="snapshot-destination[name]" id="snapshot-destination-name"
+<<<<<<< HEAD
 								value="<?php if (isset($item['name'])) { echo stripslashes(sanitize_text_field($item['name'])); } ?>" /></td>
+=======
+								value="<?php if (isset($item['name'])) { echo stripslashes($item['name']); } ?>" /></td>
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 						</tr>
 						<tr class="form-field">
 							<th scope="row"><label for="snapshot-destination-awskey"><?php _e('AWS Access Key ID', SNAPSHOT_I18N_DOMAIN); ?></label></th>
 							<td><input type="text" name="snapshot-destination[awskey]" id="snapshot-destination-awskey"
+<<<<<<< HEAD
 								value="<?php if (isset($item['awskey'])) { echo sanitize_text_field($item['awskey']); } ?>" /><br /><a href="https://aws-portal.amazon.com/gp/aws/securityCredentials" target="_blank">Access AWS Console</a></td>
+=======
+								value="<?php if (isset($item['awskey'])) { echo $item['awskey']; } ?>" /><br /><a href="https://aws-portal.amazon.com/gp/aws/securityCredentials" target="_blank">Access AWS Console</a></td>
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 						</tr>
 						<tr class="form-field">
 							<th scope="row"><label for="snapshot-destination-secretkey"><?php _e('AWS Secret Access Key', SNAPSHOT_I18N_DOMAIN); ?></label></th>
 							<td><input type="password" name="snapshot-destination[secretkey]" id="snapshot-destination-secretkey"
+<<<<<<< HEAD
 								value="<?php if (isset($item['secretkey'])) { echo sanitize_text_field($item['secretkey']); } ?>" /></td>
+=======
+								value="<?php if (isset($item['secretkey'])) { echo $item['secretkey']; } ?>" /></td>
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 						</tr>
 
 						<?php if (!isset($item['ssl'])) { $item['ssl'] = "yes"; } ?>

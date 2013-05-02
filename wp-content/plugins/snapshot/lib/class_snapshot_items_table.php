@@ -44,10 +44,17 @@ if (!class_exists('Snapshot_Items_Table')) {
 			}
 
 			if ( (isset($_POST['snapshot-filter'])) && (isset($_POST['snapshot-filter-destination'])) ) {
+<<<<<<< HEAD
 	 			$filters['destination'] = sanitize_text_field($_POST['snapshot-filter-destination']);
 			} else {
 				if (isset($_GET['destination'])) {
 					$filters['destination'] = sanitize_text_field($_GET['destination']);
+=======
+	 			$filters['destination'] = esc_attr($_POST['snapshot-filter-destination']);
+			} else {
+				if (isset($_GET['destination'])) {
+					$filters['destination'] = esc_attr($_GET['destination']);
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 				} else {
 					$filters['destination'] = '';
 				}

@@ -4,6 +4,7 @@ Author: Paul Menard (Incsub)
 Change Log:
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
+<<<<<<< HEAD
 
 2.3.3.2 - 2013-04-30
 ----------------------------------------------------------------------
@@ -20,6 +21,8 @@ Change Log:
 - Added AWS destination region to Sydney
 - Dropbox correction to filter out destination directories with multiple slashes
 
+=======
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 2.3.3 - 2013-03-09
 ----------------------------------------------------------------------
 - Fixed issue where non-WordPress prefixed tables were not showing in tables listing
@@ -179,4 +182,8 @@ http://premium.wpmudev.org/forums/topic/need-to-turn-off-zlib-compression-for-it
 - Initial stable release
 
 
+<<<<<<< HEAD
 184701-1367425155
+=======
+184701-1366998541
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9

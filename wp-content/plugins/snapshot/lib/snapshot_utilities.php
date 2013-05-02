@@ -982,6 +982,7 @@ function snapshot_utility_secure_folder($folder) {
 			fclose($fp);
 		}
 	}
+<<<<<<< HEAD
 
 	if (!file_exists(trailingslashit($folder) ."CACHEDIR.TAG")) {
 		$fp = fopen(trailingslashit($folder) ."CACHEDIR.TAG", "w+");
@@ -991,6 +992,8 @@ function snapshot_utility_secure_folder($folder) {
 		}
 	}
 
+=======
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 }
 
 function snapshot_utility_get_blog_upload_path($blog_id=0) {

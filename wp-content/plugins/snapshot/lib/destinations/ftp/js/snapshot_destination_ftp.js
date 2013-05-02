@@ -17,6 +17,7 @@ jQuery(document).ready( function($) {
 		if (destination_info['address'] == null)
 			destination_info['address'] = '';
 
+<<<<<<< HEAD
 		destination_info['protocol'] 		= jQuery('select#snapshot-destination-protocol').val();
 		if (destination_info['protocol'] == null)
 			destination_info['protocol'] = 'ftp';
@@ -24,6 +25,11 @@ jQuery(document).ready( function($) {
 		//destination_info['ssl'] 		= jQuery('select#snapshot-destination-ssl').val();
 		//if (destination_info['ssl'] == null)
 		//	destination_info['ssl'] = '';
+=======
+		destination_info['ssl'] 		= jQuery('select#snapshot-destination-ssl').val();
+		if (destination_info['ssl'] == null)
+			destination_info['ssl'] = '';
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 		destination_info['passive'] 	= jQuery('select#snapshot-destination-passive').val();
 		if (destination_info['passive'] == null)

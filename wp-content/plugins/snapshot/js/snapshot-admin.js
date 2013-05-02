@@ -214,6 +214,10 @@ jQuery(document).ready( function($) {
 			
 			$(this).parent().parent().find('p.snapshot-list-table-wp-container').slideDown();
 			$(this).parent().parent().find('p.snapshot-list-table-wp-container').css("background-color", "#FFFF9C").animate({ backgroundColor: "#FFFFFF"}, 1500);
+<<<<<<< HEAD
+=======
+			
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 		}
 		return false;
 	});
@@ -233,6 +237,7 @@ jQuery(document).ready( function($) {
 			var link_state = $(this).html(link_state);
 			$(this).parent().parent().find('p.snapshot-list-table-non-container').slideDown();
 			$(this).parent().parent().find('p.snapshot-list-table-non-container').css("background-color", "#FFFF9C").animate({ backgroundColor: "#FFFFFF"}, 1500);
+<<<<<<< HEAD
 		}
 
 		return false;
@@ -252,6 +257,9 @@ jQuery(document).ready( function($) {
 			var link_state = $(this).html(link_state);
 			$(this).parent().parent().find('p.snapshot-list-table-other-container').slideDown();
 			$(this).parent().parent().find('p.snapshot-list-table-other-container').css("background-color", "#FFFF9C").animate({ backgroundColor: "#FFFFFF"}, 1500);
+=======
+			
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 		}
 
 		return false;
@@ -281,7 +289,10 @@ jQuery(document).ready( function($) {
 
 						/* The structure of the data is the same as the function get_database_tables */
 						for (var table_group in json_tables_data) {
+<<<<<<< HEAD
 							if (!json_tables_data.hasOwnProperty(table_group)) continue;
+=======
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 							var table_set = json_tables_data[table_group];
 
 							/* for each set of tables within the group process */
@@ -348,7 +359,10 @@ jQuery(document).ready( function($) {
 
 							/* The structure of the data is the same as the function get_database_tables */
 							for (var table_group in json_tables_data) {
+<<<<<<< HEAD
 								if (!json_tables_data.hasOwnProperty(table_group)) continue;
+=======
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 								var table_set = json_tables_data[table_group];
 
 								/* for each set of tables within the group process */
@@ -455,7 +469,10 @@ jQuery(document).ready( function($) {
 			var tables_count = 0;
 			
 			for (var table_name in table_set) {
+<<<<<<< HEAD
 				if (!table_set.hasOwnProperty(table_name)) continue;
+=======
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 				tables_count = tables_count + 1;
 				
 				var table_checked = table_set[table_name];
@@ -676,7 +693,10 @@ jQuery(document).ready( function($) {
 //		}
 
 		for (var table_key in snapshot_form_tables_array) {
+<<<<<<< HEAD
 			if (!snapshot_form_tables_array.hasOwnProperty(table_key)) continue;
+=======
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 			var table_name = snapshot_form_tables_array[table_key];
 	
 			var snapshot_item_html = '<div class="snapshot-item" id="snapshot-item-table-'+table_name+'"><div class="progress"><div class="percent">0%</div><div class="bar" style="width: 0px;"></div></div><button style="display: none;" class="snapshot-button-abort">Abort</button><div class="snapshot-text">Database: '+table_name+'</div></div>';
@@ -1237,7 +1257,10 @@ jQuery(document).ready( function($) {
 									if ((reply_data['MANIFEST']['TABLES'] != undefined) && (reply_data['MANIFEST']['TABLES-DATA'])) {
 							
 										for (var table_key in reply_data['MANIFEST']['TABLES']) {
+<<<<<<< HEAD
 											if (!reply_data['MANIFEST']['TABLES'].hasOwnProperty(table_key)) continue;
+=======
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 											var table_name = reply_data['MANIFEST']['TABLES'][table_key];
 
 											var snapshot_item_html = '<div class="snapshot-item" id="snapshot-item-table-'+table_name+'"><div class="progress"><div class="percent">0%</div><div class="bar" style="width: 0px;"></div></div><button style="display: none;" class="snapshot-button-abort">Abort</button><div class="snapshot-text">'+table_name+'</div></div>';
