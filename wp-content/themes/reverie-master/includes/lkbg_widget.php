@@ -18,6 +18,7 @@ foreach ($sidebars as $sidebar) {
     'after_title' => '</h4>'
   ));
 }
+
 $sidebars = array('Footer');
 foreach ($sidebars as $sidebar) {
   register_sidebar(array('name'=> $sidebar,

@@ -46,7 +46,11 @@ if (!class_exists('Snapshot_Archives_Data_Items_Table')) {
 	    }
 
 		function column_cb($data_item) {
+<<<<<<< HEAD
+			if ((isset($_GET['snapshot-action-sub'])) && (sanitize_text_field($_GET['snapshot-action-sub']) == "restore")) {
+=======
 			if ((isset($_GET['snapshot-action-sub'])) && ($_GET['snapshot-action-sub'] == "restore")) {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 			} else {
 				?><input type="checkbox" name="data-item[]" value="<?php echo $data_item['timestamp']; ?>" /><?php
@@ -84,7 +88,11 @@ if (!class_exists('Snapshot_Archives_Data_Items_Table')) {
 						$_HAS_FILE_RESTORE = true;
 
 						if ((isset($_GET['snapshot-action-sub']))
+<<<<<<< HEAD
+						 && (sanitize_text_field($_GET['snapshot-action-sub']) == "restore")
+=======
 						 && ($_GET['snapshot-action-sub'] == "restore")
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 						 && (snapshot_utility_current_user_can( 'manage_snapshots_items' )) ) {
 							echo '<a href="?page=snapshots_edit_panel&amp;snapshot-action=restore-panel&amp;item='.
 							$this->item['timestamp'] .'&amp;snapshot-data-item='. $data_item['timestamp'] .'">'. $data_item['filename'] .'</a>';
@@ -127,7 +135,11 @@ if (!class_exists('Snapshot_Archives_Data_Items_Table')) {
 				<span class="restore">
 				<?php
 				$row_actions = '';
+<<<<<<< HEAD
+				if ((isset($_GET['snapshot-action-sub'])) && (sanitize_text_field($_GET['snapshot-action-sub']) == "restore")) {
+=======
 				if ((isset($_GET['snapshot-action-sub'])) && ($_GET['snapshot-action-sub'] == "restore")) {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 					if ($_HAS_FILE_RESTORE == true) {
 						if (snapshot_utility_current_user_can( 'manage_snapshots_items' )) {
 							if (strlen($row_actions))  $row_actions .= ' | ';
@@ -370,7 +382,11 @@ if (!class_exists('Snapshot_Archives_Data_Items_Table')) {
 		function display() {
 			extract( $this->_args );
 
+<<<<<<< HEAD
+			if ((isset($_GET['snapshot-action-sub'])) && (sanitize_text_field($_GET['snapshot-action-sub']) == "restore")) {
+=======
 			if ((isset($_GET['snapshot-action-sub'])) && ($_GET['snapshot-action-sub'] == "restore")) {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 				?><p><?php _e('Select the snapshot item to restore', SNAPSHOT_I18N_DOMAIN); ?></p><?php
 			} else {
 				$this->display_tablenav( 'top' );
@@ -394,7 +410,11 @@ if (!class_exists('Snapshot_Archives_Data_Items_Table')) {
 			</tbody>
 			</table>
 			<?php
+<<<<<<< HEAD
+			if ((isset($_GET['snapshot-action-sub'])) && (sanitize_text_field($_GET['snapshot-action-sub']) == "restore")) {
+=======
 			if ((isset($_GET['snapshot-action-sub'])) && ($_GET['snapshot-action-sub'] == "restore")) {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 			} else {
 				$this->display_tablenav( 'bottom' );
 			}

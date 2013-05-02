@@ -3,6 +3,8 @@
 // 
 
 $(document).ready(function()    {
+
+//// Home Slider
   $('#masthead-photo').delay(200).animate({opacity:1.0}, 'linear', function(){ 
 
     // The balls slide out
@@ -39,5 +41,7 @@ $(document).ready(function()    {
 
   // Stop the Success Stories slider
   $('#pausetarget').find('.orbit-timer span').click();
+
+//// Raphael
   
 });

@@ -111,6 +111,10 @@ class Dropbox_API {
 			$this->logger = $logger;
 
 		$path = str_replace('\\', '/', stripslashes($path));
+<<<<<<< HEAD
+		$path = str_replace('//', '/', $path);
+=======
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 		//$this->logger->log_message('DEBUG: path['. $path .'] file['. $file .']');
 
         $filesize = filesize($file);
@@ -215,10 +219,17 @@ class Dropbox_API {
 		$url_path = trailingslashit($this->root) . trailingslashit($destination_directory) . $destination_filename .'?upload_id='. $file_uploadid;
 		//$this->logger->log_message('DEBUG: '. __FUNCTION__ .': url_path['. $url_path .']');
 
+<<<<<<< HEAD
+		$url_path = str_replace('\\', '/', stripslashes($url_path));
+		$url_path = str_replace('//', '/', $url_path);
+
+		//$this->logger->log_message('Sending file chunked commit url path: '. $url_path);
+=======
 		//$url_path = str_replace('//', '/', $url_path);
 		//str_replace('\\', '/', $path);
 
 		$this->logger->log_message('Sending file chunked commit url path: '. $url_path);
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 		$url = trailingslashit($this->api_content_url) . trailingslashit('commit_chunked_upload') . $url_path;
 		$this->logger->log_message('Sending file chunked commit url: '. $url);
         $this->last_result = $this->oauth->fetch($url, array(), 'POST');

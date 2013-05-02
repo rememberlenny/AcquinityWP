@@ -19,6 +19,10 @@ if (!class_exists('SnapshotDestinationFTP')) {
 		var $sftp_connection;
 		var $ftp_connection;
 		var $form_errors;
+<<<<<<< HEAD
+		var $protocols;
+=======
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 		function on_creation() {
 			//private destination slug. Lowercase alpha (a-z) and dashes (-) only please! Must be unique for all destinations
@@ -31,6 +35,16 @@ if (!class_exists('SnapshotDestinationFTP')) {
 			// where the form fields will be validated and the connection tot he remote server tested.
 			add_action('wp_ajax_snapshot_destination_ftp', array(&$this, 'destination_ajax_proc' ));
 			$this->load_scripts();
+<<<<<<< HEAD
+
+			$this->protocols = array(
+				'ftp'					=>	__('FTP', SNAPSHOT_I18N_DOMAIN),
+				'sftp'					=>	__('SFTP', SNAPSHOT_I18N_DOMAIN),
+//				'ftps-implicit-ssl'		=>	__('FTP with Implicit SSL', SNAPSHOT_I18N_DOMAIN),
+				'ftps-tcl-ssl'			=>	__('FTP with TSL/SSL', SNAPSHOT_I18N_DOMAIN)
+			);
+=======
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 		}
 
 		function destination_ajax_proc() {
@@ -58,8 +72,15 @@ if (!class_exists('SnapshotDestinationFTP')) {
 				die();
 			}
 
+<<<<<<< HEAD
+			if (sanitize_text_field($_POST['snapshot_action']) == "connection-test") {
+				$this->load_class_destination($destination_info);
+				//echo "destination_info<pre>"; print_r($this->destination_info); echo "</pre>";
+
+=======
 			if ($_POST['snapshot_action'] == "connection-test") {
 				$this->load_class_destination($destination_info);
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 				if (!$this->login()) {
 					echo json_encode($this->error_array);
 					die();
@@ -76,10 +97,17 @@ if (!class_exists('SnapshotDestinationFTP')) {
 		}
 
 		function load_scripts() {
+<<<<<<< HEAD
+			if ((!isset($_GET['page'])) || (sanitize_text_field($_GET['page']) != "snapshots_destinations_panel"))
+				return;
+
+			if ((!isset($_GET['type'])) || (sanitize_text_field($_GET['type']) != $this->name_slug))
+=======
 			if ((!isset($_GET['page'])) || ($_GET['page'] != "snapshots_destinations_panel"))
 				return;
 
 			if ((!isset($_GET['type'])) || ($_GET['type'] != $this->name_slug))
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 				return;
 
 			wp_enqueue_script('snapshot-destination-ftp-js', plugins_url('/js/snapshot_destination_ftp.js', __FILE__), array('jquery'));
@@ -119,6 +147,20 @@ if (!class_exists('SnapshotDestinationFTP')) {
 			else
 				$this->form_errors['password'] = __("Password is requires", SNAPSHOT_I18N_DOMAIN);
 
+<<<<<<< HEAD
+			if ((isset($d_info['protocol'])) && (strlen($d_info['protocol'])))
+				$destination_info['protocol'] = esc_attr($d_info['protocol']);
+			else
+				$this->form_errors['protocol'] = __("Connection type is required", SNAPSHOT_I18N_DOMAIN);
+
+//			if ((isset($d_info['ssl'])) && (strlen($d_info['ssl']))) {
+//				$destination_info['ssl'] = esc_attr($d_info['ssl']);
+//				if (($destination_info['ssl'] != "yes") && ($destination_info['ssl'] != "no"))
+//					$destination_info['ssl'] = "no";
+//			} else {
+//				$destination_info['ssl'] = "no";
+//			}
+=======
 			if ((isset($d_info['ssl'])) && (strlen($d_info['ssl']))) {
 				$destination_info['ssl'] = esc_attr($d_info['ssl']);
 				if (($destination_info['ssl'] != "yes") && ($destination_info['ssl'] != "no"))
@@ -126,6 +168,7 @@ if (!class_exists('SnapshotDestinationFTP')) {
 			} else {
 				$destination_info['ssl'] = "no";
 			}
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 			if ((isset($d_info['passive'])) && (strlen($d_info['passive']))) {
 				$destination_info['passive'] = esc_attr($d_info['passive']);
@@ -296,7 +339,28 @@ if (!class_exists('SnapshotDestinationFTP')) {
 						</td>
 					</tr>
 
+<<<<<<< HEAD
+					<tr class="form-field">
+						<th scope="row"><label for="snapshot-destination-protocol"><?php _e('Connection Protocol', SNAPSHOT_I18N_DOMAIN); ?></label></th>
+						<td>
+							<select name="snapshot-destination[protocol]" id="snapshot-destination-protocol">
+							<?php
+								foreach($this->protocols as $protocol_key => $protocol_label) {
+									?><option value="<?php echo $protocol_key?>" <?php if ($item['protocol'] == $protocol_key) {
+										echo ' selected="selected" '; } ?> ><?php echo $protocol_label; ?></option><?php
+								}
+							?>
+							</select>
+
+							<p class="description"><?php _e('FTP: uses standard PHP library functions.  (default)<br />SFTP: Implementation use the <a href="http://phpseclib.sourceforge.net" target="_blank">PHP Secure Communications Library</a>. This option may not work depending on how your PHP binaries are compiled.<br />FTPS with TSL/SSL. This option attempts a secure connection. Will only work if PHP and OpenSSL are properly configured on your host and the destination host. This option will not work under Windows using the default PHP binaries. Check the PHP docs for ftp_ssl_connection', SNAPSHOT_I18N_DOMAIN); ?></p>
+						</td>
+					</tr>
+
+					<?php //if (!isset($item['ssl'])) { $item['ssl'] = "yes"; } ?>
+<?php /* ?>
+=======
 					<?php if (!isset($item['ssl'])) { $item['ssl'] = "yes"; } ?>
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 					<tr class="form-field">
 						<th scope="row"><label for="snapshot-destination-ssl"><?php _e('Use sFTP Connection', SNAPSHOT_I18N_DOMAIN); ?></label></th>
 						<td>
@@ -308,7 +372,11 @@ if (!class_exists('SnapshotDestinationFTP')) {
 							<p class="description"><?php _e('Default: Yes. If set to yes, will attempt to connect to the remote server using a secure connection using the <a href="http://phpseclib.sourceforge.net" target="_blank">PHP Secure Communications Library</a>. This option may not work depending on how your PHP binaries are compiled. This option will not work under Windows. Suggestion is to try SSL. If the test connection fails then try setting SSL to no.', SNAPSHOT_I18N_DOMAIN); ?></p>
 						</td>
 					</tr>
+<<<<<<< HEAD
+<?php */ ?>
+=======
 
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 					<tr class="form-field">
 						<th scope="row"><label for="snapshot-destination-port"><?php _e('Server Port (optional)', SNAPSHOT_I18N_DOMAIN); ?></label></th>
 						<td><input type="text" name="snapshot-destination[port]" id="snapshot-destination-port"
@@ -392,10 +460,31 @@ if (!class_exists('SnapshotDestinationFTP')) {
 			if ((isset($d_info['password'])) && (strlen($d_info['password'])))
 				$this->destination_info['password'] = esc_attr($d_info['password']);
 
+<<<<<<< HEAD
+
+			if ((isset($d_info['protocol'])) && (strlen($d_info['protocol']))) {
+				$this->destination_info['protocol'] = esc_attr($d_info['protocol']);
+			} else {
+				// If we don't have the 'protocol' setting then this is a legacy destination. So check the 'ssl' value.
+				if ((isset($d_info['ssl'])) && (strlen($d_info['ssl']))) {
+					$this->destination_info['ssl'] = esc_attr($d_info['ssl']);
+				} else {
+					$this->destination_info['ssl'] = "no";
+				}
+
+				if ($this->destination_info['ssl'] == "no")
+					$this->destination_info['protocol'] = "ftp";
+				else
+					$this->destination_info['protocol'] = "sftp";
+
+				// We no longer need the 'ssl' setting.
+				unset($this->destination_info['ssl']);
+=======
 			if ((isset($d_info['ssl'])) && (strlen($d_info['ssl']))) {
 				$this->destination_info['ssl'] = esc_attr($d_info['ssl']);
 			} else {
 				$this->destination_info['ssl'] = "no";
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 			}
 
 			if ((isset($d_info['passive'])) && (strlen($d_info['passive']))) {
@@ -410,7 +499,11 @@ if (!class_exists('SnapshotDestinationFTP')) {
 
 				if ($this->destination_info['port'] == 0) {
 
+<<<<<<< HEAD
+					if ($this->destination_info['protocol'] == "sftp")
+=======
 					if ($this->destination_info['ssl'] == "yes")
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 						$this->destination_info['port'] = 22;
 					else
 						$this->destination_info['port'] = 21;
@@ -418,7 +511,11 @@ if (!class_exists('SnapshotDestinationFTP')) {
 
 			} else {
 
+<<<<<<< HEAD
+				if ($this->destination_info['protocol'] == "sftp")
+=======
 				if ($this->destination_info['ssl'] == "yes")
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 					$this->destination_info['port'] = 22;
 				else
 					$this->destination_info['port'] = 21;
@@ -430,7 +527,11 @@ if (!class_exists('SnapshotDestinationFTP')) {
 
 				if ($this->destination_info['timeout'] == 0) {
 
+<<<<<<< HEAD
+					if ($this->destination_info['protocol'] == "sftp")
+=======
 					if ($this->destination_info['ssl'] == "yes")
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 						$this->destination_info['timeout'] = 90;
 					else
 						$this->destination_info['timeout'] = 90;
@@ -438,7 +539,11 @@ if (!class_exists('SnapshotDestinationFTP')) {
 
 			}  else {
 
+<<<<<<< HEAD
+				if ($this->destination_info['protocol'] == "sftp")
+=======
 				if ($this->destination_info['ssl'] == "yes")
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 					$this->destination_info['timeout'] = 90;
 				else
 					$this->destination_info['timeout'] = 90;
@@ -452,7 +557,11 @@ if (!class_exists('SnapshotDestinationFTP')) {
 		}
 
 		function login() {
+<<<<<<< HEAD
+			if ($this->destination_info['protocol'] == "sftp") {
+=======
 			if ($this->destination_info['ssl'] == "yes") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 				$this->error_array['responseArray'][] 	= "Using sFTP connection";
 				$this->error_array['responseArray'][] 	= "Connecting to host: ". $this->destination_info['address']
@@ -479,6 +588,26 @@ if (!class_exists('SnapshotDestinationFTP')) {
 					return true;
 				}
 			} else {
+<<<<<<< HEAD
+				if ($this->destination_info['protocol'] == "ftp") {
+					$this->error_array['responseArray'][] 	= "Using FTP connection";
+
+					$this->error_array['responseArray'][] 	= "Connecting to host: ". $this->destination_info['address']
+															." Port: ". $this->destination_info['port']
+															." Timeout: ". $this->destination_info['timeout'];
+
+					$this->ftp_connection = ftp_connect( $this->destination_info['address'], intval($this->destination_info['port']) );
+				} else if ($this->destination_info['protocol'] == "ftps-tcl-ssl") {
+
+						$this->error_array['responseArray'][] 	= "Using FTP with TSL/SSL connection";
+
+						$this->error_array['responseArray'][] 	= "Connecting to host: ". $this->destination_info['address']
+																." Port: ". $this->destination_info['port']
+																." Timeout: ". $this->destination_info['timeout'];
+
+						$this->ftp_connection = ftp_ssl_connect( $this->destination_info['address'], intval($this->destination_info['port']) );
+				}
+=======
 				$this->error_array['responseArray'][] 	= "Using FTP connection";
 
 				$this->error_array['responseArray'][] 	= "Connecting to host: ". $this->destination_info['address']
@@ -486,6 +615,7 @@ if (!class_exists('SnapshotDestinationFTP')) {
 															." Timeout: ". $this->destination_info['timeout'];
 
 				$this->ftp_connection = ftp_connect( $this->destination_info['address'], intval($this->destination_info['port']) );
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 				if ( !is_resource($this->ftp_connection) ) {
 					$this->error_array['errorStatus'] 		= true;
@@ -531,7 +661,11 @@ if (!class_exists('SnapshotDestinationFTP')) {
 		}
 
 		function logout() {
+<<<<<<< HEAD
+			if ($this->destination_info['protocol'] == "sftp") {
+=======
 			if ($this->destination_info['ssl'] == "yes") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 				unset($this->sftp_connection);
 			} else {
 				ftp_close($this->ftp_connection);
@@ -540,7 +674,11 @@ if (!class_exists('SnapshotDestinationFTP')) {
 		}
 		function get_remote_directory() {
 
+<<<<<<< HEAD
+			if ($this->destination_info['protocol'] == "sftp") {
+=======
 			if ($this->destination_info['ssl'] == "yes") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 				return $this->sftp_connection->pwd();
 			} else {
 				return ftp_pwd($this->ftp_connection);
@@ -548,7 +686,11 @@ if (!class_exists('SnapshotDestinationFTP')) {
 		}
 
 		function set_remote_directory() {
+<<<<<<< HEAD
+			if ($this->destination_info['protocol'] == "sftp") {
+=======
 			if ($this->destination_info['ssl'] == "yes") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 				if ( strlen($this->destination_info['directory']))  {
 					if (!$this->mkdir($this->destination_info['directory'] )) {
@@ -587,7 +729,11 @@ if (!class_exists('SnapshotDestinationFTP')) {
 
 		function send_file($filename) {
 
+<<<<<<< HEAD
+			if ($this->destination_info['protocol'] == "sftp") {
+=======
 			if ($this->destination_info['ssl'] == "yes") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 				$put_ret = $this->sftp_connection->put(basename($filename), $filename, NET_SFTP_LOCAL_FILE);
 				if ($put_ret != true) {
 					$this->error_array['errorStatus'] 		= true;
@@ -643,7 +789,11 @@ if (!class_exists('SnapshotDestinationFTP')) {
 			if (!strlen($directory)) return;
 
 			$this->error_array['responseArray'][] 	= "Changing Directory: ". $directory;
+<<<<<<< HEAD
+			if ($this->destination_info['protocol'] == "yes") {
+=======
 			if ($this->destination_info['ssl'] == "yes") {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 				if (!$this->sftp_connection) return false;
 

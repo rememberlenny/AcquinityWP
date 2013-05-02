@@ -115,9 +115,15 @@ if ( !class_exists( "wpmudev_snapshot_admin_metaboxes" ) ) {
 						<td>
 							<?php
 								if (isset($_REQUEST['snapshot-name'])) {
+<<<<<<< HEAD
+									$snapshot_name = sanitize_text_field($_REQUEST['snapshot-name']);
+								} else if (isset($item['name'])) {
+									$snapshot_name = sanitize_text_field($item['name']);
+=======
 									$snapshot_name = esc_attr($_REQUEST['snapshot-name']);
 								} else if (isset($item['name'])) {
 									$snapshot_name = esc_attr($item['name']);
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 								} else {
 									$snapshot_name = "snapshot";
 								}
@@ -126,7 +132,11 @@ if ( !class_exists( "wpmudev_snapshot_admin_metaboxes" ) ) {
 									echo $snapshot_name;
 								} else {
 									?>
+<<<<<<< HEAD
+									<input type="text" name="snapshot-name" id="snapshot-name" value="<?php echo stripslashes($snapshot_name); ?>" />
+=======
 									<input type="text" name="snapshot-name" id="snapshot-name" value="<?php echo $snapshot_name; ?>" />
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 									<p class="description"><?php _e('Give this configuration a name', SNAPSHOT_I18N_DOMAIN); ?></p>
 									<?php
 								}
@@ -140,7 +150,11 @@ if ( !class_exists( "wpmudev_snapshot_admin_metaboxes" ) ) {
 						<td>
 							<?php
 								if (isset($_REQUEST['snapshot-notes'])) {
+<<<<<<< HEAD
+									$snapshot_notes = sanitize_text_field($_REQUEST['snapshot-notes']);
+=======
 									$snapshot_notes = esc_attr($_REQUEST['snapshot-notes']);
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 								} else if (isset($item['notes'])) {
 									$snapshot_notes = esc_attr($item['notes']);
 								} else {
@@ -290,13 +304,23 @@ if ( !class_exists( "wpmudev_snapshot_admin_metaboxes" ) ) {
 																		}
 
 																	} else {
+<<<<<<< HEAD
+																		if ((isset($_GET['page']))
+																		 && (sanitize_text_field($_GET['page']) == "snapshots_new_panel")) {
+=======
 																		if ((isset($_GET['page'])) && ($_GET['page'] == "snapshots_new_panel")) {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 
 																			if ((isset($blog_tables_last[$table_set_key]))
 																			 && ( array_search( $table_key, $blog_tables_last[$table_set_key] ) !== false ))
 																				$is_checked = ' checked="checked" ';
 
+<<<<<<< HEAD
+																		} else 	if ((isset($_GET['page']))
+																		         && (sanitize_text_field($_GET['page']) == "snapshots_edit_panel")) {
+=======
 																		} else 	if ((isset($_GET['page'])) && ($_GET['page'] == "snapshots_edit_panel")) {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 																			if (isset($item['tables-sections'])) {
 																				if ( isset( $item['tables-sections'][$table_set_key][$table_key] ))
 																					$is_checked = ' checked="checked" ';
@@ -528,7 +552,11 @@ if ( !class_exists( "wpmudev_snapshot_admin_metaboxes" ) ) {
 					<tr class="form-field">
 						<td colspan="2">
 							<?php
+<<<<<<< HEAD
+								if ((isset($_GET['page'])) && (sanitize_text_field($_GET['page']) == "snapshots_new_panel")) {
+=======
 								if ((isset($_GET['page'])) && ($_GET['page'] == "snapshots_new_panel")) {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 									?><p><?php _e("Select a backup interval from the options below. If you select 'Immediate' the backup will start immediately and will only occur once. If you select any other value the initial backup will start within a few minutes then repeat on the selected interval.", SNAPSHOT_I18N_DOMAIN); ?></p><?php
 								} else {
 									?><p><?php _e("You can change the interval when a backup occurs by selecting from the options below. If you select 'Suspend' the recurring backups will be stopped. If you select to schedule a backup or change the interval, the initial backup will start within a few minutes then repeat on the selected interval", SNAPSHOT_I18N_DOMAIN); ?></p><?php
@@ -555,7 +583,11 @@ if ( !class_exists( "wpmudev_snapshot_admin_metaboxes" ) ) {
 							<select name="snapshot-interval" id="snapshot-interval">
 								<optgroup label="<?php _e("Immediate Options", SNAPSHOT_I18N_DOMAIN); ?>">
 								<?php
+<<<<<<< HEAD
+									if ((isset($_GET['page'])) && (sanitize_text_field($_GET['page']) == "snapshots_new_panel")) {
+=======
 									if ((isset($_GET['page'])) && ($_GET['page'] == "snapshots_new_panel")) {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 										?><option value="immediate"><?php _e('Run immediate', SNAPSHOT_I18N_DOMAIN); ?></option><?php
 									} else {
 										if ((!empty($item_interval)) && ($item_interval != "immediate")) {

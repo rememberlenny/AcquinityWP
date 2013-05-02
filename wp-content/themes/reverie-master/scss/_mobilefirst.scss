@@ -168,12 +168,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         font-weight: 300;
         font-size: 2em;
         clear: right;
-        background:#000;
-        background:rgb (0,0,0);
-        background:rgba(0,0,0,0.5);
-        box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
-        -moz-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
-        -webkit-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
         color: white;
         display: inline-block;
         margin-bottom: .5em;
@@ -190,10 +184,10 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         padding-bottom: 20px;
         background:#000;
         background:rgb (0,0,0);
-        background:rgba(0,0,0,0.5);
-        box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
-        -moz-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
-        -webkit-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
+        background:rgba(50,52,92,.8);
+        box-shadow: 20px 0 0 rgba(50,52,92,.8),-20px 0 0 rgba(50,52,92,.8);
+        -moz-box-shadow: 20px 0 0 rgba(50,52,92,.8),-20px 0 0 rgba(50,52,92,.8);
+        -webkit-box-shadow: 20px 0 0 rgba(50,52,92,.8),-20px 0 0 rgba(50,52,92,.8);
         a{
           color:white;
         }
@@ -334,8 +328,18 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 .case-studies-content{
   padding-bottom: 2em;
 }
- 
-
+.stat-case{
+  p{
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
+.orbit-container{ 
+        background: none !important; 
+        text-align: left;
+        overflow:visible;
+    }
   #featrap{
     margin: 0 auto;
     margin-left: .5em;
@@ -498,13 +502,9 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
         opacity: 1;
         @include transition( all, .2s );
         }
-      .orbit-container{ 
-          background: none !important; 
-          text-align: left;
-          overflow:visible;
-      }
 
     }    
+    
     .case-studies-content{
       .orbit-bullets{
         display: inline-block;
@@ -527,7 +527,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
     .archive-link-lead{
       p{
         margin-top: 0.4em;
-        margin-bottom: 0.5em;
+        margin-bottom: .8em;
       }
     }
 
@@ -634,17 +634,60 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
 .home{
   .masthead-photo-content{
-    h1{
-      background:rgba(0,0,0,0.5);
-      box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
-      -moz-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
-      -webkit-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
+    h1 span{
+      background:rgba(50,52,92,.8);
+      box-shadow: 20px 0 0 rgba(50,52,92,.8),-20px 0 0 rgba(50,52,92,.8);
+      -moz-box-shadow: 20px 0 0 rgba(50,52,92,.8),-20px 0 0 rgba(50,52,92,.8);
+      -webkit-box-shadow: 20px 0 0 rgba(50,52,92,.8),-20px 0 0 rgba(50,52,92,.8);
     }
     p{
-      background:rgba(0,0,0,0.5);
-      box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
-      -moz-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
-      -webkit-box-shadow: 20px 0 0 rgba(0,0,0,0.5),-20px 0 0 rgba(0,0,0,0.5);
+      background:rgba(50,52,92,.8);
+      box-shadow: 20px 0 0 rgba(50,52,92,.8),-20px 0 0 rgba(50,52,92,.8);
+      -moz-box-shadow: 20px 0 0 rgba(50,52,92,.8),-20px 0 0 rgba(50,52,92,.8);
+      -webkit-box-shadow: 20px 0 0 rgba(50,52,92,.8),-20px 0 0 rgba(50,52,92,.8);
     }
   }
+}
+.head-button-styles{
+  margin: 0 auto; width:200px; height: 200px; 
+}
+.casing-text{
+  font-weight: 800; font-size: 1.5em; line-height: 8em;
+}
+
+.stats h4{
+  color: #333 !important;
+  margin-bottom:0em;
+}
+.stats h5{
+  color: #333 !important;
+  margin-top:0em;
+}
+.orbit-bullets{ display: none;}
+.orbit-container{ background: none; }
+#masthead-photo{
+  height:auto !important;
+}
+
+.head-button-styles:hover span{
+  font-size: 1.7em;
+  color: white;
+  line-height:7em;
+}
+
+body #sidebar{ padding-bottom: 0em !important;}
+.footer-full{background: none !important;} 
+.home #masthead-photo-content h1.hero-text span.kick{
+  font-size: 2em!important;
+}
+.home #masthead-photo-content h1.hero-text{
+  font-weight: 600;
+  font-size: 2.3em!important;
+  color: #eee;
+}
+
+.home #masthead-photo{ background: rgb(50,52,92)!important; }
+
+.home .masthead-photo-content {
+  margin-top: 90px !important;
 }

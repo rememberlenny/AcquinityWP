@@ -112,14 +112,71 @@ function content_header_function(){ ?>
       <div class="masthead-photo h300" id="masthead-photo">
         <div class="s9999 masthead-photo-extension image-wrapper" id="masthead-photo-extension">
           <div class="masthead-photo-content" id="masthead-photo-content">
+            
+            <?php 
+            if( get_field('first_hero_button', 'option') ): 
+              $firstherobutton = get_field('first_hero_button', 'option'); 
+            endif; 
+            if( get_field('second_hero_button', 'option') ): 
+              $secondherobutton = get_field('second_hero_button', 'option'); 
+            endif; 
+            if( get_field('third_hero_button', 'option') ): 
+              $thirdherobutton = get_field('third_hero_button', 'option'); 
+            endif; 
+            if( get_field('first_hero_button', 'option') ): 
+              $firstherobuttonhover = get_field('first_hero_button_hover', 'option'); 
+            endif; 
+            if( get_field('second_hero_button', 'option') ): 
+              $secondherobuttonhover = get_field('second_hero_button_hover', 'option'); 
+            endif; 
+            if( get_field('third_hero_button', 'option') ): 
+              $thirdherobuttonhover = get_field('third_hero_button_hover', 'option'); 
+            endif; 
+            ?>
+            <style>
+              #firstherobutton{
+                background:url('<?php echo $firstherobutton; ?>');
+              }
+              #secondherobutton{
+                background:url('<?php echo $secondherobutton; ?>');
+              }
+              #thirdherobutton{
+                background:url('<?php echo $thirdherobutton; ?>');
+              }               
+              #firstherobutton:hover{
+                background:url('<?php echo $firstherobuttonhover; ?>');
+              }
+              #secondherobutton:hover{
+                background:url('<?php echo $secondherobuttonhover; ?>');
+              }
+              #thirdherobutton:hover{
+                background:url('<?php echo $thirdherobuttonhover; ?>');
+              } 
+            </style>
             <?php
             
             if(is_page('home')){
               if(get_field('home_section_title')){
-                echo '<div> <h1 class="text-left hero-text">' . get_field('home_section_title') . '</h1><br>';
+                echo '<div class="text-center"> <h1 class="text-center hero-text"><span>We turn our members into</span><br><br><span class="kick" style="line-height: 0.3em !important;">Your Customers</span></h1><br>';
+              
+              echo '<div class="threebuttons text-center">';
+                echo '<ul class="large-block-grid-3 small-block-grid-1">';
+                  echo '<li><ul><li class="head-button-styles" id="firstherobutton">';
+                  echo '<span class="casing-text">Advertisers</span>';
+                  echo '</li></ul></li>';
+                  echo '<li><ul><li class="head-button-styles" id="secondherobutton">';
+                  echo '<span class="casing-text">Products</span>';
+                  echo '</li></ul></li>';
+                  echo '<li><ul><li class="head-button-styles" id="thirdherobutton">';
+                  echo '<span class="casing-text">Services</span>';
+                  echo '</li></ul></li>';
+                echo '</ul>';
+              echo '</div>';
+              echo '<h1 style="font-size: 1.5em !important;
+font-weight: 400;" class="text-center hero-text"> We generate a large volume of high-quality customers for our advertisers at their target CPA</h1>';
               }
               if(get_field('hero_para_1')){
-                echo '<span><p class="hero-text">' . get_field('hero_para_1') . '</p></span></div>';
+                echo '</div>';
               }
             }
             else {
@@ -142,7 +199,7 @@ function postHeaderStyleCall(){
   endif;
   ?>
   <style type="text/css">
-    .masthead-photo {
+    #masthead-photo {
       background: url("<?php echo $image[0]; ?>") center center no-repeat #FAF8F6;
     }
     <?php

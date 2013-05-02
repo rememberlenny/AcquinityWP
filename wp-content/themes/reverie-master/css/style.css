@@ -402,6 +402,10 @@ ul, li, ol {
   list-style: none;
 }
 
+border-top1g {
+  border-top: 1px solid #e4e2e1;
+}
+
 ul.disc li {
   list-style: disc;
 }
@@ -556,6 +560,10 @@ a.svbt-line {
   padding-left: 0.2em;
 }
 
+.mb02 {
+  margin-bottom: 0.2em;
+}
+
 .mn93 {
   margin-left: -0.9375em;
 }
@@ -658,8 +666,98 @@ nav.top-bar input {
   top: 24px;
 }
 
+.menu-item {
+  margin: 1.78em 0em;
+}
+.menu-item .dropdown {
+  margin-top: 1em;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.menu-item .dropdown .menu-item {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+.menu-item .dropdown li a {
+  padding-top: 0.9em !important;
+  padding-bottom: 0.9em !important;
+}
+
+.menu-item-33 {
+  background: #9a373f !important;
+  margin: 1.59em 1.6em 1.59em 0em !important;
+  line-height: 1em !important;
+  padding: 5px 10px 6px !important;
+  border-radius: 30px !important;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  -ms-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.menu-item-33:hover {
+  background: #742a30 !important;
+  -webkit-transition: background 0.1s;
+  -moz-transition: background 0.1s;
+  -o-transition: background 0.1s;
+  -ms-transition: background 0.1s;
+  transition: background 0.1s;
+}
+
+section.top-bar-section .left > li.has-dropdown .dropdown li a:not(.button):hover {
+  background: #4f1c20 !important;
+}
+
+section.top-bar-section .left > li.has-dropdown .dropdown li:nth-child(even) a:not(.button) {
+  background: #bd4750 !important;
+}
+section.top-bar-section .left > li.has-dropdown .dropdown li:nth-child(even) a:not(.button):hover {
+  background: #4f1c20 !important;
+}
+
 .top-bar-section ul li > a {
   height: auto !important;
+  font-size: 1em !important;
+}
+
+.top-nav-wrapper {
+  background: none !important;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: none !important;
+}
+
+li.divider {
+  display: none;
+}
+
+.top-bar {
+  background: none !important;
+}
+
+.top-bar-section ul {
+  background: none !important;
+}
+
+.top-bar-section li a:not(.button) {
+  background: none !important;
+}
+
+section.top-bar-section li a:not(.button) {
+  padding: 0 5px;
+}
+
+ul.left {
+  float: right !important;
+}
+
+.top-bar-section .dropdown li a:not(.button) {
+  background: #9a373f !important;
+}
+
+.top-bar-section .dropdown li a:not(.button):hover {
+  background: #cb6c74 !important;
 }
 
 @media only screen and (min-width: 58.75em) {
@@ -668,10 +766,10 @@ nav.top-bar input {
   }
 
   .top-bar-section .dropdown li a {
-    color: #222222;
+    color: #eee;
     white-space: nowrap;
     padding: 7px 25px;
-    background: white;
+    background: none;
   }
 }
 .top-bar-section .left > li a:not(.button) {
@@ -680,7 +778,7 @@ nav.top-bar input {
   -o-transition: all .2s;
   -ms-transition: all .2s;
   transition: all .2s;
-  color: #353230 !important;
+  color: #eee !important;
 }
 .top-bar-section .left > li a:not(.button):hover {
   -webkit-transition: all .2s;
@@ -688,7 +786,7 @@ nav.top-bar input {
   -o-transition: all .2s;
   -ms-transition: all .2s;
   transition: all .2s;
-  background: #efefef !important;
+  background: none !important;
 }
 
 .top-bar {
@@ -751,8 +849,8 @@ nav.top-bar input {
   }
 
   section.top-bar-section ul li > a {
-    color: #333;
-    font-size: .9em;
+    color: #eee;
+    font-size: 1.2em;
     font-weight: 600;
   }
 }
@@ -765,7 +863,7 @@ nav.top-bar input {
 }
 
 .logo {
-  padding-top: .7em;
+  padding-top: 1.2em;
   width: 130px;
   opacity: 1;
   -webkit-transition: opacity .2s linear;
@@ -2295,12 +2393,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   font-weight: 300;
   font-size: 2em;
   clear: right;
-  background: #000;
-  background: rgb 0, 0, 0;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
   color: white;
   display: inline-block;
   margin-bottom: .5em;
@@ -2317,10 +2409,10 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   padding-bottom: 20px;
   background: #000;
   background: rgb 0, 0, 0;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
+  background: rgba(50, 52, 92, 0.8);
+  box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -moz-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -webkit-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
 }
 .masthead-photo-content p a {
   color: white;
@@ -2464,6 +2556,18 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   padding-bottom: 2em;
 }
 
+.stat-case p {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.orbit-container {
+  background: none !important;
+  text-align: left;
+  overflow: visible;
+}
+
 #featrap {
   margin: 0 auto;
   margin-left: .5em;
@@ -2505,7 +2609,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   font-size: 4em;
 }
 #featrap .case-row h5.subheader {
-  font-size: 4em !important;
+  font-size: 4em  !important;
   margin-bottom: 0em;
   margin-top: 0em;
   line-height: 1.2em;
@@ -2638,11 +2742,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   -ms-transition: all 0.2s;
   transition: all 0.2s;
 }
-.case-studies-extension .orbit-container {
-  background: none !important;
-  text-align: left;
-  overflow: visible;
-}
 
 .case-studies-content .orbit-bullets {
   display: inline-block;
@@ -2659,7 +2758,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
 .archive-link-lead p {
   margin-top: 0.4em;
-  margin-bottom: 0.5em;
+  margin-bottom: .8em;
 }
 
 .brandwrap .orbit-container {
@@ -2769,17 +2868,83 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   margin-top: 25px;
 }
 
-.home .masthead-photo-content h1 {
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
+.home .masthead-photo-content h1 span {
+  background: rgba(50, 52, 92, 0.8);
+  box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -moz-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -webkit-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
 }
 .home .masthead-photo-content p {
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5), -20px 0 0 rgba(0, 0, 0, 0.5);
+  background: rgba(50, 52, 92, 0.8);
+  box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -moz-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+  -webkit-box-shadow: 20px 0 0 rgba(50, 52, 92, 0.8), -20px 0 0 rgba(50, 52, 92, 0.8);
+}
+
+.head-button-styles {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+
+.casing-text {
+  font-weight: 800;
+  font-size: 1.5em;
+  line-height: 8em;
+}
+
+.stats h4 {
+  color: #333 !important;
+  margin-bottom: 0em;
+}
+
+.stats h5 {
+  color: #333 !important;
+  margin-top: 0em;
+}
+
+.orbit-bullets {
+  display: none;
+}
+
+.orbit-container {
+  background: none;
+}
+
+#masthead-photo {
+  height: auto !important;
+}
+
+.head-button-styles:hover span {
+  font-size: 1.7em;
+  color: white;
+  line-height: 7em;
+}
+
+body #sidebar {
+  padding-bottom: 0em !important;
+}
+
+.footer-full {
+  background: none !important;
+}
+
+.home #masthead-photo-content h1.hero-text span.kick {
+  font-size: 2em !important;
+}
+
+.home #masthead-photo-content h1.hero-text {
+  font-weight: 600;
+  font-size: 2.3em !important;
+  color: #eee;
+}
+
+.home #masthead-photo {
+  background: #32345c !important;
+}
+
+.home .masthead-photo-content {
+  margin-top: 90px !important;
 }
 
 h3.subheader {
@@ -5890,7 +6055,7 @@ form.custom .custom.disabled {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: white;
+  background: #111111;
 }
 
 .fixed {
@@ -5903,10 +6068,10 @@ form.custom .custom.disabled {
 
 .top-bar {
   overflow: hidden;
-  height: 75px;
-  line-height: 75px;
+  height: 1em;
+  line-height: 1em;
   position: relative;
-  background: white;
+  background: #111111;
   margin-bottom: 1.875em;
 }
 .top-bar ul {
@@ -5932,21 +6097,21 @@ form.custom .custom.disabled {
   position: relative;
 }
 .top-bar .name {
-  height: 75px;
+  height: 1em;
   margin: 0;
   font-size: 16px;
 }
 .top-bar .name h1 {
-  line-height: 75px;
+  line-height: 1em;
   font-size: 1.0625em;
   margin: 0;
 }
 .top-bar .name h1 a {
   font-weight: bold;
-  color: #222222;
+  color: #eeeeee;
   width: 50%;
   display: block;
-  padding: 0 25px;
+  padding: 0 0.33333em;
 }
 .top-bar .toggle-topbar {
   position: absolute;
@@ -5954,18 +6119,18 @@ form.custom .custom.disabled {
   top: 0;
 }
 .top-bar .toggle-topbar a {
-  color: #222222;
+  color: #eeeeee;
   text-transform: uppercase;
   font-size: 0.8125em;
   font-weight: bold;
   position: relative;
   display: block;
-  padding: 0 25px;
-  height: 75px;
-  line-height: 75px;
+  padding: 0 0.33333em;
+  height: 1em;
+  line-height: 1em;
 }
 .top-bar .toggle-topbar.menu-icon {
-  right: 25px;
+  right: 0.33333em;
   top: 50%;
   margin-top: -16px;
   padding-left: 40px;
@@ -5976,7 +6141,7 @@ form.custom .custom.disabled {
   height: 34px;
   line-height: 33px;
   padding: 0;
-  color: #222222;
+  color: #eeeeee;
 }
 .top-bar .toggle-topbar.menu-icon a span {
   position: absolute;
@@ -5984,15 +6149,15 @@ form.custom .custom.disabled {
   display: block;
   width: 16px;
   height: 0;
-  -webkit-box-shadow: 0 10px 0 1px #222222, 0 16px 0 1px #222222, 0 22px 0 1px #222222;
-  box-shadow: 0 10px 0 1px #222222, 0 16px 0 1px #222222, 0 22px 0 1px #222222;
+  -webkit-box-shadow: 0 10px 0 1px #eeeeee, 0 16px 0 1px #eeeeee, 0 22px 0 1px #eeeeee;
+  box-shadow: 0 10px 0 1px #eeeeee, 0 16px 0 1px #eeeeee, 0 22px 0 1px #eeeeee;
 }
 .top-bar.expanded {
   height: auto;
   background: transparent;
 }
 .top-bar.expanded .title-area {
-  background: white;
+  background: #111111;
 }
 .top-bar.expanded .toggle-topbar a {
   color: #888888;
@@ -6014,13 +6179,13 @@ form.custom .custom.disabled {
   width: 100%;
   height: auto;
   display: block;
-  background: white;
+  background: #333333;
   font-size: 16px;
   margin: 0;
 }
 .top-bar-section .divider {
-  border-bottom: solid 1px white;
-  border-top: solid 1px #e6e6e6;
+  border-bottom: solid 1px #4d4d4d;
+  border-top: solid 1px #1a1a1a;
   clear: both;
   height: 1px;
   width: 100%;
@@ -6028,16 +6193,16 @@ form.custom .custom.disabled {
 .top-bar-section ul li > a {
   display: block;
   width: 100%;
-  color: #222222;
+  color: #eeeeee;
   padding: 12px 0 12px 0;
-  padding-left: 25px;
+  padding-left: 0.33333em;
   font-size: 0.8125em;
   font-weight: bold;
-  background: white;
-  height: 75px;
+  background: #333333;
+  height: 1em;
 }
 .top-bar-section ul li > a:hover {
-  background: #f7f7f7;
+  background: #2b2b2b;
 }
 .top-bar-section ul li > a.button {
   background: #696a97;
@@ -6065,10 +6230,10 @@ form.custom .custom.disabled {
   background: #893d10;
 }
 .top-bar-section ul li.active a {
-  background: #f7f7f7;
+  background: #2b2b2b;
 }
 .top-bar-section .has-form {
-  padding: 25px;
+  padding: 0.33333em;
 }
 .top-bar-section .has-dropdown {
   position: relative;
@@ -6079,8 +6244,8 @@ form.custom .custom.disabled {
   width: 0;
   height: 0;
   border: solid 5px;
-  border-color: transparent transparent transparent rgba(34, 34, 34, 0.5);
-  margin-right: 25px;
+  border-color: transparent transparent transparent rgba(50, 52, 92, 0.5);
+  margin-right: 0.33333em;
   margin-top: -4.5px;
   position: absolute;
   top: 22px;
@@ -6104,18 +6269,18 @@ form.custom .custom.disabled {
 }
 .top-bar-section .dropdown li a {
   font-weight: normal;
-  padding: 8px 25px;
+  padding: 8px 0.33333em;
 }
 .top-bar-section .dropdown li.title h5 {
   margin-bottom: 0;
 }
 .top-bar-section .dropdown li.title h5 a {
-  color: #222222;
-  line-height: 37.5px;
+  color: #eeeeee;
+  line-height: 0.5em;
   display: block;
 }
 .top-bar-section .dropdown label {
-  padding: 8px 25px 2px;
+  padding: 8px 0.33333em 2px;
   margin-bottom: 0;
   text-transform: uppercase;
   color: #555555;
@@ -6134,7 +6299,7 @@ form.custom .custom.disabled {
 
 @media only screen and (min-width: 58.75em) {
   .top-bar {
-    background: white;
+    background: #111111;
     *zoom: 1;
     overflow: visible;
   }
@@ -6164,7 +6329,7 @@ form.custom .custom.disabled {
     top: 8px;
   }
   .top-bar.expanded {
-    background: white;
+    background: #111111;
   }
 
   .contain-to-grid .top-bar {
@@ -6190,12 +6355,12 @@ form.custom .custom.disabled {
     display: none;
   }
   .top-bar-section li a:not(.button) {
-    padding: 0 25px;
-    line-height: 75px;
-    background: white;
+    padding: 0 0.33333em;
+    line-height: 1em;
+    background: #111111;
   }
   .top-bar-section li a:not(.button):hover {
-    background: #b3b3b3;
+    background: black;
   }
   .top-bar-section .has-dropdown > a {
     padding-right: 35px !important;
@@ -6206,7 +6371,7 @@ form.custom .custom.disabled {
     width: 0;
     height: 0;
     border: solid 5px;
-    border-color: rgba(34, 34, 34, 0.5) transparent transparent transparent;
+    border-color: rgba(50, 52, 92, 0.5) transparent transparent transparent;
     margin-top: -2.5px;
   }
   .top-bar-section .has-dropdown.moved {
@@ -6231,15 +6396,15 @@ form.custom .custom.disabled {
     min-width: 100%;
   }
   .top-bar-section .dropdown li a {
-    color: #222222;
+    color: #32345c;
     line-height: 1;
     white-space: nowrap;
-    padding: 7px 25px;
-    background: white;
+    padding: 7px 0.33333em;
+    background: #1e1e1e;
   }
   .top-bar-section .dropdown li label {
     white-space: nowrap;
-    background: white;
+    background: #1e1e1e;
   }
   .top-bar-section .dropdown li .dropdown {
     left: 100%;
@@ -6248,16 +6413,16 @@ form.custom .custom.disabled {
   .top-bar-section > ul > .divider {
     border-bottom: none;
     border-top: none;
-    border-right: solid 1px white;
-    border-left: solid 1px #e6e6e6;
+    border-right: solid 1px #2b2b2b;
+    border-left: solid 1px black;
     clear: none;
-    height: 75px;
+    height: 1em;
     width: 0px;
   }
   .top-bar-section .has-form {
-    background: white;
-    padding: 0 25px;
-    height: 75px;
+    background: #111111;
+    padding: 0 0.33333em;
+    height: 1em;
   }
   .top-bar-section ul.right li .dropdown {
     left: auto;

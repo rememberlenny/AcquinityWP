@@ -16,6 +16,7 @@ function reverie_theme_support() {
 	add_theme_support('menus');
 	register_nav_menus(array(
 		'primary' => __('Primary Navigation', 'reverie'),
+		'top' => __('Top Navigation', 'reverie'),
 		'utility' => __('Utility Navigation', 'reverie')
 	));
 	add_theme_support( 'custom-background',
@@ -36,6 +37,7 @@ require_once('includes/lkbg_page_bottom.php');
 require_once('includes/lkbg_as_post.php');
 require_once('includes/lkbg_as_plugin.php');
 require_once('includes/lkbg_brand_logo.php');
+require_once('includes/lkbg_stat_bar.php');
 require_once('includes/lkbg_options_page.php');
 
 ?>

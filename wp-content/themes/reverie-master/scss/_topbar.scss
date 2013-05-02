@@ -7,43 +7,122 @@
   //
 
     /* Background color for the top bar */
-    $topbar-bg: #fff;
+    //$topbar-bg: none;
 
     /* Height and margin */
-    $topbar-height: 75px;
+    $topbar-height: 1em;
     $topbar-margin-bottom: emCalc(30px);
 
     /* Control Input height for top bar */
 
     /* Set the link colors and styles for top-level nav */
-    $topbar-link-color: #222;
+    $topbar-link-color: #eee;
 
     /* Style the top bar dropdown elements */
-    $topbar-dropdown-bg: #fff;
-    $topbar-dropdown-link-color: #222;
-    $topbar-dropdown-toggle-color: #222;
+    //$topbar-dropdown-bg: none;
+    $topbar-dropdown-link-color: #32345C;
+    $topbar-dropdown-toggle-color: #32345C;
 
     /* Top menu icon styles */
-    $topbar-menu-link-color: #222;
-    $topbar-menu-icon-color: #222;
+    $topbar-menu-link-color: #eee;
+    $topbar-menu-icon-color: #eee;
 
     nav.top-bar input{
       top: 24px;
     }
-    .top-bar-section .left > li.has-dropdown a:not(.button){
+    .menu-item{
+      margin: 1.78em 0em;
+
+      .dropdown{
+        margin-top:1em;
+        border-radius: 10px;
+        overflow: hidden;
+        .menu-item{
+          margin-top: 0em;
+          margin-bottom: 0em;
+        }
+        li{
+          a{
+            padding-top: .9em!important;
+            padding-bottom: .9em!important;
+          }
+          &:first-child{
+            a{
+            }
+          }
+          &:last-child{
+            a{}
+          }
+        }
+      }
+    }
+    .menu-item-33{
+      background: #9a373f !important;
+      margin: 1.59em 1.6em 1.59em  0em!important;
+      line-height: 1em!important;
+      padding: 5px 10px 6px!important;
+      border-radius: 30px!important;
+      @include transition(background, .2s);
+      &:hover{
+      background: darken(#9a373f, 10%) !important;
+      @include transition(background, .1s);
+      }
+    }    
+    //SHAME
+    section.top-bar-section .left > li.has-dropdown .dropdown li a:not(.button):hover{
+      background: darken(#9a373f,20%) !important;
+    }
+    section.top-bar-section .left > li.has-dropdown .dropdown li:nth-child(even) a:not(.button){
+      background: lighten(#9a373f,10%) !important;
+      &:hover{
+        background: darken(#9a373f,20%) !important;
+      }
     }
     .top-bar-section ul li > a {
       height: auto !important;
+      font-size: 1em !important;
     }
+    .top-nav-wrapper{
+      background: none!important;
+      position: absolute;
+      z-index: 1000;
+      width: 100%;
+      border-bottom: none !important; 
+    }
+    li.divider{
+      display: none;
+    }
+    .top-bar{
+      background: none !important;
+    }
+    .top-bar-section ul{
+      background: none !important;
+    }
+    .top-bar-section li a:not(.button){
+      background: none!important;
+    }
+    section.top-bar-section li a:not(.button){
+      padding: 0 5px;
+    }
+    ul.left{ float: right !important; }
+    
+    //Hover dropdown
+    .top-bar-section .dropdown li a:not(.button){
+      background: #9a373f !important;
+    }
+    .top-bar-section .dropdown li a:not(.button):hover{
+      background: lighten(#9a373f, 20%) !important;
+    }
+    //!SHAME
     @media only screen and (min-width: 58.75em){
       .top-bar-section .has-dropdown > a:after {
         top: 37px !important;
       }
       .top-bar-section .dropdown li a {
-        color: #222222;
+        color: #eee;
         white-space: nowrap;
         padding: 7px 25px;
-        background: white;
+        background: none;
       }
     }
     .top-bar-section .left > li a{
@@ -55,14 +134,14 @@
         -o-transition: all .2s;
         -ms-transition: all .2s;
         transition: all .2s;
-        color: #353230 !important;
+        color: #eee !important;
         &:hover {
           -webkit-transition: all .2s;
           -moz-transition: all .2s;
           -o-transition: all .2s;
           -ms-transition: all .2s;
           transition: all .2s;
-          background: #efefef !important;
+          background: none !important;
         }
       }
     }
@@ -122,8 +201,8 @@
         padding: 0 20px;
       }
     section.top-bar-section ul li > a {
-      color: #333;
-      font-size: .9em;
+      color: #eee;
+      font-size: 1.2em;
       font-weight: 600;
     }
     }
@@ -141,7 +220,7 @@
 
 
     .logo{
-      padding-top: .7em;
+      padding-top: 1.2em;
       width: 130px;
       opacity: 1;
       -webkit-transition: opacity .2s linear;

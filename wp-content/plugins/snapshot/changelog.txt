@@ -4,6 +4,25 @@ Author: Paul Menard (Incsub)
 Change Log:
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
+<<<<<<< HEAD
+
+2.3.3.2 - 2013-04-30
+----------------------------------------------------------------------
+- Correction to FTP destination logic to include ftp_ssl_connect function which allows support for FTP with TSL/SSL
+- Modifications to FTP destination screen to replace SSL dropdown with protocol option showing FTP, SFTP and FTP-ES.
+- Corrects admin JavaScript to filter arrays to exclude prototype/scriptaculous automatic methods.
+- Corrects to ZipArchive logic to strip off leading slashes of filenames which caused them to be hidden on Windows systems
+- Added code to create empty file CACHEDIR.TAG at top uploads/snapshots directory to exclude snapshot archives from unix system backup tools.
+
+2.3.3.1 - 2013-04-25
+----------------------------------------------------------------------
+- XSS prevention patches
+- Correction to logic for purging local archive associated with remote destinations
+- Added AWS destination region to Sydney
+- Dropbox correction to filter out destination directories with multiple slashes
+
+=======
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 2.3.3 - 2013-03-09
 ----------------------------------------------------------------------
 - Fixed issue where non-WordPress prefixed tables were not showing in tables listing
@@ -163,4 +182,8 @@ http://premium.wpmudev.org/forums/topic/need-to-turn-off-zlib-compression-for-it
 - Initial stable release
 
 
+<<<<<<< HEAD
+184701-1367425155
+=======
 184701-1366998541
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9

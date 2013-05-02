@@ -6,31 +6,53 @@
  * @since Reverie 4.0
  */
 ?>
-	
+<style>
+h4.subheader{
+  display:inline-block;
+  border-top: 5px solid #9a373f;
+  color: #333;
+}
+#sidebar h4.subheader{
+  border-top:none !important;
+}
+  .orbit-next, .orbit-prev, .orbit-slide-number, .orbit-timer{ display:none; }
+  .masthead-photo {
+overflow: hidden;
+width: 100%;
+border-right: none;
+-webkit-box-shadow: inset 0px 0px 20px black;
+box-shadow: inset 0px 0px 20px black;
+}
+#masthead-photo{
+
+}
+@media only screen and (min-width: 1000px){
+.home .masthead-photo-content {
+margin-top: 60px;
+}
+}
+</style>	
  <li class="active text-left article-title" data-orbit-slide="headline-1">
    <div id="post-<?php the_ID(); ?>">
-      <div class="large-3 small-3 mkup column mn93">
-        <div class="hide-for-small image-wrapper circlewrapper radius" >
-          <?php if (has_post_thumbnail( $post->ID ) ): ?>
-            <a href="<?php the_permalink(); ?>"><?php $image = wp_get_attachment_image_src( the_post_thumbnail( 'thumbnail' ), 'single-post-thumbnail' ); ?></a>
-          <?php endif; ?>
-        </div>
-      </div>
-      <div class="large-9 small-12 column pl98">
+      <div class="large-12 small-12 column pl98">
        <header>
-        <h5>
-          <a href="<?php the_permalink(); ?>" data-orbit-slide="headline-2" class="secondary">
-            <?php the_title(); ?>
-          </a>
-        </h5> 
+        <div class="row">
+          <p style="margin-top:0em;">
+            <a href="<?php the_permalink(); ?>" data-orbit-slide="headline-2" class="secondary">
+              <?php the_title(); ?>
+            </a>
+          </p> 
+        </div>
     	</header>
-    		<p>
+    		<div class="row">
+        <p>
           <?php
             $excerpt = get_the_excerpt();
             echo string_limit_words($excerpt,25);
           ?>... 
           <a href="<?php the_permalink(); ?>">Read More ›</a>
         </p>  
+        </div>
     	<footer>
     		<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
     	</footer>

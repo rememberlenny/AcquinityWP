@@ -125,8 +125,12 @@ function reverie_scripts_and_styles() {
     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null, true);
     
     // adding Foundation scripts file in the footer
+
     wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
     
+    wp_register_script( 'raphael', get_template_directory_uri() . '/js/raphael-min.js', false, true );
+
+    wp_register_script( 'raphael-graph', get_template_directory_uri() . '/js/raphael/graph.js', array( 'raphael' ), true );
 
     wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
 
@@ -136,13 +140,15 @@ function reverie_scripts_and_styles() {
     // enqueue styles and scripts
     wp_enqueue_script( 'reverie-modernizr' );
     wp_enqueue_script( 'respondjs' );
-    wp_enqueue_style( 'reverie-ie-only' );
+    wp_enqueue_style ( 'reverie-ie-only' );
     /*
     I recommend using a plugin to call jQuery
     using the google cdn. That way it stays cached
     and your site will load faster.
     */
     wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'raphael' );
+    wp_enqueue_script( 'raphael-graph' );
     wp_enqueue_script( 'reverie-js' );
     wp_enqueue_script( 'html5shiv' );
     wp_enqueue_script( 'appjs' );

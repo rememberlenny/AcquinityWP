@@ -127,12 +127,21 @@ if ( !class_exists( "wpmudev_snapshot_admin_panels" ) ) {
 				//echo "item<pre>"; print_r($item); echo "</pre>";
 				//echo "_REQUEST<pre>"; print_r($_REQUEST); echo "</pre>";
 
+<<<<<<< HEAD
+				if (($item) && (isset($_REQUEST['snapshot-action'])) && (sanitize_text_field($_REQUEST['snapshot-action']) == 'edit')) {
+					$this->snapshot_admin_show_edit_panel($item);
+				} else if (($item) && (isset($_REQUEST['snapshot-action'])) && (sanitize_text_field($_REQUEST['snapshot-action']) == 'restore-panel')) {
+					// ...or if the user clicked the button to show the restore form. Show it.
+					$this->snapshot_admin_show_restore_panel($item);
+				} else if (($item) && (isset($_REQUEST['snapshot-action'])) && (sanitize_text_field($_REQUEST['snapshot-action']) == 'item-archives')) {
+=======
 				if (($item) && (isset($_REQUEST['snapshot-action'])) && ($_REQUEST['snapshot-action'] == 'edit')) {
 					$this->snapshot_admin_show_edit_panel($item);
 				} else if (($item) && (isset($_REQUEST['snapshot-action'])) && ($_REQUEST['snapshot-action'] == 'restore-panel')) {
 					// ...or if the user clicked the button to show the restore form. Show it.
 					$this->snapshot_admin_show_restore_panel($item);
 				} else if (($item) && (isset($_REQUEST['snapshot-action'])) && ($_REQUEST['snapshot-action'] == 'item-archives')) {
+>>>>>>> 2c051ad76c4e79b45eb2ffa1c0d1b03b8e2c09b9
 					$this->snapshot_admin_show_item_archive_panel($item);
 				} else {
 					$this->snapshot_admin_show_listing();
