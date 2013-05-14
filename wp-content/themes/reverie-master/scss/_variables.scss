@@ -11,25 +11,22 @@
   $em-base: 16px;
 
   $header-font-family:                   "freight-sans-pro", sans-serif;
-  $header-font-weight:                   400;
+  $header-font-weight:                   600;
   $header-font-style:                    normal;
-  $header-font-color:                    #222;
+  $header-font-color:                    #111;
   $header-line-height:                   1.4;
   $header-top-margin:                    .2em;
-  $header-bottom-margin:                 .5em;
+  $header-bottom-margin:                 .2em;
   $header-text-rendering:                optimizeLegibility;
   $subheader-font-weight:                400;
-
-  h3.subheader{ font-size: 2em; }
-  h4.subheader{ font-family: "franklin-gothic-urw-comp"; text-transform: uppercase; }
 
   $highcase: "franklin-gothic-urw-comp", Helvetica, sans-serif; 
 
   // We use these to control various global styles
   $body-bg: #fff;
-  $body-font-color: #222;
+  $body-font-color: #111;
   $body-font-family: "freight-sans-pro", sans-serif;
-  $body-font-weight: 400;
+  $body-font-weight: 300;
   $body-font-style: normal;
 
   // We use this to control font-smoothing
@@ -40,10 +37,10 @@
 
   // We use these as default colors throughout
   $secondary-color: #32345c;
-  $primary-color: #696a97;
+  $primary-color: #5ca2e1;
 
   $alert-color: #B65116;
-  $success-color: #586ca8;
+  $success-color: #ffff3c;
 
   $page-purple: #1b2238;
   $circle-accent: #cfb155;

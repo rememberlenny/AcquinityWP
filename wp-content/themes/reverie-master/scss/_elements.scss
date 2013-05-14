@@ -50,7 +50,7 @@ label {
     border: 0px solid transparent !important; 
   }
   .logo-strict-height{ height: 70px; }
-  .top-nav-wrapper{ background: white; }
+  .top-nav-wrapper{ background: #111; }
   .clearboth{ clear: both; }
   .secondary{
     @include transition (all, .2s);
