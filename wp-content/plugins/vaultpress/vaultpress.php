@@ -3,7 +3,7 @@
  * Plugin Name: VaultPress
  * Plugin URI: http://vaultpress.com/?utm_source=plugin-uri&amp;utm_medium=plugin-description&amp;utm_campaign=1.0
  * Description: Protect your content, themes, plugins, and settings with <strong>realtime backup</strong> and <strong>automated security scanning</strong> from <a href="http://vaultpress.com/?utm_source=wp-admin&amp;utm_medium=plugin-description&amp;utm_campaign=1.0" rel="nofollow">VaultPress</a>. Activate, enter your registration key, and never worry again. <a href="http://vaultpress.com/help/?utm_source=wp-admin&amp;utm_medium=plugin-description&amp;utm_campaign=1.0" rel="nofollow">Need some help?</a>
- * Version: 1.4.1
+ * Version: 1.4.2
  * Author: Automattic
  * Author URI: http://vaultpress.com/?utm_source=author-uri&amp;utm_medium=plugin-description&amp;utm_campaign=1.0
  * License: GPL2+
@@ -18,7 +18,7 @@ if ( !defined( 'ABSPATH' ) )
 class VaultPress {
 	var $option_name    = 'vaultpress';
 	var $db_version     = 2;
-	var $plugin_version = '1.4.1';
+	var $plugin_version = '1.4.2';
 
 	function VaultPress() {
 		$this->__construct();
@@ -903,6 +903,15 @@ class VaultPress {
 			return null;
 		}
 	}
+	
+	// Update local cache of VP plan settings, based on a ping or connection test result
+	function update_plan_settings( $message ) {
+		if ( array_key_exists( 'do_backups', $message ) )	
+			$this->update_option( 'do_not_backup', ( false === $message['do_backups'] ) );
+			
+		if ( array_key_exists( 'do_backup_pings', $message ) )
+			$this->update_option( 'do_not_send_backup_pings', ( false === $message['do_backup_pings'] ) );
+	}
 
 	function check_connection( $force_check = false ) {
 		$connection = $this->get_option( 'connection' );
@@ -949,8 +958,8 @@ class VaultPress {
 			return false;
 		}
 
-		$this->update_option( 'do_not_backup', ( false === $connect['do_backups'] ) );
-		$this->update_option( 'do_not_send_backup_pings', ( false === $connect['do_backup_pings'] ) );
+		$this->update_plan_settings( $connect );
+
 		if ( !empty( $connect['signatures'] ) ) {
 			delete_option( '_vp_signatures' );
 			add_option( '_vp_signatures', maybe_unserialize( $connect['signatures'] ), '', 'no' );
@@ -987,40 +996,108 @@ class VaultPress {
 		return true;
 	}
 
-	function authenticate( $user ) {
-		// check only on successful logins.
-		if ( $user instanceof WP_User ) {
-			$ips = array( 'real' => $_SERVER['REMOTE_ADDR'] );
-			if ( isset( $_SERVER['HTTP_CF_CONNECTING_IP'] ) )
-				$ips['cf'] = $_SERVER['HTTP_CF_CONNECTING_IP'];
-			elseif ( isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) )
-				$ips['fwd'] = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	function get_login_tokens() {
+		// By default the login token is valid for 30 minutes.
+		$nonce_life = $this->get_option( 'nonce_life' ) ? $this->get_option( 'nonce_life' ) : 1800; 
+		$salt = wp_salt( 'nonce' ) . md5( $this->get_option( 'secret' ) );
+		$nonce_life /= 2;
 
-			$forbidden_ips = (array) get_option( '_vp_forbidden_ips', array() );
-			$count = count( $forbidden_ips );
-			// remove old entries.
-			$current_time = time();
-			$forbidden_ips = array_filter( $forbidden_ips, create_function( '$t', "return $current_time > \$t;" ) );
-			// check if we already have this ip on a ban list. 
-			if ( $forbidden_ips ) {
-				foreach ( $ips as $ip ) {
-					if ( isset( $forbidden_ips[$ip] ) )
-						return new WP_Error( 'unauthorized_ip', __( 'Your IP is not allowed on this site.' ) );
-				}
-			}
+		return array(
+			'previous' => substr( hash_hmac( 'md5', 'vp-login' . ceil( time() / $nonce_life - 1 ), $salt ), -12, 10 ),
+			'current'  => substr( hash_hmac( 'md5', 'vp-login' . ceil( time() / $nonce_life ), $salt ), -12, 10 ),
+		);
+	}
+	function add_js_token() {
+		$nonce = $this->get_login_tokens();
+		$token = $nonce['current'];
 
-			$new_forbidden_ips = $this->contact_service( 'check_login', array( 'username' => $user->user_login, 'ips' => $ips ) );
-			if ( !isset( $new_forbidden_ips['faultCode'] ) && !empty( $new_forbidden_ips ) ) {
-				foreach ( $new_forbidden_ips as $ip => $ban_time )
-					$forbidden_ips[$ip] = $current_time + $ban_time;
-				// Update the bad ips so we don't need to query the server again.
-				update_option( '_vp_forbidden_ips', $forbidden_ips );
-				return new WP_Error( 'unauthorized_ip', __( 'Your IP is not allowed on this site.' ) );
-			} elseif ( $count != count( $forbidden_ips ) ) {
-				update_option( '_vp_forbidden_ips', $forbidden_ips );
+		// Uglyfies the JS code before sending it to the browser.
+		$whitelist = array( 'charAt', 'all', 'setAttribute', 'document', 'createElement', 'appendChild', 'input', 'hidden', 'type', 'name', 'value', 'getElementById', 'loginform', '_vp' );
+		shuffle( $whitelist );
+		$whitelist = array_flip( $whitelist );
+
+		$set = array(
+			0   => array( '+[]', 'e^e' ),
+			1   => array( '+!![]', '2>>1', "e[{$whitelist['type']}].charCodeAt(3)>>6" ),
+			2   => array( '(+!![])<<1', "e[{$whitelist['_vp']}].replace(/_/,'').length" ),
+			3   => array( "(Math.log(2<<4)+[])[e[{$whitelist['charAt']}]](0)", "e[{$whitelist['_vp']}].length" ),
+			4   => array( '(+!![])<<2', "e[{$whitelist['input']}].length^1", "e[{$whitelist['name']}].length" ),
+			5   => array( '((1<<2)+1)', 'parseInt("f",0x10)/3' ),
+			6   => array( '(7^1)', "e[{$whitelist['hidden']}].length" ),
+			7   => array( '(3<<1)+1', "e[{$whitelist['hidden']}].length^1" ),
+			8   => array( '(0x101>>5)', "e[{$whitelist['document']}].length" ),
+			9   => array( '(0x7^4)*(3+[])', "e[{$whitelist['loginform']}].length", "(1<<e[{$whitelist['_vp']}].length)^1" ),
+			'a' => array( "(![]+\"\")[e[{$whitelist['charAt']}]](1)", "e[{$whitelist['appendChild']}][e[{$whitelist['charAt']}]](0)", "e[{$whitelist['name']}][e[{$whitelist['charAt']}]](1)" ),
+			'b' => array( "([]+{})[e[{$whitelist['charAt']}]](2)", "({}+[])[e[{$whitelist['charAt']}]](2)" ),
+			'c' => array( "([]+{})[e[{$whitelist['charAt']}]](5)", "e[{$whitelist['createElement']}][e[{$whitelist['charAt']}]](0)" ),
+			'd' => array( "([][0]+\"\")[e[{$whitelist['charAt']}]](2)", "([][0]+[])[e[{$whitelist['charAt']}]](2)" ),
+			'e' => array( "(!![]+[])[e[{$whitelist['charAt']}]](3)", "(!![]+\"\")[e[{$whitelist['charAt']}]](3)" ),
+			'f' => array( "(![]+[])[e[{$whitelist['charAt']}]](0)", "([]+![])[e[{$whitelist['charAt']}]](e^e)", "([]+![])[e[{$whitelist['charAt']}]](0)" ),
+		);
+
+		$js_code = <<<JS
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){
+	var i,e='%s'.split('|'),_=[%s],s=function(a,b,c){a[b]=c};
+	if(this[e[{$whitelist['document']}]][e[{$whitelist['all']}]]){
+		try {
+			i=this[e[{$whitelist['document']}]][e[{$whitelist['createElement']}]]('<'+e[{$whitelist['input']}]+' '+e[{$whitelist['name']}]+'='+(e[{$whitelist['_vp']}]+(!![]))+' />');
+		}catch(e){}
+	}
+	if(!i){
+		i=this[e[{$whitelist['document']}]][e[{$whitelist['createElement']}]](e[{$whitelist['input']}]);
+		s(i,e[{$whitelist['name']}],e[{$whitelist['_vp']}]+(!![]));
+	}
+	s(i,e[{$whitelist['type']}],e[{$whitelist['hidden']}]).
+	s(i,e[{$whitelist['value']}],(%s+""));
+	try {
+		var __=this[e[{$whitelist['document']}]][e[{$whitelist['getElementById']}]](e[{$whitelist['loginform']}]);
+		__[e[{$whitelist['appendChild']}]](i);
+	} catch(e){}
+})();
+/* ]]> */
+</script>
+JS;
+		$chars = array();
+		for ( $i = 0; $i < strlen( $token ); $i++ ) {
+			if ( isset( $set[$token{$i}] ) ) {
+				$k = array_rand( $set[$token{$i}], 1 );
+				$chars[] = $set[$token{$i}][$k];
+			} else {
+				$chars[] = $token{$i};
 			}
 		}
-		return $user;
+		$random = array_unique( $chars );
+		shuffle( $random );
+		$random = array_flip( $random );
+
+		foreach( $chars as $i => $v )
+			$chars[$i] = sprintf( '_[%d]', $random[$v] );
+
+		$code = preg_replace( 
+			"#[\n\r\t]#", 
+			'', 
+			sprintf( $js_code, 
+				join( '|', array_keys( $whitelist ) ), 
+				join( ',', array_keys( $random ) ), 
+				join( '+"")+(', $chars ) 
+			) 
+		);
+		echo $code;
+	}
+
+	function authenticate( $user, $username, $password ) {
+		if ( is_wp_error( $user ) )
+			return $user;
+		if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST || defined( 'APP_REQUEST' ) && APP_REQUEST ) {
+			// Try to log in with the username and password.
+		}
+		$retval = $user;
+		if ( empty( $_POST['_vptrue'] ) || !in_array( $_POST['_vptrue'], $this->get_login_tokens(), true ) )
+			$retval = new WP_Error( 'invalid_token', __( 'Invalid token. Please try to log in again.' ) );
+
+		return $retval;
 	}
 
 	function parse_request( $wp ) {
@@ -1170,6 +1247,8 @@ class VaultPress {
 					foreach ( $wpdb->get_results( "SHOW VARIABLES" ) as $row )
 						$mvars["$row->Variable_name"] = $row->Value;
 				}
+				
+				$this->update_plan_settings( $_POST );
 
 				$ms_global_tables = array_merge( $wpdb->global_tables, $wpdb->ms_global_tables );
 				$tinfo = array();
@@ -1534,7 +1613,7 @@ class VaultPress {
 	function validate_api_signature() {
 		global $__vp_validate_error;
 		if ( !empty( $_POST['signature'] ) )
-			$sig = $_POST['signature'];
+			$sig = (string) $_POST['signature'];
 		else {
 			$__vp_validate_error = array( 'error' => 'no_signature' );
 			return false;
@@ -1567,7 +1646,7 @@ class VaultPress {
 				return false;
 		}
 		$sig = explode( ':', $sig );
-		if ( !is_array( $sig ) || count( $sig ) != 2 || !$sig[0] || !$sig[1] ) {
+		if ( !is_array( $sig ) || count( $sig ) != 2 || !isset( $sig[0] ) || !isset( $sig[1] ) ) {
 			$__vp_validate_error = array( 'error' => 'invalid_signature_format' );
 			return false;
 		}
@@ -1582,7 +1661,7 @@ class VaultPress {
 		ksort( $post );
 		$to_sign = serialize( array( 'uri' => $uri, 'post' => $post ) );
 		$signature = $this->sign_string( $to_sign, $secret, $sig[1] );
-		if ( $sig[0] == $signature )
+		if ( $sig[0] === $signature )
 			return true;
 
 		$__vp_validate_error = array( 'error' => 'invalid_signed_data', 'detail' => array( 'actual' => $sig[0], 'needed' => $signature ) );
@@ -1991,8 +2070,10 @@ class VaultPress {
 
 	function add_vp_required_filters() {
 		// Log ins
-		if ( $this->get_option( 'login_lockdown' ) )
+		if ( $this->get_option( 'login_lockdown' ) ) {
+			add_action( 'login_form', array( $this, 'add_js_token' ) );
 			add_filter( 'authenticate', array( $this, 'authenticate' ), 999 );
+		}
 
 		// Report back to VaultPress
 		add_action( 'shutdown', array( $this, 'do_pings' ) );

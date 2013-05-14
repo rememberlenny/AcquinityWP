@@ -48,8 +48,20 @@ class VaultPress_Filesystem {
 		header("Content-Type: application/octet-stream;");
 		header("Content-Transfer-Encoding: binary");
 		@ob_end_clean();
-		if ( !file_exists( $file ) || !is_readable( $file ) )
-			die( "no such file" );
+		if ( !file_exists( $file ) || !is_readable( $file ) ) {
+			$file_name = basename( $file );
+			if ( 'wp-config.php' == $file_name ) {
+				$dir = dirname( $file );
+				$dir = explode( DIRECTORY_SEPARATOR, $dir );
+				array_pop( $dir );
+				$dir = implode( DIRECTORY_SEPARATOR, $dir );
+				$file = trailingslashit( $dir ) . $file_name;
+				if ( !file_exists( $file ) || !is_readable( $file ) )
+					die( "no such file" );
+			} else {
+				die( "no such file" );
+			}
+		}
 		if ( !is_file( $file ) && !is_link( $file ) )
 			die( "can only dump files" );
 		$fp = @fopen( $file, 'rb' );
@@ -75,13 +87,26 @@ class VaultPress_Filesystem {
 			if ( $sha1 )
 				$rval['sha1'] = sha1_file( $file );
 		}
-		$rval['path'] = str_replace( $this->dir, '', $file );
+		$dir = $this->dir;
+		if ( 0 !== strpos( $file, $dir ) && 'wp-config.php' == basename( $file ) ) {
+			$dir = explode( DIRECTORY_SEPARATOR, $dir );
+			array_pop( $dir );
+			$dir = implode( DIRECTORY_SEPARATOR, $dir );
+		}
+		$rval['path'] = str_replace( $dir, '', $file );
 		return $rval;
 	}
 
 	function ls( $what, $md5=false, $sha1=false, $limit=null, $offset=null ) {
 		clearstatcache();
 		$path = realpath($this->dir . $what);
+		$dir = $this->dir;
+		if ( !$path && '/wp-config.php' == $what ) {
+			$dir = explode( DIRECTORY_SEPARATOR, $dir );
+			array_pop( $dir );
+			$dir = implode( DIRECTORY_SEPARATOR, $dir );
+			$path = realpath( $dir . $what );
+		}
 		if ( is_file($path) )
 			return $this->stat( $path, $md5, $sha1 );
 		if ( is_dir($path) ) {
@@ -109,11 +134,18 @@ class VaultPress_Filesystem {
 
 	function validate( $file ) {
 		$rpath = realpath( $this->dir.$file );
+		$dir = $this->dir;
+		if ( !$rpath && '/wp-config.php' == $file ) {
+			$dir = explode( DIRECTORY_SEPARATOR, $dir );
+			array_pop( $dir );
+			$dir = implode( DIRECTORY_SEPARATOR, $dir );
+			$rpath = realpath( $dir . $file );
+		}
 		if ( !$rpath )
 			die( serialize( array( 'type' => 'null', 'path' => $file ) ) );
 		if ( is_dir( $rpath ) )
 			$rpath = "$rpath/";
-		if ( strpos( $rpath, $this->dir ) !== 0 )
+		if ( strpos( $rpath, $dir ) !== 0 )
 			return false;
 		return true;
 	}

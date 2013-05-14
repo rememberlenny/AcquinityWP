@@ -162,6 +162,10 @@ class VaultPress_Database {
 		foreach ( array_keys( (array)$data ) as $key )
 			$keys[] = sprintf( "`%s`", $wpdb->escape( $key ) );
 		foreach ( (array)$data as $key => $val ) {
+			if ( null === $val ) {
+				$vals[] = 'NULL';
+				continue;
+			}
 			$type = 'text';
 			if ( isset( $datatypes->$key->type ) )
 				$type= strtolower( $datatypes->$key->type );
