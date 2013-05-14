@@ -76,6 +76,9 @@ label {
     display: inline;
     border-bottom: 1px dotted $primary-color;
   }
+  input.radius{
+    border-radius: 5px;
+  }
 
 // Layout
 //
@@ -94,6 +97,7 @@ label {
   .margeless{ margin: 0px; }
   .ml0{ margin-left: 0em !important; }
   .pl02{ padding-left: 0.2em; }
+  .pbp2em{ padding-bottom:0.2em; }
   .mn93{ margin-left: -0.9375em; }
   .pt5em{ padding-top: 5em; }
   .pt1em{ padding-top: 1em; }
