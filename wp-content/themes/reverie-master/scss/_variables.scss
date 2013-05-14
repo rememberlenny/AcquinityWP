@@ -1,7 +1,19 @@
 //
 // Advanced Layout
 //
-
+  @mixin transition( $target, $time ) {           
+    -webkit-transition:  $target $time;
+    -moz-transition:  $target $time;
+    -o-transition:  $target $time;
+    -ms-transition:  $target $time;
+    transition:  $target $time;
+  }
+  @mixin delaytransition( $time ){
+      transition-delay: $time;
+      -moz-transition-delay: $time; /* Firefox 4 */
+      -webkit-transition-delay: $time; /* Safari and Chrome */
+      -o-transition-delay: $time; /* Opera */
+  }
   // Foundation Global Function, Variables and Mixins
   //
   // Variables
@@ -41,7 +53,16 @@
 
   $alert-color: #B65116;
   $success-color: #ffff3c;
-
+  .button.success{ 
+    color: #222 !important; 
+    text-transform: uppercase;
+    &:hover{
+      color: lighten(#222, 30%) !important;
+      background:darken($success-color, 23%)!important;
+    }
+  }
+  
+  $light-grey: #f2f2f2;
   $page-purple: #1b2238;
   $circle-accent: #cfb155;
 
@@ -111,16 +132,3 @@
     @return percentage(($colNumber / $totalColumns));
   }
 
-  @mixin transition( $target, $time ) {           
-    -webkit-transition:  $target $time;
-    -moz-transition:  $target $time;
-    -o-transition:  $target $time;
-    -ms-transition:  $target $time;
-    transition:  $target $time;
-  }
-  @mixin delaytransition( $time ){
-      transition-delay: $time;
-      -moz-transition-delay: $time; /* Firefox 4 */
-      -webkit-transition-delay: $time; /* Safari and Chrome */
-      -o-transition-delay: $time; /* Opera */
-  }

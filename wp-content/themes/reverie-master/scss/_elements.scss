@@ -59,7 +59,7 @@ label {
       color: lighten($secondary-color, 20%);
     }
   }
-  .brand-color-back{ background: #f9f8f6; @include transition(all, .2s); }
+  .brand-color-back{ background: $primary-color; @include transition(all, .2s); }
   .mkup {
     padding-left: 1em!important;
   }
@@ -80,7 +80,7 @@ label {
 // Layout
 //
  // .s9999{ width: 9999px; }     
-  .h300 { height: 450px; }
+  .h300 { height: 250px; }
   .h100 { height: 100px; }
   .h120 { height: 120px; }
   .b30 { padding-bottom: 30px; }    
@@ -97,12 +97,16 @@ label {
   .mn93{ margin-left: -0.9375em; }
   .pt5em{ padding-top: 5em; }
   .pt1em{ padding-top: 1em; }
+  .pb1em{ padding-bottom: 1em; }
+  .pb2em{ padding-bottom: 2em; }
   .pb15em{ padding-bottom: 1.5em; }
   .pb8em{padding-bottom: 8em;}
   .mb08em{ margin-bottom: .8em; }
   .mb2em{ margin-bottom: 2em !important; }
   .mb1em{ margin-bottom: 1em !important; }
+  .mt1em{ margin-top: 1em !important; }
   .pr1em{ padding-right: 1em; }
+  .fs1p5em{ font-size: 1.5em; } // Font-size 1.5em
   .pos-bot-right{
     position: absolute;
     top: 9em;
@@ -132,7 +136,12 @@ label {
 // Colors
 //
    
-
+.primary-color-font{
+  color: $primary-color;
+}
+div.ltgreybg{
+  background: $light-grey;
+}
 div.whitebg{
   background: white;
 }

@@ -230,42 +230,21 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   width: 100%;
 }
 .featsucc{
-  text-align: center;
-  .orbit-container{
-    background: none;
+  strong{
+    text-transform: uppercase;
   }
-  .orbit-next{ 
-    display: none;
+  h3{
+    font-size: 1.15em;
+    color: #333;
   }
-  .orbit-prev{     
-    display: none;
+  p{
+    font-size: .9em !important;
   }
-  .orbit-timer{
-    display: none;
-  } 
-  .orbit-slide-number{
-    display: none;
-  }
-  .orbit-bullets{
-    display: inline-block;
-  }
-  .orbit-bullets {
-    @include transition (all, .2s);
-    overflow: hidden;
-    position: relative;
-  }
-  .orbit-bullets li{
-    border-color:$secondary-color !important;
-    @include transition(all, .2s);
-    &.active{
-      @include transition(all, .2s);
-      background: $secondary-color !important;
-    }
-    &:hover{
-      @include transition(all, .2s);
-      background: $primary-color !important;
-      border-color: $primary-color !important;
-    }
+  .post-block{
+    margin:7px;
+    padding: 25px 25px 30px 25px;
+    background: lighten($light-grey, 4%);
+    border: 1px solid $light-grey;
   }
 }
 

@@ -17,111 +17,84 @@ get_header(); ?>
 <!-- Hero Image and Text -->  
 <?php content_header_function(); ?>
 <!-- End Hero Image and Text -->  
-<div id="brandbar-heightfix" class="brand-color-back logo-strict-height ofhdn">
-<?php brandBarHome(); ?>
+<div class="primary-color-back brand-color-back">
+  <div class="row pt1em">
+    <div class="large-9 column">
+      <h2 class="white">
+        <?php the_field('blue_bar:_first_text_line'); ?>
+      </h2>
+      <p class="white fs1p5em">
+        <?php the_field('blue_bar:_second_text_line'); ?>
+      </p>
+    </div>
+    <div class="large-3 mt1em column">
+      <a class="button success radius" href="/advertisers">
+        <?php the_field('blue_bar:_button_text'); ?></a>
+    </div>
+  </div>
+</div>
+<div class="whitebg pt1em">
+  <div class="row text-center">
+    <h2><?php the_field('bullet_point_1t:_first_line'); ?></h2>
+    <p class="fs1p5em"><?php the_field('bullet_point_1t:_second_line'); ?></p>
+  </div>
+  <div class="row text-center">
+    <h2><?php the_field('bullet_point_2:_first_line'); ?></h2>
+    <p class="fs1p5em"><?php the_field('bullet_point_2:_second_line'); ?></p>
+  </div>
+  <div class="row text-center">
+    <h2><?php the_field('bullet_point_3:_first_line'); ?></h2>
+    <p class="fs1p5em"><?php the_field('bullet_point_3:_second_line'); ?></p>
+  </div>
+</div>
+<div class="ltgreybg pt1em text-center">
+  <div class="row">
+    <div class="large-4 column">
+      <h2 class="primary-color-font"><?php the_field('statistic_1:_number'); ?></h2>
+      <p class="fs1p5em">
+        <?php the_field('statistic_1:_text'); ?>
+      </p>
+    </div>
+    <div class="large-4 column">
+      <h2 class="primary-color-font"><?php the_field('statistic_2:_number'); ?></h2>
+      <p class="fs1p5em">
+        <?php the_field('statistic_2:_text'); ?>
+      </p>
+    </div>
+    <div class="large-4 column">
+      <h2 class="primary-color-font"><?php the_field('statistic_3:_number'); ?></h2>
+      <p class="fs1p5em">
+        <?php the_field('statistic_3:_text'); ?>
+      </p>
+    </div>
+  </div>
 </div>
 	
-<div class="content content-main row twelve">
-	<div class="main large-8 columns "> 	
-		<div class="case-studies fr">
-		  <div class="s9999 page-main-extension whitebg fr">
-        <div class="lftcont page-main-content content-sec fr">
-          <div class="pr98 pl98 text-left column"> 
-            <div class=" column">
-              <a href="/success-story/">
-                <h4 class="subheader">Success Stories</h4>
-              </a>
+<div class="whitebg pt1em pb2em">
+  <div class="row">
+    <div class="case-study-item text-left large-12 fl">
+     <div class="featsucc" id="pausetarget"  > 
+          <?php 
+          rewind_posts();
+          $mypost = array( 'post_type' => 'success-story', 'posts_per_page' => '3' );
+          $my_query = new WP_Query( $mypost ); ?>
 
-              <div class="case-study-item text-left large-12 fl">
-               <div class="featsucc" id="pausetarget"  > 
-                  <ul id="featsucc" data-orbit data-options="timer_speed: 0;">
-                    <?php 
-                    rewind_posts();
-                    $mypost = array( 'post_type' => 'success-story' );
-                    $my_query = new WP_Query( $mypost ); ?>
+          <?php if ( have_posts() ) : ?>
 
-                    <?php if ( have_posts() ) : ?>
+          <?php /* Start the Loop */ ?>
+          <?php while ( $my_query->have_posts()) :  $my_query->the_post(); ?>
+          <?php get_template_part( 'content', 'homeslide' ); ?>
+          <?php endwhile; ?>
 
-                    <?php /* Start the Loop */ ?>
-                    <?php while ( $my_query->have_posts()) :  $my_query->the_post(); ?>
-                    <?php get_template_part( 'content', 'homeslide' ); ?>
-                    <?php endwhile; ?>
+          <?php else : ?>
+          <?php get_template_part( 'content', 'none' ); ?>
 
-                    <?php else : ?>
-                    <?php get_template_part( 'content', 'none' ); ?>
-
-                    <?php endif; // end have_posts() check 
-                    wp_reset_query();?>
-                  </ul>
-                </div>
-              </div>
-            <div class=" clear text"></div>
-            </div>
-          </div>
-        </div>
+          <?php endif; // end have_posts() check 
+          wp_reset_query();?>
       </div>
-		</div>	
-		<div class="page-main fr text-left" role="main">
-	    <div class="s9999 page-main-extension newsynew fr">
-	      <div class="lftcont page-main-content content-sec fr pb15em">
-		      <div class="pr98 pl98 text-left column"> 
-            <div class=" ">
-              <div class="large-6 column featart-short borderrt">
-                <a href="/news/">
-                  <h4 class="subheader">Latest</h4>
-                </a>
-                  <?php 
-                  rewind_posts();
-                  $mypost = array( 'post_type' => 'post' );
-                  $my_query = new WP_Query( $mypost ); ?>
-
-                  <?php if ( have_posts() ) : ?>
-
-                  <?php $i=1 /* Start the Loop */ ?>
-                  <?php while ( $i<2 && $my_query->have_posts()) :  $my_query->the_post(); ?>
-                  <?php get_template_part( 'content', 'newpost' ); ?> 
-                  <?php $i++; endwhile; ?>
-               </div>
-               <div class="text-left large-6 column">
-                <a href="/news/">
-                  <h4 class="subheader">News</h4>
-                </a>
-                <ul class="" style="margin-bottom: 1.8em;">
-                  <?php while ( $i<5 && $my_query->have_posts()) :  $my_query->the_post(); ?>
-                  <?php get_template_part( 'content', 'notnewpost' ); ?>
-                  <?php $i++; endwhile; ?>
-                  <?php endif; // end have_posts() check 
-                  wp_reset_query(); ?>               
-                </ul>
-                    <a class="svbt-line" href="/news/" class="secondary">
-                      See more News ›
-                    </a>
-              </div>
-              <div class=" clear text"></div>
-            </div>
-          </div>
-		    </div>
-		  </div>
-		</div>
-    <div class="page-main fr text-left" role="main">
-      <div class="s9999 page-main-extension whitebg borderbtm fr ">
-        <div class="lftcont page-main-content content-sec fr">
-          <div class="pr98 pl98 text-left column"> 
-            <div class="column">
-              <header>
-                <h4 class="subheader"><?php the_field('home_section2_title'); ?></h4>
-              </header>
-              <div class="entry-content">
-                <?php the_field('product_section'); ?>
-              </div>
-            </div>
-            <div class=" clear text">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>  
-	</div>
-	<?php get_sidebar(); ?>
+    </div>
+  <div class=" clear text"></div>
+  </div>
 </div>
+
 <?php get_footer(); ?>

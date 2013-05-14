@@ -20,5 +20,12 @@
     .top-bar-section > ul > .divider{
     display: none;
   }
-  
+  .post-block{
+    h3{
+      min-height: 50px;
+    }
+    p.excerpt{
+      min-height: 135px;
+    }
+  }
 }
