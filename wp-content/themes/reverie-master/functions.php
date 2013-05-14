@@ -37,6 +37,7 @@ require_once('includes/lkbg_page_bottom.php');
 require_once('includes/lkbg_as_post.php');
 require_once('includes/lkbg_as_plugin.php');
 require_once('includes/lkbg_brand_logo.php');
+require_once('includes/lkbg_homeLeftColumnContent_bar.php');
 require_once('includes/lkbg_stat_bar.php');
 require_once('includes/lkbg_options_page.php');
 

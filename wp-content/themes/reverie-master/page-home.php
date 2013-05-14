@@ -18,13 +18,14 @@ get_header(); ?>
 <?php content_header_function(); ?>
 <!-- End Hero Image and Text -->  
 <div id="brandbar-heightfix" class="brand-color-back">
-<?php brandBarHome(); ?>
-
+  <?php leftcontentBarHome(); ?>
 </div>
-	<script>
-  (document)
-  </script>
+
 <?php statBarHome(); ?>
+
+<div id="brandbar-heightfix" class="brand-color-back">
+  <?php brandBarHome(); ?>
+</div>
 
 <div class="content content-main row twelve">
 	<div class="main large-8 columns "> 	

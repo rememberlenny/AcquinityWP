@@ -78,11 +78,11 @@ function statBarContent(){
 </div>
 <div class="large-6 column">
   
-    <h4 class="subheader text-center" style="color:#333;">Company statistics</h4>
+    <h4 class="subheader text-center" style="color:#333;">How we do it</h4>
   <h3>
   We've done the math.</h3> 
   <p>
-  Industry-accepted independent auditors and research sources, coupled with Acquinity's internal data and metrics teams, consistently report traffic for our web, email and call center properties.
+  Our client services department works closely with brand partners to promote and create compelling campaigns. Which are then placed in front of receptive audiences, new-developed and established. Member intelligence coupled with multivariate testing tells us what works and what doesn’t…we've been optimizing interactive advertisements for so long, we’re experts.
   </p>
   <a href="#" class="button radius">Learn more about Acquinity</a>
   <div class="spacing row"></div>
