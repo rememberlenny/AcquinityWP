@@ -28,7 +28,7 @@ get_header(); ?>
       </p>
     </div>
     <div class="large-3 mt1em column">
-      <a class="button success radius" href="/advertisers">
+      <a class="button small small success radius" href="/advertisers">
         <?php the_field('blue_bar:_button_text'); ?></a>
     </div>
   </div>
@@ -66,6 +66,39 @@ get_header(); ?>
       <p class="fs1p5em">
         <?php the_field('statistic_3:_text'); ?>
       </p>
+    </div>
+  </div>
+</div>
+
+<div class="primary-color-back brand-color-back pbp2em pt1em blue-bar2">
+  <div class="row">
+    <div class="large-6 column">
+      <strong class="white">
+        <?php the_field('blue_bar_2:_work_link'); ?>
+      </strong>
+      <a href="/contact" class="button small success radius">Contact us</a>
+    </div>
+    <div class="large-6 column">
+      <div class="large-4 column">
+        <strong class="white  email-pref">
+          Email newsletter
+        </strong>
+      </div>
+      <div class="large-8 fl">
+        <form name="ccoptin" action="http://visitor.r20.constantcontact.com/d.jsp" target="_blank" method="post">
+        <input type="hidden" name="llr" value="cr5omucab">
+        <input type="hidden" name="m" value="1102343272994">
+        <input type="hidden" name="p" value="oi">
+        <div class="collapse" style="display: block!important;">
+          <div class="large-7 column">
+            <input type="text" name="ea" size="20" class="radius" value="" placeholder="email Address" data-cip-id="cIPJQ342845639">
+          </div>
+          <div class="large-5 column">
+            <input type="submit" name="go" value="Sign up" class="radius button small success">
+          </div>
+        </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

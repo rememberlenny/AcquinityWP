@@ -9,7 +9,7 @@
 	
   <div class="large-4 column">
    <div id="post-<?php the_ID(); ?>" class=" post-block">
-      <div class="large-12 small-12 mkup mn93">
+      <div class="large-12 small-12">
         <div class="hide-for-small " >
           <?php if (has_post_thumbnail( $post->ID ) ): ?>
             <a href="<?php the_permalink(); ?>"><?php $image = wp_get_attachment_image_src( the_post_thumbnail( 'thumbnail' ), 'single-post-thumbnail' ); ?></a>
