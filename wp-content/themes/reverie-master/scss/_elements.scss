@@ -63,6 +63,9 @@ label {
   .mkup {
     padding-left: 1em!important;
   }
+  .d-inline-f{
+    display: inline !important;
+  }
   .d-inline{
     display: inline-block;
   }
@@ -86,6 +89,7 @@ label {
   .mt03em{ margin-top: .3em !important; }
   .mt005em{ margin-top: .05em; }
   .fw200{ font-weight: 200; } 
+  .fw400{ font-weight: 400; } 
   .lh1em{ line-height: 1em; }
   .lh2em{ line-height: 2em; }
   .mb0em{ margin-bottom: 0em; } 
@@ -103,6 +107,7 @@ label {
   .row-fluid{ max-width: none !important; }
   .content{}
   .margeless{ margin: 0px; }
+  .nmp5em{ margin-bottom: -.5em; } // negative margin .5em
   .nm1p5em{ margin-bottom: -1.5em; } // negative margin 1.5em
   .ml0{ margin-left: 0em !important; }
   .pl02{ padding-left: 0.2em; }
@@ -120,9 +125,13 @@ label {
   .mb08em{ margin-bottom: .8em; }
   .mb2em{ margin-bottom: 2em !important; }
   .mb1em{ margin-bottom: 1em !important; }
+  .mt2em{ margin-top: 2em !important; }
   .mt1em{ margin-top: 1em !important; }
+  .mt1p5em{ margin-top: 1.5em !important; }
   .pr1em{ padding-right: 1em; }
+  .mr2em{ margin-right: 2em; }
   .fs1p5em{ font-size: 1.5em; } // Font-size 1.5em
+  .p10em20em{ padding: 5px 20px 5px; }
   .pos-bot-right{
     position: absolute;
     top: 9em;

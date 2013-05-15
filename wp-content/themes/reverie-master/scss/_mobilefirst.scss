@@ -6,7 +6,7 @@
 
 .container{
   overflow-x: hidden;
-  background: #333;
+  background: white;
 }
 
 html ::selection, body ::selection, button ::selection, input ::selection, select ::selection, textarea ::selection {
@@ -36,7 +36,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
     }
   }
   .case-studies-extension{
-    border-bottom: solid 1px #e6e6e6;
     padding-bottom: 0em;
   }
   .social-block span {font-size: 2em; }
@@ -284,7 +283,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   }
   .content-main{
     .main{
-      border-right: 1px solid darken(#333, 20%);
     }
   }
     .hero-row {
@@ -406,7 +404,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       }
       padding-top: 1.45em;
       h2{
-        margin-bottom: 0em;
       }
       ul{
         height: auto !important;
@@ -475,7 +472,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
       }
     }
     .case-studies-extension{
-        min-height: 780px;
         background: white;
         li{
           height: auto;
@@ -600,7 +596,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   }
   .page-main-content{
     .content-sec{
-      min-height: 550px;
     }
     padding-top: 1.5em;
     padding-bottom: 1em;
