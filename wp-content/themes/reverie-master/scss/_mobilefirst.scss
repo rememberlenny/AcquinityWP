@@ -250,9 +250,11 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   }
   .post-block{
     margin:7px;
-    padding: 25px 25px 30px 25px;
     background: lighten($light-grey, 4%);
     border: 1px solid $light-grey;
+    .content-padding{
+      padding: 10px 25px 30px 25px;
+    }
   }
 }
 

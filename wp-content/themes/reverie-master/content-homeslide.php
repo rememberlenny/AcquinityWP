@@ -15,28 +15,30 @@
             <a href="<?php the_permalink(); ?>"><?php $image = wp_get_attachment_image_src( the_post_thumbnail( 'thumbnail' ), 'single-post-thumbnail' ); ?></a>
           <?php endif; ?>
         </div>
-       <header>
-        <h3 class="subheader">
-          <a href="<?php the_permalink(); ?>" data-orbit-slide="headline-2" class="secondary">
-            <?php the_title(); ?>
-          </a>
-        </h3> 
-        <strong class="primary-color-font">
-          <?php the_field('post_company_name'); ?>
-        </strong>
-      </header>
-        <p class="excerpt">
-          <?php
-            $excerpt = get_the_excerpt();
-            echo string_limit_words($excerpt,25);
-          ?>... 
-        </p>  
-        <p>
-        <a href="<?php the_permalink(); ?>">Read More ›</a>
-        </p>
-      <footer>
-        <?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
-      </footer>
+        <div class="content-padding">
+          <header>
+            <h3 class="subheader">
+              <a href="<?php the_permalink(); ?>" data-orbit-slide="headline-2" class="secondary">
+                <?php the_title(); ?>
+              </a>
+            </h3> 
+            <strong class="primary-color-font">
+              <?php the_field('post_company_name'); ?>
+            </strong>
+          </header>
+          <p class="excerpt">
+            <?php
+              $excerpt = get_the_excerpt();
+              echo string_limit_words($excerpt,25);
+            ?>... 
+          </p>  
+          <p>
+          <a href="<?php the_permalink(); ?>">Read More ›</a>
+          </p>
+          <footer>
+            <?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
+          </footer>
+        </div>
     </div>
   </div>
   </div>
