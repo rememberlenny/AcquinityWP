@@ -43,7 +43,9 @@
       section.top-bar-section .dropdown li a:not(.button){
         padding-top: 7px;
         padding-bottom: 7px;
-
+        font-weight: 200 !important;
+        line-height:1.5em !important;
+        text-transform: none !important;
       }
       .top-bar-section .has-dropdown > a:after {
         top: 37px !important;
@@ -52,7 +54,7 @@
         color: #fff;
         white-space: nowrap;
         padding: 7px 25px;
-        background: white;
+        background: white;;
       }
     }
     .top-bar-section .left > li a{

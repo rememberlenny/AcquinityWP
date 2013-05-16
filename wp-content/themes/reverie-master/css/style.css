@@ -782,6 +782,9 @@ nav.top-bar input {
   section.top-bar-section .dropdown li a:not(.button) {
     padding-top: 7px;
     padding-bottom: 7px;
+    font-weight: 200 !important;
+    line-height: 1.5em !important;
+    text-transform: none !important;
   }
 
   .top-bar-section .has-dropdown > a:after {
@@ -2236,7 +2239,7 @@ div.sidebar h4.subheader {
   max-width: 145px;
 }
 .archive p, .blog p {
-  display: inline;
+  color: #333;
 }
 
 .content-block {

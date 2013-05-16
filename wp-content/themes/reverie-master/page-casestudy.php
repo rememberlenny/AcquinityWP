@@ -46,6 +46,6 @@ get_header(); ?>
       </div>
     </div>
 	</div>
-	<?php get_sidebar(); ?>
+<?php get_template_part( 'content-sidebar'); ?>
 </div>
 <?php get_footer(); ?>

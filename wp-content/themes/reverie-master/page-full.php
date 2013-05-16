@@ -26,5 +26,10 @@ get_header(); ?>
 	<?php endwhile; // End the loop ?>
 
 	</div>
+
+<?php get_template_part( 'content-emailbar'); ?>
+
+<?php get_template_part( 'content-successstories'); ?>
+
 		
 <?php get_footer(); ?>
