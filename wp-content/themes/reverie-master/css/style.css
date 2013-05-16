@@ -864,7 +864,7 @@ nav.top-bar input {
   font-size: 1.7em;
 }
 .top-bar a i:hover {
-  color: #56599e;
+  color: white;
   -webkit-transition: color .2s;
   -moz-transition: color .2s;
   -o-transition: color .2s;
@@ -917,12 +917,12 @@ section.top-bar-section ul li > a {
 }
 
 .menu-icon span {
-  color: #32345c;
+  color: #fff;
 }
 
 .top-bar li.toggle-topbar.menu-icon a span {
-  -webkit-box-shadow: 0 10px 0 1px #32345c, 0 16px 0 1px #32345c, 0 22px 0 1px #32345c;
-  box-shadow: 0 10px 0 1px #32345c, 0 16px 0 1px #32345c, 0 22px 0 1px #32345c;
+  -webkit-box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+  box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
 }
 
 @media only screen and (min-width: 767px) {
@@ -2906,7 +2906,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   }
 
   .entry-content {
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
 }
 .home .masthead-photo-content {
