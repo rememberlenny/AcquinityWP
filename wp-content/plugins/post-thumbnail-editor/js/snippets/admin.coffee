@@ -3,9 +3,9 @@ do (jQuery) ->
    image_id = null
    pte_url = (override_id) ->
       id = override_id || image_id || jQuery("#attachment-id").val()
-      "upload.php?page=pte-edit&pte-id=#{ id }"
+      _.template pteL10n.url, {'id': id}
    $getLink = (id) ->
-      jQuery("""<a class="thickbox" href="#{ pte_url id }">#{ objectL10n.PTE }</a>""")
+      jQuery """<a href="#{ pte_url id }">#{ pteL10n.PTE }</a>"""
 
 
 
@@ -24,14 +24,14 @@ do (jQuery) ->
    #
    injectPTE = ->
       # Find and inject pte-url into size cell...
-      jQuery('.media-item').each (i,elem) ->
-         post_id = elem.id.replace "media-item-",""
-         $getLink(post_id)
-         .css
-            'font-size': '.8em'
-            'margin-left': '5px'
-         .click(checkExistingThickbox)
-         .appendTo jQuery 'tr.image-size th.label', elem
+      #jQuery('.media-item').each (i,elem) ->
+      #   post_id = elem.id.replace "media-item-",""
+      #   $getLink(post_id)
+      #   .css
+      #      'font-size': '.8em'
+      #      'margin-left': '5px'
+      #   .click(checkExistingThickbox)
+      #   .appendTo jQuery 'tr.image-size th.label', elem
 
       if imageEdit.open?
          imageEdit.oldopen = imageEdit.open
@@ -59,7 +59,10 @@ do (jQuery) ->
          return false
 
       # Add convenience functions to menu
-      $editmenu.append $getLink().click checkExistingThickbox
+      $link = $getLink().click checkExistingThickbox
+      $link.addClass "button-primary"
+      $link.css "margin-top", "10px"
+      $editmenu.append $link
 
    injectPTE()
 

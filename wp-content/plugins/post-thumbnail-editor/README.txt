@@ -1,9 +1,9 @@
 === Post Thumbnail Editor ===
 Contributors: sewpafly
 Donate link: https://www.wepay.com/donate/34543
-Tags: post-thumbnail, post thumbnail, featured image, featured, editor, image, awesome
+Tags: post-thumbnail, post thumbnail, featured image, featured, editor, image, awesome, crop
 Requires at least: 3.5
-Tested up to: 3.5.1
+Tested up to: 3.6
 Stable tag: trunk
 License: GPLv2
 
@@ -63,12 +63,19 @@ Using a version with [json_encode](http://www.php.net/manual/en/function.json-en
 
 == Changelog ==
 
-= 2.0.1-beta =
+= 2.1.0 =
+* Crop Constraints are visually available: green is good and red means there will be upscaling
+* In the options panel change the size of the cropping image
+* Bug fix: 3.6 compatibility
+* Added thumbnail metadata to table
+
+= 2.0.1 =
 * IE fix with the jcrop api
 * Now go into the view mode after cropping
-* Added option to crop and save without verifying.
-* updated coffee-script to 1.6.2
-* Added French and Spanish translations
+* Added option to crop and save without verifying
+* Featured images now have link to launch the Post Thumbnail Editor
+* Updated coffee-script to 1.6.2
+* Updated French and Spanish translations
 * Made the cache buster an option
 
 = 2.0.0 =
@@ -119,5 +126,5 @@ Using a version with [json_encode](http://www.php.net/manual/en/function.json-en
 
 == Upgrade Notice ==
 
-= 2.0.1-beta =
-Upgrade if you're willing to see some rough edges...
+= 2.1.0 =
+Several new features and bug fixes since 2.0.1
