@@ -17,11 +17,11 @@
               <ul class="large-block-grid-2 small-block-grid-2">
                 <li>
                   
-            <p class="d-inline-f mr2em"><a href="<?php the_field('facebook_link', 'option'); ?>"><img class="nmp5em" src="<?php the_field('facebook_icon', 'option'); ?>" alt=""> <span>Check us out on Facebook</span></a></p>
+            <a href="<?php the_field('facebook_url', 'option'); ?>"><p class="d-inline-f mr2em"><img class="nmp5em" src="<?php the_field('facebook_icon', 'option'); ?>" alt="<?php the_field('facebook_text', 'option'); ?>"> <span><?php the_field('facebook_text', 'option'); ?></span></p></a>
                 </li>
                 
                 <li>
-            <p class="d-inline-f mr2em"><a href="<?php the_field('twitter_link', 'option'); ?>"><img class="nmp5em" src="<?php the_field('twitter_icon', 'option'); ?>" alt=""> <span>Follow us on Twitter</span></a></p>
+           <a href="<?php the_field('twitter_url', 'option'); ?>"> <p class="d-inline-f mr2em"><img class="nmp5em" src="<?php the_field('twitter_icon', 'option'); ?>" alt="<?php the_field('twitter_text', 'option'); ?>"> <span><?php the_field('twitter_text', 'option'); ?></span></p></a>
                   
                 </li>
               </ul>
