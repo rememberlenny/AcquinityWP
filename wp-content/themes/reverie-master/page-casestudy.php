@@ -22,7 +22,7 @@ get_header(); ?>
 <!-- End Hero Image and Text -->  
 	
 <div class="content content-main row twelve">
-	<div class="main large-8 columns "> 	
+	<div class="main large-9 columns "> 	
 		
     <?php query_posts( 'post_type=case-studies'); ?>
 

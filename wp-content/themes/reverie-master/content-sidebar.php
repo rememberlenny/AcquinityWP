@@ -1,4 +1,4 @@
-<div class="large-4 column small-12 text-center whitebg mt1p5em mb1em">
+<div class="large-3 column small-12 text-center whitebg mt1p5em mb1em">
     <div class="widget brand-color-back row pt1em d-inline p10em20em mt1p5em">
       <h3 class="white fw400">
         <?php the_field('cta_sidebar_header', 'option'); ?>
@@ -10,7 +10,7 @@
     </div>
 
     <div class="widget row mt2em">
-      <div class="large-10 column large-centered">
+      <div class="large-12 column large-centered">
         <h3 class="subheader fs1p2em">
           <?php the_field('logos_sidebar_header', 'option'); ?>
         </h3> 

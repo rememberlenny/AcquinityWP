@@ -430,6 +430,15 @@ label {
   height: auto !important;
 }
 
+.thumb-wrapper {
+  height: 145px !important;
+  width: 145px !important;
+}
+.thumb-wrapper img {
+  width: 150px !important;
+  height: 150px !important;
+}
+
 .fl {
   float: left;
 }
@@ -3117,7 +3126,7 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   }
   .case-studies-extension #case-sliders {
     float: right;
-    width: 667px;
+    width: 750px;
   }
 
   .page-main-extension {
@@ -3127,12 +3136,12 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   }
   .page-main-extension .page-main-content {
     float: right;
-    width: 667px;
+    width: 750px;
   }
 
   .company-facts-extension #featrap {
     float: right;
-    width: 667px;
+    width: 750px;
   }
   .company-facts-extension .orbit-container {
     background: transparent !important;

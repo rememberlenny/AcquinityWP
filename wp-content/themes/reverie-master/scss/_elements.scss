@@ -41,6 +41,15 @@ label {
 .autoheight{
   height: auto !important;
 }
+
+  .thumb-wrapper{
+    height: 145px !important;
+    width: 145px !important;
+    img{
+      width:150px !important;
+      height:150px !important;
+    }
+  }
   .fl{ float:left; }
   .fr{ float:right; }
   .ofhdn{ overflow:hidden; }

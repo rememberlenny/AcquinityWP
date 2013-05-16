@@ -23,7 +23,7 @@ get_header(); ?>
 ?>
   
 <div class="content content-main row twelve">
-  <div class="main large-8 columns ">   
+  <div class="main large-9 columns ">   
     <?php /* Start loop */ ?>
     <div class="case-studies fr">
       <div class="s9999 case-studies-extension fr">
