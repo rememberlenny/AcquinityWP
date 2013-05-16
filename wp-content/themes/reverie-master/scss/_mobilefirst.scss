@@ -632,3 +632,35 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
     }
   }
 }
+
+.wf-loading{
+  p{
+    visibility: none !important;}
+  a{
+    visibility: none !important;}
+  h1{
+    visibility: none !important;
+    a{
+      visibility: none !important;}
+  }
+  h2{
+    visibility: none !important;
+    a{
+      visibility: none !important;}
+  }
+  h3{
+    visibility: none !important;
+    a{
+      visibility: none !important;}
+  }
+  h4{
+    visibility: none !important;
+    a{
+      visibility: none !important;}
+  }
+  h5{
+    visibility: none !important;
+    a{
+      visibility: none !important;}
+  }
+}

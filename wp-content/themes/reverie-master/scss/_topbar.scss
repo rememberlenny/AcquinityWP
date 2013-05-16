@@ -195,3 +195,7 @@
     max-width: 220px !important;
   }
 }
+.top-bar-section .has-dropdown > a:after{
+  visibility: hidden !important;
+}
+

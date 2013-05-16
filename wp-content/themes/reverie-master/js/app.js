@@ -24,20 +24,5 @@ $(document).ready(function()    {
         $('#brand-logo-case').addClass("active-now");
       });
     });
-  });
-
-  // Initiate the slider for Success Stories
-  $('#featsucc').foundation('orbit');
-
-  // Start the Brand Logo slider
-  $('#brandslider').foundation('orbit',{
-      timer_speed: 13000
-    , stack_on_small: false
-    , animation_speed: 1000
-    , bullets: false
-  }, function(response){});
-
-  // Stop the Success Stories slider
-  $('#pausetarget').find('.orbit-timer span').click();
-  
+  });  
 });
