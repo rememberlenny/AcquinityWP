@@ -16,7 +16,7 @@ get_header(); ?>
 <?php content_header_function(); ?>
   
 <div class="content content-main row twelve">
-  <div class="main large-8 columns ">   
+  <div class="main large-9 columns ">   
     
 
 

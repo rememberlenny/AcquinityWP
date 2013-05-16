@@ -23,11 +23,11 @@ get_header(); ?>
 <?php content_header_function(); ?>  
 	
 <div class="content content-main row twelve">
-	<div class="main large-8 columns "> 	
+	<div class="main large-9 columns "> 	
 		<?php /* Start loop */ ?>
 		<div class="case-studies fr">
 		  <div class="s9999 case-studies-extension fr">
-		    <div id="case-sliders" class="pr98 pl98 lftcont case-studies-content content-sec fr">
+		    <div id="case-sliders" class="pr98 lftcont case-studies-content content-sec fr">
   
           <?php if ( have_posts() ) : ?>
           

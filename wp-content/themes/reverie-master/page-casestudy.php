@@ -22,7 +22,7 @@ get_header(); ?>
 <!-- End Hero Image and Text -->  
 	
 <div class="content content-main row twelve">
-	<div class="main large-8 columns "> 	
+	<div class="main large-9 columns "> 	
 		
     <?php query_posts( 'post_type=case-studies'); ?>
 
@@ -33,7 +33,7 @@ get_header(); ?>
 	      <?php while (have_posts()) : the_post(); ?>
 					<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 						<header>
-							<h4 class="subheader"><?php the_title(); ?></h4>
+							<h2><?php the_title(); ?></h2>
 							<?php // reverie_entry_meta(); ?>
 						</header>
 						<div class="entry-content">

@@ -1,8 +1,13 @@
 @import "variables";
 
 .archive, .blog{
+  .content-block{
+    p{
+      font-size: 1.2em;
+    }
+  }
   h2{
-    font-size: 1.125em;
+
   }
   img{ 
   }

@@ -12,13 +12,13 @@
       <div class="large-12 small-12">
         <div class="hide-for-small " >
           <?php if (has_post_thumbnail( $post->ID ) ): ?>
-            <a href="<?php the_permalink(); ?>"><?php $image = wp_get_attachment_image_src( the_post_thumbnail( 'thumbnail' ), 'single-post-thumbnail' ); ?></a>
+            <a href="<?php the_permalink(); ?>"><?php $image = wp_get_attachment_image_src( the_post_thumbnail( 'medium' ), 'single-post-thumbnail' ); ?></a>
           <?php endif; ?>
         </div>
         <div class="content-padding">
           <header>
             <h3 class="subheader">
-              <a href="<?php the_permalink(); ?>" data-orbit-slide="headline-2" class="secondary">
+              <a href="<?php the_permalink(); ?>" class="secondary">
                 <?php the_title(); ?>
               </a>
             </h3> 

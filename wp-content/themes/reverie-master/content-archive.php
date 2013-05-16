@@ -8,9 +8,8 @@
 ?>
 
 
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="large-4 column">
+  <div class="large-3 column">
   	<div class="thumb-wrapper circlewrapper">
       <?php 
 
@@ -19,7 +18,7 @@
     <a href="<?php the_permalink(); ?>"><?php 
       // Check if post has a Post Custom Thumbnail set
       if( get_field('toggle_post_custom_thumbnaill') ):?>
-        <img style="max-width: 145px;" src="<?php the_field('image_post_custom_thumbnail'); ?>" alt="" />
+        <img style="" src="<?php the_field('image_post_custom_thumbnail'); ?>" alt="" />
         <?php
       // Else display normal post thumbnail
       else:
@@ -31,9 +30,9 @@
       ?>
     </div>
   </div>
-  <div class="content-block large-8 column"> 
+  <div class="content-block large-9 column"> 
     <header>
-      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
     </header>
   		<?php the_excerpt(''); ?>
     <footer>
