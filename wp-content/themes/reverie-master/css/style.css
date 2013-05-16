@@ -1666,7 +1666,7 @@ div.sidebar h4.subheader {
 
 @media only screen and (min-width: 767px) {
   .footer-full nav ul li a:hover {
-    opacity: .8;
+    opacity: 1;
     color: #0E0F1A;
   }
 
@@ -1722,7 +1722,7 @@ div.sidebar h4.subheader {
     color: #32345c;
   }
   .footer-full nav ul li a:hover {
-    opacity: .8;
+    opacity: 1;
     color: #0e0f1a;
   }
   .footer-full ul.sub-menu a {
@@ -1734,6 +1734,7 @@ div.sidebar h4.subheader {
 
   .footer-full p {
     color: #777;
+    text-align: left;
     font-size: 1.2em;
   }
 }
@@ -2228,8 +2229,8 @@ div.sidebar h4.subheader {
   background: #c6c600 !important;
 }
 
-.archive h2, .blog h2 {
-  font-size: 1.125em;
+.archive .content-block p, .blog .content-block p {
+  font-size: 1.2em;
 }
 .archive .thumb-wrapper, .blog .thumb-wrapper {
   float: left;
@@ -2615,9 +2616,6 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
 
 #case-sliders {
   padding-top: 1.45em;
-}
-#case-sliders > h2 {
-  font-size: 1.85em;
 }
 #case-sliders ul {
   height: auto !important;
