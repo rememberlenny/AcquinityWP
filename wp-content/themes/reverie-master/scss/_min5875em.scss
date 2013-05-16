@@ -1,9 +1,6 @@
 @import "variables";
 
 @media only screen and (min-width: 58.75em){
-  .top-bar-section li a:not(.button) {
-    padding: 0 20px;
-  }
   .case-studies-extension{
   }
   .home .masthead-photo-content{
@@ -31,6 +28,13 @@
   .stat h2{ font-size: 3.5em; }
   .entry-content{
     font-size: 1.2em;
+  }
+ section.top-bar-section li a:not(.button) {
+  padding: 0 24px !important;
+  }
+  section.top-bar-section .dropdown li a:not(.button) {
+    padding-top: .5em !important;
+    padding-bottom: .5em !important;
   }
 
 }
