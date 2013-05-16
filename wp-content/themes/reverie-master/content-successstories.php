@@ -5,7 +5,7 @@
      <div class="featsucc" id="pausetarget"  > 
           <?php 
           rewind_posts();
-          $mypost = array( 'post_type' => 'success-story', 'posts_per_page' => '3' );
+          $mypost = array( 'post_type' => 'success-story', 'posts_per_page' => '3', 'orderby' => 'rand' );
           $my_query = new WP_Query( $mypost ); ?>
 
           <?php if ( have_posts() ) : ?>
