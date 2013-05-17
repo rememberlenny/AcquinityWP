@@ -27,6 +27,11 @@ function reverie_theme_support() {
 	    'admin-preview-callback' => ''
 	    )
 	);
+	if(false === get_option()):
+    add_option("medium_crop", "1");
+	else
+	    update_option("medium_crop", "1");
+	endif;
 }
 add_action('after_setup_theme', 'reverie_theme_support');
 
@@ -38,9 +43,5 @@ require_once('includes/lkbg_as_plugin.php');
 require_once('includes/lkbg_brand_logo.php');
 require_once('includes/lkbg_options_page.php');
 
-if(false === get_option()):
-    add_option("medium_crop", "1");
-else
-    update_option("medium_crop", "1");
-endif;
+
 ?>
