@@ -14,7 +14,7 @@
 				<div class="mt1em text-center large-12 column large-centered  ">
             <ul class="large-block-grid-2 small-block-grid-1">
               <li>
-              <ul class="large-block-grid-2 small-block-grid-2">
+              <ul class="large-block-grid-2 small-block-grid-1">
                 <li>
                   
             <a href="<?php the_field('facebook_url', 'option'); ?>"><p class="d-inline-f mr2em"><img class="nmp5em" src="<?php the_field('facebook_icon', 'option'); ?>" alt="<?php the_field('facebook_text', 'option'); ?>"> <span><?php the_field('facebook_text', 'option'); ?></span></p></a>
