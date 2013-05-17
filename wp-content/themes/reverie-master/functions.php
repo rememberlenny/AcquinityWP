@@ -27,11 +27,7 @@ function reverie_theme_support() {
 	    'admin-preview-callback' => ''
 	    )
 	);
-	if(false === get_option()):
-    add_option("medium_crop", "1");
-	else
-	    update_option("medium_crop", "1");
-	endif;
+	
 }
 add_action('after_setup_theme', 'reverie_theme_support');
 
