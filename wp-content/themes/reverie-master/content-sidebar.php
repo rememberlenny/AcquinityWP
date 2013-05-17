@@ -14,7 +14,7 @@
 }
 else
 {
-     ?> <a href="<?php echo site_url(); ?>/mediakit"><?php
+     ?> <a href="<?php echo site_url(); ?>/mediakit">class="button small success radius">Download</a> <?php
 }
  ?>
     </div>
