@@ -249,8 +249,8 @@ html ::selection, body ::selection, button ::selection, input ::selection, selec
   }
   .post-block{
     margin:7px;
-    background: lighten($light-grey, 4%);
-    border: 1px solid $light-grey;
+    background: $light-grey;
+    border: 1px solid darken($light-grey, 5%);
     .content-padding{
       padding: 10px 25px 30px 25px;
     }
