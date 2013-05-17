@@ -1,4 +1,5 @@
-<div class="large-3 column small-12 text-center whitebg mt1p5em mb1em">
+<div class="large-3 column small-12 text-center whitebg mt1p5em mb1em ppr5em ppl5em
+">
     <div class="widget brand-color-back row pt1em d-inline p10em20em mt1p5em">
       <h3 class="white fw400">
         <?php the_field('cta_sidebar_header', 'option'); ?>
@@ -14,7 +15,7 @@
         <h3 class="subheader fs1p2em">
           <?php the_field('logos_sidebar_header', 'option'); ?>
         </h3> 
-        <ul class="large-block-grid-2">
+        <ul class="large-block-grid-2 small-block-grid-2">
           <?php get_template_part('content-loop-load'); ?>
         </ul>
       </div>

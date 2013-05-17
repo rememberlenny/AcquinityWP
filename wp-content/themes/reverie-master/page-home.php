@@ -20,7 +20,9 @@ get_header(); ?>
 
 <?php get_template_part( 'content-heroblue' ); ?>
 
-<?php get_template_part( 'content-bulletpoints'); ?>
+<div class="ppr5em ppl5em">
+  <?php get_template_part( 'content-bulletpoints'); ?>
+</div>
 
 <?php get_template_part( 'content-statbar'); ?>
 
