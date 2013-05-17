@@ -15,21 +15,21 @@
             <ul class="large-block-grid-2 small-block-grid-1">
               <li>
               <ul class="large-block-grid-2 small-block-grid-1">
-                <li>
+                <li class="non-mob-text-right">
                   
             <a href="<?php the_field('facebook_url', 'option'); ?>"><p class="d-inline-f mr2em"><img class="nmp5em" src="<?php the_field('facebook_icon', 'option'); ?>" alt="<?php the_field('facebook_text', 'option'); ?>"> <span><?php the_field('facebook_text', 'option'); ?></span></p></a>
                 </li>
                 
-                <li>
+                <li class="non-mob-text-right">
            <a href="<?php the_field('twitter_url', 'option'); ?>"> <p class="d-inline-f mr2em"><img class="nmp5em" src="<?php the_field('twitter_icon', 'option'); ?>" alt="<?php the_field('twitter_text', 'option'); ?>"> <span><?php the_field('twitter_text', 'option'); ?></span></p></a>
                   
                 </li>
               </ul>
                 
               </li>
-              <li>
+              <li class="non-mob-text-left">
                 
-            <p class="d-inline-f">&copy; <?php echo date('Y'); ?> <a href="<?php echo site_url(); ?>" rel="nofollow" title="Acquinity Interactive"><span>Acquinity Interactive - All Rights Reserved</span></a>.</p>
+            <p class="d-inline-f"><a href="<?php echo site_url(); ?>" rel="nofollow" title="Acquinity Interactive">&copy; <?php echo date('Y'); ?> <span>Acquinity Interactive - All Rights Reserved</span></a>.</p>
               </li>
             </ul>
         </div>
