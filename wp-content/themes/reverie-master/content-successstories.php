@@ -15,9 +15,6 @@
           <?php get_template_part( 'content', 'homeslide' ); ?>
           <?php endwhile; ?>
 
-          <?php else : ?>
-          <?php get_template_part( 'content', 'none' ); ?>
-
           <?php endif; // end have_posts() check 
           wp_reset_query();?>
       </div>

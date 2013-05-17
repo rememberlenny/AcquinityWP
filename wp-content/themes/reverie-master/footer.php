@@ -10,7 +10,7 @@
 <footer class="row full-width mb1em ppr5em ppl5em" role="contentinfo">
 	<div class="footer-full twelve column">
 		<div class="row footer">
-			<?php wp_nav_menu(array('theme_location' => 'utility', 'container' => 'nav', 'container_class' => '', 'menu_class' => 'large-block-grid-6 small-block-grid-1 small-centered mob-text-center')); ?>
+			<?php wp_nav_menu(array('theme_location' => 'utility', 'container' => 'nav', 'container_class' => '', 'menu_class' => 'large-block-grid-6 small-block-grid-1 small-centered mob-text-center  ')); ?>
 				<div class="mt1em text-center large-12 column large-centered  ">
             <ul class="large-block-grid-2 small-block-grid-1">
               <li>
