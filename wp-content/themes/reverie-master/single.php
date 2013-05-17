@@ -31,11 +31,17 @@
 							<?php	if( get_field('toggle_post_custom_thumbnaill') ):?>
 								<div class="thumb-wrapper d-inline fl circlewrapper mr1p5em" style="margin-right:1.5em;">
 								<?php 
+
 								$attachment_id = get_field('image_post_custom_thumbnail');
 								$size = "thumbnail"; // (thumbnail, medium, large, full or custom size)
-								$image = wp_get_attachment_image( $attachment_id, $size );
+								 
+								$image = wp_get_attachment_image_src( $attachment_id, $size );
+								// url = $image[0];
+								// width = $image[1];
+								// height = $image[2];
 								?>
-					      <img src="<?php echo $image[0]; ?>" />
+								<img src="<?php echo $image[0]; ?>" />
+	
 								</div>
 							<?php endif; ?>
 							<?php the_content(); ?>

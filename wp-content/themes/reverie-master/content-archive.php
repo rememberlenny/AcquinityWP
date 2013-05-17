@@ -19,12 +19,18 @@
       // Check if post has a Post Custom Thumbnail set
       if( get_field('toggle_post_custom_thumbnaill') ):?>
         
-        <?php
-          $attachment_id = get_field('image_post_custom_thumbnail');
-          $size = "thumbnail"; // (thumbnail, medium, large, full or custom size)
-          $image = wp_get_attachment_image( $attachment_id, $size );
-          ?>
-      <img src="<?php echo $image[0]; ?>" /> <?
+        <?php 
+
+                $attachment_id = get_field('image_post_custom_thumbnail');
+                $size = "thumbnail"; // (thumbnail, medium, large, full or custom size)
+                 
+                $image = wp_get_attachment_image_src( $attachment_id, $size );
+                // url = $image[0];
+                // width = $image[1];
+                // height = $image[2];
+                ?>
+                <img src="<?php echo $image[0]; ?>" />
+    <?
       // Else display normal post thumbnail
       else:
       $image = wp_get_attachment_image_src( the_post_thumbnail( 'thumbnail' ), 'single-post-thumbnail' ); 
