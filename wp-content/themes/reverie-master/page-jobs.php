@@ -40,7 +40,7 @@ get_header(); ?>
               <iframe name="resumator-job-frame2" id="resumator-job-frame" class="resumator-advanced-widget" src="http://acquinityinteractive.theresumator.com/apply/jobs?s_state=NY" height="300" width="100%" scrolling="yes" frameborder="0" allowTransparency="true"></iframe>
               <script>function resizeResumatorIframe(height,nojump){if(nojump== 0){window.scrollTo(0,0);}document.getElementById("resumator-job-frame2").height = parseInt(height)+20;}</script>
               <hr>
-              <?php page_bottom_box(); ?>
+
             </div>
           </article>
         <?php endwhile; // End the loop ?>

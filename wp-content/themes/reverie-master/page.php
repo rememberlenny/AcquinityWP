@@ -26,8 +26,7 @@ get_header(); ?>
 						</header>
 						<div class="entry-content">
   						<?php the_content(); ?>
-              <?php //about_us_panel(); ?>    
-              <?php page_bottom_box(); ?>   
+              <?php //about_us_panel(); ?>     
 						</div>
 					</article>
           
