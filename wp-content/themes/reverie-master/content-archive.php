@@ -18,8 +18,11 @@
     <a href="<?php the_permalink(); ?>"><?php 
       // Check if post has a Post Custom Thumbnail set
       if( get_field('toggle_post_custom_thumbnaill') ):?>
-        <img style="" src="<?php the_field('image_post_custom_thumbnail'); ?>" alt="" />
+        
         <?php
+          $attachment_id = get_field('image_post_custom_thumbnail');
+          $size = "thumbnail"; // (thumbnail, medium, large, full or custom size)
+          wp_get_attachment_image( $attachment_id, $size );
       // Else display normal post thumbnail
       else:
       $image = wp_get_attachment_image_src( the_post_thumbnail( 'thumbnail' ), 'single-post-thumbnail' ); 
