@@ -21,7 +21,7 @@
           <input type="hidden" name="llr" value="cr5omucab">
           <input type="hidden" name="m" value="1102343272994">
           <input type="hidden" name="p" value="oi">
-          <input type="email" name="ea" size="20" class="radius" value="" placeholder="Enter email here" data-cip-id="cIPJQ342845639">
+          <input type="email" name="ea" size="20" class="radius email-input" value="" placeholder="Enter email here" data-cip-id="cIPJQ342845639">
         </div>
         <div class="large-3 column">
           <input type="submit" name="go" value="Sign up" class="mt005em radius button small success">
