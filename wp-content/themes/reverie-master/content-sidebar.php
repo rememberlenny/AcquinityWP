@@ -15,7 +15,7 @@
 else
 {
      ?> <a href="#" data-reveal-id="mediakit" class="button small success radius">Download</a> <?php
-     get_template_part( 'content-modal'); 
+      
 }
  ?>
     </div>

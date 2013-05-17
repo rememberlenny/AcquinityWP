@@ -52,6 +52,11 @@
 <script>
 	$(document).foundation();
 </script>
-
+<?php 
+  if( !get_field('media_kit_download') )
+    {
+    get_template_part( 'content-modal'); 
+    }
+  ?>
 </body>
 </html>
