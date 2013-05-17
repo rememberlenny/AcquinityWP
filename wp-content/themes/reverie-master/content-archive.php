@@ -22,7 +22,7 @@
         <?php
           $attachment_id = get_field('image_post_custom_thumbnail');
           $size = "thumbnail"; // (thumbnail, medium, large, full or custom size)
-          wp_get_attachment_image( $attachment_id, $size );
+          $image = wp_get_attachment_image( $attachment_id, $size );
           ?>
       <img src="<?php echo $image[0]; ?>" /> <?
       // Else display normal post thumbnail
