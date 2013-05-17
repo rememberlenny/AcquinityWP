@@ -7,7 +7,16 @@
       <p class="white lh1em mb08em">
         <?php the_field('cta_sidebar_text', 'option'); ?>
       </p>
-      <a href="<?php the_field('cta_sidebar_media_kit', 'option'); ?>" class="button small success radius">Download</a>
+      <?php
+      if( get_field('media_kit_download') )
+{
+     ?> <a href="<?php the_field('cta_sidebar_media_kit', 'option'); ?>" class="button small success radius">Download</a> </div> <?php
+}
+else
+{
+     ?> <a href="<?php echo site_url(); ?>/mediakit"><?php
+}
+ ?>
     </div>
 
     <div class="widget row mt2em">
