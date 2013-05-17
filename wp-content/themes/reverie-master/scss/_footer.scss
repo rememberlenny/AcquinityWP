@@ -91,7 +91,7 @@
   @media only screen and (min-width: 767px) {
   .footer-full nav ul li a:hover {
     opacity: 1;
-    color: #0E0F1A;
+    color: $primary-color;
   }
   .footer-full nav ul li a {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
