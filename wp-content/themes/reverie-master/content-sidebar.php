@@ -14,7 +14,8 @@
 }
 else
 {
-     ?> <a href="<?php echo site_url(); ?>/mediakit" class="button small success radius">Download</a> <?php
+     ?> <a href="#" data-reveal-id="mediakit" class="button small success radius">Download</a> <?php
+     get_template_part( 'content-modal'); 
 }
  ?>
     </div>
