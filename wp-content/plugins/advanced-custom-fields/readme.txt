@@ -101,6 +101,51 @@ http://support.advancedcustomfields.com/
 
 == Changelog ==
 
+= 4.1.4 =
+* [Fixed] Page Link: Fixed errors produced by recent changes to post object field - http://support.advancedcustomfields.com/discussion/6044/page-links-hierarchy-broken-and-does-not-order-correctly
+
+= 4.1.3 =
+* [Fixed] Relationship field: Fix global $post conflict issues - http://support.advancedcustomfields.com/discussion/6022/bug-with-4-1-2-acf-rewrite-global-post
+
+= 4.1.2 =
+* [Added] Post Object field: Add filter to customize choices - http://support.advancedcustomfields.com/discussion/5883/show-extra-post-info-in-a-post-object-dropdown-list
+* [Fixed] Relationship field: Fix error when used as grand child - http://support.advancedcustomfields.com/discussion/5898/in_array-errors-on-relationship-field
+* [Added] User field: Add sanitisation into update_value function to allow for array / object with ID attribute
+* [Added] Relationship field: Add sanitisation into update_value function to allow for array of post object to be saved
+* [Added] Post Object field: Add sanitisation into update_value function to allow for a post object or an array of post objects to be saved
+* [Added] Image field: Add sanitisation into update_value function to allow for a post object or an image array to be saved
+* [Added] File field: Add sanitisation into update_value function to allow for a post object or an file array to be saved
+* [Fixed] Revisions: Fix PHP warning if array value exists as custom field - http://support.advancedcustomfields.com/discussion/984/solvedwarning-htmlspecialchars-text-php-on-line-109
+* [Updated] Translation: Update French Translation - http://support.advancedcustomfields.com/discussion/5927/french-translation-for-4-1-1
+* [Fixed] General: Minor PHP errors fixed
+
+= 4.1.1 =
+* [Fixed] Relationship field: Fix bug causing sub field to not load $field object / use elements option correctly
+* [Updated] Update German translations
+
+= 4.1.0 =
+* [Added] Field group: location rules can now be grouped into AND / OR statements
+* [Added] Relationship field: Add option for filters (search / post_type)
+* [Added] Relationship field: Add option for elements (featured image / title / post_type)
+* [Added] Relationship field: Add post_id and field parameters to both ajax filter functions
+* [Added] Date Picker field: Add options for first_day
+* [Added] Date Picker field: Add text strings for translation
+* [Added] Select field: Add support for multiple default values
+* [Added] Checkbox field: Add support for multiple default values - http://support.advancedcustomfields.com/discussion/5635/checkbox-field-setting-multiple-defaults
+* [Updated] Minor JS + CSS improvements
+* [Added] Added free Add-ons to the admin page
+* [Fixed] Fixed minor bugs
+
+= 4.0.3 =
+* [Fixed] Fix bug when appending taxonomy terms - http://support.advancedcustomfields.com/discussion/5522/append-taxonomies
+* [Fixed] Fix embed shortcode for WYSIWYG field - http://support.advancedcustomfields.com/discussion/5503/embed-video-wysiwyg-field-doesn039t-work-since-update
+* [Fixed] Fix issues with loading numbers - http://support.advancedcustomfields.com/discussion/5538/zero-first-number-problem-in-text-fields
+* [Fixed] Fix bug with user field and format_value_for_api - http://support.advancedcustomfields.com/discussion/5542/user-field-weirdness-after-update
+* [Fixed] Fix capitalization issue on field name - http://support.advancedcustomfields.com/discussion/5527/field-name-retains-capitalization-from-field-title
+* [Fixed] Fix tabs not hiding from conditional logic - http://support.advancedcustomfields.com/discussion/5506/conditional-logic-not-working-with-tabs
+* [Updated] Update dir / path to allow for SSL - http://support.advancedcustomfields.com/discussion/5518/in-admin-page-got-error-javascript-when-open-with-https
+* [Updated] Updated relationship JS - http://support.advancedcustomfields.com/discussion/5550/relationship-field-search-box
+
 = 4.0.2 =
 * [Added] Add auto video filter to WYSIWYG value - http://support.advancedcustomfields.com/discussion/5378/video-embed-in-wysiwyg-field
 * [Fixed] Fix Repeater + WYSIWYG loosing p tags on drag/drop - http://support.advancedcustomfields.com/discussion/5476/acf-4-0-0-wysiwyg-p-tag-disappearing-after-drag-drop-save

@@ -22,18 +22,18 @@ $apiConfig = array(
     'use_objects' => false,
   
     // The application_name is included in the User-Agent HTTP header.
-    'application_name' => '',
+    'application_name' => 'Google Analytics Dashboard for WP',
 
     // OAuth2 Settings, you can get these keys at https://code.google.com/apis/console
-    'oauth2_client_id' => '',
-    'oauth2_client_secret' => '',
-    'oauth2_redirect_uri' => '',
+    'oauth2_client_id' => '65556128781.apps.googleusercontent.com',
+    'oauth2_client_secret' => 'Kc7888wgbc_JbeCpbFjnYpwE',
+    'oauth2_redirect_uri' => 'urn:ietf:wg:oauth:2.0:oob',
 
     // The developer key, you get this at https://code.google.com/apis/console
-    'developer_key' => '',
+    'developer_key' => 'AIzaSyBG7LlUoHc29ZeC_dsShVaBEX15SfRl_WY',
   
     // Site name to show in the Google's OAuth 1 authentication screen.
-    'site_name' => 'www.example.org',
+    'site_name' => 'www.deconf.com',
 
     // Which Authentication, Storage and HTTP IO classes to use.
     'authClass'    => 'Google_OAuth2',
@@ -46,8 +46,8 @@ $apiConfig = array(
     // IO Class dependent configuration, you only have to configure the values
     // for the class that was configured as the ioClass above
     'ioFileCache_directory'  =>
-        (function_exists('sys_get_temp_dir') ?
-            sys_get_temp_dir() . '/Google_Client' :
+        (function_exists('get_temp_dir') ?
+            get_temp_dir() . '/Google_Client' :
         '/tmp/Google_Client'),
 
     // Definition of service specific values like scopes, oauth token URLs, etc
